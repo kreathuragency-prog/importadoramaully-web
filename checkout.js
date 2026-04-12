@@ -161,7 +161,7 @@ function updateTotals() {
 
   totals.innerHTML = `
     <div class="ck-total-row"><span>Subtotal</span><span>${fmtPrice(subtotal)}</span></div>
-    <div class="ck-total-row"><span>Envio (${selectedShipping})</span><span>${shippingCost > 0 ? fmtPrice(shippingCost) : 'Gratis'}</span></div>
+    <div class="ck-total-row"><span>Envio (${selectedShipping.replace('_',' ')})</span><span>${selectedShipping === 'starken' || selectedShipping === 'dhl' ? 'Por pagar' : 'Gratis'}</span></div>
     <div class="ck-total-row"><span>IVA incluido</span><span>-</span></div>
     <div class="ck-total-row total"><span>Total</span><span>${fmtPrice(total)}</span></div>
   `;
@@ -206,8 +206,9 @@ function renderShippingOptions() {
   if (!container) return;
 
   const methods = config.shipping_methods || [
-    {id:'starken', name:'Starken', desc:'Envio economico, 5-10 dias habiles', icon:'fa-truck'},
-    {id:'dhl', name:'DHL Express', desc:'Envio rapido, 2-5 dias habiles', icon:'fa-shipping-fast'},
+    {id:'starken', name:'Starken', desc:'Envio economico, 5-10 dias habiles. Flete por pagar.', icon:'fa-truck', por_pagar:true},
+    {id:'dhl', name:'DHL Express', desc:'Envio rapido, 2-5 dias habiles. Flete por pagar.', icon:'fa-shipping-fast', por_pagar:true},
+    {id:'coordinar_whatsapp', name:'Coordinar por WhatsApp', desc:'Conversemos el mejor envio para ti', icon:'fab fa-whatsapp', free:true},
     {id:'retiro_santiago', name:'Retiro Santiago', desc:'Av. La Florida 9421, Santiago', icon:'fa-store', free:true},
     {id:'retiro_pichilemu', name:'Retiro Pichilemu', desc:'Av. Millaco 1172, Pichilemu', icon:'fa-store', free:true},
   ];
@@ -215,13 +216,13 @@ function renderShippingOptions() {
   container.innerHTML = methods.map((m, i) => `
     <label class="ck-ship-option${i === 0 ? ' active' : ''}" data-method="${m.id}">
       <input type="radio" name="shipping" value="${m.id}" ${i === 0 ? 'checked' : ''}>
-      <div class="ck-ship-icon"><i class="fas ${m.icon}"></i></div>
+      <div class="ck-ship-icon"><i class="${m.icon && (m.icon.includes('fab') || m.icon.includes('fas')) ? '' : 'fas '}${m.icon}"></i></div>
       <div class="ck-ship-info">
         <strong>${m.name}</strong>
         <small>${m.desc}</small>
       </div>
-      <div class="ck-ship-price${m.free ? ' free' : ''}" data-method="${m.id}">
-        ${m.free ? 'Gratis' : 'Calculando...'}
+      <div class="ck-ship-price${m.free ? ' free' : ''}${m.por_pagar ? ' por-pagar' : ''}" data-method="${m.id}">
+        ${m.free ? 'Gratis' : m.por_pagar ? 'Por pagar' : 'Calculando...'}
       </div>
     </label>
   `).join('');
@@ -233,10 +234,11 @@ function renderShippingOptions() {
       opt.querySelector('input').checked = true;
       selectedShipping = opt.dataset.method;
 
-      // Toggle address fields
+      // Toggle address fields — hide for retiro and coordinar WhatsApp
       const addrFields = document.getElementById('addressFields');
       if (addrFields) {
-        addrFields.style.display = selectedShipping.startsWith('retiro') ? 'none' : 'block';
+        const hideAddr = selectedShipping.startsWith('retiro') || selectedShipping === 'coordinar_whatsapp';
+        addrFields.style.display = hideAddr ? 'none' : 'block';
       }
 
       calcShipping();
@@ -247,39 +249,9 @@ function renderShippingOptions() {
 }
 
 async function calcShipping() {
-  const region = document.getElementById('ckRegion')?.value || 'Region Metropolitana';
-  const totalWeight = cart.reduce((s, i) => s + parseInt(String(i.weight || '20').replace(/[^0-9]/g, '')) * (i.qty || 1), 0);
-
-  if (selectedShipping.startsWith('retiro')) {
-    shippingCost = 0;
-    updateTotals();
-    return;
-  }
-
-  try {
-    const resp = await fetch(API_BASE + '/api/shipping-cost', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({method: selectedShipping, region, weight_kg: totalWeight}),
-    });
-    const data = await resp.json();
-    shippingCost = data.cost || 0;
-  } catch(e) {
-    // Fallback local calc
-    const rate = selectedShipping === 'dhl' ? 5000 : 2500;
-    shippingCost = rate * Math.max(totalWeight, 5);
-  }
-
-  // Update price labels
-  document.querySelectorAll('.ck-ship-price').forEach(el => {
-    const method = el.dataset.method;
-    if (method && !method.startsWith('retiro')) {
-      if (method === selectedShipping) {
-        el.textContent = fmtPrice(shippingCost);
-      }
-    }
-  });
-
+  // Starken/DHL van "por pagar" (el cliente paga al courier directo)
+  // Retiro y coordinar WhatsApp son gratis en el checkout
+  shippingCost = 0;
   updateTotals();
 }
 
@@ -336,7 +308,7 @@ function validateStep1() {
 }
 
 function validateStep2() {
-  if (selectedShipping.startsWith('retiro')) return true;
+  if (selectedShipping.startsWith('retiro') || selectedShipping === 'coordinar_whatsapp') return true;
 
   const region = document.getElementById('ckRegion').value;
   const address = document.getElementById('ckAddress').value.trim();
@@ -399,7 +371,7 @@ function buildSummary() {
     </div>
     <div class="ck-summary-section">
       <h4>Envio</h4>
-      <div class="ck-summary-row"><span>${shipLabel}</span><span>${shippingCost > 0 ? fmtPrice(shippingCost) : 'Gratis'}</span></div>
+      <div class="ck-summary-row"><span>${shipLabel}</span><span>${selectedShipping === 'starken' || selectedShipping === 'dhl' ? 'Por pagar' : 'Gratis'}</span></div>
       ${!selectedShipping.startsWith('retiro') ? `<div class="ck-summary-row"><span>${address}, ${comuna}, ${region}</span></div>` : ''}
     </div>
     <div class="ck-summary-section">

@@ -102,8 +102,9 @@ async def get_config():
         "mp_public_key": MP_PUBLIC_KEY,
         "regiones": REGIONES_CHILE,
         "shipping_methods": [
-            {"id": "starken", "name": "Starken", "desc": "Envio economico, 5-10 dias habiles", "icon": "fa-truck"},
-            {"id": "dhl", "name": "DHL Express", "desc": "Envio rapido, 2-5 dias habiles", "icon": "fa-shipping-fast"},
+            {"id": "starken", "name": "Starken", "desc": "Envio economico, 5-10 dias habiles. Flete por pagar.", "icon": "fa-truck", "por_pagar": True},
+            {"id": "dhl", "name": "DHL Express", "desc": "Envio rapido, 2-5 dias habiles. Flete por pagar.", "icon": "fa-shipping-fast", "por_pagar": True},
+            {"id": "coordinar_whatsapp", "name": "Coordinar por WhatsApp", "desc": "Conversemos el mejor envio para ti", "icon": "fa-whatsapp fab", "free": True},
             {"id": "retiro_santiago", "name": "Retiro Santiago", "desc": "Av. La Florida 9421, Santiago", "icon": "fa-store", "free": True},
             {"id": "retiro_pichilemu", "name": "Retiro Pichilemu", "desc": "Av. Millaco 1172, Pichilemu", "icon": "fa-store", "free": True},
         ],

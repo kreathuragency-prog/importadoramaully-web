@@ -56,8 +56,9 @@ STATUS_LABELS = {
 }
 
 SHIPPING_LABELS = {
-    "starken": "Starken",
-    "dhl": "DHL Express",
+    "starken": "Starken (por pagar)",
+    "dhl": "DHL Express (por pagar)",
+    "coordinar_whatsapp": "Coordinar por WhatsApp",
     "retiro_santiago": "Retiro Santiago",
     "retiro_pichilemu": "Retiro Pichilemu",
 }

@@ -65,6 +65,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .ck-ship-info small{display:block;color:var(--gray-500);font-size:.75rem;margin-top:2px}
 .ck-ship-price{font-weight:700;color:var(--dark);font-size:.9rem}
 .ck-ship-price.free{color:var(--green)}
+.ck-ship-price.por-pagar{color:var(--orange);font-size:.8rem}
 
 /* BUTTONS */
 .ck-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;border:none;transition:all .2s}
