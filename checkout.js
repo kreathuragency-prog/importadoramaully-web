@@ -20,9 +20,9 @@ if (cart.length === 0 && !window.location.search.includes('status=')) {
     document.body.innerHTML = `
       <div style="max-width:500px;margin:100px auto;text-align:center;padding:40px;font-family:system-ui,sans-serif">
         <i class="fas fa-shopping-cart" style="font-size:4rem;color:#d4af37;margin-bottom:20px"></i>
-        <h1 style="color:#1a1a2e;margin-bottom:12px">Tu carrito esta vacio</h1>
+        <h1 style="color:#1a1a2e;margin-bottom:12px">Tu carrito está vacío</h1>
         <p style="color:#666;margin-bottom:24px">Agrega fardos al carrito antes de pagar.</p>
-        <a href="/" style="background:#d4af37;color:#1a1a2e;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block">← Volver al catalogo</a>
+        <a href="/" style="background:#d4af37;color:#1a1a2e;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block">← Volver al catálogo</a>
       </div>`;
   });
 }
@@ -206,8 +206,8 @@ function renderShippingOptions() {
   if (!container) return;
 
   const methods = config.shipping_methods || [
-    {id:'starken', name:'Starken', desc:'Envio economico, 5-10 dias habiles. Flete por pagar.', icon:'fa-truck', por_pagar:true},
-    {id:'dhl', name:'DHL Express', desc:'Envio rapido, 2-5 dias habiles. Flete por pagar.', icon:'fa-shipping-fast', por_pagar:true},
+    {id:'starken', name:'Starken', desc:'Envío económico, 5-10 días hábiles. Flete por pagar.', icon:'fa-truck', por_pagar:true},
+    {id:'dhl', name:'DHL Express', desc:'Envío rápido, 2-5 días hábiles. Flete por pagar.', icon:'fa-shipping-fast', por_pagar:true},
     {id:'coordinar_whatsapp', name:'Coordinar por WhatsApp', desc:'Conversemos el mejor envio para ti', icon:'fab fa-whatsapp', free:true},
     {id:'retiro_santiago', name:'Retiro Santiago', desc:'Av. La Florida 9421, Santiago', icon:'fa-store', free:true},
     {id:'retiro_pichilemu', name:'Retiro Pichilemu', desc:'Av. Millaco 1172, Pichilemu', icon:'fa-store', free:true},

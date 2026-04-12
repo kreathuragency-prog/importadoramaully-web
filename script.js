@@ -1543,7 +1543,7 @@ async function beaReply(text) {
   await beaMsg(text, false);
 }
 
-function beaGenderLabel() { return beaGender === 'm' ? 'mi nino' : 'mi nina'; }
+function beaGenderLabel() { return beaGender === 'm' ? 'mi niño' : 'mi niña'; }
 function beaNinoName() { return beaGenderLabel() + ' ' + beaUserName.split(' ')[0]; }
 
 function beaProductCard(p) {
@@ -1640,7 +1640,7 @@ async function beaHandleMessage(text) {
   // Shipping
   if (/envio|envios|despacho|flete|shipping|transporte|courier|mandan|mandar|llega|llegan|region|regiones|provincia|donde envian|como llega/.test(t)) {
     document.getElementById('envios')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Sobre envios, ' + beaNinoName() + ':<br><br>• El envio <strong>NO esta incluido</strong> en el precio<br>• Enviamos a <strong>todo Chile</strong> (5-15 dias habiles)<br>• Envios internacionales a <strong>Argentina</strong> y otros paises<br>• <strong>Tu eliges</strong> el courier o transporte que prefieras<br>• El costo se cotiza segun destino y peso<br>• Tambien puedes retirar en nuestro local');
+    await beaReply('Sobre envios, ' + beaNinoName() + ':<br><br>• El envio <strong>NO esta incluido</strong> en el precio<br>• Enviamos a <strong>todo Chile</strong> (5-15 días hábiles)<br>• Envios internacionales a <strong>Argentina</strong> y otros paises<br>• <strong>Tu eliges</strong> el courier o transporte que prefieras<br>• El costo se cotiza segun destino y peso<br>• Tambien puedes retirar en nuestro local');
     return;
   }
 
@@ -1746,7 +1746,7 @@ async function beaHandleMessage(text) {
 
   // Payment
   if (/pago|pagar|transferencia|mercadopago|tarjeta|cuenta|deposito|webpay|khipu|banco|efectivo|como pago|forma de pago|metodo|debito|credito/.test(t)) {
-    await beaReply('Aceptamos estos medios de pago, ' + beaNinoName() + ':<br><br>🏦 <strong>Transferencia bancaria</strong><br>💳 <strong>MercadoPago</strong><br><br>Todos los precios incluyen IVA. Una vez confirmado tu pago, procesamos tu pedido en 1-3 dias habiles.');
+    await beaReply('Aceptamos estos medios de pago, ' + beaNinoName() + ':<br><br>🏦 <strong>Transferencia bancaria</strong><br>💳 <strong>MercadoPago</strong><br><br>Todos los precios incluyen IVA. Una vez confirmado tu pago, procesamos tu pedido en 1-3 días hábiles.');
     return;
   }
 
