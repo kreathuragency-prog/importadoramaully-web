@@ -96,6 +96,8 @@ class Order(Base):
     doc_type: Mapped[str] = mapped_column(String(20), default="boleta")  # boleta, factura
     business_name: Mapped[str] = mapped_column(String(200), default="")  # razon social (factura)
     business_rut: Mapped[str] = mapped_column(String(20), default="")    # rut empresa (factura)
+    business_giro: Mapped[str] = mapped_column(String(200), default="")  # giro del negocio (factura)
+    business_address: Mapped[str] = mapped_column(String(300), default="")  # direccion empresa (factura)
     # Envio
     shipping_method: Mapped[str] = mapped_column(String(30), default="starken")  # starken, dhl, retiro_santiago, retiro_pichilemu
     shipping_cost: Mapped[int] = mapped_column(Integer, default=0)

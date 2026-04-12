@@ -395,6 +395,7 @@ function buildSummary() {
       <h4>Cliente</h4>
       <div class="ck-summary-row"><span>${name}</span><span>${email}</span></div>
       <div class="ck-summary-row"><span>${phone}</span><span>Documento: ${docType.toUpperCase()}</span></div>
+      ${docType === 'factura' ? `<div class="ck-summary-row"><span>${document.getElementById('ckBizName')?.value || ''} (${document.getElementById('ckBizRut')?.value || ''})</span><span>Giro: ${document.getElementById('ckBizGiro')?.value || ''}</span></div>` : ''}
     </div>
     <div class="ck-summary-section">
       <h4>Envio</h4>
@@ -432,6 +433,8 @@ async function submitCheckout() {
     doc_type: docType,
     business_name: document.getElementById('ckBizName')?.value.trim() || '',
     business_rut: document.getElementById('ckBizRut')?.value.trim() || '',
+    business_giro: document.getElementById('ckBizGiro')?.value.trim() || '',
+    business_address: document.getElementById('ckBizAddress')?.value.trim() || '',
     shipping_method: selectedShipping,
     items: cart.map(i => ({
       id: i.id,

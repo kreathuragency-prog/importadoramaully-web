@@ -311,6 +311,7 @@ async def order_detail(request: Request, order_number: str):
             <hr style="margin:12px 0;border:none;border-top:1px solid #eee">
             <p style="font-size:.82rem"><strong>Direccion:</strong> {order.address_street}, {order.address_comuna}, {order.address_region}</p>
             <p style="font-size:.82rem"><strong>Documento:</strong> {order.doc_type.upper()}{f' — {order.business_name} ({order.business_rut})' if order.doc_type == 'factura' else ''}</p>
+            {f'<p style="font-size:.82rem"><strong>Giro:</strong> {order.business_giro}</p><p style="font-size:.82rem"><strong>Dir. Empresa:</strong> {order.business_address}</p>' if order.doc_type == 'factura' and order.business_giro else ''}
         </div>
         <div class="card">
             <h3 style="margin-bottom:12px;font-size:.9rem;color:#888">ENVIO Y PAGO</h3>

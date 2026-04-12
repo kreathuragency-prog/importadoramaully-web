@@ -164,6 +164,8 @@ async def create_checkout(request: Request):
             doc_type=data.get("doc_type", "boleta"),
             business_name=data.get("business_name", ""),
             business_rut=data.get("business_rut", ""),
+            business_giro=data.get("business_giro", ""),
+            business_address=data.get("business_address", ""),
             shipping_method=shipping_method,
             shipping_cost=shipping_cost,
             subtotal=subtotal,
