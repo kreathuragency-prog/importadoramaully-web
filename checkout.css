@@ -1,0 +1,137 @@
+:root{
+  --dark:#1a1a2e;--gold:#d4af37;--gold-light:#f5ecd0;
+  --green:#10b981;--green-wa:#25d366;--red:#ef4444;--orange:#f59e0b;
+  --gray-50:#fafaf5;--gray-100:#f0ede5;--gray-200:#ddd8cc;--gray-300:#bbb5a8;
+  --gray-500:#888;--gray-700:#444;--gray-900:#1a1a1a;
+  --radius:12px;--shadow:0 2px 12px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--gray-50);color:var(--gray-900);min-height:100vh}
+
+/* HEADER */
+.ck-header{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:var(--dark);color:#fff;position:sticky;top:0;z-index:100}
+.ck-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-size:.9rem}
+.ck-logo-icon{width:32px;height:32px;background:var(--gold);color:var(--dark);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem}
+.ck-logo strong{color:var(--gold)}
+.ck-secure{font-size:.78rem;color:var(--gray-300)}
+.ck-secure i{color:var(--green);margin-right:4px}
+
+/* PROGRESS */
+.ck-progress{display:flex;align-items:center;justify-content:center;gap:0;padding:20px 24px;background:#fff;border-bottom:1px solid var(--gray-200)}
+.ck-step{display:flex;align-items:center;gap:8px;padding:6px 16px;border-radius:50px;transition:all .3s}
+.ck-step.active{background:var(--dark);color:#fff}
+.ck-step.active .ck-step-num{background:var(--gold);color:var(--dark)}
+.ck-step.done{color:var(--green)}
+.ck-step.done .ck-step-num{background:var(--green);color:#fff}
+.ck-step-num{width:24px;height:24px;border-radius:50%;background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--gray-500);transition:all .3s}
+.ck-step-label{font-size:.82rem;font-weight:500}
+.ck-step-line{width:40px;height:2px;background:var(--gray-200);margin:0 4px}
+
+/* MAIN LAYOUT */
+.ck-main{max-width:1100px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+
+/* PANELS */
+.ck-panel{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.ck-panel h2{font-size:1.15rem;margin-bottom:20px;display:flex;align-items:center;gap:8px;color:var(--dark)}
+.ck-panel h2 i{color:var(--gold)}
+
+/* FORM */
+.ck-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.ck-field{display:flex;flex-direction:column;gap:4px}
+.ck-field.full{grid-column:1/-1}
+.ck-field label{font-size:.78rem;font-weight:600;color:var(--gray-700)}
+.ck-field input,.ck-field select{padding:10px 14px;border:1.5px solid var(--gray-200);border-radius:8px;font-size:.88rem;transition:all .2s;background:#fff}
+.ck-field input:focus,.ck-field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.1)}
+.ck-field input.error{border-color:var(--red)}
+.ck-error{color:var(--red);font-size:.72rem;min-height:14px}
+
+/* RADIO GROUP */
+.ck-radio-group{display:flex;gap:10px}
+.ck-radio{flex:1;padding:12px 16px;border:1.5px solid var(--gray-200);border-radius:8px;cursor:pointer;text-align:center;font-size:.85rem;font-weight:500;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px}
+.ck-radio:hover{border-color:var(--gold)}
+.ck-radio.active{border-color:var(--gold);background:var(--gold-light);color:var(--dark)}
+.ck-radio input{display:none}
+
+/* SHIPPING OPTIONS */
+.ck-shipping-options{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.ck-ship-option{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;transition:all .2s}
+.ck-ship-option:hover{border-color:var(--gold)}
+.ck-ship-option.active{border-color:var(--gold);background:var(--gold-light)}
+.ck-ship-option input{display:none}
+.ck-ship-icon{width:40px;height:40px;border-radius:8px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:1.1rem}
+.ck-ship-option.active .ck-ship-icon{background:var(--gold);color:var(--dark)}
+.ck-ship-info{flex:1}
+.ck-ship-info strong{font-size:.9rem}
+.ck-ship-info small{display:block;color:var(--gray-500);font-size:.75rem;margin-top:2px}
+.ck-ship-price{font-weight:700;color:var(--dark);font-size:.9rem}
+.ck-ship-price.free{color:var(--green)}
+
+/* BUTTONS */
+.ck-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;border:none;transition:all .2s}
+.ck-btn-next{background:var(--dark);color:#fff;width:100%}.ck-btn-next:hover{background:#2a2a4e}
+.ck-btn-back{background:var(--gray-100);color:var(--gray-700)}.ck-btn-back:hover{background:var(--gray-200)}
+.ck-btn-pay{background:var(--gold);color:var(--dark);width:100%;font-size:1rem;padding:14px 24px}.ck-btn-pay:hover{background:#c9a030}
+.ck-btn-pay:disabled{opacity:.5;cursor:not-allowed}
+.ck-btn-wa{background:var(--green-wa);color:#fff}.ck-btn-wa:hover{background:#1fb855}
+.ck-btn-row{display:flex;gap:10px;margin-top:8px}
+.ck-btn-row .ck-btn-next,.ck-btn-row .ck-btn-pay{flex:1}
+
+/* MP BADGE */
+.ck-mp-badge{text-align:center;padding:12px;color:var(--gray-500);font-size:.78rem;margin-top:12px}
+.ck-mp-badge i{color:var(--green);margin-right:4px}
+
+/* SIDEBAR */
+.ck-sidebar{position:sticky;top:80px}
+.ck-cart-summary{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:12px}
+.ck-cart-summary h3{font-size:.9rem;margin-bottom:14px;display:flex;align-items:center;gap:6px;color:var(--dark)}
+.ck-cart-summary h3 i{color:var(--gold)}
+.ck-cart-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--gray-100);font-size:.82rem}
+.ck-cart-item-name{flex:1;color:var(--gray-700)}
+.ck-cart-item-name span{display:block;font-size:.7rem;color:var(--gray-500)}
+.ck-cart-item-price{font-weight:600;white-space:nowrap;margin-left:8px}
+.ck-cart-totals{padding-top:12px;font-size:.85rem}
+.ck-cart-totals .ck-total-row{display:flex;justify-content:space-between;padding:4px 0}
+.ck-cart-totals .ck-total-row.total{font-weight:700;font-size:1.1rem;color:var(--dark);border-top:2px solid var(--dark);padding-top:10px;margin-top:8px}
+.ck-trust{display:flex;flex-direction:column;gap:8px;padding:16px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}
+.ck-trust div{font-size:.78rem;color:var(--gray-500);display:flex;align-items:center;gap:8px}
+.ck-trust i{color:var(--green);width:16px}
+
+/* ORDER SUMMARY STEP 3 */
+.ck-summary{background:var(--gray-50);border-radius:8px;padding:16px;margin-bottom:16px;font-size:.85rem}
+.ck-summary-section{margin-bottom:12px}
+.ck-summary-section h4{font-size:.75rem;color:var(--gray-500);text-transform:uppercase;margin-bottom:6px;letter-spacing:.5px}
+.ck-summary-row{display:flex;justify-content:space-between;padding:3px 0}
+
+/* RESULT SCREENS */
+.ck-result{text-align:center;padding:48px 28px}
+.ck-result-icon{font-size:3.5rem;margin-bottom:16px}
+.ck-result-icon.success{color:var(--green)}
+.ck-result-icon.failure{color:var(--red)}
+.ck-result-icon.pending{color:var(--orange)}
+.ck-result h2{margin-bottom:8px}
+.ck-result p{color:var(--gray-500);margin-bottom:16px;font-size:.9rem}
+
+/* MOBILE */
+@media(max-width:768px){
+  .ck-main{grid-template-columns:1fr;padding:12px}
+  .ck-sidebar{position:static;order:-1}
+  .ck-panel{padding:20px 16px}
+  .ck-form-grid{grid-template-columns:1fr}
+  .ck-field.full{grid-column:1}
+  .ck-progress{padding:14px 12px;gap:0}
+  .ck-step{padding:4px 8px}
+  .ck-step-label{font-size:.7rem}
+  .ck-step-line{width:20px}
+  .ck-btn-row{flex-direction:column}
+  .ck-radio-group{flex-direction:column}
+}
+@media(max-width:480px){
+  .ck-header{padding:10px 14px}
+  .ck-logo{font-size:.8rem}
+  .ck-secure{font-size:.7rem}
+}
+
+/* LOADING */
+.ck-loading{pointer-events:none;opacity:.6}
+.ck-spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}

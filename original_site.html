@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Importadora Maully | Ropa Americana Importada al Por Mayor - Chile</title>
+<meta name="description" content="Importadora Maully - Ropa americana y europea importada al por mayor. Fardos, packs y calugas de ropa premium. Envios a todo Chile.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--primary:#1a1a2e;--primary-light:#16213e;--accent:#e94560;--accent-hover:#c73a52;
+--gold:#d4a853;--gold-light:#f0d68a;--bg:#fafafa;--white:#ffffff;--gray-50:#f8f9fa;
+--gray-100:#f1f3f5;--gray-200:#e9ecef;--gray-300:#dee2e6;--gray-400:#ced4da;
+--gray-500:#adb5bd;--gray-600:#868e96;--gray-700:#495057;--gray-800:#343a40;
+--gray-900:#212529;--success:#2ecc71;--shadow-sm:0 1px 3px rgba(0,0,0,.08);
+--shadow:0 4px 12px rgba(0,0,0,.1);--shadow-lg:0 12px 40px rgba(0,0,0,.15);
+--radius:12px;--radius-sm:8px;--radius-lg:20px;--transition:all .3s ease;
+--font-body:'DM Sans',sans-serif;--font-heading:'Poppins',sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);color:var(--gray-800);background:var(--bg);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+button{cursor:pointer;border:none;outline:none;font-family:var(--font-body)}
+input,select{font-family:var(--font-body)}
+
+/* ANIMATIONS */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.animate-on-scroll.visible{opacity:1;transform:translateY(0)}
+
+/* TOP BAR */
+.top-bar{background:var(--primary);color:var(--white);padding:8px 0;font-size:.82rem;letter-spacing:.3px}
+.top-bar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.top-bar a{color:var(--gold-light);transition:var(--transition)}
+.top-bar a:hover{color:var(--white)}
+.top-bar i{margin-right:6px}
+
+/* NAVBAR */
+.navbar{background:var(--white);position:sticky;top:0;z-index:1000;box-shadow:var(--shadow-sm);transition:var(--transition)}
+.navbar.scrolled{box-shadow:var(--shadow)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),var(--gold));border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:800;font-size:1.2rem;font-family:var(--font-heading)}
+.logo-text{font-family:var(--font-heading);font-weight:800;font-size:1.4rem;color:var(--primary)}
+.logo-text span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{font-weight:500;font-size:.92rem;color:var(--gray-700);transition:var(--transition);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--accent);transition:var(--transition)}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a:hover::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:16px}
+.cart-btn{position:relative;background:var(--gray-100);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;color:var(--gray-700);transition:var(--transition);font-size:1.1rem}
+.cart-btn:hover{background:var(--accent);color:var(--white)}
+.cart-badge{position:absolute;top:-4px;right:-4px;background:var(--accent);color:var(--white);font-size:.7rem;font-weight:700;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--white)}
+.mobile-toggle{display:none;background:none;font-size:1.5rem;color:var(--gray-700)}
+
+/* HERO */
+.hero{position:relative;min-height:85vh;display:flex;align-items:center;overflow:hidden;background:var(--primary)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.35}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,46,.92) 0%,rgba(22,33,62,.8) 50%,rgba(233,69,96,.3) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:700px;animation:fadeInUp .8s ease}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(233,69,96,.15);border:1px solid rgba(233,69,96,.3);color:var(--gold-light);padding:8px 18px;border-radius:50px;font-size:.85rem;font-weight:600;margin-bottom:24px;backdrop-filter:blur(10px)}
+.hero h1{font-size:3.5rem;color:var(--white);margin-bottom:20px;line-height:1.1}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:1.15rem;color:rgba(255,255,255,.8);margin-bottom:36px;max-width:540px;line-height:1.7}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-weight:600;font-size:.95rem;transition:var(--transition);letter-spacing:.3px}
+.btn-primary{background:var(--accent);color:var(--white)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 8px 25px rgba(233,69,96,.4)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.3)}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.1)}
+.btn-gold{background:var(--gold);color:var(--primary)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa:hover{background:#20bd5a;transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.4)}
+.hero-stats{display:flex;gap:48px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-stat{text-align:center}
+.hero-stat .num{font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--gold)}
+.hero-stat .label{font-size:.82rem;color:rgba(255,255,255,.6);margin-top:4px}
+
+/* TRUST BAR */
+.trust-bar{background:var(--white);padding:24px 0;border-bottom:1px solid var(--gray-200)}
+.trust-bar .container{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--gray-600)}
+.trust-item i{font-size:1.4rem;color:var(--accent)}
+
+/* SECTION STYLES */
+.section{padding:80px 0}
+.section-dark{background:var(--primary);color:var(--white)}
+.section-gray{background:var(--gray-50)}
+.section-header{text-align:center;max-width:640px;margin:0 auto 56px}
+.section-header .label{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px}
+.section-header h2{font-size:2.4rem;color:var(--gray-900);margin-bottom:16px}
+.section-dark .section-header h2{color:var(--white)}
+.section-header p{color:var(--gray-600);font-size:1.05rem}
+.section-dark .section-header p{color:rgba(255,255,255,.6)}
+
+/* CATEGORIES GRID */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.cat-card{position:relative;border-radius:var(--radius);overflow:hidden;height:280px;cursor:pointer;transition:var(--transition)}
+.cat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.cat-card-bg{position:absolute;inset:0;transition:var(--transition)}
+.cat-card:hover .cat-card-bg{transform:scale(1.08)}
+.cat-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,46,.9) 0%,rgba(26,26,46,.2) 100%);z-index:1}
+.cat-card-content{position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:2}
+.cat-card-icon{width:48px;height:48px;background:rgba(233,69,96,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.3rem;margin-bottom:12px;backdrop-filter:blur(10px)}
+.cat-card h3{color:var(--white);font-size:1.2rem;margin-bottom:6px}
+.cat-card p{color:rgba(255,255,255,.6);font-size:.85rem}
+
+/* PRODUCT SECTION */
+.product-controls{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:32px}
+.filter-group{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.filter-btn{padding:8px 20px;border-radius:50px;font-size:.85rem;font-weight:500;background:var(--gray-100);color:var(--gray-700);transition:var(--transition);border:1px solid transparent}
+.filter-btn:hover,.filter-btn.active{background:var(--accent);color:var(--white);border-color:var(--accent)}
+.search-box{display:flex;align-items:center;background:var(--white);border:1px solid var(--gray-300);border-radius:50px;padding:0 16px;transition:var(--transition);min-width:280px}
+.search-box:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(233,69,96,.1)}
+.search-box input{border:none;outline:none;padding:10px 8px;width:100%;font-size:.9rem;background:transparent}
+.search-box i{color:var(--gray-500)}
+
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.product-card{background:var(--white);border-radius:var(--radius);overflow:hidden;transition:var(--transition);border:1px solid var(--gray-200)}
+.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
+.product-img{height:200px;position:relative;overflow:hidden}
+.product-img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:2.5rem;color:rgba(255,255,255,.6)}
+.product-img-placeholder span{font-size:.75rem;margin-top:8px;font-weight:500}
+.product-badges{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:6px;z-index:2}
+.badge{padding:4px 10px;border-radius:50px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.badge-premium{background:linear-gradient(135deg,var(--gold),#c9952e);color:var(--white)}
+.badge-primera{background:#3498db;color:var(--white)}
+.badge-oferta{background:var(--success);color:var(--white)}
+.badge-extra{background:linear-gradient(135deg,#8e44ad,#e74c3c);color:var(--white)}
+.badge-new{background:var(--accent);color:var(--white)}
+.product-info{padding:20px}
+.product-cat{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:600;margin-bottom:6px}
+.product-name{font-family:var(--font-heading);font-size:1rem;font-weight:600;color:var(--gray-900);margin-bottom:8px;line-height:1.4}
+.product-meta{display:flex;gap:16px;margin-bottom:12px;font-size:.82rem;color:var(--gray-500)}
+.product-meta i{margin-right:4px;color:var(--gray-400)}
+.product-price-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.product-price{font-family:var(--font-heading);font-size:1.3rem;font-weight:700;color:var(--primary)}
+.product-price small{font-size:.75rem;color:var(--gray-500);font-weight:400}
+.product-per-kg{font-size:.78rem;color:var(--gray-500)}
+.product-actions{display:flex;gap:8px}
+.product-actions .btn{flex:1;justify-content:center;padding:10px 16px;font-size:.82rem;border-radius:var(--radius-sm)}
+.btn-add-cart{background:var(--gray-100);color:var(--gray-700)}
+.btn-add-cart:hover{background:var(--primary);color:var(--white)}
+.load-more-wrap{text-align:center;margin-top:48px}
+
+/* QUALITY TIERS */
+.tiers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.tier-card{background:var(--white);border-radius:var(--radius);padding:32px;text-align:center;border:2px solid var(--gray-200);transition:var(--transition);position:relative;overflow:hidden}
+.tier-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow)}
+.tier-card.featured{border-color:var(--gold);background:linear-gradient(135deg,rgba(212,168,83,.05),rgba(233,69,96,.05))}
+.tier-stars{font-size:1.5rem;margin-bottom:16px;color:var(--gold)}
+.tier-card h3{font-size:1.2rem;margin-bottom:8px;color:var(--primary)}
+.tier-card p{font-size:.9rem;color:var(--gray-600);line-height:1.6}
+
+/* HOW IT WORKS */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.step-card{text-align:center;padding:32px 20px}
+.step-num{width:56px;height:56px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-family:var(--font-heading);font-weight:800;font-size:1.3rem}
+.step-card h3{font-size:1.1rem;margin-bottom:10px}
+.section-dark .step-card p{color:rgba(255,255,255,.6);font-size:.9rem}
+
+/* TESTIMONIALS */
+.testimonials-slider{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+.testimonial-card{background:var(--white);border-radius:var(--radius);padding:32px;border:1px solid var(--gray-200);transition:var(--transition)}
+.testimonial-card:hover{box-shadow:var(--shadow);border-color:transparent}
+.testimonial-stars{color:var(--gold);margin-bottom:16px;font-size:.95rem}
+.testimonial-text{font-size:.95rem;color:var(--gray-700);line-height:1.7;margin-bottom:20px;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.testimonial-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--gold));display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:1rem}
+.testimonial-info h4{font-size:.95rem;color:var(--gray-900)}
+.testimonial-info p{font-size:.8rem;color:var(--gray-500)}
+
+/* FAQ */
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border:1px solid var(--gray-200);border-radius:var(--radius-sm);margin-bottom:12px;overflow:hidden;transition:var(--transition)}
+.faq-item.active{border-color:var(--accent);box-shadow:0 2px 12px rgba(233,69,96,.1)}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-weight:600;font-size:.95rem;color:var(--gray-800);background:var(--white);transition:var(--transition)}
+.faq-question:hover{color:var(--accent)}
+.faq-question i{transition:transform .3s ease;color:var(--gray-400)}
+.faq-item.active .faq-question i{transform:rotate(180deg);color:var(--accent)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;background:var(--gray-50)}
+.faq-answer-inner{padding:0 24px 20px;font-size:.9rem;color:var(--gray-600);line-height:1.7}
+.faq-item.active .faq-answer{max-height:300px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-img{border-radius:var(--radius-lg);overflow:hidden;height:420px}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-content h2{font-size:2rem;margin-bottom:20px;color:var(--gray-900)}
+.about-content p{color:var(--gray-600);margin-bottom:16px;line-height:1.7}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.about-feature{display:flex;align-items:start;gap:12px}
+.about-feature i{color:var(--accent);font-size:1.2rem;margin-top:3px}
+.about-feature span{font-size:.9rem;color:var(--gray-700);font-weight:500}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 50%,var(--accent) 150%);padding:80px 0;text-align:center}
+.cta h2{font-size:2.4rem;color:var(--white);margin-bottom:16px}
+.cta p{color:rgba(255,255,255,.7);font-size:1.1rem;margin-bottom:36px;max-width:550px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+.footer{background:var(--gray-900);color:rgba(255,255,255,.6);padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand p{margin-top:16px;font-size:.9rem;line-height:1.7}
+.footer-brand .social-links{display:flex;gap:12px;margin-top:20px}
+.footer-brand .social-links a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);transition:var(--transition)}
+.footer-brand .social-links a:hover{background:var(--accent);color:var(--white)}
+.footer h4{color:var(--white);font-size:1rem;margin-bottom:20px;font-family:var(--font-heading)}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:10px}
+.footer-links a{font-size:.88rem;transition:var(--transition)}
+.footer-links a:hover{color:var(--white);padding-left:4px}
+.footer-links i{margin-right:6px;width:16px;font-size:.8rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.82rem}
+.footer-bottom a{color:var(--gold);transition:var(--transition)}
+.footer-bottom a:hover{color:var(--white)}
+
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:60px;height:60px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.8rem;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:var(--transition);animation:pulse 2s infinite}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,.5)}
+
+/* CART DRAWER */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2000;opacity:0;visibility:hidden;transition:var(--transition)}
+.cart-overlay.open{opacity:1;visibility:visible}
+.cart-drawer{position:fixed;top:0;right:-420px;width:400px;max-width:90vw;height:100vh;background:var(--white);z-index:2001;transition:transform .4s ease;transform:translateX(0);box-shadow:var(--shadow-lg);display:flex;flex-direction:column}
+.cart-drawer.open{right:0;transform:translateX(0)}
+.cart-overlay.open+.cart-drawer,.cart-overlay.open~.cart-drawer{right:0}
+.cart-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--gray-200)}
+.cart-header h3{font-size:1.2rem}
+.cart-close{background:none;font-size:1.3rem;color:var(--gray-500);transition:var(--transition)}
+.cart-close:hover{color:var(--gray-900)}
+.cart-body{flex:1;overflow-y:auto;padding:20px 24px}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--gray-400)}
+.cart-empty i{font-size:3rem;margin-bottom:16px;display:block}
+.cart-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--gray-100)}
+.cart-item-img{width:64px;height:64px;border-radius:var(--radius-sm);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:1.3rem}
+.cart-item-info{flex:1}
+.cart-item-name{font-weight:600;font-size:.9rem;margin-bottom:4px}
+.cart-item-price{font-size:.85rem;color:var(--accent);font-weight:600}
+.cart-item-remove{background:none;color:var(--gray-400);font-size:.9rem;transition:var(--transition)}
+.cart-item-remove:hover{color:var(--accent)}
+.cart-footer{padding:20px 24px;border-top:1px solid var(--gray-200)}
+.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.cart-total span:first-child{font-weight:600;font-size:1rem}
+.cart-total span:last-child{font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--accent)}
+.cart-footer .btn{width:100%;justify-content:center;font-size:1rem;padding:14px}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:3000;opacity:0;visibility:hidden;transition:var(--transition);display:flex;align-items:center;justify-content:center}
+.modal-overlay.open{opacity:1;visibility:visible}
+.modal{background:var(--white);border-radius:var(--radius-lg);max-width:800px;width:90vw;max-height:85vh;overflow-y:auto;padding:40px;position:relative;transform:scale(.9);transition:var(--transition)}
+.modal-overlay.open .modal{transform:scale(1)}
+.modal-close{position:absolute;top:16px;right:20px;background:none;font-size:1.5rem;color:var(--gray-400);transition:var(--transition)}
+.modal-close:hover{color:var(--gray-900)}
+.modal h2{font-size:1.6rem;margin-bottom:24px;color:var(--primary)}
+.modal h3{font-size:1.1rem;margin:20px 0 10px;color:var(--gray-800)}
+.modal p,.modal li{font-size:.9rem;color:var(--gray-600);line-height:1.7}
+.modal ul{padding-left:20px;margin-bottom:12px}
+.modal li{margin-bottom:6px}
+
+/* MOBILE NAV */
+.mobile-nav{position:fixed;inset:0;background:var(--white);z-index:1500;transform:translateX(100%);transition:transform .4s ease;padding:80px 32px 32px;display:flex;flex-direction:column;gap:4px}
+.mobile-nav.open{transform:translateX(0)}
+.mobile-nav a{font-size:1.2rem;font-weight:600;color:var(--gray-800);padding:16px 0;border-bottom:1px solid var(--gray-100);display:block;transition:var(--transition)}
+.mobile-nav a:hover{color:var(--accent);padding-left:8px}
+.mobile-nav-close{position:absolute;top:20px;right:20px;background:none;font-size:1.5rem;color:var(--gray-500)}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:100px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;z-index:998;opacity:0;visibility:hidden;transition:var(--transition);font-size:.9rem}
+.back-to-top.visible{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--accent);transform:translateY(-3px)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+.footer-grid{grid-template-columns:1fr 1fr}
+.about-grid{grid-template-columns:1fr}
+.about-img{height:300px}
+}
+@media(max-width:768px){
+.nav-links{display:none}
+.mobile-toggle{display:block}
+.hero h1{font-size:2.2rem}
+.hero-stats{gap:24px}
+.hero-stat .num{font-size:1.5rem}
+.section{padding:56px 0}
+.section-header h2{font-size:1.8rem}
+.products-grid{grid-template-columns:1fr 1fr}
+.testimonials-slider{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+.product-controls{flex-direction:column;align-items:stretch}
+.search-box{min-width:unset}
+.filter-group{overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px}
+.filter-btn{white-space:nowrap;flex-shrink:0}
+.cat-grid{grid-template-columns:1fr 1fr}
+.cta h2{font-size:1.8rem}
+}
+@media(max-width:480px){
+.products-grid{grid-template-columns:1fr}
+.cat-grid{grid-template-columns:1fr}
+.hero-btns{flex-direction:column}
+.hero-stats{flex-direction:column;gap:16px}
+.tiers-grid{grid-template-columns:1fr}
+.steps-grid{grid-template-columns:1fr}
+.about-features{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+<div class="container">
+<div><i class="fas fa-truck"></i> Envios a todo Chile | 5-15 dias habiles</div>
+<div>
+<a href="tel:+56900000000"><i class="fas fa-phone"></i> +56 9 XXXX XXXX</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="mailto:ventas@importadoramaully.cl"><i class="fas fa-envelope"></i> ventas@importadoramaully.cl</a>
+</div>
+</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+<div class="container">
+<a href="#" class="logo">
+<div class="logo-icon">M</div>
+<div class="logo-text">Importadora <span>Maully</span></div>
+</a>
+<ul class="nav-links">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#categorias">Categorias</a></li>
+<li><a href="#productos">Productos</a></li>
+<li><a href="#calidad">Calidad</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+<div class="nav-actions">
+<button class="cart-btn" id="cartToggle" aria-label="Ver carrito">
+<i class="fas fa-shopping-bag"></i>
+<span class="cart-badge" id="cartBadge">0</span>
+</button>
+<button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+</div>
+</div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+<button class="mobile-nav-close" id="mobileClose"><i class="fas fa-times"></i></button>
+<a href="#inicio" onclick="closeMobileNav()">Inicio</a>
+<a href="#categorias" onclick="closeMobileNav()">Categorias</a>
+<a href="#productos" onclick="closeMobileNav()">Productos</a>
+<a href="#calidad" onclick="closeMobileNav()">Calidad</a>
+<a href="#nosotros" onclick="closeMobileNav()">Nosotros</a>
+<a href="#faq" onclick="closeMobileNav()">FAQ</a>
+<a href="#contacto" onclick="closeMobileNav()">Contacto</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+<div class="hero-bg"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&q=80" alt="Warehouse" loading="eager"></div>
+<div class="hero-overlay"></div>
+<div class="container">
+<div class="hero-content">
+<div class="hero-badge"><i class="fas fa-star"></i> Importadora Mayorista #1 en Chile</div>
+<h1>Ropa Americana y Europea <span>Importada al Por Mayor</span></h1>
+<p>Seleccion exclusiva de prendas importadas de primera calidad. Fardos, packs y calugas con calidad garantizada para tu negocio. Precios mayoristas directos.</p>
+<div class="hero-btns">
+<a href="#productos" class="btn btn-primary"><i class="fas fa-box-open"></i> Ver Catalogo</a>
+<a href="https://wa.me/56900000000?text=Hola!%20Me%20interesa%20conocer%20sus%20productos%20al%20por%20mayor" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Cotizar Ahora</a>
+</div>
+<div class="hero-stats">
+<div class="hero-stat"><div class="num">8+</div><div class="label">Anos de Experiencia</div></div>
+<div class="hero-stat"><div class="num">2,500+</div><div class="label">Clientes Satisfechos</div></div>
+<div class="hero-stat"><div class="num">50K+</div><div class="label">Prendas Vendidas</div></div>
+<div class="hero-stat"><div class="num">15+</div><div class="label">Categorias</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+<div class="container">
+<div class="trust-item"><i class="fas fa-shield-halved"></i> Calidad Garantizada</div>
+<div class="trust-item"><i class="fas fa-truck-fast"></i> Envio a Todo Chile</div>
+<div class="trust-item"><i class="fas fa-tags"></i> Precios Mayoristas</div>
+<div class="trust-item"><i class="fas fa-hand-holding-dollar"></i> Transferencia & MercadoPago</div>
+<div class="trust-item"><i class="fas fa-certificate"></i> Prendas Importadas Premium</div>
+</div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section" id="categorias">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<div class="label"><i class="fas fa-th-large"></i> Nuestras Categorias</div>
+<h2>Seleccion Exclusiva de Prendas Importadas</h2>
+<p>Descubre nuestra amplia variedad de ropa americana y europea importada, seleccionada cuidadosamente para tu negocio</p>
+</div>
+<div class="cat-grid" id="catGrid"></div>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section section-gray" id="productos">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<div class="label"><i class="fas fa-box-open"></i> Catalogo Completo</div>
+<h2>Nuestros Productos</h2>
+<p>Fardos, packs y calugas con la mejor seleccion de ropa importada. Todos los precios incluyen IVA.</p>
+</div>
+<div class="product-controls">
+<div class="filter-group" id="filterGroup">
+<button class="filter-btn active" data-filter="all">Todos</button>
+</div>
+<div class="search-box">
+<i class="fas fa-search"></i>
+<input type="text" id="searchInput" placeholder="Buscar productos...">
+</div>
+</div>
+<div class="products-grid" id="productsGrid"></div>
+<div class="load-more-wrap" id="loadMoreWrap">
+<button class="btn btn-primary" id="loadMoreBtn"><i class="fas fa-plus"></i> Ver Mas Productos</button>
+</div>
+</div>
+</section>
+
+<!-- QUALITY TIERS -->
+<section class="section" id="calidad">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<div class="label"><i class="fas fa-award"></i> Niveles de Calidad</div>
+<h2>Garantia de Calidad en Cada Paquete</h2>
+<p>Cada lote es revisado y clasificado para ofrecer la mejor relacion calidad-precio del mercado</p>
+</div>
+<div class="tiers-grid">
+<div class="tier-card animate-on-scroll">
+<div class="tier-stars"><i class="fas fa-star"></i></div>
+<h3>OFERTA</h3>
+<p>Buena calidad a precio economico. Ideal para ferias, tiendas de barrio y emprendedores que inician.</p>
+</div>
+<div class="tier-card animate-on-scroll">
+<div class="tier-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<h3>PRIMERA</h3>
+<p>Excelente calidad con marcas reconocidas. El equilibrio perfecto entre calidad y precio para tiendas establecidas.</p>
+</div>
+<div class="tier-card featured animate-on-scroll">
+<div class="tier-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<h3>PREMIUM</h3>
+<p>Calidad superior con marcas top en estado impecable. Para boutiques y tiendas de alto nivel.</p>
+</div>
+<div class="tier-card animate-on-scroll">
+<div class="tier-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<h3>EXTRA LINDA</h3>
+<p>Lo mejor de lo mejor. Prendas seleccionadas a mano, marcas premium, estado como nuevo. Para las tiendas mas exclusivas.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-dark">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<div class="label" style="color:var(--gold)"><i class="fas fa-clipboard-list"></i> Como Comprar</div>
+<h2>Facil, Rapido y Seguro</h2>
+<p>Comprar ropa importada al por mayor nunca fue tan simple</p>
+</div>
+<div class="steps-grid">
+<div class="step-card animate-on-scroll">
+<div class="step-num">1</div>
+<h3 style="color:var(--white)">Elige tus Productos</h3>
+<p>Navega nuestro catalogo y selecciona los fardos, packs o calugas que necesitas.</p>
+</div>
+<div class="step-card animate-on-scroll">
+<div class="step-num">2</div>
+<h3 style="color:var(--white)">Cotiza por WhatsApp</h3>
+<p>Envanos tu pedido por WhatsApp. Te confirmamos disponibilidad y precio final.</p>
+</div>
+<div class="step-card animate-on-scroll">
+<div class="step-num">3</div>
+<h3 style="color:var(--white)">Paga con Transferencia</h3>
+<p>Realiza tu pago por transferencia bancaria o MercadoPago. Facil y seguro.</p>
+</div>
+<div class="step-card animate-on-scroll">
+<div class="step-num">4</div>
+<h3 style="color:var(--white)">Recibe en tu Puerta</h3>
+<p>Enviamos a todo Chile por courier. Recibes en 5-15 dias habiles.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="nosotros">
+<div class="container">
+<div class="about-grid">
+<div class="about-img animate-on-scroll">
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80" alt="Importadora Maully" loading="lazy">
+</div>
+<div class="about-content animate-on-scroll">
+<div class="label"><i class="fas fa-building"></i> Sobre Nosotros</div>
+<h2>Importadora Maully - Tu Socio Mayorista de Confianza</h2>
+<p>Somos una empresa chilena dedicada a la importacion y distribucion de ropa americana y europea premium al por mayor. Con mas de 8 anos de experiencia, nos hemos consolidado como referentes en el mercado de prendas importadas de calidad.</p>
+<p>Trabajamos directamente con proveedores internacionales para ofrecerte la mejor seleccion exclusiva de prendas importadas, con calidad garantizada y precios competitivos para hacer crecer tu negocio.</p>
+<div class="about-features">
+<div class="about-feature"><i class="fas fa-check-circle"></i><span>Importacion directa</span></div>
+<div class="about-feature"><i class="fas fa-check-circle"></i><span>Calidad garantizada</span></div>
+<div class="about-feature"><i class="fas fa-check-circle"></i><span>Envio a todo Chile</span></div>
+<div class="about-feature"><i class="fas fa-check-circle"></i><span>Atencion personalizada</span></div>
+<div class="about-feature"><i class="fas fa-check-circle"></i><span>Precios mayoristas</span></div>
+<div class="about-feature"><i class="fas fa-check-circle"></i><span>Seleccion premium</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-gray">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<div class="label"><i class="fas fa-comment-dots"></i> Testimonios</div>
+<h2>Lo Que Dicen Nuestros Clientes</h2>
+<p>Miles de emprendedores y tiendas confian en Importadora Maully</p>
+</div>
+<div class="testimonials-slider">
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p class="testimonial-text">"Llevo 3 anos comprando fardos con Importadora Maully y la calidad siempre es excelente. Las prendas importadas llegan en muy buen estado y mis clientes quedan felices."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">CL</div>
+<div class="testimonial-info"><h4>Carolina Lopez</h4><p>Tienda en Temuco</p></div>
+</div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p class="testimonial-text">"Los packs Premium son increibles. La seleccion de marcas es muy buena y el precio por kilo es el mejor que he encontrado. Totalmente recomendado para emprendedores."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">MR</div>
+<div class="testimonial-info"><h4>Miguel Rodriguez</h4><p>Feria en Santiago</p></div>
+</div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p class="testimonial-text">"Excelente atencion al cliente y envio rapido a Antofagasta. Los fardos de chaquetas outdoor son espectaculares, se venden muy rapido. Seguire comprando."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">PV</div>
+<div class="testimonial-info"><h4>Patricia Vera</h4><p>Boutique en Antofagasta</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<div class="label"><i class="fas fa-circle-question"></i> Preguntas Frecuentes</div>
+<h2>Resolvemos Tus Dudas</h2>
+</div>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-question">Cuales son los niveles de calidad? <i class="fas fa-chevron-down"></i></div>
+<div class="faq-answer"><div class="faq-answer-inner">Manejamos 4 niveles: <strong>Oferta</strong> (buena calidad, precio economico), <strong>Primera</strong> (excelente calidad, marcas reconocidas), <strong>Premium</strong> (calidad superior, marcas top, estado impecable) y <strong>Extra Linda</strong> (lo mejor, prendas seleccionadas a mano). Cada nivel esta pensado para distintos tipos de negocio y presupuesto.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Que es la "merma"? <i class="fas fa-chevron-down"></i></div>
+<div class="faq-answer"><div class="faq-answer-inner">La merma es un pequeno porcentaje de prendas que pueden presentar detalles menores (manchas, botones faltantes, costuras sueltas). Es algo normal en la compra mayorista. Nuestros niveles Premium y Extra Linda tienen merma minima o nula. Solo se aceptan devoluciones si la merma supera el 20% del lote.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Cual es el pedido minimo? <i class="fas fa-chevron-down"></i></div>
+<div class="faq-answer"><div class="faq-answer-inner">El pedido minimo es de 1 pack o caluga. No necesitas comprar grandes cantidades para empezar. Tenemos opciones desde 5kg (calugas) hasta fardos de 25kg o mas. Ideal para probar calidad antes de hacer pedidos mayores.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Hacen envios a regiones? <i class="fas fa-chevron-down"></i></div>
+<div class="faq-answer"><div class="faq-answer-inner">Si, enviamos a todo Chile mediante courier. El tiempo de entrega es de 5 a 15 dias habiles dependiendo de la zona. El costo de envio se calcula segun el peso y destino. Tambien puedes retirar en nuestro local en Santiago.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Puedo ver la mercaderia antes de comprar? <i class="fas fa-chevron-down"></i></div>
+<div class="faq-answer"><div class="faq-answer-inner">Si, puedes visitar nuestro local en Santiago previa coordinacion por WhatsApp. Ahi podras ver los productos disponibles, revisar calidad y elegir tus packs personalmente. Coordinamos hora para brindarte atencion personalizada.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Que medios de pago aceptan? <i class="fas fa-chevron-down"></i></div>
+<div class="faq-answer"><div class="faq-answer-inner">Aceptamos transferencia bancaria y MercadoPago. Todos nuestros precios incluyen IVA. Una vez confirmado el pago, procesamos tu pedido y lo enviamos en un plazo de 1-3 dias habiles.</div></div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Que pasa si la mercaderia llega con problemas? <i class="fas fa-chevron-down"></i></div>
+<div class="faq-answer"><div class="faq-answer-inner">Si la merma o defectos superan el 20% del lote, puedes solicitar una devolucion o cambio dentro de las 48 horas siguientes a la recepcion. Debes enviar fotos y detalle de las prendas afectadas por WhatsApp para su revision. Trabajamos para tu satisfaccion.</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contacto">
+<div class="container">
+<h2 class="animate-on-scroll">Empieza a Vender Ropa Importada Hoy</h2>
+<p class="animate-on-scroll">Contactanos por WhatsApp y recibe atencion personalizada. Armamos tu pedido a medida con la mejor seleccion de prendas importadas.</p>
+<div class="cta-btns animate-on-scroll">
+<a href="https://wa.me/56900000000?text=Hola!%20Quiero%20cotizar%20ropa%20al%20por%20mayor" target="_blank" class="btn btn-wa" style="font-size:1.05rem;padding:16px 40px"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</a>
+<a href="mailto:ventas@importadoramaully.cl" class="btn btn-outline" style="border-color:rgba(255,255,255,.4)"><i class="fas fa-envelope"></i> Enviar Email</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a href="#" class="logo">
+<div class="logo-icon">M</div>
+<div class="logo-text" style="color:#fff">Importadora <span>Maully</span></div>
+</a>
+<p>Importadora y distribuidora de ropa americana y europea premium al por mayor. Seleccion exclusiva de prendas importadas con calidad garantizada. Envios a todo Chile.</p>
+<div class="social-links">
+<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+<a href="https://wa.me/56900000000" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+<div>
+<h4>Categorias</h4>
+<ul class="footer-links">
+<li><a href="#productos"><i class="fas fa-angle-right"></i> Chaquetas y Parcas</a></li>
+<li><a href="#productos"><i class="fas fa-angle-right"></i> Jeans</a></li>
+<li><a href="#productos"><i class="fas fa-angle-right"></i> Poleras y Blusas</a></li>
+<li><a href="#productos"><i class="fas fa-angle-right"></i> Ropa Deportiva</a></li>
+<li><a href="#productos"><i class="fas fa-angle-right"></i> Ropa Ski</a></li>
+<li><a href="#productos"><i class="fas fa-angle-right"></i> Calzado</a></li>
+</ul>
+</div>
+<div>
+<h4>Informacion</h4>
+<ul class="footer-links">
+<li><a href="#nosotros"><i class="fas fa-angle-right"></i> Sobre Nosotros</a></li>
+<li><a href="#calidad"><i class="fas fa-angle-right"></i> Niveles de Calidad</a></li>
+<li><a href="#faq"><i class="fas fa-angle-right"></i> Preguntas Frecuentes</a></li>
+<li><a href="#" onclick="openTerms();return false"><i class="fas fa-angle-right"></i> Terminos y Condiciones</a></li>
+<li><a href="#" onclick="openTerms();return false"><i class="fas fa-angle-right"></i> Politica de Devoluciones</a></li>
+</ul>
+</div>
+<div>
+<h4>Contacto</h4>
+<ul class="footer-links">
+<li><a href="https://wa.me/56900000000"><i class="fab fa-whatsapp"></i> +56 9 XXXX XXXX</a></li>
+<li><a href="mailto:ventas@importadoramaully.cl"><i class="fas fa-envelope"></i> ventas@importadoramaully.cl</a></li>
+<li><a href="#"><i class="fas fa-map-marker-alt"></i> Santiago, Chile</a></li>
+<li><a href="#"><i class="fas fa-clock"></i> Lun-Vie 9:00 - 18:00</a></li>
+<li><a href="https://importadoramaully.cl"><i class="fas fa-globe"></i> importadoramaully.cl</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2024 Importadora Maully. Todos los derechos reservados.</p>
+<p>Desarrollado por <a href="#">Kreathur Agency</a> | <a href="#" onclick="openTerms();return false">Terminos</a></p>
+</div>
+</div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/56900000000?text=Hola!%20Me%20interesan%20sus%20productos%20al%20por%20mayor" target="_blank" class="wa-float" aria-label="WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></button>
+
+<!-- CART OVERLAY & DRAWER -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+<div class="cart-header">
+<h3><i class="fas fa-shopping-bag"></i> Tu Pedido</h3>
+<button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+</div>
+<div class="cart-body" id="cartBody">
+<div class="cart-empty"><i class="fas fa-box-open"></i><p>Tu carrito esta vacio</p><p style="font-size:.82rem;margin-top:8px">Agrega productos para cotizar por WhatsApp</p></div>
+</div>
+<div class="cart-footer">
+<div class="cart-total">
+<span>Total Estimado:</span>
+<span id="cartTotal">$0</span>
+</div>
+<button class="btn btn-wa" id="cartWhatsApp" style="border-radius:50px"><i class="fab fa-whatsapp"></i> Enviar Pedido por WhatsApp</button>
+</div>
+</div>
+
+<!-- TERMS MODAL -->
+<div class="modal-overlay" id="termsModal">
+<div class="modal">
+<button class="modal-close" onclick="closeTerms()"><i class="fas fa-times"></i></button>
+<h2>Terminos y Condiciones</h2>
+<p><strong>Importadora Maully</strong> - importadoramaully.cl</p>
+<h3>1. Informacion General</h3>
+<p>El presente sitio web importadoramaully.cl es operado por Importadora Maully, empresa dedicada a la importacion y distribucion mayorista de ropa americana y europea importada, con domicilio en Santiago, Chile.</p>
+<h3>2. Productos y Precios</h3>
+<p>Todos los productos ofrecidos son prendas importadas de origen americano y europeo, clasificadas por niveles de calidad (Oferta, Primera, Premium, Extra Linda). Los precios publicados estan en pesos chilenos (CLP) e incluyen IVA. Los precios pueden variar sin previo aviso segun disponibilidad de stock.</p>
+<h3>3. Proceso de Compra</h3>
+<p>Las compras se realizan a traves de cotizacion por WhatsApp o correo electronico. El pedido se confirma una vez recibido el pago completo mediante transferencia bancaria o MercadoPago.</p>
+<h3>4. Envios y Entregas</h3>
+<p>Los envios se realizan a todo Chile mediante servicio de courier. El plazo de entrega estimado es de 5 a 15 dias habiles, dependiendo de la ubicacion del destinatario. Los costos de envio se calculan segun peso y destino, y son informados al momento de la cotizacion. Tambien se ofrece retiro en local previa coordinacion.</p>
+<h3>5. Politica de Devoluciones</h3>
+<p>Debido a la naturaleza mayorista de nuestros productos, las devoluciones solo se aceptan cuando los defectos o merma superan el 20% del lote adquirido. El reclamo debe realizarse dentro de las 48 horas siguientes a la recepcion, enviando evidencia fotografica por WhatsApp. Se excluye el derecho de retracto segun lo establecido en la Ley 19.496 de Proteccion al Consumidor de Chile, articulo 3 bis letra b.</p>
+<h3>6. Merma</h3>
+<p>En la comercializacion mayorista de prendas importadas, es normal un pequeno porcentaje de prendas con detalles menores (manchas, botones faltantes, pequenas imperfecciones). Esta merma es inherente al formato de venta por peso y esta contemplada en los precios ofrecidos. Los niveles Premium y Extra Linda presentan merma minima.</p>
+<h3>7. Garantia</h3>
+<p>Importadora Maully garantiza que cada lote corresponde al nivel de calidad y categoria descritos. No se garantizan marcas, tallas o modelos especificos dentro de un fardo o pack, salvo que se indique expresamente.</p>
+<h3>8. Privacidad y Datos Personales</h3>
+<p>Importadora Maully respeta la privacidad de sus clientes. Los datos personales proporcionados seran utilizados exclusivamente para procesar pedidos y mejorar nuestro servicio. No compartimos informacion con terceros.</p>
+<h3>9. Propiedad Intelectual</h3>
+<p>Todo el contenido de importadoramaully.cl, incluyendo textos, imagenes, logotipos y diseno, es propiedad de Importadora Maully y esta protegido por las leyes de propiedad intelectual vigentes.</p>
+<h3>10. Modificaciones</h3>
+<p>Importadora Maully se reserva el derecho de modificar estos terminos y condiciones en cualquier momento, sin previo aviso. Las modificaciones seran efectivas desde su publicacion en el sitio web.</p>
+<p style="margin-top:20px"><em>Ultima actualizacion: Marzo 2026 | Santiago, Chile</em></p>
+</div>
+</div>
+
+<script>
+// ============ DATA ============
+const WA_NUMBER = '56900000000';
+const categories = [
+{id:'chaquetas',name:'Chaquetas y Parcas',icon:'fa-vest-patches',range:'$45,000 - $250,000',gradient:'linear-gradient(135deg,#2c3e50,#3498db)',img:'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80'},
+{id:'jeans',name:'Jeans',icon:'fa-user',range:'$40,000 - $180,000',gradient:'linear-gradient(135deg,#34495e,#2980b9)',img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80'},
+{id:'poleras',name:'Poleras y Blusas',icon:'fa-shirt',range:'$35,000 - $150,000',gradient:'linear-gradient(135deg,#8e44ad,#3498db)',img:'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80'},
+{id:'polerones',name:'Polerones y Polar',icon:'fa-mitten',range:'$45,000 - $200,000',gradient:'linear-gradient(135deg,#2c3e50,#e74c3c)',img:'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80'},
+{id:'deportiva',name:'Ropa Deportiva',icon:'fa-person-running',range:'$50,000 - $250,000',gradient:'linear-gradient(135deg,#e74c3c,#f39c12)',img:'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80'},
+{id:'vestidos',name:'Vestidos y Faldas',icon:'fa-wand-magic-sparkles',range:'$40,000 - $160,000',gradient:'linear-gradient(135deg,#e91e63,#9c27b0)',img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=80'},
+{id:'ninos',name:'Ropa Ninos',icon:'fa-child-reaching',range:'$35,000 - $150,000',gradient:'linear-gradient(135deg,#00bcd4,#4caf50)',img:'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600&q=80'},
+{id:'ski',name:'Ropa Ski',icon:'fa-person-skiing',range:'$60,000 - $300,000',gradient:'linear-gradient(135deg,#0d47a1,#42a5f5)',img:'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80'},
+{id:'calzado',name:'Calzado',icon:'fa-shoe-prints',range:'$50,000 - $250,000',gradient:'linear-gradient(135deg,#5d4037,#8d6e63)',img:'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80'},
+{id:'hogar',name:'Hogar',icon:'fa-house',range:'$35,000 - $120,000',gradient:'linear-gradient(135deg,#607d8b,#90a4ae)',img:'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80'},
+{id:'sweaters',name:'Sweaters',icon:'fa-temperature-low',range:'$40,000 - $170,000',gradient:'linear-gradient(135deg,#795548,#d7ccc8)',img:'https://images.unsplash.com/photo-1434389677669-e08b4cda3a5b?w=600&q=80'},
+{id:'pantalones',name:'Pantalones',icon:'fa-scissors',range:'$40,000 - $160,000',gradient:'linear-gradient(135deg,#455a64,#78909c)',img:'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80'},
+{id:'plussize',name:'Plus Size',icon:'fa-expand',range:'$45,000 - $180,000',gradient:'linear-gradient(135deg,#ad1457,#e91e63)',img:'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&q=80'},
+];
+
+const products = [
+// Chaquetas
+{id:1,cat:'chaquetas',name:'Pack Chaquetas Hombre Premium 10kg',price:89000,weight:'10kg',tier:'premium',badge:'premium',isNew:true},
+{id:2,cat:'chaquetas',name:'Pack Chaquetas Mujer Premium 10kg',price:89000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:3,cat:'chaquetas',name:'Fardo Parcas Invierno Mix 25kg',price:185000,weight:'25kg',tier:'primera',badge:'primera'},
+{id:4,cat:'chaquetas',name:'Pack Cortavientos Deportivos 10kg',price:75000,weight:'10kg',tier:'primera',badge:'primera'},
+{id:5,cat:'chaquetas',name:'Fardo Chaquetas Outdoor Premium 25kg',price:210000,weight:'25kg',tier:'premium',badge:'premium',isNew:true},
+{id:6,cat:'chaquetas',name:'Pack Columbia/North Face Mix 10kg',price:120000,weight:'10kg',tier:'extra',badge:'extra'},
+{id:7,cat:'chaquetas',name:'Saco Parcas Largas Mujer 15kg',price:145000,weight:'15kg',tier:'premium',badge:'premium'},
+{id:8,cat:'chaquetas',name:'Pack Chaquetas Nino 10kg',price:65000,weight:'10kg',tier:'primera',badge:'primera'},
+// Jeans
+{id:9,cat:'jeans',name:'Pack Jeans Hombre Premium 10kg',price:85000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:10,cat:'jeans',name:'Pack Jeans Mujer Premium 10kg',price:85000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:11,cat:'jeans',name:'Fardo Jeans Mix Primera 25kg',price:165000,weight:'25kg',tier:'primera',badge:'primera'},
+{id:12,cat:'jeans',name:'Pack Jeans Marca (Levis, Wrangler) 10kg',price:110000,weight:'10kg',tier:'extra',badge:'extra',isNew:true},
+{id:13,cat:'jeans',name:'Caluga Jeans Oferta 5kg',price:35000,weight:'5kg',tier:'oferta',badge:'oferta'},
+// Poleras
+{id:14,cat:'poleras',name:'Pack Poleras Hombre Premium 10kg',price:65000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:15,cat:'poleras',name:'Pack Blusas Mujer Premium 10kg',price:70000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:16,cat:'poleras',name:'Fardo Poleras Mix Primera 25kg',price:130000,weight:'25kg',tier:'primera',badge:'primera'},
+{id:17,cat:'poleras',name:'Pack Poleras Deportivas (Nike, Adidas) 10kg',price:95000,weight:'10kg',tier:'extra',badge:'extra'},
+{id:18,cat:'poleras',name:'Caluga Poleras Oferta 5kg',price:25000,weight:'5kg',tier:'oferta',badge:'oferta'},
+// Polerones
+{id:19,cat:'polerones',name:'Pack Polerones Hombre Premium 10kg',price:85000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:20,cat:'polerones',name:'Pack Polerones Mujer Premium 10kg',price:85000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:21,cat:'polerones',name:'Fardo Polar Outdoor 25kg',price:175000,weight:'25kg',tier:'primera',badge:'primera'},
+{id:22,cat:'polerones',name:'Pack Hoodies Marca 10kg',price:110000,weight:'10kg',tier:'extra',badge:'extra',isNew:true},
+// Deportiva
+{id:23,cat:'deportiva',name:'Fardo Deportivo Mix Nike/Adidas 25kg',price:220000,weight:'25kg',tier:'premium',badge:'premium',isNew:true},
+{id:24,cat:'deportiva',name:'Pack Deportivo Under Armour 10kg',price:130000,weight:'10kg',tier:'extra',badge:'extra'},
+{id:25,cat:'deportiva',name:'Pack Shorts Deportivos 10kg',price:65000,weight:'10kg',tier:'primera',badge:'primera'},
+{id:26,cat:'deportiva',name:'Fardo Outdoor Columbia/TNF 25kg',price:250000,weight:'25kg',tier:'extra',badge:'extra'},
+// Vestidos
+{id:27,cat:'vestidos',name:'Pack Vestidos Mujer Premium 10kg',price:80000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:28,cat:'vestidos',name:'Pack Faldas Mix Primera 10kg',price:65000,weight:'10kg',tier:'primera',badge:'primera'},
+{id:29,cat:'vestidos',name:'Fardo Vestidos Fiesta 25kg',price:160000,weight:'25kg',tier:'premium',badge:'premium'},
+// Ninos
+{id:30,cat:'ninos',name:'Pack Ropa Nino Mix Premium 10kg',price:65000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:31,cat:'ninos',name:'Fardo Ninos Invierno 25kg',price:130000,weight:'25kg',tier:'primera',badge:'primera'},
+{id:32,cat:'ninos',name:'Pack Parcas Nino 10kg',price:75000,weight:'10kg',tier:'primera',badge:'primera'},
+// Ski
+{id:33,cat:'ski',name:'Fardo Ropa Ski Premium 25kg',price:280000,weight:'25kg',tier:'extra',badge:'extra',isNew:true},
+{id:34,cat:'ski',name:'Pack Pantalones Ski 10kg',price:110000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:35,cat:'ski',name:'Pack Chaquetas Ski 10kg',price:130000,weight:'10kg',tier:'premium',badge:'premium'},
+// Calzado
+{id:36,cat:'calzado',name:'Pack Zapatillas Deportivas 12 pares',price:95000,weight:'12 pares',tier:'primera',badge:'primera'},
+{id:37,cat:'calzado',name:'Pack Botas Mujer 10 pares',price:85000,weight:'10 pares',tier:'primera',badge:'primera'},
+{id:38,cat:'calzado',name:'Fardo Calzado Mix 50 pares',price:220000,weight:'50 pares',tier:'premium',badge:'premium'},
+// Hogar
+{id:39,cat:'hogar',name:'Pack Sabanas Import 10kg',price:55000,weight:'10kg',tier:'primera',badge:'primera'},
+{id:40,cat:'hogar',name:'Fardo Toallas Premium 15kg',price:75000,weight:'15kg',tier:'premium',badge:'premium'},
+{id:41,cat:'hogar',name:'Pack Cortinas Mix 10kg',price:65000,weight:'10kg',tier:'primera',badge:'primera'},
+// Sweaters
+{id:42,cat:'sweaters',name:'Pack Sweaters Hombre Premium 10kg',price:75000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:43,cat:'sweaters',name:'Pack Sweaters Mujer Premium 10kg',price:75000,weight:'10kg',tier:'premium',badge:'premium'},
+{id:44,cat:'sweaters',name:'Fardo Sweaters Lana Mix 25kg',price:160000,weight:'25kg',tier:'primera',badge:'primera'},
+// Pantalones
+{id:45,cat:'pantalones',name:'Pack Pantalones Hombre Mix 10kg',price:70000,weight:'10kg',tier:'primera',badge:'primera'},
+{id:46,cat:'pantalones',name:'Pack Pantalones Mujer Mix 10kg',price:70000,weight:'10kg',tier:'primera',badge:'primera'},
+{id:47,cat:'pantalones',name:'Fardo Pantalones Cargo/Outdoor 25kg',price:155000,weight:'25kg',tier:'premium',badge:'premium'},
+// Plus Size
+{id:48,cat:'plussize',name:'Pack Tallas Grandes Mujer 10kg',price:80000,weight:'10kg',tier:'primera',badge:'primera'},
+{id:49,cat:'plussize',name:'Pack Tallas Grandes Hombre 10kg',price:80000,weight:'10kg',tier:'primera',badge:'primera'},
+{id:50,cat:'plussize',name:'Fardo Plus Size Mix 25kg',price:170000,weight:'25kg',tier:'premium',badge:'premium'},
+];
+
+const badgeLabels={premium:'Premium',primera:'Primera',oferta:'Oferta',extra:'Extra Linda'};
+const badgeClasses={premium:'badge-premium',primera:'badge-primera',oferta:'badge-oferta',extra:'badge-extra'};
+
+function getCatInfo(catId){return categories.find(c=>c.id===catId)||{};}
+function formatPrice(n){return '$'+n.toLocaleString('es-CL');}
+function perKg(price,weight){
+  const m=weight.match(/^(\d+)kg$/);
+  if(!m)return '';
+  return formatPrice(Math.round(price/parseInt(m[1])))+'/kg';
+}
+
+// ============ RENDER CATEGORIES ============
+function renderCategories(){
+  const grid=document.getElementById('catGrid');
+  grid.innerHTML=categories.map(c=>`
+    <div class="cat-card animate-on-scroll" onclick="filterByCategory('${c.id}')">
+      <div class="cat-card-bg" style="background:url('${c.img}') center/cover no-repeat, ${c.gradient}"></div>
+      <div class="cat-card-overlay"></div>
+      <div class="cat-card-content">
+        <div class="cat-card-icon"><i class="fas ${c.icon}"></i></div>
+        <h3>${c.name}</h3>
+        <p>${c.range}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============ RENDER PRODUCTS ============
+let currentFilter='all';
+let currentSearch='';
+let visibleCount=12;
+
+function getFilteredProducts(){
+  let list=products;
+  if(currentFilter!=='all')list=list.filter(p=>p.cat===currentFilter);
+  if(currentSearch){
+    const s=currentSearch.toLowerCase();
+    list=list.filter(p=>p.name.toLowerCase().includes(s)||p.cat.toLowerCase().includes(s));
+  }
+  return list;
+}
+
+function renderProducts(){
+  const filtered=getFilteredProducts();
+  const toShow=filtered.slice(0,visibleCount);
+  const grid=document.getElementById('productsGrid');
+  grid.innerHTML=toShow.map(p=>{
+    const cat=getCatInfo(p.cat);
+    const pkg=perKg(p.price,p.weight);
+    return `
+    <div class="product-card animate-on-scroll" data-id="${p.id}">
+      <div class="product-img">
+        <div class="product-img-placeholder" style="background:${cat.gradient}">
+          <i class="fas ${cat.icon}"></i>
+          <span>${cat.name}</span>
+        </div>
+        <div class="product-badges">
+          <span class="badge ${badgeClasses[p.badge]}">${badgeLabels[p.badge]}</span>
+          ${p.isNew?'<span class="badge badge-new">Nuevo</span>':''}
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">${cat.name}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-meta">
+          <span><i class="fas fa-weight-hanging"></i> ${p.weight}</span>
+          <span><i class="fas fa-star"></i> ${badgeLabels[p.badge]}</span>
+        </div>
+        <div class="product-price-row">
+          <div class="product-price">${formatPrice(p.price)} <small>CLP</small></div>
+          ${pkg?`<div class="product-per-kg">${pkg}</div>`:''}
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-add-cart" onclick="addToCart(${p.id})"><i class="fas fa-plus"></i> Agregar</button>
+          <a href="https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hola! Me interesa: '+p.name+' - '+formatPrice(p.price)+'. Tienen disponibilidad?')}" target="_blank" class="btn btn-wa" style="font-size:.82rem"><i class="fab fa-whatsapp"></i> Cotizar</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const wrap=document.getElementById('loadMoreWrap');
+  wrap.style.display=filtered.length>visibleCount?'block':'none';
+
+  setTimeout(()=>{document.querySelectorAll('.products-grid .animate-on-scroll').forEach(el=>{observer.observe(el)})},50);
+}
+
+function renderFilterButtons(){
+  const fg=document.getElementById('filterGroup');
+  fg.innerHTML='<button class="filter-btn active" data-filter="all" onclick="setFilter(\'all\')">Todos</button>';
+  categories.forEach(c=>{
+    fg.innerHTML+=`<button class="filter-btn" data-filter="${c.id}" onclick="setFilter('${c.id}')">${c.name}</button>`;
+  });
+}
+
+function setFilter(f){
+  currentFilter=f;visibleCount=12;
+  document.querySelectorAll('.filter-btn').forEach(b=>{b.classList.toggle('active',b.dataset.filter===f)});
+  renderProducts();
+  document.getElementById('productos').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function filterByCategory(id){setFilter(id);}
+
+document.getElementById('loadMoreBtn').addEventListener('click',()=>{visibleCount+=12;renderProducts();});
+document.getElementById('searchInput').addEventListener('input',e=>{currentSearch=e.target.value;visibleCount=12;renderProducts();});
+
+// ============ CART ============
+let cart=[];
+function updateCartUI(){
+  document.getElementById('cartBadge').textContent=cart.length;
+  const body=document.getElementById('cartBody');
+  if(cart.length===0){
+    body.innerHTML='<div class="cart-empty"><i class="fas fa-box-open"></i><p>Tu carrito esta vacio</p><p style="font-size:.82rem;margin-top:8px">Agrega productos para cotizar por WhatsApp</p></div>';
+  }else{
+    body.innerHTML=cart.map((item,i)=>{
+      const cat=getCatInfo(item.cat);
+      return `<div class="cart-item"><div class="cart-item-img" style="background:${cat.gradient}"><i class="fas ${cat.icon}"></i></div><div class="cart-item-info"><div class="cart-item-name">${item.name}</div><div class="cart-item-price">${formatPrice(item.price)}</div></div><button class="cart-item-remove" onclick="removeFromCart(${i})"><i class="fas fa-trash-alt"></i></button></div>`;
+    }).join('');
+  }
+  const total=cart.reduce((s,i)=>s+i.price,0);
+  document.getElementById('cartTotal').textContent=formatPrice(total);
+}
+function addToCart(id){
+  const p=products.find(x=>x.id===id);
+  if(p){cart.push(p);updateCartUI();openCart();}
+}
+function removeFromCart(i){cart.splice(i,1);updateCartUI();}
+function openCart(){document.getElementById('cartOverlay').classList.add('open');document.getElementById('cartDrawer').classList.add('open');}
+function closeCart(){document.getElementById('cartOverlay').classList.remove('open');document.getElementById('cartDrawer').classList.remove('open');}
+document.getElementById('cartToggle').addEventListener('click',openCart);
+document.getElementById('cartClose').addEventListener('click',closeCart);
+document.getElementById('cartOverlay').addEventListener('click',closeCart);
+document.getElementById('cartWhatsApp').addEventListener('click',()=>{
+  if(cart.length===0)return;
+  let msg='Hola! Me interesan los siguientes productos:\n\n';
+  cart.forEach((p,i)=>{msg+=`${i+1}. ${p.name} - ${formatPrice(p.price)}\n`;});
+  const total=cart.reduce((s,i)=>s+i.price,0);
+  msg+=`\nTotal estimado: ${formatPrice(total)}\n\nTienen disponibilidad?`;
+  window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg),'_blank');
+});
+
+// ============ FAQ ============
+document.querySelectorAll('.faq-question').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const wasActive=item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));
+    if(!wasActive)item.classList.add('active');
+  });
+});
+
+// ============ TERMS MODAL ============
+function openTerms(){document.getElementById('termsModal').classList.add('open');document.body.style.overflow='hidden';}
+function closeTerms(){document.getElementById('termsModal').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('termsModal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeTerms();});
+
+// ============ MOBILE NAV ============
+document.getElementById('mobileToggle').addEventListener('click',()=>{document.getElementById('mobileNav').classList.add('open');});
+document.getElementById('mobileClose').addEventListener('click',()=>{document.getElementById('mobileNav').classList.remove('open');});
+function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}
+
+// ============ SCROLL EFFECTS ============
+const navbar=document.getElementById('navbar');
+const backToTop=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{
+  navbar.classList.toggle('scrolled',window.scrollY>50);
+  backToTop.classList.toggle('visible',window.scrollY>400);
+});
+backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
+
+// ============ INTERSECTION OBSERVER ============
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+function observeAll(){document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));}
+
+// ============ INIT ============
+renderCategories();
+renderFilterButtons();
+renderProducts();
+setTimeout(observeAll,100);
+</script>
+</body>
+</html>

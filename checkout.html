@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Importadora Maully</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="ck-header">
+  <a href="/" class="ck-logo">
+    <div class="ck-logo-icon">M</div>
+    <span>Importadora <strong>Maully</strong></span>
+  </a>
+  <div class="ck-secure"><i class="fas fa-lock"></i> Compra Segura</div>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="ck-progress">
+  <div class="ck-step active" data-step="1"><span class="ck-step-num">1</span><span class="ck-step-label">Datos</span></div>
+  <div class="ck-step-line"></div>
+  <div class="ck-step" data-step="2"><span class="ck-step-num">2</span><span class="ck-step-label">Envio</span></div>
+  <div class="ck-step-line"></div>
+  <div class="ck-step" data-step="3"><span class="ck-step-num">3</span><span class="ck-step-label">Pago</span></div>
+</div>
+
+<!-- MAIN -->
+<main class="ck-main">
+  <div class="ck-content">
+
+    <!-- STEP 1: DATOS -->
+    <section class="ck-panel" id="step1">
+      <h2><i class="fas fa-user"></i> Tus Datos</h2>
+      <div class="ck-form-grid">
+        <div class="ck-field full">
+          <label>Nombre Completo *</label>
+          <input type="text" id="ckName" placeholder="Ej: Maria Lopez" required>
+        </div>
+        <div class="ck-field">
+          <label>RUT *</label>
+          <input type="text" id="ckRut" placeholder="12.345.678-9" required>
+          <small class="ck-error" id="rutError"></small>
+        </div>
+        <div class="ck-field">
+          <label>Telefono *</label>
+          <input type="tel" id="ckPhone" placeholder="+56 9 1234 5678" required>
+        </div>
+        <div class="ck-field full">
+          <label>Email *</label>
+          <input type="email" id="ckEmail" placeholder="tu@email.com" required>
+        </div>
+        <div class="ck-field full">
+          <label>Tipo de Documento</label>
+          <div class="ck-radio-group">
+            <label class="ck-radio active"><input type="radio" name="docType" value="boleta" checked> <i class="fas fa-receipt"></i> Boleta</label>
+            <label class="ck-radio"><input type="radio" name="docType" value="factura"> <i class="fas fa-file-invoice"></i> Factura</label>
+          </div>
+        </div>
+        <div class="ck-field full ck-factura-fields" style="display:none">
+          <div class="ck-form-grid">
+            <div class="ck-field"><label>Razon Social</label><input type="text" id="ckBizName" placeholder="Nombre empresa"></div>
+            <div class="ck-field"><label>RUT Empresa</label><input type="text" id="ckBizRut" placeholder="76.123.456-7"></div>
+          </div>
+        </div>
+      </div>
+      <button class="ck-btn ck-btn-next" onclick="goStep(2)">Continuar a Envio <i class="fas fa-arrow-right"></i></button>
+    </section>
+
+    <!-- STEP 2: ENVIO -->
+    <section class="ck-panel" id="step2" style="display:none">
+      <h2><i class="fas fa-truck"></i> Envio</h2>
+      <div class="ck-field full">
+        <label>Region *</label>
+        <select id="ckRegion">
+          <option value="">Selecciona tu region</option>
+        </select>
+      </div>
+      <div class="ck-field full" id="addressFields">
+        <label>Direccion *</label>
+        <input type="text" id="ckAddress" placeholder="Ej: Av. Las Flores 1234, Depto 302">
+        <div style="margin-top:8px">
+          <label>Comuna *</label>
+          <input type="text" id="ckComuna" placeholder="Ej: La Florida">
+        </div>
+      </div>
+      <div class="ck-shipping-options" id="shippingOptions">
+        <!-- Se llenan por JS -->
+      </div>
+      <div class="ck-btn-row">
+        <button class="ck-btn ck-btn-back" onclick="goStep(1)"><i class="fas fa-arrow-left"></i> Volver</button>
+        <button class="ck-btn ck-btn-next" onclick="goStep(3)">Continuar a Pago <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </section>
+
+    <!-- STEP 3: RESUMEN Y PAGO -->
+    <section class="ck-panel" id="step3" style="display:none">
+      <h2><i class="fas fa-credit-card"></i> Resumen y Pago</h2>
+      <div class="ck-summary" id="orderSummary">
+        <!-- Se llena por JS -->
+      </div>
+      <div class="ck-btn-row">
+        <button class="ck-btn ck-btn-back" onclick="goStep(2)"><i class="fas fa-arrow-left"></i> Volver</button>
+        <button class="ck-btn ck-btn-pay" id="payBtn" onclick="submitCheckout()">
+          <i class="fas fa-lock"></i> Pagar con MercadoPago
+        </button>
+      </div>
+      <div class="ck-mp-badge">
+        <i class="fas fa-shield-alt"></i> Pago seguro procesado por MercadoPago
+      </div>
+    </section>
+
+    <!-- SUCCESS/FAILURE SCREENS -->
+    <section class="ck-panel ck-result" id="resultSuccess" style="display:none">
+      <div class="ck-result-icon success"><i class="fas fa-check-circle"></i></div>
+      <h2>Pago Confirmado!</h2>
+      <p>Tu pedido <strong id="successOrderNum"></strong> ha sido procesado.</p>
+      <p>Te enviamos un resumen a tu email. Te avisaremos cuando despachemos tu pedido.</p>
+      <a href="/" class="ck-btn ck-btn-next">Volver a la Tienda</a>
+    </section>
+
+    <section class="ck-panel ck-result" id="resultFailure" style="display:none">
+      <div class="ck-result-icon failure"><i class="fas fa-times-circle"></i></div>
+      <h2>Pago no completado</h2>
+      <p>Hubo un problema con tu pago. Puedes intentar de nuevo o contactarnos por WhatsApp.</p>
+      <div class="ck-btn-row">
+        <a href="/" class="ck-btn ck-btn-back">Volver a la Tienda</a>
+        <a href="https://wa.me/56968442594" class="ck-btn ck-btn-wa"><i class="fab fa-whatsapp"></i> Contactar</a>
+      </div>
+    </section>
+
+    <section class="ck-panel ck-result" id="resultPending" style="display:none">
+      <div class="ck-result-icon pending"><i class="fas fa-clock"></i></div>
+      <h2>Pago Pendiente</h2>
+      <p>Tu pedido <strong id="pendingOrderNum"></strong> esta pendiente de confirmacion.</p>
+      <p>Te notificaremos por email cuando se confirme el pago.</p>
+      <a href="/" class="ck-btn ck-btn-next">Volver a la Tienda</a>
+    </section>
+
+  </div>
+
+  <!-- SIDEBAR: CARRITO -->
+  <aside class="ck-sidebar">
+    <div class="ck-cart-summary">
+      <h3><i class="fas fa-shopping-bag"></i> Tu Pedido</h3>
+      <div id="ckCartItems">
+        <!-- Se llena por JS -->
+      </div>
+      <div class="ck-cart-totals" id="ckTotals">
+        <!-- Se llena por JS -->
+      </div>
+    </div>
+    <div class="ck-trust">
+      <div><i class="fas fa-lock"></i> Pago 100% seguro</div>
+      <div><i class="fas fa-truck"></i> Envio a todo Chile</div>
+      <div><i class="fas fa-undo"></i> Garantia de calidad</div>
+      <div><i class="fas fa-headset"></i> Soporte por WhatsApp</div>
+    </div>
+  </aside>
+</main>
+
+<script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+  "name": "[MAULLY] — WhatsApp Inbound — Demo",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "maully-demo",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-1",
+      "name": "Webhook — WhatsApp Entry",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "mode": "manual",
+        "duplicateItem": false,
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-phone",
+              "name": "clientPhone",
+              "value": "={{ $json.from || $json.phone || '+56900000000' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-name",
+              "name": "clientName",
+              "value": "={{ $json.name || $json.clientName || 'Cliente Demo' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-message",
+              "name": "messageText",
+              "value": "={{ $json.message || $json.text || $json.body || 'Hola, quiero info' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-timestamp",
+              "name": "timestamp",
+              "value": "={{ $now.format('yyyy-MM-dd HH:mm:ss') }}",
+              "type": "string"
+            },
+            {
+              "id": "field-brand",
+              "name": "brand",
+              "value": "Importadora Maully",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "id": "set-1",
+      "name": "Set — Parse Client Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [480, 300]
+    },
+    {
+      "parameters": {
+        "resource": "chat",
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.messageText }}",
+              "role": "user"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0.3,
+          "systemMessage": "Eres el clasificador comercial de Kreathur Agency para Importadora Maully.\n\nANALIZA el mensaje y devuelve SOLO un JSON valido (sin texto extra):\n\n{\n  \"intent\": \"precio|stock|envio|compra|saludo|reclamo|otro\",\n  \"category\": \"chaquetas|jeans|poleras|polerones|deportiva|hogar|calzado|general\",\n  \"temperature\": \"hot|warm|cold\",\n  \"summary\": \"resumen en 10 palabras\",\n  \"suggested_reply\": \"respuesta corta y amable como Bea, asesora con 40 anos de experiencia. Si nombre suena femenino di mi nina, si masculino di mi nino.\"\n}\n\nREGLAS:\n- hot = menciona compra, cantidad, pago, envio\n- warm = pide precio, stock, categoria especifica\n- cold = saludo generico, curiosidad\n- lucas = miles de pesos (100 lucas = $100.000)\n\nCATALOGO:\nChaquetas: Blazer 20kg $93.500 | Parka 20kg $242.000\nJeans: Mujer 45kg $198.000 | Hombre 45kg $192.500\nPoleras: Deportiva 45kg $148.500\nPolerones: Polar 45kg $99.000\nHogar: Ropa Cama 45kg $77.000"
+        }
+      },
+      "id": "openai-1",
+      "name": "OpenAI — Classify Intent",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [710, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst aiText = input.message?.content || input.choices?.[0]?.message?.content || '{}';\n\nlet parsed;\ntry {\n  const match = aiText.match(/\\{[\\s\\S]*\\}/);\n  parsed = JSON.parse(match ? match[0] : aiText);\n} catch(e) {\n  parsed = {\n    intent: 'otro',\n    category: 'general',\n    temperature: 'cold',\n    summary: 'No clasificado',\n    suggested_reply: 'Hola! Gracias por escribirnos. En que te puedo ayudar?'\n  };\n}\n\nconst prev = $('Set — Parse Client Data').first().json;\n\nconst replyMessage = [\n  parsed.suggested_reply,\n  '',\n  '---',\n  'Bea | Importadora Maully',\n  'www.importadoramaully.cl'\n].join('\\n');\n\nreturn [{\n  json: {\n    ...parsed,\n    replyMessage,\n    clientPhone: prev.clientPhone,\n    clientName: prev.clientName,\n    messageText: prev.messageText,\n    timestamp: prev.timestamp,\n    brand: prev.brand,\n    status: 'New'\n  }\n}];"
+      },
+      "id": "code-1",
+      "name": "Code — Parse AI Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [940, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"ok\",\n  \"reply\": {{ JSON.stringify($json.replyMessage) }},\n  \"intent\": \"{{ $json.intent }}\",\n  \"temperature\": \"{{ $json.temperature }}\",\n  \"category\": \"{{ $json.category }}\"\n}",
+        "options": {}
+      },
+      "id": "respond-1",
+      "name": "Respond — Send Reply",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1400, 300]
+    },
+    {
+      "parameters": {},
+      "id": "noop-airtable",
+      "name": "Airtable — Save Lead (connect later)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1170, 480]
+    }
+  ],
+  "connections": {
+    "Webhook — WhatsApp Entry": {
+      "main": [
+        [
+          {
+            "node": "Set — Parse Client Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set — Parse Client Data": {
+      "main": [
+        [
+          {
+            "node": "OpenAI — Classify Intent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI — Classify Intent": {
+      "main": [
+        [
+          {
+            "node": "Code — Parse AI Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code — Parse AI Response": {
+      "main": [
+        [
+          {
+            "node": "Respond — Send Reply",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Airtable — Save Lead (connect later)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Santiago"
+  },
+  "tags": [
+    {
+      "name": "Kreathur Agency"
+    },
+    {
+      "name": "Demo"
+    },
+    {
+      "name": "Maully"
+    }
+  ]
+}
