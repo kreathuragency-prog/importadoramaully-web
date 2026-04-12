@@ -851,7 +851,7 @@ const translations = {
     history_2008_title:'Expansao Europeia',history_2008_text:'Ampliamos nossa rede de fornecedores para a Europa, incorporando mercadorias da Italia, Espanha e outros paises europeus.',
     history_2015_title:'Consolidacao Nacional',history_2015_text:'Nos consolidamos como uma das importadoras atacadistas de referencia no Chile, com envios para todas as regioes do pais.',
     history_2020_title:'Era Digital',history_2020_text:'Nos reinventamos com a digitalizacao, lancando nossa loja online, canal no YouTube e redes sociais. Incorporamos a Bea, nossa assessora especialista no WhatsApp.',
-    history_2026_title:'Hoje e o Futuro',history_2026_text:'Com mais de 20 anos de experiencia, 2.500+ clientes satisfeitos e presenca em todo o Chile e America do Sul, continuamos crescendo.',
+    history_2026_title:'Hoje e o Futuro',history_2026_text:'Com mais de 20 años de experiencia, 2.500+ clientes satisfeitos e presenca em todo o Chile e America do Sul, continuamos crescendo.',
     calc_label:'Calculadora de Lucro',calc_title:'Calcule Quanto Voce Pode Ganhar',
     calc_desc:'Simule seu investimento e descubra o lucro estimado vendendo roupas americanas e europeias importadas',
     calc_investment:'Investimento em mercadoria (CLP)',calc_weight:'Peso do fardo (kg)',
@@ -1582,7 +1582,7 @@ function beaDetectGender(text) {
 }
 
 const tourSections = [
-  {id:'inicio',title:'Portada',desc:'Aqui ves nuestro video principal y las estadisticas de Importadora Maully. Mas de 40 anos en el rubro textil, ' + beaNinoName() + '!'},
+  {id:'inicio',title:'Portada',desc:'Aqui ves nuestro video principal y las estadisticas de Importadora Maully. Mas de 40 años en el rubro textil, ' + beaNinoName() + '!'},
   {id:'categorias',title:'Categorias',desc:'Tenemos 13 categorias de productos: chaquetas, jeans, poleras, polerones, deportiva, vestidos, ninos, ski, calzado, hogar, sweaters, pantalones y plus size.'},
   {id:'productos',title:'Productos',desc:'Aqui puedes ver todo nuestro catalogo con mas de 50 productos. Puedes filtrar por categoria, buscar por nombre y agregar al carrito.'},
   {id:'calidad',title:'Niveles de Calidad',desc:'Manejamos 4 niveles: Oferta, Primera, Premium y Extra Linda. Cada uno pensado para distintos tipos de negocio.'},
@@ -1630,7 +1630,7 @@ async function beaHandleMessage(text) {
 
   // Greetings
   if (/^(hola|hey|buenas|buenos|hi|hello|ola|que tal|saludos)/.test(t)) {
-    await beaReply('Hola ' + beaNinoName() + '! Soy Bea, tu asesora personal de Importadora Maully con mas de 40 anos de experiencia en el rubro textil 💛<br><br>En que te puedo ayudar? Puedo:<br>• Darte un <strong>tour virtual</strong> por la tienda<br>• <strong>Recomendarte productos</strong> segun tu presupuesto<br>• Responder cualquier duda sobre nuestros fardos y packs');
+    await beaReply('Hola ' + beaNinoName() + '! Soy Bea, tu asesora personal de Importadora Maully con mas de 40 años de experiencia en el rubro textil 💛<br><br>En que te puedo ayudar? Puedo:<br>• Darte un <strong>tour virtual</strong> por la tienda<br>• <strong>Recomendarte productos</strong> segun tu presupuesto<br>• Responder cualquier duda sobre nuestros fardos y packs');
     return;
   }
 
@@ -1767,7 +1767,7 @@ async function beaHandleMessage(text) {
   // History
   if (/historia|quienes son|sobre ustedes|maully|empresa|fundacion|quien/.test(t)) {
     document.getElementById('historia')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Importadora Maully tiene mas de <strong>40 anos en el rubro textil</strong> y mas de 20 anos importando directamente desde Canada, Estados Unidos y Europa, ' + beaNinoName() + '. Somos una empresa familiar con tradicion, experiencia y un compromiso real con nuestros clientes.');
+    await beaReply('Importadora Maully tiene mas de <strong>40 años en el rubro textil</strong> y mas de 20 años importando directamente desde Canada, Estados Unidos y Europa, ' + beaNinoName() + '. Somos una empresa familiar con tradicion, experiencia y un compromiso real con nuestros clientes.');
     return;
   }
 
@@ -1827,7 +1827,7 @@ document.getElementById('beaRegisterBtn').addEventListener('click', () => {
   document.getElementById('beaQuickActions').style.display = 'flex';
   document.getElementById('beaChatInput').style.display = 'flex';
   const firstName = name.split(' ')[0];
-  beaMsg('Hola ' + beaNinoName() + '! Que alegria conocerte 💛 Soy Bea, tu asesora personal de Importadora Maully con mas de 40 anos de experiencia en el rubro textil.<br><br>En que te puedo ayudar hoy?', false, 300);
+  beaMsg('Hola ' + beaNinoName() + '! Que alegria conocerte 💛 Soy Bea, tu asesora personal de Importadora Maully con mas de 40 años de experiencia en el rubro textil.<br><br>En que te puedo ayudar hoy?', false, 300);
 });
 document.getElementById('beaName').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('beaContact').focus(); });
 document.getElementById('beaContact').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('beaRegisterBtn').click(); });
