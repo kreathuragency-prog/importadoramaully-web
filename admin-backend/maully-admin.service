@@ -1,0 +1,15 @@
+[Unit]
+Description=Maully Admin API (FastAPI)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/www/importadoramaully/admin-backend
+Environment="MAULLY_ADMIN_PASSWORD=maully2026"
+ExecStart=/var/www/importadoramaully/admin-backend/venv/bin/uvicorn main:app --host 127.0.0.1 --port 8002
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

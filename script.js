@@ -69,7 +69,7 @@ function getProductGallery(cat,name){
   return [...base.slice(offset), ...base.slice(0,offset)];
 }
 const MAULLY_IMG = 'fardo-maully.jpg';
-const products = [
+let products = [
   {id:1,cat:'chaquetas',name:'Blazer / Chaqueta Fashion Verano 20 Kg',price:65000,origPrice:80000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
   {id:2,cat:'chaquetas',name:'Blazer / Chaqueta Fashion 1ra 20 Kg',price:85000,origPrice:100000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
   {id:3,cat:'chaquetas',name:'Parkas Sin Manga 1ra 25 Kg',price:130000,origPrice:145000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
@@ -1533,6 +1533,17 @@ function checkProductHash(){
 window.addEventListener('hashchange',checkProductHash);
 
 // ============ INIT ============
+// Fetch products from API (falls back to hardcoded array on failure)
+fetch('/api/products').then(r=>r.ok?r.json():null).then(apiProducts=>{
+  if(Array.isArray(apiProducts) && apiProducts.length>0){
+    products = apiProducts;
+    renderCategories();
+    renderFilterButtons();
+    renderProducts();
+    renderFeaturedProducts();
+  }
+}).catch(()=>{});
+
 renderCategories();
 renderFilterButtons();
 renderProducts();

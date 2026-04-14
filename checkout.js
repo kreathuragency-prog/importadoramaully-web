@@ -3,10 +3,9 @@
  * 3-step checkout: Datos → Envío → Pago MercadoPago
  */
 
-// API base — cambiar en producción
-const API_BASE = window.location.hostname === 'localhost'
-  ? 'http://localhost:8000'
-  : 'https://api.importadoramaully.cl';  // Tu backend FastAPI
+// API base — same-origin /api, proxied by Caddy to FastAPI on :8002
+const API_BASE = '';
+const WA_NUMBER = '56975155745';
 
 // ── Cart from localStorage ──
 let cart = [];
@@ -62,18 +61,12 @@ async function init() {
     return;
   }
 
-  // Load config
-  try {
-    const resp = await fetch(API_BASE + '/api/config');
-    config = await resp.json();
-  } catch(e) {
-    console.warn('Could not load config, using defaults');
-    config = { regiones: [
-      "Arica y Parinacota","Tarapacá","Antofagasta","Atacama","Coquimbo",
-      "Valparaíso","Región Metropolitana","O'Higgins","Maule","Ñuble",
-      "Biobío","Araucanía","Los Ríos","Los Lagos","Aysén","Magallanes"
-    ]};
-  }
+  // Default config (regions list)
+  config = { regiones: [
+    "Arica y Parinacota","Tarapacá","Antofagasta","Atacama","Coquimbo",
+    "Valparaíso","Región Metropolitana","O'Higgins","Maule","Ñuble",
+    "Biobío","Araucanía","Los Ríos","Los Lagos","Aysén","Magallanes"
+  ]};
 
   renderCart();
   populateRegions();
@@ -418,26 +411,58 @@ async function submitCheckout() {
     })),
   };
 
+  // Compute total and build order payload for our backend
+  const subtotal = cart.reduce((s,i)=>s+(i.price*(i.qty||1)),0);
+  const total = subtotal + (shippingCost||0);
+  const orderPayload = {
+    items: cart.map(i => ({
+      id: i.id,
+      name: i.name,
+      price: i.price,
+      qty: i.qty || 1,
+    })),
+    customer: {
+      name: payload.name,
+      rut: payload.rut,
+      email: payload.email,
+      phone: payload.phone,
+      doc_type: payload.doc_type,
+      business_name: payload.business_name,
+      business_rut: payload.business_rut,
+    },
+    shipping: {
+      method: payload.shipping_method,
+      address: payload.address,
+      city: payload.comuna,
+      region: payload.region,
+    },
+    total: total,
+    payment_method: 'whatsapp',
+  };
+
   try {
-    const resp = await fetch(API_BASE + '/api/checkout', {
+    // Save order to backend
+    const resp = await fetch('/api/orders', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(payload),
+      body: JSON.stringify(orderPayload),
     });
 
     if (!resp.ok) {
-      const err = await resp.json();
-      throw new Error(err.detail || 'Error al crear orden');
+      throw new Error('No se pudo registrar el pedido');
     }
 
     const data = await resp.json();
+    const orderId = data.order_id;
 
-    // Redirect to MercadoPago
-    if (data.mp_init_point) {
-      window.location.href = data.mp_init_point;
-    } else {
-      throw new Error('No se obtuvo URL de pago');
-    }
+    // Build WhatsApp message with order details
+    const itemsText = cart.map(i => `• ${i.name} × ${i.qty||1} — ${fmtPrice(i.price*(i.qty||1))}`).join('\n');
+    const msg = `Hola! Acabo de hacer el Pedido #${orderId}\n\n*Cliente:* ${payload.name}\n*RUT:* ${payload.rut}\n*Teléfono:* ${payload.phone}\n\n*Productos:*\n${itemsText}\n\n*Envío:* ${payload.shipping_method}\n*Dirección:* ${payload.address}, ${payload.comuna}, ${payload.region}\n\n*Total:* ${fmtPrice(total)}\n\nQuiero coordinar el pago y el envío.`;
+
+    // Clear cart and redirect to WhatsApp
+    localStorage.removeItem('maully_cart');
+    window.location.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+    return;
 
   } catch(e) {
     // Show inline error box instead of alert
@@ -450,7 +475,7 @@ async function submitCheckout() {
     })();
     errBox.innerHTML = `<strong>No se pudo procesar el pago.</strong><br>${e.message}<br><br>Intenta de nuevo o escríbenos por WhatsApp: <a href="https://wa.me/56975155745" style="color:#c00;text-decoration:underline">+56 9 7515 5745</a>`;
     btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-lock"></i> Pagar con MercadoPago';
+    btn.innerHTML = '<i class="fab fa-whatsapp"></i> Confirmar Pedido por WhatsApp';
   }
 }
 

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel Admin · Importadora Maully</title>
+<link rel="icon" href="icon-192.svg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="loginScreen" class="login-screen">
+  <div class="login-box">
+    <div class="login-logo">
+      <i class="fas fa-lock"></i>
+      <h1>Panel Maully</h1>
+      <p>Ingresa tu contraseña para administrar</p>
+    </div>
+    <form id="loginForm">
+      <input type="password" id="loginPassword" placeholder="Contraseña" required autofocus>
+      <button type="submit"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
+      <div id="loginError" class="login-error"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ADMIN PANEL -->
+<section id="adminPanel" class="admin-panel" style="display:none">
+
+  <header class="admin-header">
+    <div class="admin-brand">
+      <i class="fas fa-tshirt"></i>
+      <span>Maully Admin</span>
+    </div>
+    <nav class="admin-nav">
+      <button class="nav-btn active" data-tab="products"><i class="fas fa-box"></i> Productos</button>
+      <button class="nav-btn" data-tab="orders"><i class="fas fa-receipt"></i> Pedidos</button>
+      <a href="/" class="nav-btn"><i class="fas fa-external-link-alt"></i> Ver Sitio</a>
+      <button class="nav-btn logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Salir</button>
+    </nav>
+  </header>
+
+  <!-- PRODUCTS TAB -->
+  <div id="productsTab" class="tab active">
+    <div class="tab-header">
+      <h2>Productos <span id="productCount" class="count-badge">0</span></h2>
+      <div class="tab-actions">
+        <input type="text" id="searchProduct" placeholder="Buscar..." class="search-input">
+        <select id="filterCat" class="filter-select">
+          <option value="">Todas las categorías</option>
+        </select>
+        <button class="btn btn-primary" id="newProductBtn"><i class="fas fa-plus"></i> Nuevo Producto</button>
+      </div>
+    </div>
+    <div class="products-table-wrap">
+      <table class="products-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Categoría</th>
+            <th>Producto</th>
+            <th>Peso</th>
+            <th>Precio</th>
+            <th>Precio Original</th>
+            <th>Tier</th>
+            <th>Nuevo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="productsTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ORDERS TAB -->
+  <div id="ordersTab" class="tab">
+    <div class="tab-header">
+      <h2>Pedidos <span id="orderCount" class="count-badge">0</span></h2>
+      <div class="tab-actions">
+        <select id="filterStatus" class="filter-select">
+          <option value="">Todos los estados</option>
+          <option value="pending">Pendientes</option>
+          <option value="paid">Pagados</option>
+          <option value="shipped">Enviados</option>
+          <option value="delivered">Entregados</option>
+          <option value="cancelled">Cancelados</option>
+        </select>
+        <button class="btn btn-secondary" id="refreshOrdersBtn"><i class="fas fa-sync"></i> Actualizar</button>
+      </div>
+    </div>
+    <div id="ordersList" class="orders-list"></div>
+  </div>
+</section>
+
+<!-- PRODUCT MODAL -->
+<div id="productModal" class="modal-overlay" style="display:none">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modalTitle">Nuevo Producto</h3>
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+    </div>
+    <form id="productForm" class="modal-body">
+      <input type="hidden" id="productId">
+      <div class="form-row">
+        <label>Nombre</label>
+        <input type="text" id="productName" required>
+      </div>
+      <div class="form-grid">
+        <div class="form-row">
+          <label>Categoría</label>
+          <select id="productCat" required>
+            <option value="chaquetas">Chaquetas</option>
+            <option value="jeans">Jeans</option>
+            <option value="poleras">Poleras</option>
+            <option value="polerones">Polerones</option>
+            <option value="deportiva">Deportiva</option>
+            <option value="vestidos">Vestidos</option>
+            <option value="ninos">Niños</option>
+            <option value="ski">Ski</option>
+            <option value="calzado">Calzado</option>
+            <option value="hogar">Hogar</option>
+            <option value="sweaters">Sweaters</option>
+            <option value="pantalones">Pantalones</option>
+            <option value="plussize">Plus Size</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Peso</label>
+          <input type="text" id="productWeight" placeholder="25kg" required>
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="form-row">
+          <label>Precio (CLP)</label>
+          <input type="number" id="productPrice" required min="0">
+        </div>
+        <div class="form-row">
+          <label>Precio Original (tachado)</label>
+          <input type="number" id="productOrigPrice" required min="0">
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="form-row">
+          <label>Tier</label>
+          <select id="productTier" required>
+            <option value="primera">Primera</option>
+            <option value="premium">Premium</option>
+            <option value="oferta">Oferta</option>
+            <option value="extra">Extra</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Badge</label>
+          <select id="productBadge" required>
+            <option value="primera">Primera</option>
+            <option value="premium">Premium</option>
+            <option value="oferta">Oferta</option>
+            <option value="extra">Extra</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <label class="checkbox-label">
+          <input type="checkbox" id="productIsNew">
+          <span>Marcar como Nuevo</span>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Imagen (ruta)</label>
+        <input type="text" id="productImg" value="fardo-maully.jpg" required>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cancelBtn">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="deleteBtn" style="display:none">Eliminar</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<script src="admin.js"></script>
+</body>
+</html>

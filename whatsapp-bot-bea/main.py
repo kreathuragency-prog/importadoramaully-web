@@ -1,6 +1,7 @@
 """
 Bot WhatsApp — Bea, Importadora Maully
-Webhook + Panel CRM + Respuesta manual
+Webhook + Panel CRM + E-Commerce + Audio (Whisper)
+Seguridad: dedupe, background tasks, rate limiting, PII masking
 """
 
 import sys, os, site
@@ -11,6 +12,9 @@ import jinja2  # noqa: F401
 
 import asyncio
 import random
+import json
+import re
+import time
 import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request, HTTPException, Form
@@ -20,7 +24,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from jinja2 import Environment, FileSystemLoader
 from dotenv import load_dotenv
 
-from whatsapp import parsear_mensaje, enviar_mensaje
+from whatsapp import parsear_mensaje, enviar_mensaje, transcribir_audio, close_http_client
 from brain import generar_respuesta, cargar_info_web
 from scraper import scrape_maully
 from checkout import router as checkout_router
@@ -44,9 +48,60 @@ logging.basicConfig(
 )
 logger = logging.getLogger("bot")
 
-VERIFY_TOKEN = os.getenv("META_VERIFY_TOKEN", "maully-bea-token")
+VERIFY_TOKEN = os.getenv("META_VERIFY_TOKEN", "maully-bea-2026")
 PORT = int(os.getenv("PORT", 8000))
 
+
+# ── PII masking ───────────────────────────────────────────────
+
+def mask_phone(phone: str) -> str:
+    if not phone or len(phone) < 6:
+        return "****"
+    return phone[:4] + "*" * (len(phone) - 8) + phone[-4:]
+
+
+def mask_text(text: str, max_chars: int = 40) -> str:
+    if not text:
+        return ""
+    t = text.replace("\n", " ").strip()
+    return t[:max_chars] + "..." if len(t) > max_chars else t
+
+
+# ── Background task tracker + dedupe ──────────────────────────
+
+_background_tasks: set[asyncio.Task] = set()
+_procesados_cache: dict[str, float] = {}
+_MAX_CACHE = 10000
+_CACHE_TTL = 600
+
+
+def track_task(coro) -> asyncio.Task:
+    task = asyncio.create_task(coro)
+    _background_tasks.add(task)
+    task.add_done_callback(_background_tasks.discard)
+    return task
+
+
+def _ya_procesado(msg_id: str) -> bool:
+    if not msg_id:
+        return False
+    ahora = time.time()
+    if len(_procesados_cache) > _MAX_CACHE:
+        expirados = [k for k, v in _procesados_cache.items() if ahora - v > _CACHE_TTL]
+        for k in expirados:
+            _procesados_cache.pop(k, None)
+    if msg_id in _procesados_cache:
+        return True
+    _procesados_cache[msg_id] = ahora
+    return False
+
+
+# Input validation
+MAX_TEXTO = 2000
+_RE_TELEFONO = re.compile(r"\+?\d{8,20}")
+
+
+# ── Lifespan ──────────────────────────────────────────────────
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -55,6 +110,33 @@ async def lifespan(app: FastAPI):
     cargar_info_web(info_web)
     logger.info("Bea Bot (Importadora Maully) iniciado en puerto %d", PORT)
     yield
+
+    # Shutdown ordenado
+    logger.info("Shutdown iniciando...")
+    if _background_tasks:
+        logger.info(f"Esperando {len(_background_tasks)} tareas pendientes...")
+        try:
+            await asyncio.wait_for(
+                asyncio.gather(*_background_tasks, return_exceptions=True),
+                timeout=25.0,
+            )
+        except asyncio.TimeoutError:
+            logger.warning(f"Timeout, {len(_background_tasks)} tareas canceladas")
+            for t in _background_tasks:
+                t.cancel()
+
+    try:
+        await close_http_client()
+    except Exception as e:
+        logger.error(f"Error cerrando http client: {e}")
+
+    try:
+        from database import engine
+        await engine.dispose()
+    except Exception as e:
+        logger.error(f"Error dispose engine: {e}")
+
+    logger.info("Shutdown completo")
 
 
 app = FastAPI(title="Importadora Maully — Bea WhatsApp Bot + E-Commerce", lifespan=lifespan)
@@ -88,7 +170,7 @@ def render(template_name: str, **context) -> HTMLResponse:
 
 @app.get("/")
 async def health():
-    return {"status": "ok", "service": "maully-bea-bot"}
+    return {"status": "ok", "service": "maully-bea-bot", "bot": "Bea"}
 
 
 @app.get("/webhook")
@@ -113,48 +195,102 @@ async def recibir_mensaje(request: Request):
     mensajes = parsear_mensaje(body)
 
     for msg in mensajes:
-        telefono = msg["telefono"]
-        texto = msg["texto"]
-        if not texto:
+        telefono = (msg.get("telefono") or "").strip()[:20]
+        msg_id = msg.get("msg_id", "")
+        tipo = msg.get("tipo", "text")
+
+        if not telefono:
+            continue
+        if not _RE_TELEFONO.fullmatch(telefono):
+            logger.warning(f"teléfono inválido ignorado: {telefono!r}")
+            continue
+        if _ya_procesado(msg_id):
+            logger.info(f"[{mask_phone(telefono)}] msg duplicado, ignorando")
             continue
 
-        logger.info(f"[{telefono}] -> {texto}")
+        if tipo == "text":
+            texto = (msg.get("texto") or "").strip()
+            if not texto:
+                continue
+            if len(texto) > MAX_TEXTO:
+                texto = texto[:MAX_TEXTO]
+            texto = "".join(c for c in texto if c >= " " or c in "\n\t")
+            track_task(_procesar_texto_async(telefono, texto))
 
-        try:
-            contact = await get_or_create_contact(telefono)
-            conv = await get_or_create_conversation(contact.id)
-            await save_message(conv.id, "inbound", texto)
-            await get_or_create_lead(contact.id, "maully")
+        elif tipo == "audio":
+            media_id = msg.get("media_id", "")
+            if not media_id:
+                continue
+            track_task(_procesar_audio_async(telefono, media_id))
 
-            historial = await get_conversation_messages(conv.id)
-            respuesta = await generar_respuesta(texto, historial)
-
-            # Delay humano: 7-10 seg primer mensaje, 3-5 seg siguientes
-            es_primer_mensaje = len(historial) == 0
-            if es_primer_mensaje:
-                delay = random.uniform(7, 10)
-            else:
-                delay = random.uniform(3, 5)
-            await asyncio.sleep(delay)
-
-            await save_message(conv.id, "outbound", respuesta)
-
-            ok = await enviar_mensaje(telefono, respuesta)
-            if ok:
-                logger.info(f"[{telefono}] <- {respuesta[:80]}...")
-            else:
-                logger.error(f"[{telefono}] Error enviando")
-
-        except Exception as e:
-            logger.error(f"Error procesando [{telefono}]: {e}")
+        else:
+            logger.info(f"[{mask_phone(telefono)}] tipo no soportado: {tipo}")
 
     return {"status": "ok"}
 
 
+async def _procesar_texto_async(telefono: str, texto: str):
+    logger.info(f"[{mask_phone(telefono)}] -> {mask_text(texto)}")
+    await _responder(telefono, texto_para_ia=texto, texto_para_db=texto)
+
+
+async def _procesar_audio_async(telefono: str, media_id: str):
+    logger.info(f"[{mask_phone(telefono)}] -> [voz] media_id={media_id[:12]}...")
+
+    transcripcion = await transcribir_audio(media_id)
+
+    if not transcripcion:
+        logger.error(f"[{mask_phone(telefono)}] Whisper falló")
+        try:
+            contact = await get_or_create_contact(telefono)
+            conv = await get_or_create_conversation(contact.id)
+            await save_message(conv.id, "inbound", "[audio - no se pudo transcribir]")
+            fallback = "Perdón, no pude escuchar bien tu audio 🙈 Me lo puedes escribir? Así te ayudo más rápido 💛"
+            await save_message(conv.id, "outbound", fallback)
+            await enviar_mensaje(telefono, fallback)
+        except Exception as e:
+            logger.error(f"Error fallback audio [{mask_phone(telefono)}]: {type(e).__name__}")
+        return
+
+    texto_para_ia = transcripcion
+    texto_para_db = f"🎤 {transcripcion}"
+    logger.info(f"[{mask_phone(telefono)}] -> [voz transcrita] {mask_text(transcripcion)}")
+
+    await _responder(telefono, texto_para_ia=texto_para_ia, texto_para_db=texto_para_db)
+
+
+async def _responder(telefono: str, texto_para_ia: str, texto_para_db: str):
+    try:
+        contact = await get_or_create_contact(telefono)
+        conv = await get_or_create_conversation(contact.id)
+
+        # Obtener historial ANTES de guardar el mensaje actual
+        historial = await get_conversation_messages(conv.id)
+        await save_message(conv.id, "inbound", texto_para_db)
+
+        await get_or_create_lead(contact.id, "maully")
+
+        respuesta = await generar_respuesta(texto_para_ia, historial)
+
+        # Delay humanizado
+        es_primer_mensaje = len(historial) == 0
+        delay = random.uniform(5, 8) if es_primer_mensaje else random.uniform(2, 4)
+        await asyncio.sleep(delay)
+
+        await save_message(conv.id, "outbound", respuesta)
+
+        ok = await enviar_mensaje(telefono, respuesta)
+        if ok:
+            logger.info(f"[{mask_phone(telefono)}] <- {mask_text(respuesta)}")
+        else:
+            logger.error(f"[{mask_phone(telefono)}] Error enviando")
+
+    except Exception as e:
+        logger.error(f"Error procesando [{mask_phone(telefono)}]: {type(e).__name__}: {e}")
+
+
 # ══════════════════════════════════════════════════════════════
 # PANEL CRM (conversaciones de WhatsApp)
-# Nota: /admin esta reservado para el panel e-commerce (admin_panel.py)
-# El panel de conversaciones de Bea vive en /crm
 # ══════════════════════════════════════════════════════════════
 
 @app.get("/crm", response_class=HTMLResponse)
