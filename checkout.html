@@ -22,7 +22,7 @@
 <div class="ck-progress">
   <div class="ck-step active" data-step="1"><span class="ck-step-num">1</span><span class="ck-step-label">Datos</span></div>
   <div class="ck-step-line"></div>
-  <div class="ck-step" data-step="2"><span class="ck-step-num">2</span><span class="ck-step-label">Envio</span></div>
+  <div class="ck-step" data-step="2"><span class="ck-step-num">2</span><span class="ck-step-label">Envío</span></div>
   <div class="ck-step-line"></div>
   <div class="ck-step" data-step="3"><span class="ck-step-num">3</span><span class="ck-step-label">Pago</span></div>
 </div>
@@ -37,7 +37,7 @@
       <div class="ck-form-grid">
         <div class="ck-field full">
           <label>Nombre Completo *</label>
-          <input type="text" id="ckName" placeholder="Ej: Maria Lopez" required>
+          <input type="text" id="ckName" placeholder="Ej: María López" required>
         </div>
         <div class="ck-field">
           <label>RUT *</label>
@@ -45,7 +45,7 @@
           <small class="ck-error" id="rutError"></small>
         </div>
         <div class="ck-field">
-          <label>Telefono *</label>
+          <label>Teléfono *</label>
           <input type="tel" id="ckPhone" placeholder="+56 9 1234 5678" required>
         </div>
         <div class="ck-field full">
@@ -61,27 +61,27 @@
         </div>
         <div class="ck-field full ck-factura-fields" style="display:none">
           <div class="ck-form-grid">
-            <div class="ck-field"><label>Razon Social *</label><input type="text" id="ckBizName" placeholder="Nombre empresa"></div>
+            <div class="ck-field"><label>Razón Social *</label><input type="text" id="ckBizName" placeholder="Nombre empresa"></div>
             <div class="ck-field"><label>RUT Empresa *</label><input type="text" id="ckBizRut" placeholder="76.123.456-7"></div>
             <div class="ck-field"><label>Giro *</label><input type="text" id="ckBizGiro" placeholder="Ej: Venta al por menor de vestuario"></div>
-            <div class="ck-field"><label>Direccion Empresa *</label><input type="text" id="ckBizAddress" placeholder="Ej: Av. La Florida 9421, Santiago"></div>
+            <div class="ck-field"><label>Dirección Empresa *</label><input type="text" id="ckBizAddress" placeholder="Ej: Av. La Florida 9421, Santiago"></div>
           </div>
         </div>
       </div>
-      <button class="ck-btn ck-btn-next" onclick="goStep(2)">Continuar a Envio <i class="fas fa-arrow-right"></i></button>
+      <button class="ck-btn ck-btn-next" onclick="goStep(2)">Continuar a Envío <i class="fas fa-arrow-right"></i></button>
     </section>
 
-    <!-- STEP 2: ENVIO -->
+    <!-- STEP 2: ENVÍO -->
     <section class="ck-panel" id="step2" style="display:none">
-      <h2><i class="fas fa-truck"></i> Envio</h2>
+      <h2><i class="fas fa-truck"></i> Envío</h2>
       <div class="ck-field full">
-        <label>Region *</label>
+        <label>Región *</label>
         <select id="ckRegion">
-          <option value="">Selecciona tu region</option>
+          <option value="">Selecciona tu región</option>
         </select>
       </div>
       <div class="ck-field full" id="addressFields">
-        <label>Direccion *</label>
+        <label>Dirección *</label>
         <input type="text" id="ckAddress" placeholder="Ej: Av. Las Flores 1234, Depto 302">
         <div style="margin-top:8px">
           <label>Comuna *</label>
@@ -117,7 +117,7 @@
     <!-- SUCCESS/FAILURE SCREENS -->
     <section class="ck-panel ck-result" id="resultSuccess" style="display:none">
       <div class="ck-result-icon success"><i class="fas fa-check-circle"></i></div>
-      <h2>Pago Confirmado!</h2>
+      <h2>¡Pago Confirmado!</h2>
       <p>Tu pedido <strong id="successOrderNum"></strong> ha sido procesado.</p>
       <p>Te enviamos un resumen a tu email. Te avisaremos cuando despachemos tu pedido.</p>
       <a href="/" class="ck-btn ck-btn-next">Volver a la Tienda</a>
@@ -136,7 +136,7 @@
     <section class="ck-panel ck-result" id="resultPending" style="display:none">
       <div class="ck-result-icon pending"><i class="fas fa-clock"></i></div>
       <h2>Pago Pendiente</h2>
-      <p>Tu pedido <strong id="pendingOrderNum"></strong> esta pendiente de confirmacion.</p>
+      <p>Tu pedido <strong id="pendingOrderNum"></strong> está pendiente de confirmación.</p>
       <p>Te notificaremos por email cuando se confirme el pago.</p>
       <a href="/" class="ck-btn ck-btn-next">Volver a la Tienda</a>
     </section>
@@ -156,8 +156,8 @@
     </div>
     <div class="ck-trust">
       <div><i class="fas fa-lock"></i> Pago 100% seguro</div>
-      <div><i class="fas fa-truck"></i> Envio a todo Chile</div>
-      <div><i class="fas fa-undo"></i> Garantia de calidad</div>
+      <div><i class="fas fa-truck"></i> Envío a todo Chile</div>
+      <div><i class="fas fa-undo"></i> Garantía de calidad</div>
       <div><i class="fas fa-headset"></i> Soporte por WhatsApp</div>
     </div>
   </aside>

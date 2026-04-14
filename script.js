@@ -1,5 +1,5 @@
 // ============ DATA ============
-const WA_NUMBER = '56968442594';
+const WA_NUMBER = '56975155745';
 const USD_RATE = 950;
 const BRAND_TAGS=['Columbia','North Face','Nike','Adidas','Zara','Levis','Calvin Klein','Tommy','Ralph Lauren','Patagonia','Gap','H&M','Puma','Reebok','Under Armour'];
 function getProductTags(p){
@@ -9,7 +9,7 @@ function getProductTags(p){
   if(n.includes('invierno')||n.includes('ski')||n.includes('polar'))tags.push('Invierno');
   if(n.includes('mujer')||n.includes('dama'))tags.push('Mujer');
   if(n.includes('hombre'))tags.push('Hombre');
-  if(n.includes('nino')||n.includes('niña')||n.includes('ninos'))tags.push('Ninos');
+  if(n.includes('nino')||n.includes('niña')||n.includes('ninos'))tags.push('Niños');
   if(n.includes('outdoor')||n.includes('trekking'))tags.push('Outdoor');
   return tags.slice(0,4);
 }
@@ -20,7 +20,7 @@ const categories = [
 {id:'polerones',name:'Polerones y Polar',icon:'fa-mitten',range:'$45,000 - $200,000',gradient:'linear-gradient(135deg,#2c3e50,#e74c3c)',img:'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80'},
 {id:'deportiva',name:'Ropa Deportiva',icon:'fa-person-running',range:'$50,000 - $250,000',gradient:'linear-gradient(135deg,#e74c3c,#f39c12)',img:'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80'},
 {id:'vestidos',name:'Vestidos y Faldas',icon:'fa-wand-magic-sparkles',range:'$40,000 - $160,000',gradient:'linear-gradient(135deg,#e91e63,#9c27b0)',img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=80'},
-{id:'ninos',name:'Ropa Ninos',icon:'fa-child-reaching',range:'$35,000 - $150,000',gradient:'linear-gradient(135deg,#00bcd4,#4caf50)',img:'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600&q=80'},
+{id:'ninos',name:'Ropa Niños',icon:'fa-child-reaching',range:'$35,000 - $150,000',gradient:'linear-gradient(135deg,#00bcd4,#4caf50)',img:'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600&q=80'},
 {id:'ski',name:'Ropa Ski',icon:'fa-person-skiing',range:'$60,000 - $300,000',gradient:'linear-gradient(135deg,#0d47a1,#42a5f5)',img:'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80'},
 {id:'calzado',name:'Calzado',icon:'fa-shoe-prints',range:'$50,000 - $250,000',gradient:'linear-gradient(135deg,#5d4037,#8d6e63)',img:'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80'},
 {id:'hogar',name:'Hogar',icon:'fa-house',range:'$35,000 - $120,000',gradient:'linear-gradient(135deg,#607d8b,#90a4ae)',img:'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80'},
@@ -70,259 +70,198 @@ function getProductGallery(cat,name){
 }
 const MAULLY_IMG = 'fardo-maully.jpg';
 const products = [
-{id:1,cat:'chaquetas',name:'Blazer / Chaqueta Fashion 1ra 20 Kg',price:93500,origPrice:100000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:2,cat:'chaquetas',name:'Calvin Klein Chaquetas 1ra+ 25 Kg',price:363000,origPrice:380000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:3,cat:'chaquetas',name:'Chaqueta Lenadora 1ra+ 25 Kg',price:198000,origPrice:220000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:4,cat:'chaquetas',name:'Chaqueta Lenadora 45 Kg',price:352000,origPrice:350000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:5,cat:'chaquetas',name:'Chaqueta Piloto Y Gamulan 1ra 20 Kg',price:242000,origPrice:300000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:6,cat:'chaquetas',name:'Chaquetas Solo Marcas Deportivas Nino Juv 1ra 25 Kg',price:341000,origPrice:350000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:7,cat:'chaquetas',name:'Columbia Mix 1ra 20kg',price:513700,origPrice:617000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:8,cat:'chaquetas',name:'Columbia Mix Inv 1ra 20kg',price:524700,origPrice:517000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:9,cat:'chaquetas',name:'Columbia Mix Oferta 20 Kg',price:331100,origPrice:361000,weight:'20kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:10,cat:'chaquetas',name:'Columbia Mix Oferta 25kg',price:399300,origPrice:413000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:11,cat:'chaquetas',name:'Columbia/ Northface Mix 1ra 10 Kg',price:342100,origPrice:331000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:12,cat:'chaquetas',name:'Columbia/ Northface Mix 1ra 20 Kg',price:599500,origPrice:600000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:13,cat:'chaquetas',name:'Cortaviento Chaq Ligera Columbia 1ra 10 Kg',price:427900,origPrice:564000,weight:'10kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:14,cat:'chaquetas',name:'Cortaviento Marca 25kg',price:662200,origPrice:722000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:15,cat:'chaquetas',name:'Gamulan 40kg',price:159500,origPrice:220000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:16,cat:'chaquetas',name:'Mix Columbia/ Northface Training Deportivo 10 Kg',price:228800,origPrice:358000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:17,cat:'chaquetas',name:'Mix Columbia/ Northface Poleron Polar Parka Chaqueta 1ra 20 Kg',price:576400,origPrice:569000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:18,cat:'chaquetas',name:'Northface Mix Polar Parka Chaq 1ra 10 Kg',price:393800,origPrice:513000,weight:'10kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:19,cat:'chaquetas',name:'Northface Mix Polar Parka Chaq 1ra 20 Kg',price:748000,origPrice:775000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:20,cat:'chaquetas',name:'Northface Mix Polar Parka Chaq Oferta 20 Kg',price:433400,origPrice:414000,weight:'20kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:21,cat:'chaquetas',name:'Outdoor / Trekking Columbia 1ra Seleccionado 10 Kg',price:404800,origPrice:423000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:22,cat:'chaquetas',name:'Pantalones Outdoor Marca Columbia 10 Kg',price:427900,origPrice:434000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:23,cat:'chaquetas',name:'Parka Alta Montana 20 Kg',price:242000,origPrice:280000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:24,cat:'chaquetas',name:'Parka Treking / Alta Montana 25 Kg',price:275000,origPrice:320000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:25,cat:'chaquetas',name:'Parka/chaq Marca Columbia Oferta 20 Kg',price:433400,origPrice:494000,weight:'20kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:26,cat:'chaquetas',name:'Parka/chaq Marca Columbia 1ra 20 Kg',price:576400,origPrice:619000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:27,cat:'chaquetas',name:'Parka/chaq Marca Oferta 25kg',price:363000,origPrice:360000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:28,cat:'chaquetas',name:'Parkas Coreana 1ra 20 Kg',price:171600,origPrice:186000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:29,cat:'chaquetas',name:'Parkas Coreana 1ra 40 Kg',price:331100,origPrice:361000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:30,cat:'chaquetas',name:'Parkas Largas 1ra 40 Kg',price:222200,origPrice:267000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:31,cat:'chaquetas',name:'Parkas Plus Size 45kg',price:176000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:32,cat:'chaquetas',name:'Parkas Sin Manga 1ra 25 Kg',price:143000,origPrice:145000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:33,cat:'chaquetas',name:'Poleron Algodon Y Deportivo Columbia 10 Kg',price:404800,origPrice:413000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:34,cat:'chaquetas',name:'Poleron Polar Columbia 1ra 10 Kg',price:228800,origPrice:258000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:35,cat:'jeans',name:'Blusa Jeans 1ra 22 Kg',price:148500,origPrice:185000,weight:'22kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:36,cat:'jeans',name:'Blusa Jeans 1ra 45 Kg',price:242000,origPrice:335000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:37,cat:'jeans',name:'Chaqueta Mezclilla 1ra 45 Kg',price:181500,origPrice:180000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:38,cat:'jeans',name:'Jardineras De Jeans 40 Kg',price:132000,origPrice:250000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:39,cat:'jeans',name:'Jeans Mujer Plus Size 1ra 40 Kg',price:110000,origPrice:120000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:40,cat:'jeans',name:'Jeans Hombre 1ra 25kg',price:268400,origPrice:259000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:41,cat:'jeans',name:'Jeans Levis Hombre 1ra 30 Kg',price:433400,origPrice:464000,weight:'30kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:42,cat:'jeans',name:'Jeans Levis Mujer 25 Kg',price:264000,origPrice:300000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:43,cat:'jeans',name:'Jeans Levis Mujer 50 Kg',price:440000,origPrice:550000,weight:'50kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:44,cat:'jeans',name:'Jeans Mujer Marca Prem Retorno 24 U',price:257400,origPrice:259000,weight:'24u',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:45,cat:'jeans',name:'Jeans Mujer Marca Prem Retorno 50 U',price:513700,origPrice:517000,weight:'50u',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:46,cat:'jeans',name:'Pescador Jeans Juvenil Mujer 1ra 40 Kg',price:66000,origPrice:90000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:47,cat:'jeans',name:'Vestidos De Jeans 45 Kg',price:242000,origPrice:300000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:48,cat:'jeans',name:'Zara Abrigo 20u 15kg Aprox',price:319000,origPrice:429000,weight:'15kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:49,cat:'poleras',name:'Blusa Franela 45 Kg 1ra',price:154000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:50,cat:'poleras',name:'Blusa Mixta Xl 45kg',price:110000,origPrice:180000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:51,cat:'poleras',name:'Camisa Franela 45 Kg 1ra',price:154000,origPrice:145000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:52,cat:'poleras',name:'Camisa Guayabera 1ra 10 Kg',price:165000,origPrice:200000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:53,cat:'poleras',name:'Camisa Guayabera 1ra 22 Kg',price:342100,origPrice:361000,weight:'22kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:54,cat:'poleras',name:'Camisa Guayabera 1ra 45 Kg',price:628100,origPrice:671000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:55,cat:'poleras',name:'Polera Hombre Cervezas 1ra+',price:377300,origPrice:368000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:56,cat:'poleras',name:'Polera Hombre Dibujos Animados 1ra+/prem 20 Kg',price:209000,origPrice:230000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:57,cat:'poleras',name:'Polera Hombre Dibujos Animados 1ra+/prem 25 Kg',price:247500,origPrice:270000,weight:'25kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
-{id:58,cat:'poleras',name:'Polera Hombre Marca M/co Multi Marca 25 Kg',price:495000,origPrice:480000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:59,cat:'poleras',name:'Polera Hombre Starwars / Marvel 1ra+ 20 Kg',price:377300,origPrice:353000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:60,cat:'poleras',name:'Polera Marca Algodon / Vestir Mixta 1ra 25 Kg',price:456500,origPrice:465000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:61,cat:'poleras',name:'Polera Marca Deportiva Hombre 1ra 10 Kg',price:239800,origPrice:428000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:62,cat:'poleras',name:'Polera Marca Deportiva Hombre 1ra 25 Kg',price:456500,origPrice:435000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:63,cat:'poleras',name:'Polera Marca Deportiva Oferta 25kg',price:214500,origPrice:225000,weight:'25kg',tier:'oferta',badge:'oferta',isNew:true,img:MAULLY_IMG},
-{id:64,cat:'poleras',name:'Polera Marca Hombre M/co C/cuello 1ra+/prem 25 Kg',price:495000,origPrice:490000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:65,cat:'poleras',name:'Polera Marca Hombre M/la 1ra+/prem 25kg',price:319000,origPrice:350000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:66,cat:'poleras',name:'Polera Marca Hombre S/ma 1ra 25 Kg',price:352000,origPrice:375000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:67,cat:'poleras',name:'Polera Marca Nino 1ra+/prem 25 Kg',price:275000,origPrice:340000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:68,cat:'poleras',name:'Polera Tie Dye 1ra+ 22 Kg',price:198000,origPrice:260000,weight:'22kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:69,cat:'poleras',name:'Poleras Y Blusas Marca Ardene Retorno 150 U',price:110000,origPrice:170000,weight:'150u',tier:'oferta',badge:'oferta',isNew:true,img:MAULLY_IMG},
-{id:70,cat:'poleras',name:'Poleras Y Blusas Marca Ardene Retorno 50 U',price:49500,origPrice:85000,weight:'50u',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:71,cat:'polerones',name:'Pantalon Polar 1ra 45 Kg',price:137500,origPrice:165000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:72,cat:'polerones',name:'Pijama Polar 1ra 45 Kg',price:137500,origPrice:150000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:73,cat:'polerones',name:'Polar 45 Kg',price:99000,origPrice:185000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:74,cat:'polerones',name:'Polar 1ra Canada 45 Kg',price:170500,origPrice:175000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:75,cat:'polerones',name:'Polar Chaqueta 45kg Kg',price:159500,origPrice:170000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:76,cat:'polerones',name:'Polar Corderito 1ra 45 Kg',price:220000,origPrice:250000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:77,cat:'polerones',name:'Polar Oferta 45 Kg',price:99000,origPrice:150000,weight:'45kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:78,cat:'polerones',name:'Poleron C/ Gorro Oferta 40 Kg',price:66000,origPrice:150000,weight:'40kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:79,cat:'polerones',name:'Poleron C/ Gorro Talla Grande 1ra 45 Kg',price:176000,origPrice:230000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:80,cat:'polerones',name:'Poleron Con Gorro 1ra Canada 45 Kg',price:214500,origPrice:280000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:81,cat:'polerones',name:'Poleron Con Gorro Heavy 1ra 40 Kg',price:154000,origPrice:160000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:82,cat:'polerones',name:'Poleron Con Gorro Solo Marca 1ra 25kg',price:388300,origPrice:363000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:83,cat:'polerones',name:'Poleron Polar / Parka/ Chaq Marca Columbia 1ra 20 Kg',price:559900,origPrice:599000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:84,cat:'polerones',name:'Poleron Polar Marca Columbia 1ra 20kg',price:456500,origPrice:435000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:85,cat:'polerones',name:'Poleron Sin Gorro 20kg',price:44000,origPrice:90000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:86,cat:'polerones',name:'Poleron Sin Gorro 45kg',price:88000,origPrice:150000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:87,cat:'polerones',name:'Poleron Sin Gorro Hombre 40 Kg',price:203500,origPrice:200000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:88,cat:'polerones',name:'Polerones Calvin Klein 20 U',price:209000,origPrice:300000,weight:'20u',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:89,cat:'polerones',name:'Termico Ski Columbia 1ra 10 Kg',price:239800,origPrice:283000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:90,cat:'polerones',name:'Zara Retorno Inv Lig 40 U',price:456500,origPrice:465000,weight:'40u',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:91,cat:'deportiva',name:'Buzos Marca 1ra 25 Kg',price:399300,origPrice:383000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:92,cat:'deportiva',name:'Buzos Marca Algodon 1ra 23-25kg',price:365200,origPrice:342000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:93,cat:'deportiva',name:'Buzos Marca Deportivos 25 Kg',price:388300,origPrice:388000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:94,cat:'deportiva',name:'Buzos Plus Size 45 Kg',price:176000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:95,cat:'deportiva',name:'Camisa Hombre 1ra 40 Kg',price:159500,origPrice:160000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:96,cat:'deportiva',name:'Chaqueta Militar 20 Kg',price:181500,origPrice:180000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:97,cat:'deportiva',name:'Ciclismo 1ra/prem 20 Kg',price:220000,origPrice:230000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:98,cat:'deportiva',name:'Ciclismo 1ra/prem 25 Kg',price:258500,origPrice:260000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:99,cat:'deportiva',name:'Columbia Mix Inv 1ra 40kg',price:1004300,origPrice:1013000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:100,cat:'deportiva',name:'Cortaviento Y Poleron Deportivo Mixto 45 Kg',price:209000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:101,cat:'deportiva',name:'Deportivo Mujer Premium 25kg',price:297000,origPrice:310000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:102,cat:'deportiva',name:'Deportivo Solo Marcas 1ra+/prem 20 Kg',price:374000,origPrice:400000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:103,cat:'deportiva',name:'Deportivo Solo Marcas 1ra+/prem 25 Kg',price:434500,origPrice:450000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:104,cat:'deportiva',name:'Mix Deportivo 1ra 20 Kg',price:165000,origPrice:200000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:105,cat:'deportiva',name:'Mix Deportivo 1ra 40 Kg',price:308000,origPrice:380000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:106,cat:'deportiva',name:'Mixto Deportivo Marcas Premium 45 Kg',price:828300,origPrice:828000,weight:'45kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:107,cat:'deportiva',name:'Mixto Marca Deportivo Nike Adidas Surtido 20 Kg',price:330000,origPrice:320000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:108,cat:'deportiva',name:'Mixto Marca Deportivo Oferta 25 Kg',price:209000,origPrice:250000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:109,cat:'deportiva',name:'Mixto Marca Deportivo Oferta 2x25kg (50 Kg Total)',price:396000,origPrice:420000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:110,cat:'deportiva',name:'Mixto Marca Premium Under Armour 10 Kg',price:188100,origPrice:206000,weight:'10kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
-{id:111,cat:'deportiva',name:'Mixto Marca Premium Under Armour 25 Kg',price:451000,origPrice:465000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:112,cat:'deportiva',name:'Mixto Marcas Premium Deportivo Ninos / Juvenil 25 Kg',price:286000,origPrice:300000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:113,cat:'deportiva',name:'Short Running 1ra 20 Kg',price:220000,origPrice:250000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:114,cat:'deportiva',name:'Short Running 1ra 20 Kg (v3)',price:220000,origPrice:250000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:115,cat:'deportiva',name:'Mixto Marcas Premium Fila Champion Puma Reebok 1ra 10 Kg',price:177100,origPrice:856000,weight:'10kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
-{id:116,cat:'deportiva',name:'Mixto Marcas Premium Fila Champion Puma Reebok 1ra 20 Kg',price:342100,origPrice:361000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:117,cat:'deportiva',name:'Mixto Marcas Premium Fila Champion Puma Reebok 1ra 25 Kg',price:399300,origPrice:413000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:118,cat:'deportiva',name:'Mixto Marcas Premium Nike Adidas Deportivo 1ra 25 Kg',price:468600,origPrice:466000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:119,cat:'deportiva',name:'Nino Marca 1ra 25kg',price:258500,origPrice:285000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:120,cat:'deportiva',name:'Short Running 1ra 20 Kg (orig)',price:220000,origPrice:250000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:121,cat:'deportiva',name:'Pantalon Raquelado 1ra 45 Kg',price:297000,origPrice:320000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:122,cat:'deportiva',name:'Pantalon Raquelado Marca 12kg',price:262900,origPrice:249000,weight:'12kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:123,cat:'deportiva',name:'Pantalon Raquelado Marca 25kg',price:599500,origPrice:570000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:124,cat:'deportiva',name:'Pantalon Trekking / Senderismo Inv 1ra 40 Kg',price:513700,origPrice:617000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:125,cat:'deportiva',name:'Pantalon Trekking / Senderismo Verano 1ra 40 Kg',price:628100,origPrice:721000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:126,cat:'deportiva',name:'Poleron Con Gorro Solo Marca 1ra 20kg',price:342100,origPrice:361000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:127,cat:'deportiva',name:'Premium Nike Adidas Deportivo 20 Kg',price:456500,origPrice:445000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:128,cat:'deportiva',name:'Ropa Caza Y Pesca 1ra 25 Kg',price:302500,origPrice:290000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:129,cat:'deportiva',name:'Short Columbia 5 Kg',price:143000,origPrice:230000,weight:'5kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:130,cat:'deportiva',name:'Short Marca Surtido 25 Kg',price:203500,origPrice:250000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:131,cat:'deportiva',name:'Short Marca Columbia 10 Kg',price:228800,origPrice:258000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:132,cat:'deportiva',name:'Short Marca Vestir Y Outdoor 15 Kg',price:148500,origPrice:275000,weight:'15kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:133,cat:'deportiva',name:'Short Marca Vestir Y Outdoor 25kg',price:262900,origPrice:309000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:134,cat:'deportiva',name:'Short Marcas Deportivas 1ra 25 Kg',price:495000,origPrice:500000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:135,cat:'deportiva',name:'Short Marcas Premium Unisex 1ra 25 Kg',price:330000,origPrice:360000,weight:'25kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
-{id:136,cat:'deportiva',name:'Short Running 1ra 20 Kg (v5)',price:220000,origPrice:250000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:137,cat:'deportiva',name:'Short Running 1ra 20 Kg (v4)',price:220000,origPrice:250000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:138,cat:'deportiva',name:'Short Running 1ra 25 Kg',price:275000,origPrice:260000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:139,cat:'deportiva',name:'Short Surf / Playero Hombre 1ra 25 Kg',price:275000,origPrice:300000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:140,cat:'sweaters',name:'Cardigan 1ra 45 1ra Kg',price:159500,origPrice:180000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:141,cat:'sweaters',name:'Cardigan Largo 1ra 20 Kg',price:148500,origPrice:150000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:142,cat:'sweaters',name:'Poncho Fashion 1ra 45 Kg',price:203500,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:143,cat:'sweaters',name:'Ruana Poncho Fashion 1ra 45 Kg',price:187000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:144,cat:'sweaters',name:'Sweater Grueso 20 Kg',price:71500,origPrice:200000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:145,cat:'sweaters',name:'Sweater Marca Hombre 1ra 25kg',price:308000,origPrice:315000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:146,cat:'sweaters',name:'Sweter Largo 22kg',price:77000,origPrice:220000,weight:'22kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:147,cat:'sweaters',name:'Sweter Marca Mujer Premium 25kg',price:374000,origPrice:360000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:148,cat:'sweaters',name:'Sweter Mujer Moderno 1ra 20 Kg',price:77000,origPrice:75000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:149,cat:'sweaters',name:'Sweter Mujer Moderno 1ra 45 Kg',price:137500,origPrice:150000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:150,cat:'sweaters',name:'Sweter Mujer Oferta 2x20 Kg',price:66000,origPrice:150000,weight:'20kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:151,cat:'vestidos',name:'Enteritos 1ra 40 Kg',price:176000,origPrice:250000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:152,cat:'vestidos',name:'Enteritos 1ra 20 Kg',price:93500,origPrice:125000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:153,cat:'vestidos',name:'Mix Brillo / Lentejuelas 25 Kg',price:247500,origPrice:300000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:154,cat:'vestidos',name:'Sweter Largo 45kg',price:137500,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:155,cat:'vestidos',name:'Trench Coat 1ra 25 Kg',price:165000,origPrice:200000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:156,cat:'vestidos',name:'Vestidos Extra Linda 1ra 45 Kg',price:176000,origPrice:250000,weight:'45kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:157,cat:'vestidos',name:'Vestidos Fiesta Prem / Retorno 20 Kg',price:264000,origPrice:280000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:158,cat:'vestidos',name:'Vestidos Verano Juv 1ra+ 20 Kg',price:143000,origPrice:150000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:159,cat:'vestidos',name:'Vestidos Y Faldas 1ra+ Extra Linda 20 Kg',price:148500,origPrice:200000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:160,cat:'vestidos',name:'Vestidos Y Faldas 1ra+ Extra Linda 40 Kg',price:253000,origPrice:380000,weight:'40kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
-{id:161,cat:'pantalones',name:'Buzo Algodon 40kg',price:203500,origPrice:260000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:162,cat:'calzado',name:'Calzado Marca Ugg 1ra 10 Kg',price:275000,origPrice:300000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:163,cat:'calzado',name:'Calzado Marca Ugg 1ra 20 Kg',price:539000,origPrice:600000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:164,cat:'calzado',name:'Calzado Marca Ugg Oferta 10kg',price:154000,origPrice:200000,weight:'10kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:165,cat:'calzado',name:'Calzado Mixto 18 Kg',price:55000,origPrice:80000,weight:'18kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:166,cat:'calzado',name:'Calzado Termico/nieve Adulto 1ra 20 Kg',price:216700,origPrice:257000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:167,cat:'calzado',name:'Calzado Termico/nieve Adulto Mixto 20 Kg',price:160600,origPrice:186000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:168,cat:'calzado',name:'Disfraces 45 Kg',price:159500,origPrice:180000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:169,cat:'calzado',name:'Disfraces Y Accesorios 20 Kg',price:71500,origPrice:100000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:170,cat:'calzado',name:'Ropa Mascota 10 Kg',price:88000,origPrice:100000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:171,cat:'calzado',name:'Zapatillas Hombre Marca 1ra 30 U',price:411400,origPrice:380000,weight:'30u',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:172,cat:'calzado',name:'Zapatillas Jordan Y Basketball 1ra 25u',price:524700,origPrice:480000,weight:'25u',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:173,cat:'hogar',name:'Bata Toalla 1ra 45kg',price:176000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:174,cat:'hogar',name:'Cobertor 1ra-prem 40kg',price:159500,origPrice:200000,weight:'40kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:175,cat:'hogar',name:'Cobertor 45 Kg',price:110000,origPrice:120000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:176,cat:'hogar',name:'Cubrecolchon 1ra 45kg',price:203500,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:177,cat:'hogar',name:'Frazada 1ra 40kg',price:108900,origPrice:104000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:178,cat:'hogar',name:'Funda Cobertor 18 U Retorno',price:60500,origPrice:75000,weight:'18u',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:179,cat:'hogar',name:'Mix Hogar 1ra 40 Kg Euro',price:110000,origPrice:150000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:180,cat:'hogar',name:'Mix Hogar 2x45kg',price:171600,origPrice:166000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:181,cat:'hogar',name:'Mix Hogar 45 Kg',price:88000,origPrice:85000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:182,cat:'hogar',name:'Sabana Blanca 40 Kg',price:216700,origPrice:247000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:183,cat:'hogar',name:'Sabana Color 40 Kg',price:216700,origPrice:247000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:184,cat:'hogar',name:'Sabanas Franela 1ra 45 Kg',price:192500,origPrice:210000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:185,cat:'hogar',name:'Toalla 1ra 45 Kg',price:262900,origPrice:289000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:186,cat:'hogar',name:'Toalla 25 Kg',price:181500,origPrice:210000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:187,cat:'plussize',name:'Hombre Verano 1ra Plus Size 40 Kg',price:165000,origPrice:210000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:188,cat:'plussize',name:'Hombre Y Mujer Verano 1ra Plus Size 20 Kg',price:88000,origPrice:120000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:189,cat:'plussize',name:'Hombre Y Mujer Verano 1ra Plus Size 40 Kg',price:165000,origPrice:210000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:190,cat:'plussize',name:'Mix Mujer Verano Extra Linda 20 Kg',price:88000,origPrice:100000,weight:'20kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
-{id:191,cat:'plussize',name:'Mix Mujer Verano Extra Linda 40 Kg',price:154000,origPrice:270000,weight:'40kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:192,cat:'plussize',name:'Mix Verano Pluz Size Prem 24 Kg',price:220000,origPrice:280000,weight:'24kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:193,cat:'poleras',name:'Abrigo Hombre 3/4 Y Largo 1ra+ 25 Kg',price:137500,origPrice:160000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:194,cat:'poleras',name:'Camisa Marca Hombre Oferta',price:242000,origPrice:250000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:195,cat:'poleras',name:'Mixto Marca Hombre Oferta',price:203500,origPrice:250000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:196,cat:'poleras',name:'Polera Marca Hombre M/co Adidas Nike 1ra+/prem 20 Kg',price:513700,origPrice:497000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:197,cat:'poleras',name:'Polera Marca Hombre M/co Oferta 25kg',price:214500,origPrice:250000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:198,cat:'poleras',name:'Polera Marca Hombre M/la Oferta',price:203500,origPrice:220000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:199,cat:'vestidos',name:'Abrigo 3/4 Mujer + Blazer / Chaqueta Fashion 2x20 Kg',price:165000,origPrice:180000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:200,cat:'vestidos',name:'Abrigo 3/4 Mujer 1ra 20 Kg',price:99000,origPrice:100000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:201,cat:'vestidos',name:'Blazer / Chaqueta Fashion 20 Kg',price:99000,origPrice:300000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:202,cat:'vestidos',name:'Brillo / Lentejuela 1ra+/prem 25 Kg',price:253000,origPrice:300000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:203,cat:'vestidos',name:'Calza Y Pantalon Lycra 40 Kg',price:104500,origPrice:140000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:204,cat:'vestidos',name:'Chaqueta Marca Zara Hym 1ra+ 25 Kg',price:401500,origPrice:370000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:205,cat:'vestidos',name:'Corset / Calzon Faja / Modeladores Otros 20kg',price:154000,origPrice:215000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:206,cat:'vestidos',name:'Corset / Calzon Faja / Modeladores Otros 40kg',price:286000,origPrice:400000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:207,cat:'vestidos',name:'Gamulan Piloto 20 Kg',price:132000,origPrice:220000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:208,cat:'vestidos',name:'Jeans Zara 10 U',price:188100,origPrice:406000,weight:'10u',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:209,cat:'vestidos',name:'Michael Kors 1ra 25kg',price:434500,origPrice:500000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:210,cat:'vestidos',name:'Mix Mujer Juv Verano 20 Kg',price:148500,origPrice:180000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:211,cat:'vestidos',name:'Mix Mujer Verano Extra Linda 10 Kg',price:49500,origPrice:55000,weight:'10kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
-{id:212,cat:'vestidos',name:'Mixto Marcas Premium Mujer Verano',price:423500,origPrice:420000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:213,cat:'vestidos',name:'Pink 1ra 25 Kg',price:324500,origPrice:350000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:214,cat:'vestidos',name:'Sweter Oferta 20 Kg',price:44000,origPrice:70000,weight:'20kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:215,cat:'vestidos',name:'Traje Bano Mujer Entero 1ra+ 20 Kg',price:93500,origPrice:120000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:216,cat:'vestidos',name:'Traje Bano Mujer Entero Surtido 45 Kg',price:93500,origPrice:150000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:217,cat:'vestidos',name:'Trench Coat 1ra 20 Kg',price:132000,origPrice:150000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:218,cat:'vestidos',name:'Zara + Jeans Zara 20 U',price:302500,origPrice:470000,weight:'20u',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:219,cat:'vestidos',name:'Zara Retorno Inv Lig + Heavy 30 U',price:456500,origPrice:465000,weight:'30u',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:220,cat:'ninos',name:'Chaquetas Solo Marcas Deportivas Nino Juv 1ra 20 Kg',price:258500,origPrice:300000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:221,cat:'ninos',name:'Mix Nina Toda Estacion 1ra 10 Kg',price:49500,origPrice:135000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:222,cat:'ninos',name:'Parka Y Chaq Nino 1ra 40kg',price:154000,origPrice:180000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:223,cat:'ninos',name:'Poleron Y Buzo Marca Gap Nino 25 Kg',price:313500,origPrice:320000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:224,cat:'ninos',name:'Termico Ski Ninos 1ra 40 Kg',price:154000,origPrice:200000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:225,cat:'pantalones',name:'Pantalon / Short 3/4 Outdoor 1ra 40 Kg',price:132000,origPrice:180000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:226,cat:'ski',name:'Pantalon Ski Y Termicos Adulto Can 45 Kg',price:214500,origPrice:265000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:227,cat:'ski',name:'Termico Ski Adulto 1ra 45 Kg',price:209000,origPrice:265000,weight:'45kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:228,cat:'deportiva',name:'Abrigo 35 Kg',price:143000,origPrice:150000,weight:'35kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:229,cat:'deportiva',name:'Chaqueta Bomber 1ra+ 25 Kg',price:286000,origPrice:300000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:230,cat:'deportiva',name:'Chaquetas Cuero 25 Kg',price:132000,origPrice:140000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:231,cat:'deportiva',name:'Calvin Klein Mix 22-23 Kg',price:365200,origPrice:362000,weight:'23kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:232,cat:'deportiva',name:'Columbia Verano 20 Kg',price:513700,origPrice:617000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:233,cat:'deportiva',name:'Columbia/ Northface 2da / 3ra 10 Kg',price:104500,origPrice:120000,weight:'10kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:234,cat:'deportiva',name:'Deportivo Verano Solo Marcas 1ra 25 Kg',price:456500,origPrice:435000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:235,cat:'deportiva',name:'Mix Marcas Premium 1ra-prem 20 Kg',price:451000,origPrice:415000,weight:'20kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:236,cat:'deportiva',name:'Mix Marcas Premium 1ra-prem 25 Kg',price:528000,origPrice:550000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:237,cat:'deportiva',name:'Mix Surtido Verano, Todo Producto 20 Kg Calidad Oferta',price:49500,origPrice:75000,weight:'20kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:238,cat:'deportiva',name:'Mix Verano Marca (poleras Y Short) Oferta 50 Kg',price:399300,origPrice:513000,weight:'50kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:239,cat:'deportiva',name:'Mixto Marca Deportivo Old Navy Nba, Nfl, Nhl, Russel,starter, Otras 1ra+ 25 Kg',price:264000,origPrice:300000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:240,cat:'deportiva',name:'Mixto Marca Under Armour Verano 25 Kg',price:440000,origPrice:450000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:241,cat:'deportiva',name:'Parka Chaqueta 1ra 40 Kg',price:159500,origPrice:200000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:242,cat:'deportiva',name:'Polar Marca 1ra 25 Kg',price:388300,origPrice:373000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:243,cat:'deportiva',name:'Polar Marca Oferta 25 Kg',price:220000,origPrice:230000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:244,cat:'deportiva',name:'Poleron Canguro Marca Oferta 25 Kg',price:214500,origPrice:220000,weight:'25kg',tier:'oferta',badge:'oferta',img:MAULLY_IMG},
-{id:245,cat:'deportiva',name:'Poleron Con Gorro Marca 1ra+ 25 Kg',price:411400,origPrice:394000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:246,cat:'deportiva',name:'Poleron Deportivo Premium 25kg',price:247500,origPrice:240000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:247,cat:'deportiva',name:'Poleron Marca Gap Adulto 25 Kg',price:399300,origPrice:413000,weight:'25kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:248,cat:'deportiva',name:'Ropa Caza Y Pesca 1ra Prem 25 Kg',price:324500,origPrice:320000,weight:'25kg',tier:'premium',badge:'premium',img:MAULLY_IMG},
-{id:249,cat:'deportiva',name:'Ropa Moto 1ra+ 15-18 Kg',price:203500,origPrice:250000,weight:'18kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:250,cat:'deportiva',name:'Ski Alta Montana (parkas Chaq Y Termicos) 1ra+ 20 Kg',price:220000,origPrice:220000,weight:'20kg',tier:'primera',badge:'primera',img:MAULLY_IMG},
-{id:251,cat:'deportiva',name:'Sweater Shaggy 40 Kg',price:209000,origPrice:220000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
-{id:252,cat:'hogar',name:'Hospital 40 Kg',price:154000,origPrice:165000,weight:'40kg',tier:'primera',badge:'primera',img:MAULLY_IMG}
+  {id:1,cat:'chaquetas',name:'Blazer / Chaqueta Fashion Verano 20 Kg',price:65000,origPrice:80000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:2,cat:'chaquetas',name:'Blazer / Chaqueta Fashion 1ra 20 Kg',price:85000,origPrice:100000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:3,cat:'chaquetas',name:'Parkas Sin Manga 1ra 25 Kg',price:130000,origPrice:145000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:4,cat:'chaquetas',name:'Gamulan 40kg',price:145000,origPrice:220000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:5,cat:'chaquetas',name:'Parkas Coreana 1ra 20 Kg',price:156000,origPrice:186000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:6,cat:'chaquetas',name:'Parkas Plus Size 45kg',price:160000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:7,cat:'chaquetas',name:'Chaqueta Lenadora 1ra+ 25 Kg',price:180000,origPrice:220000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:8,cat:'chaquetas',name:'Parkas Largas 1ra 40 Kg',price:197000,origPrice:267000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:9,cat:'chaquetas',name:'Chaqueta Piloto Y Gamulan 1ra 20 Kg',price:220000,origPrice:300000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:10,cat:'chaquetas',name:'Parka Alta Montaña 20 Kg',price:220000,origPrice:280000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:11,cat:'chaquetas',name:'Parka Treking / Alta Montaña 25 Kg',price:260000,origPrice:330000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:12,cat:'chaquetas',name:'Chaquetas Solo Marcas Deportivas Niño Juv 1ra 25 Kg',price:300000,origPrice:350000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:13,cat:'chaquetas',name:'Parkas Coreana 1ra 40 Kg',price:301000,origPrice:361000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:14,cat:'chaquetas',name:'Columbia Mix Oferta 20 Kg',price:311000,origPrice:361000,weight:'20kg',tier:'oferta',badge:'oferta',isNew:true,img:MAULLY_IMG},
+  {id:15,cat:'chaquetas',name:'Chaqueta Lenadora 45 Kg',price:320000,origPrice:350000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:16,cat:'chaquetas',name:'Calvin Klein Chaquetas 1ra+ 25 Kg',price:330000,origPrice:380000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:17,cat:'chaquetas',name:'Parka/Chaq Marca Oferta 25kg',price:330000,origPrice:360000,weight:'25kg',tier:'oferta',badge:'oferta',isNew:true,img:MAULLY_IMG},
+  {id:18,cat:'chaquetas',name:'Columbia Mix Oferta 25kg',price:363000,origPrice:413000,weight:'25kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:19,cat:'chaquetas',name:'Parka/Chaq Polar Marca Columbia 1ra Directa 20 Kg',price:363000,origPrice:413000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:20,cat:'chaquetas',name:'Northface Mix Polar Parka Chaq Oferta 20 Kg',price:394000,origPrice:414000,weight:'20kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:21,cat:'chaquetas',name:'Outdoor / Trekking Columbia 1ra Seleccionado 10 Kg',price:394000,origPrice:424000,weight:'10kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:22,cat:'chaquetas',name:'Parka/Chaq Marca Columbia Oferta 20 Kg',price:394000,origPrice:494000,weight:'20kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:23,cat:'chaquetas',name:'Cortaviento Chaq Ligera Columbia 1ra 10 Kg',price:405000,origPrice:565000,weight:'10kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:24,cat:'chaquetas',name:'Pantalones Outdoor Marca Columbia 10 Kg',price:405000,origPrice:435000,weight:'10kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:25,cat:'chaquetas',name:'Poleron Algodon Y Deportivo Columbia 10 Kg',price:405000,origPrice:465000,weight:'10kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:26,cat:'chaquetas',name:'Columbia Mix 1ra 20kg',price:493000,origPrice:518000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:27,cat:'chaquetas',name:'Columbia Northface Mix 1ra Directo 25 Kg',price:519000,origPrice:569000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:28,cat:'chaquetas',name:'Parka/Chaq Marca Columbia 1ra 20 Kg',price:545000,origPrice:570000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:29,cat:'chaquetas',name:'Parka/Chaq Marca Columbia/ Northface 1ra 20 Kg',price:576000,origPrice:601000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:30,cat:'chaquetas',name:'Columbia Mix 1ra 25kg',price:597000,origPrice:622000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:31,cat:'chaquetas',name:'Cortaviento Marca 25kg',price:602000,origPrice:722000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:32,cat:'chaquetas',name:'Columbia/ Northface Mix Inv Oferta 40 Kg',price:623000,origPrice:823000,weight:'40kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:33,cat:'chaquetas',name:'Northface Mix Polar Parka Chaq 1ra 20 Kg',price:690000,origPrice:775000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:34,cat:'chaquetas',name:'Northface Mix Polar Parka Chaq 1ra 25 Kg',price:830000,origPrice:880000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:35,cat:'chaquetas',name:'Columbia/ Northface Mix Inv 1ra Can 45 Kg',price:986000,origPrice:1086000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:36,cat:'jeans',name:'Pescador Jeans Juvenil Mujer 1ra 40 Kg',price:60000,origPrice:90000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:37,cat:'jeans',name:'Jardineras De Jeans 40 Kg',price:120000,origPrice:250000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:38,cat:'jeans',name:'Jeans Mujer Plus Size 1ra 40 Kg',price:120000,origPrice:140000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:39,cat:'jeans',name:'Blusa Jeans 1ra 22 Kg',price:135000,origPrice:185000,weight:'22kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:40,cat:'jeans',name:'Chaqueta Mezclilla 1ra 45 Kg',price:165000,origPrice:180000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:41,cat:'jeans',name:'Jeans Hombre Plus Size 1ra 45 Kg',price:185000,origPrice:250000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:42,cat:'jeans',name:'Blusa Jeans 1ra 45 Kg',price:220000,origPrice:335000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:43,cat:'jeans',name:'Jeans Levis Mujer 25 Kg',price:240000,origPrice:300000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:44,cat:'jeans',name:'Jeans Hombre 1ra 25kg',price:244000,origPrice:259000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:45,cat:'jeans',name:'Jeans Levis Hombre 1ra 30 Kg',price:410000,origPrice:465000,weight:'30kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:46,cat:'jeans',name:'Jeans Levis Mujer 50 Kg',price:450000,origPrice:550000,weight:'50kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:47,cat:'poleras',name:'Poleras Manga Larga Mujer 1ra 45 Kg',price:95000,origPrice:120000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:48,cat:'poleras',name:'Blusa Mixta Xl 45kg',price:100000,origPrice:180000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:49,cat:'poleras',name:'Blusa Franela 45 Kg 1ra',price:140000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:50,cat:'poleras',name:'Camisa Franela 45 Kg 1ra',price:140000,origPrice:145000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:51,cat:'poleras',name:'Polera Manga Larga Hombre 1ra 40 Kg',price:145000,origPrice:190000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:52,cat:'poleras',name:'Camisa Guayabera 1ra 10 Kg',price:150000,origPrice:200000,weight:'10kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:53,cat:'poleras',name:'Polera Tie Dye 1ra+ 22 Kg',price:180000,origPrice:260000,weight:'22kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:54,cat:'poleras',name:'Polera Marca Deportiva Oferta 25kg',price:195000,origPrice:225000,weight:'25kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:55,cat:'poleras',name:'Polera Marca Deportiva Hombre 1ra 10 Kg',price:208000,origPrice:228000,weight:'10kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:56,cat:'poleras',name:'Polera Hombre Dibujos Animados 1ra+/Prem 20 Kg',price:210000,origPrice:230000,weight:'20kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
+  {id:57,cat:'poleras',name:'Polera Hombre Dibujos Animados 1ra+/Prem 25 Kg',price:250000,origPrice:270000,weight:'25kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:58,cat:'poleras',name:'Polera Marca Niño 1ra+/Prem 25 Kg',price:280000,origPrice:340000,weight:'25kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:59,cat:'poleras',name:'Polera Marca Hombre M/La 1ra+/Prem 25kg',price:306000,origPrice:361000,weight:'25kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
+  {id:60,cat:'poleras',name:'Camisa Guayabera 1ra 22 Kg',price:311000,origPrice:361000,weight:'22kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:61,cat:'poleras',name:'Polera Marca Hombre S/Ma 1ra 25 Kg',price:320000,origPrice:375000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:62,cat:'poleras',name:'Polera Hombre Starwars / Marvel 1ra+ 20 Kg',price:343000,origPrice:353000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:63,cat:'poleras',name:'Polera Marca Deportiva Hombre 1ra 25 Kg',price:426000,origPrice:436000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:64,cat:'poleras',name:'Polera Hombre Marca M/Co Multi Marca 25 Kg',price:450000,origPrice:480000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:65,cat:'poleras',name:'Polera Marca Hombre M/Co C/Cuello 1ra+/Prem 25 Kg',price:450000,origPrice:490000,weight:'25kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:66,cat:'poleras',name:'Camisa Guayabera 1ra 45 Kg',price:571000,origPrice:671000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:67,cat:'poleras',name:'Camisa Hombre 1ra 40 Kg',price:145000,origPrice:160000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:68,cat:'polerones',name:'Poleron C/ Gorro Oferta 40 Kg',price:60000,origPrice:150000,weight:'40kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:69,cat:'polerones',name:'Poleron Sin Gorro 45kg',price:80000,origPrice:100000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:70,cat:'polerones',name:'Polar Oferta 45 Kg',price:85000,origPrice:150000,weight:'45kg',tier:'oferta',badge:'oferta',isNew:true,img:MAULLY_IMG},
+  {id:71,cat:'polerones',name:'Polar 45 Kg',price:90000,origPrice:185000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:72,cat:'polerones',name:'Pantalon Polar 1ra 45 Kg',price:125000,origPrice:165000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:73,cat:'polerones',name:'Pijama Polar 1ra 45 Kg',price:125000,origPrice:150000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:74,cat:'polerones',name:'Poleron Con Gorro Heavy 1ra 40 Kg',price:140000,origPrice:160000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:75,cat:'polerones',name:'Polar 1ra Canada 45 Kg',price:145000,origPrice:175000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:76,cat:'polerones',name:'Polar Chaqueta 45kg',price:145000,origPrice:170000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:77,cat:'polerones',name:'Poleron C/ Gorro Talla Grande 1ra 45 Kg',price:160000,origPrice:230000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:78,cat:'polerones',name:'Poleron Polar Marca Columbia Oferta 12kg',price:182000,origPrice:707000,weight:'12kg',tier:'oferta',badge:'oferta',isNew:true,img:MAULLY_IMG},
+  {id:79,cat:'polerones',name:'Poleron Sin Gorro Hombre 40 Kg',price:185000,origPrice:200000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:80,cat:'polerones',name:'Poleron Con Gorro 1ra Canada 45 Kg',price:195000,origPrice:280000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:81,cat:'polerones',name:'Polar Corderito 1ra 45 Kg',price:200000,origPrice:250000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:82,cat:'polerones',name:'Polerones Calvin Klein 20 U',price:200000,origPrice:300000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:83,cat:'polerones',name:'Poleron Polar Marca Columbia 1ra 12kg',price:234000,origPrice:359000,weight:'12kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:84,cat:'polerones',name:'Termico Ski Columbia 1ra 10 Kg',price:234000,origPrice:284000,weight:'10kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:85,cat:'polerones',name:'Poleron Con Gorro Solo Marca 1ra 25kg',price:353000,origPrice:363000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:86,cat:'polerones',name:'Poleron Con Gorro Marca 1ra+ 25 Kg',price:374000,origPrice:394000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:87,cat:'polerones',name:'Poleron Polar Marca Columbia 1ra 20kg',price:415000,origPrice:435000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:88,cat:'polerones',name:'Poleron Polar / Parka/ Chaq Marca Columbia 1ra 25 Kg',price:597000,origPrice:642000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:89,cat:'deportiva',name:'Mix Deportivo 1ra 20 Kg',price:150000,origPrice:200000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:90,cat:'deportiva',name:'Chaqueta Militar 20 Kg',price:165000,origPrice:180000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:91,cat:'deportiva',name:'Mixto Marca Premium Under Armour 10 Kg',price:171000,origPrice:206000,weight:'10kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:92,cat:'deportiva',name:'Mixto Marcas Premium Fila Champion Puma Reebok 1ra 10 Kg',price:171000,origPrice:206000,weight:'10kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:93,cat:'deportiva',name:'Cortaviento Y Poleron Deportivo Mixto 45 Kg',price:190000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:94,cat:'deportiva',name:'Mixto Marca Deportivo Oferta 25 Kg',price:190000,origPrice:250000,weight:'25kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:95,cat:'deportiva',name:'Ciclismo 1ra/Prem 20 Kg',price:200000,origPrice:230000,weight:'20kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:96,cat:'deportiva',name:'Ciclismo 1ra/Prem 25 Kg',price:230000,origPrice:260000,weight:'25kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:97,cat:'deportiva',name:'Mixto Marcas Premium Deportivo Niños / Juvenil 25 Kg',price:260000,origPrice:300000,weight:'25kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
+  {id:98,cat:'deportiva',name:'Deportivo Mujer Premium 25kg',price:270000,origPrice:310000,weight:'25kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:99,cat:'deportiva',name:'Ropa Caza Y Pesca 1ra 25 Kg',price:275000,origPrice:290000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:100,cat:'deportiva',name:'Mix Deportivo 1ra 40 Kg',price:280000,origPrice:380000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:101,cat:'deportiva',name:'Mixto Marca Deportivo Nike Adidas Surtido 20 Kg',price:285000,origPrice:320000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:102,cat:'deportiva',name:'Mixto Marcas Premium Fila Champion Puma Reebok 1ra 20 Kg',price:311000,origPrice:361000,weight:'20kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:103,cat:'deportiva',name:'Buzos Marca Algodon 1ra 23-25kg',price:343000,origPrice:363000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:104,cat:'deportiva',name:'Buzos Marca Deportivos 25 Kg',price:353000,origPrice:388000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:105,cat:'deportiva',name:'Buzos Marca 1ra 25 Kg',price:363000,origPrice:383000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:106,cat:'deportiva',name:'Mixto Marcas Premium Fila Champion Puma Reebok 1ra 25 Kg',price:363000,origPrice:413000,weight:'25kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:107,cat:'deportiva',name:'Deportivo Solo Marcas 1ra+/Prem 20 Kg',price:340000,origPrice:400000,weight:'20kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:108,cat:'deportiva',name:'Deportivo Solo Marcas 1ra+/Prem 25 Kg',price:395000,origPrice:450000,weight:'25kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:109,cat:'deportiva',name:'Mixto Marca Premium Under Armour 25 Kg',price:410000,origPrice:465000,weight:'25kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
+  {id:110,cat:'vestidos',name:'Enteritos 1ra 20 Kg',price:85000,origPrice:125000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:111,cat:'vestidos',name:'Vestidos Verano Juv 1ra+ 20 Kg',price:130000,origPrice:150000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:112,cat:'vestidos',name:'Vestidos Y Faldas 1ra+ Extra Linda 20 Kg',price:135000,origPrice:200000,weight:'20kg',tier:'extra',badge:'extra',isNew:true,img:MAULLY_IMG},
+  {id:113,cat:'vestidos',name:'Trench Coat Chaqueta Trench 1ra 25 Kg',price:155000,origPrice:200000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:114,cat:'vestidos',name:'Enteritos 1ra 40 Kg',price:160000,origPrice:250000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:115,cat:'vestidos',name:'Vestidos Extra Linda 1ra 45 Kg',price:160000,origPrice:250000,weight:'45kg',tier:'extra',badge:'extra',isNew:false,img:MAULLY_IMG},
+  {id:116,cat:'vestidos',name:'Mix Brillo / Lentejuelas 25 Kg',price:225000,origPrice:300000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:117,cat:'vestidos',name:'Vestidos Y Faldas 1ra+ Extra Linda 40 Kg',price:230000,origPrice:380000,weight:'40kg',tier:'extra',badge:'extra',isNew:false,img:MAULLY_IMG},
+  {id:118,cat:'vestidos',name:'Vestidos Fiesta Prem / Retorno 20 Kg',price:250000,origPrice:280000,weight:'20kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:119,cat:'ninos',name:'Mix Niña Toda Estación 1ra 10 Kg',price:45000,origPrice:135000,weight:'10kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:120,cat:'ninos',name:'Parka Y Chaq Niño 1ra 40 Kg',price:140000,origPrice:180000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:121,cat:'ninos',name:'Pantalón Ski Y Térmicos Niños 1ra 40 Kg',price:145000,origPrice:190000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:122,cat:'ninos',name:'Térmico Ski Niños 1ra 40 Kg',price:145000,origPrice:200000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:123,cat:'ninos',name:'Poleron Y Buzo Marca Gap Niño 25 Kg',price:275000,origPrice:320000,weight:'25kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:124,cat:'ski',name:'Calzado Termico/Nieve Adulto Mixto 20 Kg',price:146000,origPrice:186000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:125,cat:'ski',name:'Termico Ski Adulto 1ra 45 Kg',price:190000,origPrice:265000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:126,cat:'ski',name:'Pantalón Ski Y Térmicos Adulto Can 45 Kg',price:195000,origPrice:265000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:127,cat:'ski',name:'Calzado Termico/Nieve Adulto 1ra 20 Kg',price:197000,origPrice:257000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:128,cat:'calzado',name:'Calzado Mixto 18 Kg',price:50000,origPrice:80000,weight:'18kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:129,cat:'calzado',name:'Ropa Mascota 10 Kg',price:80000,origPrice:100000,weight:'10kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:130,cat:'calzado',name:'Calzado Marca Ugg Oferta 10kg',price:140000,origPrice:200000,weight:'10kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:131,cat:'calzado',name:'Calzado Marca Ugg 1ra 10 Kg',price:260000,origPrice:300000,weight:'10kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:132,cat:'calzado',name:'Calzado Marca Ugg 1ra 20 Kg',price:500000,origPrice:600000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:133,cat:'hogar',name:'Mix Hogar 45 Kg',price:80000,origPrice:85000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:134,cat:'hogar',name:'Cobertor 45 Kg',price:100000,origPrice:120000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:135,cat:'hogar',name:'Mix Hogar 1ra 40 Kg Euro',price:100000,origPrice:150000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:136,cat:'hogar',name:'Frazada 1ra 40kg',price:104000,origPrice:124000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:137,cat:'hogar',name:'Cobertor 1ra-Prem 40kg',price:145000,origPrice:200000,weight:'40kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
+  {id:138,cat:'hogar',name:'Mix Hogar 2x45kg',price:150000,origPrice:160000,weight:'90kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:139,cat:'hogar',name:'Bata Toalla 1ra 45kg',price:160000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:140,cat:'hogar',name:'Toalla 25 Kg',price:171000,origPrice:216000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:141,cat:'hogar',name:'Sabanas Franela 1ra 45 Kg',price:175000,origPrice:210000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:142,cat:'hogar',name:'Cubrecolchon 1ra 45kg',price:185000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:143,cat:'hogar',name:'Sabana Blanca 40 Kg',price:197000,origPrice:247000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:144,cat:'hogar',name:'Sabana Color 40 Kg',price:197000,origPrice:247000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:145,cat:'hogar',name:'Toalla 1ra 45 Kg',price:239000,origPrice:289000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:146,cat:'sweaters',name:'Sweter Mujer Oferta 2x20 Kg',price:60000,origPrice:150000,weight:'40kg',tier:'oferta',badge:'oferta',isNew:false,img:MAULLY_IMG},
+  {id:147,cat:'sweaters',name:'Sweater Grueso 20 Kg',price:65000,origPrice:200000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:148,cat:'sweaters',name:'Sweter Largo 20kg',price:70000,origPrice:220000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:149,cat:'sweaters',name:'Sweter Mujer Moderno 1ra 20 Kg',price:70000,origPrice:75000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:150,cat:'sweaters',name:'Sweter Mujer Moderno 1ra 45 Kg',price:125000,origPrice:150000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:151,cat:'sweaters',name:'Cardigan Largo 1ra 20 Kg',price:135000,origPrice:150000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:152,cat:'sweaters',name:'Cardigan 1ra 45 Kg',price:145000,origPrice:180000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:153,cat:'sweaters',name:'Ruana Poncho Fashion 1ra 45 Kg',price:170000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:154,cat:'sweaters',name:'Poncho Fashion 1ra 45 Kg',price:185000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:155,cat:'sweaters',name:'Sweater Marca Hombre 1ra 25kg',price:280000,origPrice:315000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:156,cat:'sweaters',name:'Sweter Marca Mujer Premium 25kg',price:363000,origPrice:373000,weight:'25kg',tier:'premium',badge:'premium',isNew:true,img:MAULLY_IMG},
+  {id:157,cat:'pantalones',name:'Calza Y Pantalon Lycra 40 Kg',price:95000,origPrice:140000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:158,cat:'pantalones',name:'Buzo Algodon 45kg',price:145000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:159,cat:'pantalones',name:'Pantalon Raquelado 1ra 45 Kg',price:280000,origPrice:320000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:160,cat:'pantalones',name:'Pantalon Raquelado Marca 25kg',price:602000,origPrice:622000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:161,cat:'plussize',name:'Buzos Plus Size 45 Kg',price:160000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:162,cat:'plussize',name:'Hombre Verano 1ra Plus Size 40 Kg',price:150000,origPrice:210000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:163,cat:'plussize',name:'Hombre Y Mujer Verano 1ra Plus Size 20 Kg',price:80000,origPrice:120000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:164,cat:'plussize',name:'Hombre Y Mujer Verano 1ra Plus Size 40 Kg',price:150000,origPrice:210000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:165,cat:'poleras',name:'Mix Surtido Verano Todo Producto 20 Kg Oferta',price:45000,origPrice:75000,weight:'20kg',tier:'oferta',badge:'oferta',isNew:true,img:MAULLY_IMG},
+  {id:166,cat:'chaquetas',name:'Columbia/ Northface 3ra 10 Kg',price:95000,origPrice:120000,weight:'10kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:167,cat:'chaquetas',name:'Chaquetas Cuero 25 Kg',price:120000,origPrice:140000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:168,cat:'poleras',name:'Hospital 40 Kg',price:140000,origPrice:165000,weight:'40kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:169,cat:'chaquetas',name:'Parka Chaqueta 1ra 40 Kg',price:145000,origPrice:200000,weight:'40kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:170,cat:'chaquetas',name:'Abrigo 35 Kg',price:130000,origPrice:150000,weight:'35kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:171,cat:'chaquetas',name:'Abrigo 3/4 Mujer 1ra 20 Kg',price:93000,origPrice:103000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:172,cat:'chaquetas',name:'Abrigo Hombre 3/4 Y Largo 1ra+ 25 Kg',price:125000,origPrice:160000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:173,cat:'vestidos',name:'Mix Mujer Verano Extra Linda 10 Kg',price:45000,origPrice:55000,weight:'10kg',tier:'extra',badge:'extra',isNew:true,img:MAULLY_IMG},
+  {id:174,cat:'vestidos',name:'Mix Mujer Verano Extra Linda 20 Kg',price:80000,origPrice:100000,weight:'20kg',tier:'extra',badge:'extra',isNew:false,img:MAULLY_IMG},
+  {id:175,cat:'vestidos',name:'Mix Mujer Verano Extra Linda 40 Kg',price:140000,origPrice:270000,weight:'40kg',tier:'extra',badge:'extra',isNew:false,img:MAULLY_IMG},
+  {id:176,cat:'vestidos',name:'Mix Mujer Juv Verano 20 Kg',price:135000,origPrice:180000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:177,cat:'vestidos',name:'Traje Baño Mujer Entero 1ra+ 20 Kg',price:85000,origPrice:120000,weight:'20kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:178,cat:'vestidos',name:'Traje Baño Mujer Entero Surtido 45 Kg',price:85000,origPrice:150000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:179,cat:'vestidos',name:'Corset / Calzon Faja / Modeladores 20kg',price:145000,origPrice:215000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:180,cat:'chaquetas',name:'Gamulan Piloto 20 Kg',price:125000,origPrice:220000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:181,cat:'deportiva',name:'Short Marca Vestir Y Outdoor 15 Kg',price:135000,origPrice:275000,weight:'15kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:182,cat:'deportiva',name:'Short Marca Surtido 25 Kg',price:185000,origPrice:250000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:183,cat:'deportiva',name:'Short Running 1ra 20 Kg',price:200000,origPrice:250000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:184,cat:'deportiva',name:'Short Running 1ra 25 Kg',price:250000,origPrice:260000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:185,cat:'deportiva',name:'Short Marca Columbia 10 Kg',price:208000,origPrice:258000,weight:'10kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:186,cat:'deportiva',name:'Short Surf / Playero Hombre 1ra 25 Kg',price:250000,origPrice:300000,weight:'25kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:187,cat:'deportiva',name:'Short Marcas Premium Unisex 1ra 25 Kg',price:320000,origPrice:360000,weight:'25kg',tier:'premium',badge:'premium',isNew:false,img:MAULLY_IMG},
+  {id:188,cat:'ninos',name:'Disfraces Y Accesorios 20 Kg',price:65000,origPrice:100000,weight:'20kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG},
+  {id:189,cat:'ninos',name:'Disfraces 45 Kg',price:145000,origPrice:180000,weight:'45kg',tier:'primera',badge:'primera',isNew:true,img:MAULLY_IMG},
+  {id:190,cat:'sweaters',name:'Sweter Largo 45kg',price:125000,origPrice:200000,weight:'45kg',tier:'primera',badge:'primera',isNew:false,img:MAULLY_IMG}
 ];
+
 
 const badgeLabels={premium:'Premium',primera:'Primera',oferta:'Oferta',extra:'Extra Linda'};
 const badgeClasses={premium:'badge-premium',primera:'badge-primera',oferta:'badge-oferta',extra:'badge-extra'};
@@ -404,7 +343,7 @@ function getStockStatus(id){
   const h=(id*2654435761)>>>0;
   const r=h%100;
   if(r<65)return{cls:'stock-available',text:'En Stock'};
-  if(r<90)return{cls:'stock-low',text:'Ultimas unidades'};
+  if(r<90)return{cls:'stock-low',text:'Últimas unidades'};
   return{cls:'stock-available',text:'Disponible por encargo'};
 }
 
@@ -438,7 +377,7 @@ function renderProducts(){
           ${pkg?`<div class="product-per-kg">${pkg}</div>`:''}
         </div>
         <div class="stock-indicator ${getStockStatus(p.id).cls}"><span class="stock-dot"></span> ${getStockStatus(p.id).text}</div>
-        <div class="product-shipping-note"><i class="fas fa-truck"></i> Envio no incluido</div>
+        <div class="product-shipping-note"><i class="fas fa-truck"></i> Envío no incluido</div>
         <div class="product-calc-mini">
           <small><i class="fas fa-calculator"></i> Si vendes a $5.000/prenda: ~${Math.round(parseInt(p.weight)*5*5000/1000)}k ganancia est.</small>
         </div>
@@ -562,11 +501,11 @@ function openProductModal(id){
             </div>
           </div>
           <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-radius:8px;padding:12px;margin-bottom:16px;font-size:.82rem;color:#166534;border:1px solid #bbf7d0">
-            <i class="fas fa-calculator"></i> <strong>Ganancia estimada:</strong> Si vendes cada prenda a $5.000, tu ganancia seria de ~${formatPrice(estPieces*5000-p.price)} (ROI ${Math.round((estPieces*5000-p.price)/p.price*100)}%)
+            <i class="fas fa-calculator"></i> <strong>Ganancia estimada:</strong> Si vendes cada prenda a $5.000, tu ganancia sería de ~${formatPrice(estPieces*5000-p.price)} (ROI ${Math.round((estPieces*5000-p.price)/p.price*100)}%)
           </div>
           <div style="font-size:.82rem;color:var(--gray-600);margin-bottom:16px;display:flex;flex-direction:column;gap:4px">
-            <div><i class="fas fa-truck" style="color:var(--accent);width:18px"></i> Envio no incluido - Tu eliges el courier</div>
-            <div><i class="fas fa-shield-halved" style="color:var(--accent);width:18px"></i> Garantia de calidad segun nivel indicado</div>
+            <div><i class="fas fa-truck" style="color:var(--accent);width:18px"></i> Envío no incluido - Tú eliges el courier</div>
+            <div><i class="fas fa-shield-halved" style="color:var(--accent);width:18px"></i> Garantía de calidad según nivel indicado</div>
             <div><i class="fas fa-box" style="color:var(--accent);width:18px"></i> Prendas variadas en marcas, tallas y modelos</div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -587,12 +526,13 @@ function closeProductModal(){
 
 // ============ CART WITH QUANTITIES ============
 let cart=[];
+try{cart=JSON.parse(localStorage.getItem('maully_cart')||'[]');}catch(e){cart=[];}
 function getCartQty(){return cart.reduce((s,i)=>s+i.qty,0);}
 function updateCartUI(){
   document.getElementById('cartBadge').textContent=getCartQty();
   const body=document.getElementById('cartBody');
   if(cart.length===0){
-    body.innerHTML='<div class="cart-empty"><i class="fas fa-box-open"></i><p>Tu carrito esta vacio</p><p style="font-size:.82rem;margin-top:8px">Agrega productos para cotizar por WhatsApp</p></div>';
+    body.innerHTML='<div class="cart-empty"><i class="fas fa-box-open"></i><p>Tu carrito está vacío</p><p style="font-size:.82rem;margin-top:8px">Agrega productos para cotizar por WhatsApp</p></div>';
   }else{
     body.innerHTML=cart.map((item,i)=>{
       const cat=getCatInfo(item.cat);
@@ -632,7 +572,7 @@ function updateCartUI(){
     if(cart.length===0){
       shippingEl.innerHTML='';
     }else{
-      shippingEl.innerHTML='<i class="fas fa-truck" style="color:var(--gray-500)"></i> Envio no incluido. Se cotiza aparte segun destino y peso ('+totalWeight+'kg total)';
+      shippingEl.innerHTML='<i class="fas fa-truck" style="color:var(--gray-500)"></i> Envío no incluido. Se cotiza aparte según destino y peso ('+totalWeight+'kg total)';
     }
   }
 }
@@ -672,7 +612,7 @@ document.getElementById('cartWhatsApp').addEventListener('click',()=>{
   const total=cart.reduce((s,i)=>s+i.price*i.qty,0);
   const totalWeight=cart.reduce((s,i)=>s+parseInt(i.weight||'20')*i.qty,0);
   msg+=`\nTotal estimado: ${formatPrice(total)} (${totalWeight}kg)\n`;
-  msg+='\nTienen disponibilidad? Cual es el costo de envio a mi ciudad?';
+  msg+='\nTienen disponibilidad? ¿Cuál es el costo de envío a mi ciudad?';
   window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg),'_blank');
 });
 
@@ -947,7 +887,7 @@ const channelVideos = [
   {id:'Y5fNlNwWAoQ',title:'Poleron Polar Mixto 38 KG',type:'video'},
   {id:'_pa77QcPvvs',title:'Jeans Hombre Mix',type:'video'},
   {id:'MU-jts-3hoo',title:'Short Hombre 3/4 y Outdoor 40 KG',type:'video'},
-  {id:'q4eeJp8yATY',title:'Ropa de Nino Mixta Invierno 40 KG',type:'video'},
+  {id:'q4eeJp8yATY',title:'Ropa de Niño Mixta Invierno 40 KG',type:'video'},
   {id:'SOwGgasEUDg',title:'Jeans Hombre Premium 40 KG',type:'video'},
   {id:'jBiDTxrYFDI',title:'Ropa de Trekking Mix Premium 40 KG',type:'video'},
   {id:'VePhdLlD13I',title:'Mix Invierno Mujer Premium 40 KG',type:'video'},
@@ -957,9 +897,9 @@ const channelVideos = [
   {id:'KtmsPcp-gbI',title:'Leggings Mujer 40 KG',type:'video'},
   {id:'-Bjwii0BpWs',title:'Poleras Hombre M/C 40 KG',type:'video'},
   {id:'fONkp7-N_T8',title:'Jeans Hombre 40 KG',type:'video'},
-  {id:'9_w8jNMh4fk',title:'Ropa de Nino Mixta Invierno',type:'video'},
+  {id:'9_w8jNMh4fk',title:'Ropa de Niño Mixta Invierno',type:'video'},
   {id:'7uJKk0-5bko',title:'Manteles 40 KG',type:'video'},
-  {id:'5aOPzj1V9QY',title:'Seatpant Nino 40 KG',type:'video'},
+  {id:'5aOPzj1V9QY',title:'Seatpant Niño 40 KG',type:'video'},
   {id:'QkcwPX2o9hQ',title:'Ropa de Ciclista Contenedor Italiano',type:'video'},
   {id:'kORyUJndG2E',title:'Ropa Interior Algodon + Nylon Italia',type:'video'},
   {id:'ZLEkMzvujoA',title:'Jeans Mujer Premium Italia',type:'video'},
@@ -1039,7 +979,7 @@ function renderVideoGallery() {
   const loadMoreWrap = document.getElementById('videoLoadMore');
   if (loadMoreWrap) {
     if (remaining > 0) {
-      loadMoreWrap.innerHTML = '<button class="btn btn-primary" onclick="visibleVideos+=12;renderVideoGallery()"><i class="fas fa-plus"></i> Ver Mas Videos (' + remaining + ' restantes)</button>';
+      loadMoreWrap.innerHTML = '<button class="btn btn-primary" onclick="visibleVideos+=12;renderVideoGallery()"><i class="fas fa-plus"></i> Ver Más Videos (' + remaining + ' restantes)</button>';
       loadMoreWrap.style.display = 'block';
     } else {
       loadMoreWrap.style.display = 'none';
@@ -1087,7 +1027,7 @@ const galleryPhotos = [
   {src:'https://img.youtube.com/vi/F_w3iOu_rXI/hqdefault.jpg',title:'Sweater/Chaleco Cardigan'},
   {src:'https://img.youtube.com/vi/o1ghbdTinbM/hqdefault.jpg',title:'Sweater Mujer Abiertos Mixtos'},
   {src:'https://img.youtube.com/vi/eUWoW8tCy6I/hqdefault.jpg',title:'Termicos Adulto'},
-  {src:'https://img.youtube.com/vi/q4eeJp8yATY/hqdefault.jpg',title:'Ropa de Nino Mixta Invierno'},
+  {src:'https://img.youtube.com/vi/q4eeJp8yATY/hqdefault.jpg',title:'Ropa de Niño Mixta Invierno'},
   {src:'https://img.youtube.com/vi/fVAiVxVUQ2M/hqdefault.jpg',title:'Ropa Moto Premium 20 KG'},
   {src:'https://img.youtube.com/vi/p4gIk4_TVHk/hqdefault.jpg',title:'Mixto Juvenil Dama Verano Premium'},
   {src:'https://img.youtube.com/vi/J-DE7ab44Q8/hqdefault.jpg',title:'Mix Militar Premium 40 KG'},
@@ -1207,7 +1147,7 @@ function showEventPopup() {
         <div><i class="fas fa-map-marker-alt"></i> Berna 767, Pichilemu</div>
       </div>
       <div class="event-popup-btns">
-        <a href="https://wa.me/56968442594?text=Hola%20Bea!%20Quiero%20participar%20del%20evento%20en%20vivo%20del%20lunes%2030%20en%20Pichilemu!" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Quiero Participar</a>
+        <a href="https://wa.me/56975155745?text=Hola%20Bea!%20Quiero%20participar%20del%20evento%20en%20vivo%20del%20lunes%2030%20en%20Pichilemu!" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Quiero Participar</a>
         <a href="https://www.youtube.com/@importadoramaully2024" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:var(--gray-300);color:var(--gray-700)"><i class="fab fa-youtube" style="color:#e74c3c"></i> Ver Canal</a>
       </div>
     </div>`;
@@ -1477,396 +1417,6 @@ window.closeEventPopup=function(){
 };
 
 // Purchase notifications removed — replaced with real social proof
-
-// ============ BEA CHATBOT ============
-const BEA_WA = 'https://wa.me/56968442594?text=';
-const beaChat = document.getElementById('beaChat');
-const beaBody = document.getElementById('beaChatBody');
-const beaInput = document.getElementById('beaInput');
-const beaFab = document.getElementById('beaFab');
-let beaOpen = false;
-let beaGender = null; // null => must register, 'f', 'm'
-let beaUserName = '';
-let beaUserContact = '';
-let beaTourStep = -1;
-let beaAskedBudget = false;
-let beaRegistered = false;
-
-// Common female names in Chile/Latam
-const femaleNames = ['maria','carolina','andrea','claudia','patricia','francisca','valentina','camila','javiera','catalina','daniela','fernanda','constanza','nicole','paulina','lorena','katherine','karla','alejandra','marcela','gabriela','natalia','veronica','paola','monica','ana','rosa','carmen','laura','sandra','cecilia','silvia','beatriz','teresa','lucia','margarita','elena','sofia','isabella','martina','isidora','josefa','antonia','emilia','florencia','renata','agustina','macarena','barbara','viviana','carla','jimena','ximena','pamela','marisol','roxana','gloria','graciela','pilar','ines','marta','julia','adriana','alicia','diana','milena','rocio','tamara','yesenia','soledad','priscila','fabiola','evelyn','genesis','karen','karina','denisse','jacqueline','maite'];
-const maleNames = ['roberto','miguel','carlos','pedro','juan','diego','sebastian','felipe','andres','matias','nicolas','benjamin','vicente','martin','joaquin','tomas','gabriel','daniel','francisco','alejandro','pablo','santiago','cristian','rodrigo','jose','luis','sergio','marcos','rafael','oscar','fernando','raul','hector','alvaro','enrique','alberto','arturo','ricardo','hugo','manuel','eduardo','claudio','gonzalo','patricio','mauricio','jaime','ivan','ignacio','gustavo','mario','esteban','hernan','cesar','camilo','maximiliano','lucas','agustin','emiliano','renato','franco'];
-
-function detectGenderByName(name) {
-  const n = name.toLowerCase().trim().split(/\s+/)[0]; // first name only
-  if (femaleNames.includes(n)) return 'f';
-  if (maleNames.includes(n)) return 'm';
-  // Heuristic: names ending in 'a' are usually female in Spanish
-  if (n.endsWith('a') && !['joshua','elba'].includes(n)) return 'f';
-  if (n.endsWith('o') || n.endsWith('os')) return 'm';
-  // Default to female (more common in clothing business)
-  return 'f';
-}
-
-function _escapeHtml(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML;}
-function beaMsg(text, isUser, delay) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      const div = document.createElement('div');
-      div.className = 'bea-msg ' + (isUser ? 'bea-msg-user' : 'bea-msg-bot');
-      if(isUser){
-        const bubble=document.createElement('div');bubble.className='bea-msg-bubble';bubble.textContent=text;div.appendChild(bubble);
-      }else{
-        div.innerHTML='<div class="bea-msg-avatar">B</div><div class="bea-msg-bubble">' + text + '</div>';
-      }
-      beaBody.appendChild(div);
-      beaBody.scrollTop = beaBody.scrollHeight;
-      resolve();
-    }, delay || 0);
-  });
-}
-
-function beaTyping() {
-  const div = document.createElement('div');
-  div.className = 'bea-msg bea-msg-bot bea-typing-msg';
-  div.innerHTML = '<div class="bea-msg-avatar">B</div><div class="bea-msg-bubble"><div class="bea-typing"><span></span><span></span><span></span></div></div>';
-  beaBody.appendChild(div);
-  beaBody.scrollTop = beaBody.scrollHeight;
-  return div;
-}
-
-function beaRemoveTyping(el) { if (el && el.parentNode) el.parentNode.removeChild(el); }
-
-async function beaReply(text) {
-  const typing = beaTyping();
-  await new Promise(r => setTimeout(r, 600 + Math.random() * 800));
-  beaRemoveTyping(typing);
-  await beaMsg(text, false);
-}
-
-function beaGenderLabel() { return beaGender === 'm' ? 'mi niño' : 'mi niña'; }
-function beaNinoName() { return beaGenderLabel() + ' ' + beaUserName.split(' ')[0]; }
-
-function beaProductCard(p) {
-  const cat = getCatInfo(p.cat);
-  return '<div class="bea-product-card" onclick="scrollToProduct(' + p.id + ')">' +
-    '<div class="bea-prod-img" style="background:' + cat.gradient + '">' +
-    (p.img ? '<img src="' + p.img + '" alt="' + p.name + '">' : '<i class="fas ' + cat.icon + '"></i>') +
-    '</div><div class="bea-prod-info"><strong>' + p.name + '</strong><span>' + formatPrice(p.price) + '</span></div></div>';
-}
-
-function scrollToProduct(id) {
-  document.getElementById('productos').scrollIntoView({behavior:'smooth'});
-  setTimeout(() => {
-    const card = document.querySelector('.product-card[data-id="' + id + '"]');
-    if (card) { card.scrollIntoView({behavior:'smooth', block:'center'}); card.style.boxShadow='0 0 0 3px var(--gold)'; setTimeout(()=>card.style.boxShadow='',3000); }
-  }, 600);
-}
-
-function beaSearchProducts(query) {
-  const q = query.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-  const keywords = q.split(/\s+/);
-  return products.filter(p => {
-    const name = p.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    const catName = getCatInfo(p.cat).name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    const tierName = (badgeLabels[p.badge]||'').toLowerCase();
-    const combined = name + ' ' + catName + ' ' + tierName + ' ' + p.cat;
-    return keywords.some(k => combined.includes(k));
-  });
-}
-
-function beaDetectGender(text) {
-  const t = text.toLowerCase();
-  if (/\b(senora|mujer|chica|dama|mama|abuela|tia|ella)\b/.test(t)) return 'f';
-  if (/\b(senor|hombre|chico|caballero|papa|abuelo|tio|el)\b/.test(t)) return 'm';
-  return null;
-}
-
-const tourSections = [
-  {id:'inicio',title:'Portada',desc:'Aqui ves nuestro video principal y las estadisticas de Importadora Maully. Mas de 40 años en el rubro textil, ' + beaNinoName() + '!'},
-  {id:'categorias',title:'Categorias',desc:'Tenemos 13 categorias de productos: chaquetas, jeans, poleras, polerones, deportiva, vestidos, ninos, ski, calzado, hogar, sweaters, pantalones y plus size.'},
-  {id:'productos',title:'Productos',desc:'Aqui puedes ver todo nuestro catalogo con mas de 50 productos. Puedes filtrar por categoria, buscar por nombre y agregar al carrito.'},
-  {id:'calidad',title:'Niveles de Calidad',desc:'Manejamos 4 niveles: Oferta, Primera, Premium y Extra Linda. Cada uno pensado para distintos tipos de negocio.'},
-  {id:'calculadora',title:'Calculadora de Utilidad',desc:'Esta herramienta te permite calcular cuanto puedes ganar con tu inversion. Pon tus numeros y ve la ganancia estimada!'},
-  {id:'clases',title:'Clases y Asesoria',desc:'Ofrecemos cursos para empezar desde cero, asesoria para hacer crecer tu negocio y masterclass de venta online.'},
-  {id:'envios',title:'Envios',desc:'Enviamos a todo Chile e internacionalmente a Argentina y otros. El envio NO esta incluido, tu eliges el courier que prefieras.'},
-  {id:'videos',title:'Videos de YouTube',desc:'Tenemos mas de 70 videos en nuestro canal mostrando la mercaderia real, sin filtros ni ediciones.'},
-  {id:'instagram',title:'Instagram',desc:'Siguenos en @fardos_importadoramaully con mas de 4,400 seguidores. Publicamos mercaderia nueva todos los dias.'},
-  {id:'contacto',title:'Contacto',desc:'Puedes contactarnos por WhatsApp al +56 9 6844 2594 o por email a ventas@importadoramaully.cl'},
-];
-
-async function beaTour() {
-  beaTourStep = 0;
-  await beaReply('Perfecto ' + beaNinoName() + '! Te voy a dar un tour por toda nuestra tienda. Vamos paso a paso 😊');
-  await beaTourNext();
-}
-
-async function beaTourNext() {
-  if (beaTourStep >= tourSections.length) {
-    await beaReply('Y eso es todo el tour, ' + beaNinoName() + '! Espero que te haya gustado. Si quieres saber mas de algo, preguntame con confianza 💛');
-    beaTourStep = -1;
-    return;
-  }
-  const s = tourSections[beaTourStep];
-  const el = document.getElementById(s.id);
-  if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
-  await beaReply('<strong>📍 ' + s.title + '</strong><br>' + s.desc + '<br><br><button class="bea-quick-btn bea-tour-next" onclick="beaContinueTour()"><i class="fas fa-arrow-right"></i> Siguiente</button>');
-  beaTourStep++;
-}
-
-window.beaContinueTour = async function() {
-  document.querySelectorAll('.bea-tour-next').forEach(b => b.disabled = true);
-  await beaTourNext();
-};
-
-async function beaRecommend() {
-  beaAskedBudget = true;
-  await beaReply('Con mucho gusto te ayudo, ' + beaNinoName() + '! Para recomendarte lo mejor, dime:<br><br>1. Que tipo de ropa buscas? (chaquetas, jeans, poleras, etc.)<br>2. Cual es tu presupuesto aproximado?<br>3. Que nivel de calidad prefieres? (Oferta, Primera, Premium, Extra Linda)');
-}
-
-async function beaHandleMessage(text) {
-  const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-  const g = beaDetectGender(text);
-  if (g) beaGender = g;
-
-  // Greetings
-  if (/^(hola|hey|buenas|buenos|hi|hello|ola|que tal|saludos)/.test(t)) {
-    await beaReply('Hola ' + beaNinoName() + '! Soy Bea, tu asesora personal de Importadora Maully con mas de 40 años de experiencia en el rubro textil 💛<br><br>En que te puedo ayudar? Puedo:<br>• Darte un <strong>tour virtual</strong> por la tienda<br>• <strong>Recomendarte productos</strong> segun tu presupuesto<br>• Responder cualquier duda sobre nuestros fardos y packs');
-    return;
-  }
-
-  // Tour
-  if (/tour|recorr|mostrar|conocer la tienda|ver todo/.test(t)) { await beaTour(); return; }
-
-  // Shipping
-  if (/envio|envios|despacho|flete|shipping|transporte|courier|mandan|mandar|llega|llegan|region|regiones|provincia|donde envian|como llega/.test(t)) {
-    document.getElementById('envios')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Sobre envios, ' + beaNinoName() + ':<br><br>• El envio <strong>NO esta incluido</strong> en el precio<br>• Enviamos a <strong>todo Chile</strong> (5-15 días hábiles)<br>• Envios internacionales a <strong>Argentina</strong> y otros paises<br>• <strong>Tu eliges</strong> el courier o transporte que prefieras<br>• El costo se cotiza segun destino y peso<br>• Tambien puedes retirar en nuestro local');
-    return;
-  }
-
-  // Chilean number/budget parser - understands all modismos
-  function parseChileanAmount(str) {
-    const s = str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
-    let amount = 0;
-    // "100 lucas", "200lucas", "50 lks", "100 lukas", "100lk"
-    let m = s.match(/(\d[\d.,]*)\s*(?:lucas?|lukas?|lks?|lukitas?|luquitas?)/);
-    if (m) return parseInt(m[1].replace(/[.,]/g,'')) * 1000;
-    // "medio palo", "un palo", "2 palos"
-    m = s.match(/(?:un|1)\s*palo/); if (m) return 1000000;
-    m = s.match(/medio\s*palo/); if (m) return 500000;
-    m = s.match(/(\d+)\s*palos?/); if (m) return parseInt(m[1]) * 1000000;
-    // "1 millon", "2 millones"
-    m = s.match(/(\d[\d.,]*)\s*mill?on(?:es)?/); if (m) return parseInt(m[1].replace(/[.,]/g,'')) * 1000000;
-    // "medio millon"
-    m = s.match(/medio\s*mill?on/); if (m) return 500000;
-    // "cien mil", "doscientos mil", etc - word numbers
-    const wordNums = {
-      'un':1,'uno':1,'una':1,'dos':2,'tres':3,'cuatro':4,'cinco':5,'seis':6,'siete':7,'ocho':8,'nueve':9,'diez':10,
-      'once':11,'doce':12,'trece':13,'catorce':14,'quince':15,'dieciseis':16,'diecisiete':17,'dieciocho':18,'diecinueve':19,
-      'veinte':20,'veintiuno':21,'veintidos':22,'veintitres':23,'veinticuatro':24,'veinticinco':25,
-      'treinta':30,'cuarenta':40,'cincuenta':50,'sesenta':60,'setenta':70,'ochenta':80,'noventa':90,
-      'cien':100,'ciento':100,'doscientos':200,'doscientas':200,'trescientos':300,'trescientas':300,
-      'cuatrocientos':400,'cuatrocientas':400,'quinientos':500,'quinientas':500,
-      'seiscientos':600,'seiscientas':600,'setecientos':700,'setecientas':700,
-      'ochocientos':800,'ochocientas':800,'novecientos':900,'novecientas':900
-    };
-    // "cien lucas" "doscientas lucas"
-    for (const [word, val] of Object.entries(wordNums)) {
-      const re = new RegExp(word + '\\s*(?:lucas?|lukas?|lks?|lukitas?)');
-      if (re.test(s)) return val * 1000;
-    }
-    // "cien mil", "doscientos mil"
-    for (const [word, val] of Object.entries(wordNums)) {
-      const re = new RegExp(word + '\\s+mil');
-      if (re.test(s)) return val * 1000;
-    }
-    // "100 mil", "200 mil", "50 mil"
-    m = s.match(/(\d[\d.,]*)\s*mil(?:es)?/); if (m) return parseInt(m[1].replace(/[.,]/g,'')) * 1000;
-    // "100k", "200k"
-    m = s.match(/(\d[\d.,]*)\s*k\b/); if (m) return parseInt(m[1].replace(/[.,]/g,'')) * 1000;
-    // "$100.000", "100.000", "$100000", "100000" (6+ digits = CLP)
-    m = s.match(/\$?\s*(\d{1,3}(?:[.,]\d{3})+)/); if (m) return parseInt(m[1].replace(/[.,]/g,''));
-    m = s.match(/\$?\s*(\d{5,})/); if (m) return parseInt(m[1]);
-    // "como 100" or just a number in context with budget words
-    m = s.match(/(\d+)/); if (m) {
-      const n = parseInt(m[1]);
-      // If small number (1-999) in context of money talk, assume thousands
-      if (n >= 10 && n <= 999) return n * 1000;
-      if (n >= 1000) return n;
-    }
-    return 0;
-  }
-
-  // Prices / budget - detect any money/budget related intent
-  const budgetIntent = /precio|costo|valor|cuanto|barato|economico|presupuesto|plata|lucas?|lukas?|lks?|lukitas?|mil(?:es)?|\bk\b|palo|millon|tengo|dispongo|gasto|gastar|invertir|inversion|comprar por|entre \d/.test(t);
-  const parsedAmount = parseChileanAmount(text);
-
-  if (budgetIntent || parsedAmount > 0) {
-    if (parsedAmount > 0) {
-      const inBudget = products.filter(p => p.price <= parsedAmount).sort((a,b) => b.price - a.price).slice(0,4);
-      if (inBudget.length > 0) {
-        let html = 'Con un presupuesto de ' + formatPrice(parsedAmount) + ', te recomiendo estos productos, ' + beaNinoName() + ':<br><br>';
-        html += inBudget.map(p => beaProductCard(p)).join('');
-        await beaReply(html);
-      } else {
-        await beaReply('Con ' + formatPrice(parsedAmount) + ' no alcanzo a encontrar un producto completo, ' + beaNinoName() + '. Nuestros precios parten desde ' + formatPrice(Math.min(...products.map(p=>p.price))) + '. Quieres que te muestre las opciones mas economicas?');
-      }
-      return;
-    }
-    await beaReply(beaNinoName().charAt(0).toUpperCase() + beaNinoName().slice(1) + ', nuestros precios van desde ' + formatPrice(Math.min(...products.map(p=>p.price))) + ' hasta ' + formatPrice(Math.max(...products.map(p=>p.price))) + '. Todos los precios incluyen IVA pero <strong>no incluyen envio</strong>.<br><br>Dime tu presupuesto y te recomiendo lo mejor! Por ejemplo: "tengo 100 lucas" o "200 mil"');
-    return;
-  }
-
-  // Quality tiers
-  if (/calidad|niveles|oferta|primera|premium|extra linda|tier|buena|mala|que tal|como es|wena|weno|fina|piola|bkn|bacana/.test(t)) {
-    document.getElementById('calidad')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Manejamos 4 niveles de calidad, ' + beaNinoName() + ':<br><br>⭐ <strong>Oferta</strong> - Buena calidad, precio economico. Ideal para ferias.<br>⭐⭐ <strong>Primera</strong> - Excelente calidad, marcas reconocidas.<br>⭐⭐⭐ <strong>Premium</strong> - Calidad superior, marcas top, estado impecable.<br>⭐⭐⭐⭐ <strong>Extra Linda</strong> - Lo mejor de lo mejor, seleccionadas a mano.');
-    return;
-  }
-
-  // Calculator
-  if (/calcul|ganancia|utilidad|cuanto gano|roi|retorno|inversion|cuanta plata|cuanto saco|cuanto hago|rentab|negocio|conviene|vale la pena/.test(t)) {
-    document.getElementById('calculadora')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Te llevo a nuestra calculadora de utilidad, ' + beaNinoName() + '! Ahi puedes simular tu inversion y ver cuanto puedes ganar. En promedio, nuestros clientes obtienen entre 80% y 150% de retorno sobre su inversion. Pruebala!');
-    return;
-  }
-
-  // Classes
-  if (/clase|curso|aprender|ensenar|asesoria|masterclass|capacitacion/.test(t)) {
-    document.getElementById('clases')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Tenemos 3 opciones de formacion, ' + beaNinoName() + ':<br><br>🌱 <strong>Empezar desde Cero</strong> - Para quienes recien comienzan<br>🏪 <strong>Haz Crecer tu Negocio</strong> - Para quienes ya venden (la mas popular!)<br>💻 <strong>Masterclass Venta Online</strong> - Para dominar la venta por internet<br><br>Consultame por WhatsApp para mas detalles!');
-    return;
-  }
-
-  // Merma
-  if (/merma|defecto|manchas|roto|dano|devolucion|reclamo|garantia|fallo|falla|malo|mala|rota|cochino|sucio|pasado|trucho/.test(t)) {
-    await beaReply(beaNinoName().charAt(0).toUpperCase() + beaNinoName().slice(1) + ', la merma es normal en la venta mayorista. Son prendas con detalles menores (manchas, botones faltantes). Los niveles Premium y Extra Linda tienen merma minima o nula.<br><br>Si la merma supera el 20% del lote, aceptamos devoluciones dentro de 48 horas con fotos por WhatsApp.');
-    return;
-  }
-
-  // Payment
-  if (/pago|pagar|transferencia|mercadopago|tarjeta|cuenta|deposito|webpay|khipu|banco|efectivo|como pago|forma de pago|metodo|debito|credito/.test(t)) {
-    await beaReply('Aceptamos estos medios de pago, ' + beaNinoName() + ':<br><br>🏦 <strong>Transferencia bancaria</strong><br>💳 <strong>MercadoPago</strong><br><br>Todos los precios incluyen IVA. Una vez confirmado tu pago, procesamos tu pedido en 1-3 días hábiles.');
-    return;
-  }
-
-  // Instagram
-  if (/instagram|ig|insta|red social|seguir/.test(t)) {
-    document.getElementById('instagram')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Siguenos en Instagram ' + beaNinoName() + '! Somos <strong>@fardos_importadoramaully</strong> con mas de 4,400 seguidores. Publicamos mercaderia nueva todos los dias 📸');
-    return;
-  }
-
-  // YouTube
-  if (/youtube|video|canal/.test(t)) {
-    document.getElementById('videos')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Tenemos mas de 70 videos en YouTube, ' + beaNinoName() + '! Ahi puedes ver las aperturas de fardos reales, sin ediciones. Todo transparente para que veas exactamente lo que recibes.');
-    return;
-  }
-
-  // History
-  if (/historia|quienes son|sobre ustedes|maully|empresa|fundacion|quien/.test(t)) {
-    document.getElementById('historia')?.scrollIntoView({behavior:'smooth'});
-    await beaReply('Importadora Maully tiene mas de <strong>40 años en el rubro textil</strong> y mas de 20 años importando directamente desde Canada, Estados Unidos y Europa, ' + beaNinoName() + '. Somos una empresa familiar con tradicion, experiencia y un compromiso real con nuestros clientes.');
-    return;
-  }
-
-  // Specific product search
-  const found = beaSearchProducts(text);
-  if (found.length > 0) {
-    const show = found.slice(0, 4);
-    let html = 'Encontre ' + found.length + ' producto' + (found.length > 1 ? 's' : '') + ' para ti, ' + beaNinoName() + ':<br><br>';
-    html += show.map(p => beaProductCard(p)).join('');
-    if (found.length > 4) html += '<br><small>Y ' + (found.length - 4) + ' productos mas. Usa el buscador de productos para ver todos!</small>';
-    await beaReply(html);
-    return;
-  }
-
-  // Recommend / suggest
-  if (/recomiend|suger|que me|mejor|popular|mas vendido|top|favorit|vendid|hit|exito|bueno bonito|dale|muestram|tirame|dame opciones|que hay|que tienen|lo mas/.test(t)) { await beaRecommend(); return; }
-
-  // WhatsApp fallback
-  if (/whatsapp|contacto|hablar|llamar|telefono|humano|persona real|wsp|wts|wapp|wena onda|persona de verdad|alguien real|vendedor|vendedora|quiero hablar/.test(t)) {
-    await beaReply(beaNinoName().charAt(0).toUpperCase() + beaNinoName().slice(1) + ', con mucho gusto te conecto con nuestro equipo por WhatsApp!<br><br><a href="' + BEA_WA + encodeURIComponent('Hola Bea! Necesito ayuda personalizada') + '" target="_blank" rel="noopener noreferrer" class="bea-wa-link"><i class="fab fa-whatsapp"></i> Hablar por WhatsApp</a>');
-    return;
-  }
-
-  // Pedido minimo
-  if (/minimo|minima|menor|menos/.test(t)) {
-    await beaReply('El pedido minimo es de 1 pack o caluga, ' + beaNinoName() + '. No necesitas comprar grandes cantidades. Tenemos opciones desde 5kg (calugas desde $27.500) hasta fardos de 25kg. Ideal para probar calidad!');
-    return;
-  }
-
-  // Event
-  if (/evento|vivo|live|sabado|28/.test(t)) {
-    await beaReply('Este <strong>Lunes 30 de Marzo a las 11:30 AM</strong> tenemos un evento en vivo en <strong>Berna 767, Pichilemu</strong>, ' + beaNinoName() + '! Vamos a abrir un fardo premium en directo, sin efectos ni ediciones. 100% real. Ven a vernos o siguenos en YouTube!');
-    return;
-  }
-
-  // Fallback - can't help
-  await beaReply('Disculpa ' + beaNinoName() + ', no estoy segura de poder ayudarte con eso. Pero no te preocupes! Puedes hablar directamente con nuestro equipo por WhatsApp y te atienden con cariño:<br><br><a href="' + BEA_WA + encodeURIComponent('Hola! Necesito ayuda con: ' + text) + '" target="_blank" rel="noopener noreferrer" class="bea-wa-link"><i class="fab fa-whatsapp"></i> Continuar por WhatsApp</a><br><br>O preguntame sobre: productos, precios, envios, calidad, clases, o pideme un tour virtual!');
-}
-
-// Bea Registration
-document.getElementById('beaRegisterBtn').addEventListener('click', () => {
-  const name = document.getElementById('beaName').value.trim();
-  const contact = document.getElementById('beaContact').value.trim();
-  if (!name) { document.getElementById('beaName').style.borderColor='var(--accent)'; document.getElementById('beaName').focus(); return; }
-  if (!contact) { document.getElementById('beaContact').style.borderColor='var(--accent)'; document.getElementById('beaContact').focus(); return; }
-  beaUserName = name;
-  beaUserContact = contact;
-  beaGender = detectGenderByName(name);
-  beaRegistered = true;
-  // Save lead to localStorage
-  const leads = JSON.parse(localStorage.getItem('beaLeads')||'[]');
-  leads.push({name, contact, date: new Date().toISOString()});
-  localStorage.setItem('beaLeads', JSON.stringify(leads));
-  // Hide register, show chat
-  document.getElementById('beaRegister').style.display = 'none';
-  document.getElementById('beaChatBody').style.display = 'flex';
-  document.getElementById('beaQuickActions').style.display = 'flex';
-  document.getElementById('beaChatInput').style.display = 'flex';
-  const firstName = name.split(' ')[0];
-  beaMsg('Hola ' + beaNinoName() + '! Que alegria conocerte 💛 Soy Bea, tu asesora personal de Importadora Maully con mas de 40 años de experiencia en el rubro textil.<br><br>En que te puedo ayudar hoy?', false, 300);
-});
-document.getElementById('beaName').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('beaContact').focus(); });
-document.getElementById('beaContact').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('beaRegisterBtn').click(); });
-
-// Bea UI events
-beaFab.addEventListener('click', () => {
-  beaOpen = !beaOpen;
-  beaChat.classList.toggle('open', beaOpen);
-  beaFab.classList.toggle('open', beaOpen);
-});
-document.getElementById('beaChatClose').addEventListener('click', () => {
-  beaOpen = false; beaChat.classList.remove('open'); beaFab.classList.remove('open');
-});
-
-async function beaSendMsg() {
-  const text = beaInput.value.trim();
-  if (!text) return;
-  beaInput.value = '';
-  await beaMsg(text, true);
-  await beaHandleMessage(text);
-}
-
-beaInput.addEventListener('keydown', e => { if (e.key === 'Enter') beaSendMsg(); });
-document.getElementById('beaSend').addEventListener('click', beaSendMsg);
-
-document.querySelectorAll('.bea-quick-btn[data-action]').forEach(btn => {
-  btn.addEventListener('click', async () => {
-    const action = btn.dataset.action;
-    if (action === 'tour') { await beaMsg('Quiero un tour virtual', true); await beaTour(); }
-    else if (action === 'products') { await beaMsg('Quiero ver productos', true); document.getElementById('productos')?.scrollIntoView({behavior:'smooth'}); await beaReply('Te llevo al catalogo, ' + beaNinoName() + '! Ahi puedes filtrar por categoria, buscar por nombre y agregar productos al carrito. Tenemos mas de 50 productos disponibles!'); }
-    else if (action === 'recommend') { await beaMsg('Recomiendame algo', true); await beaRecommend(); }
-    else if (action === 'prices') { await beaMsg('Quiero saber de precios', true); await beaReply(beaNinoName().charAt(0).toUpperCase() + beaNinoName().slice(1) + ', nuestros precios van desde:<br><br>💰 <strong>Calugas (5kg)</strong>: desde $27.500<br>📦 <strong>Packs (10kg)</strong>: desde $60.500<br>📦 <strong>Sacos (15kg)</strong>: desde $82.500<br>📦 <strong>Fardos (25kg)</strong>: desde $143.000<br><br>Todos incluyen IVA. Envio no incluido. Dime tu presupuesto y te recomiendo lo mejor!'); }
-  });
-});
-
-// Auto-show greeting tooltip
-setTimeout(() => {
-  if (!beaOpen) { beaFab.classList.add('greeting'); setTimeout(() => beaFab.classList.remove('greeting'), 5000); }
-}, 4000);
 
 // ============ FLOATING SEARCH BAR ============
 (function(){

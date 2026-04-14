@@ -1,9 +1,9 @@
 /**
  * Checkout JS — Importadora Maully
- * 3-step checkout: Datos → Envio → Pago MercadoPago
+ * 3-step checkout: Datos → Envío → Pago MercadoPago
  */
 
-// API base — cambiar en produccion
+// API base — cambiar en producción
 const API_BASE = window.location.hostname === 'localhost'
   ? 'http://localhost:8000'
   : 'https://api.importadoramaully.cl';  // Tu backend FastAPI
@@ -69,9 +69,9 @@ async function init() {
   } catch(e) {
     console.warn('Could not load config, using defaults');
     config = { regiones: [
-      "Arica y Parinacota","Tarapaca","Antofagasta","Atacama","Coquimbo",
-      "Valparaiso","Region Metropolitana","O'Higgins","Maule","Nuble",
-      "Biobio","Araucania","Los Rios","Los Lagos","Aysen","Magallanes"
+      "Arica y Parinacota","Tarapacá","Antofagasta","Atacama","Coquimbo",
+      "Valparaíso","Región Metropolitana","O'Higgins","Maule","Ñuble",
+      "Biobío","Araucanía","Los Ríos","Los Lagos","Aysén","Magallanes"
     ]};
   }
 
@@ -161,7 +161,7 @@ function updateTotals() {
 
   totals.innerHTML = `
     <div class="ck-total-row"><span>Subtotal</span><span>${fmtPrice(subtotal)}</span></div>
-    <div class="ck-total-row"><span>Envio (${selectedShipping.replace('_',' ')})</span><span>${selectedShipping === 'starken' || selectedShipping === 'dhl' ? 'Por pagar' : 'Gratis'}</span></div>
+    <div class="ck-total-row"><span>Envío (${selectedShipping.replace('_',' ')})</span><span>${selectedShipping === 'starken' || selectedShipping === 'dhl' ? 'Por pagar' : 'Gratis'}</span></div>
     <div class="ck-total-row"><span>IVA incluido</span><span>-</span></div>
     <div class="ck-total-row total"><span>Total</span><span>${fmtPrice(total)}</span></div>
   `;
@@ -208,7 +208,7 @@ function renderShippingOptions() {
   const methods = config.shipping_methods || [
     {id:'starken', name:'Starken', desc:'Envío económico, 5-10 días hábiles. Flete por pagar.', icon:'fa-truck', por_pagar:true},
     {id:'dhl', name:'DHL Express', desc:'Envío rápido, 2-5 días hábiles. Flete por pagar.', icon:'fa-shipping-fast', por_pagar:true},
-    {id:'coordinar_whatsapp', name:'Coordinar por WhatsApp', desc:'Conversemos el mejor envio para ti', icon:'fab fa-whatsapp', free:true},
+    {id:'coordinar_whatsapp', name:'Coordinar por WhatsApp', desc:'Conversemos el mejor envío para ti', icon:'fab fa-whatsapp', free:true},
     {id:'retiro_santiago', name:'Retiro Santiago', desc:'Av. La Florida 9421, Santiago', icon:'fa-store', free:true},
     {id:'retiro_pichilemu', name:'Retiro Pichilemu', desc:'Av. Millaco 1172, Pichilemu', icon:'fa-store', free:true},
   ];
@@ -296,7 +296,7 @@ function validateStep1() {
   if (!name) { highlight('ckName'); valid = false; }
   if (!rut || !validateRut(rut)) {
     highlight('ckRut');
-    document.getElementById('rutError').textContent = rut ? 'RUT invalido' : 'Requerido';
+    document.getElementById('rutError').textContent = rut ? 'RUT inválido' : 'Requerido';
     valid = false;
   } else {
     document.getElementById('rutError').textContent = '';
@@ -370,7 +370,7 @@ function buildSummary() {
       ${docType === 'factura' ? `<div class="ck-summary-row"><span>${document.getElementById('ckBizName')?.value || ''} (${document.getElementById('ckBizRut')?.value || ''})</span><span>Giro: ${document.getElementById('ckBizGiro')?.value || ''}</span></div>` : ''}
     </div>
     <div class="ck-summary-section">
-      <h4>Envio</h4>
+      <h4>Envío</h4>
       <div class="ck-summary-row"><span>${shipLabel}</span><span>${selectedShipping === 'starken' || selectedShipping === 'dhl' ? 'Por pagar' : 'Gratis'}</span></div>
       ${!selectedShipping.startsWith('retiro') ? `<div class="ck-summary-row"><span>${address}, ${comuna}, ${region}</span></div>` : ''}
     </div>
@@ -380,7 +380,7 @@ function buildSummary() {
     </div>
     <div class="ck-summary-section" style="border-top:2px solid var(--dark);padding-top:10px;margin-top:8px">
       <div class="ck-summary-row"><span>Subtotal</span><span>${fmtPrice(subtotal)}</span></div>
-      <div class="ck-summary-row"><span>Envio</span><span>${shippingCost > 0 ? fmtPrice(shippingCost) : 'Gratis'}</span></div>
+      <div class="ck-summary-row"><span>Envío</span><span>${shippingCost > 0 ? fmtPrice(shippingCost) : 'Gratis'}</span></div>
       <div class="ck-summary-row" style="font-weight:700;font-size:1.1rem"><span>Total a Pagar</span><span style="color:var(--gold)">${fmtPrice(total)}</span></div>
     </div>
   `;
@@ -448,7 +448,7 @@ async function submitCheckout() {
       document.getElementById('payBtn').parentNode.insertBefore(d, document.getElementById('payBtn'));
       return d;
     })();
-    errBox.innerHTML = `<strong>No se pudo procesar el pago.</strong><br>${e.message}<br><br>Intenta de nuevo o escribenos por WhatsApp: <a href="https://wa.me/56990565137" style="color:#c00;text-decoration:underline">+56 9 9056 5137</a>`;
+    errBox.innerHTML = `<strong>No se pudo procesar el pago.</strong><br>${e.message}<br><br>Intenta de nuevo o escríbenos por WhatsApp: <a href="https://wa.me/56975155745" style="color:#c00;text-decoration:underline">+56 9 7515 5745</a>`;
     btn.disabled = false;
     btn.innerHTML = '<i class="fas fa-lock"></i> Pagar con MercadoPago';
   }
