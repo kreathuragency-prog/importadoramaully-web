@@ -1,5 +1,5 @@
 // ============ DATA ============
-const WA_NUMBER = '56975155745';
+const WA_NUMBER = '56968442594';
 const USD_RATE = 950;
 const BRAND_TAGS=['Columbia','North Face','Nike','Adidas','Zara','Levis','Calvin Klein','Tommy','Ralph Lauren','Patagonia','Gap','H&M','Puma','Reebok','Under Armour'];
 function getProductTags(p){
@@ -1147,7 +1147,7 @@ function showEventPopup() {
         <div><i class="fas fa-map-marker-alt"></i> Berna 767, Pichilemu</div>
       </div>
       <div class="event-popup-btns">
-        <a href="https://wa.me/56975155745?text=Hola%20Bea!%20Quiero%20participar%20del%20evento%20en%20vivo%20del%20lunes%2030%20en%20Pichilemu!" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Quiero Participar</a>
+        <a href="https://wa.me/56968442594?text=Hola%20Bea!%20Quiero%20participar%20del%20evento%20en%20vivo%20del%20lunes%2030%20en%20Pichilemu!" target="_blank" rel="noopener noreferrer" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Quiero Participar</a>
         <a href="https://www.youtube.com/@importadoramaully2024" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:var(--gray-300);color:var(--gray-700)"><i class="fab fa-youtube" style="color:#e74c3c"></i> Ver Canal</a>
       </div>
     </div>`;

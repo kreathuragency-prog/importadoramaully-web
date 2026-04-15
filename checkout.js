@@ -5,7 +5,7 @@
 
 // API base — same-origin /api, proxied by Caddy to FastAPI on :8002
 const API_BASE = '';
-const WA_NUMBER = '56975155745';
+const WA_NUMBER = '56968442594';
 
 // ── Cart from localStorage ──
 let cart = [];
@@ -473,7 +473,7 @@ async function submitCheckout() {
       document.getElementById('payBtn').parentNode.insertBefore(d, document.getElementById('payBtn'));
       return d;
     })();
-    errBox.innerHTML = `<strong>No se pudo procesar el pago.</strong><br>${e.message}<br><br>Intenta de nuevo o escríbenos por WhatsApp: <a href="https://wa.me/56975155745" style="color:#c00;text-decoration:underline">+56 9 7515 5745</a>`;
+    errBox.innerHTML = `<strong>No se pudo procesar el pago.</strong><br>${e.message}<br><br>Intenta de nuevo o escríbenos por WhatsApp: <a href="https://wa.me/56968442594" style="color:#c00;text-decoration:underline">+56 9 7515 5745</a>`;
     btn.disabled = false;
     btn.innerHTML = '<i class="fab fa-whatsapp"></i> Confirmar Pedido por WhatsApp';
   }
