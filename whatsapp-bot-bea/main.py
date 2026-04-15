@@ -25,8 +25,8 @@ from jinja2 import Environment, FileSystemLoader
 from dotenv import load_dotenv
 
 from whatsapp import parsear_mensaje, enviar_mensaje, transcribir_audio, close_http_client
-from brain import generar_respuesta, cargar_info_web
-from scraper import scrape_maully
+from brain import generar_respuesta, cargar_info_maully, cargar_info_puntoski
+from scraper import scrape_maully, scrape_puntoski
 from checkout import router as checkout_router
 from admin_panel import router as admin_router
 from database import init_db
@@ -106,9 +106,23 @@ _RE_TELEFONO = re.compile(r"\+?\d{8,20}")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await init_db()
-    info_web = await scrape_maully()
-    cargar_info_web(info_web)
-    logger.info("Bea Bot (Importadora Maully) iniciado en puerto %d", PORT)
+
+    # Scrape paralelo de ambos sitios
+    info_maully, info_puntoski = await asyncio.gather(
+        scrape_maully(),
+        scrape_puntoski(),
+        return_exceptions=True,
+    )
+    if isinstance(info_maully, str):
+        cargar_info_maully(info_maully)
+    else:
+        logger.warning(f"Scrape Maully falló: {info_maully}")
+    if isinstance(info_puntoski, str):
+        cargar_info_puntoski(info_puntoski)
+    else:
+        logger.warning(f"Scrape Punto Ski falló: {info_puntoski}")
+
+    logger.info("Bea Bot (Maully + Punto Ski) iniciado en puerto %d", PORT)
     yield
 
     # Shutdown ordenado
