@@ -7,8 +7,8 @@ import os
 # ── Config ──
 USD_RATE = 950
 BASE_URL = "https://www.importadoramaully.cl"
-WA_LINK = "https://wa.me/56968442594"
-WA_NUM = "+56 9 6844 2594"
+WA_LINK = "https://wa.me/56975155745"
+WA_NUM = "+56 9 7515 5745"
 MAPS_STGO = "https://www.google.com/maps/search/Av+La+Florida+9421+Santiago+Chile"
 MAPS_PICH = "https://www.google.com/maps/search/Av+Millaco+1172+Pichilemu+Chile"
 

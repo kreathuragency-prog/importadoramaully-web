@@ -230,7 +230,7 @@ Precios incluyen IVA.
 == UBICACIÓN ==
 Santiago: Av. La Florida 9421, lun-vie 11:30-19:00
 Pichilemu: Berna 767
-Tel fijo: 02 2833 2667 (lun-vie 11:00-19:00)
+Tel fijo: 22 8332 667 (lun-vie 11:00-19:00)
 WhatsApp: +56 9 7515 5745
 
 == ENVÍOS ==
