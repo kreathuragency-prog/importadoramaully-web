@@ -56,6 +56,12 @@
       answer: 'Por ser venta <b>mayorista por peso</b>, no aplica el derecho de retracto (Ley 19.496 art. 3 bis b).<br><br>Sí aceptamos cambio o nota de crédito si:<br>• La <b>merma supera el 20%</b> del lote, o<br>• El fardo no corresponde al nivel/categoría descrito<br><br>El reclamo debe hacerse <b>dentro de 48 hrs</b> de recibida la mercadería, enviando fotos por WhatsApp.'
     },
     {
+      id: 'gancho',
+      kw: ['gancho', 'ganchos', 'mas gancho', 'más gancho', 'que es gancho', 'qué es gancho', 'rotacion stock', 'rotación stock'],
+      title: '¿Qué es un "gancho"?',
+      answer: 'Un <b>gancho</b> es un fardo de menor exclusividad que se compra <b>junto a</b> un fardo top muy demandado.<br><br>📦 <b>Ejemplo:</b> si te llevas un <i>JORDAN 25 kg</i> (top exclusivo), debes sumar 2 ganchos (fardos premium/marca/segunda) en la misma compra.<br><br>🎯 <b>¿Por qué?</b><br>• A nosotros nos permite <b>rotar bodega</b> de variedad de productos<br>• A ti te permite <b>acceder a los fardos más exclusivos</b> y diversificar tu oferta<br>• Pagas <b>menos por kilo total</b> al combinar exclusivos + ganchos<br><br>Los ganchos son fardos premium/marca/segunda — calidad excelente, no son saldos.<br><br>En la ficha de cada producto top verás "+1 gancho" o "+2 ganchos" si aplica. Bea te ayuda a armar el combo perfecto por WhatsApp.'
+    },
+    {
       id: 'marcas',
       kw: ['marca', 'marcas', 'columbia', 'north face', 'nike', 'zara', 'adidas', 'levis', 'tommy', 'que ropa', 'que prendas', 'qué prendas'],
       title: '¿Qué marcas vienen en los fardos?',
@@ -123,7 +129,7 @@
     }
   ];
 
-  var QUICK = ['envio', 'minimo', 'calidad', 'pago', 'cupon', 'marcas'];
+  var QUICK = ['envio', 'gancho', 'calidad', 'pago', 'cupon', 'argentina'];
 
   // ====== Intent matching ======
   function normalize(s) {

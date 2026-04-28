@@ -21,7 +21,7 @@ import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-MARGIN = 1.10  # +10%
+MARGIN = 1.15  # +15% (regla oficial Maully sobre precios Eurotextile)
 
 # ── Carga datos ──
 products_raw = []

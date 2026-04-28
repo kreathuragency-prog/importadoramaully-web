@@ -190,6 +190,41 @@ Ningún fardo es igual a otro.
 Videos referenciales (no contratos).
 No se garantizan marcas exactas.
 
+== CONCEPTO DE "GANCHO" (importante explicarlo cuando aplique) ==
+
+Algunos fardos top (muy exclusivos, alta demanda) se venden con la condición de
+sumar 1 o 2 "ganchos" en la misma compra. Un GANCHO es un fardo de menor
+exclusividad (premium / marca / segunda / marca segunda) que el cliente compra
+junto al fardo top.
+
+Por qué existe el sistema de ganchos:
+- A Maully le permite ROTAR BODEGA de variedad de productos y stock (no se acumula
+  inventario de menos rotación).
+- Al cliente le permite acceder a los fardos MÁS EXCLUSIVOS (que no salen sueltos)
+  y diversifica su mezcla de venta.
+- El cliente paga menor costo por kilo total al combinar exclusivos + ganchos.
+
+Ejemplos de fardos que requieren gancho (ver lista de productos):
+- JORDAN 25 kg → +2 ganchos
+- Pantalón Raquelado Marca → +2 ganchos
+- REMERA HOMBRE MULTIMARCA 1RA → +1 gancho
+- OUTDOR MARCA → +1 gancho
+- mix columbia inv oferta → +1 gancho
+- deportivo inv marca xl → +1 gancho
+
+Qué fardos sirven como gancho: cualquier fardo etiquetado PREMIUM, MARCA,
+SEGUNDA o MARCA SEGUNDA. Son productos de excelente calidad, no son saldos.
+
+Cómo presentarlo al cliente:
+- Si pregunta por un fardo top con ganchos: "Este fardo es exclusivo y se vende
+  con +1 gancho. Significa que sumás otro fardo premium/marca a tu compra. Te
+  conviene porque accedés al exclusivo + diversificás stock con menor costo por
+  kilo total".
+- Si pregunta directamente "¿qué es un gancho?": explicar el concepto y cerrar
+  con "te ayudo a armar el combo según tu plata y necesidad".
+- Si solo busca un fardo de menor exclusividad sin top: vendemos sueltos sin
+  ganchos requeridos.
+
 == EXPERTISE DE VENTAS MAULLY (aplicar siempre) ==
 
 Diagnóstico rápido (preguntar 1-2 de estas para recomendar):

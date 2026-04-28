@@ -41,261 +41,266 @@ CAT_INFO = {
     'calzado':    ('CALZADO Y OTROS',     (70, 50, 42)),
     'hogar':      ('HOGAR',               (60, 85, 95)),
     'plussize':   ('PLUS SIZE',           (120, 25, 65)),
+    'ski':        ('ROPA SKI Y NIEVE',    (13, 71, 161)),
+    'ninos':      ('ROPA NIÑOS Y NIÑAS',  (0, 150, 136)),
 }
 
 # ── All products ──
 products = [
-    {"cat":"chaquetas","name":"Blazer / Chaqueta Fashion 20 Kg","price":93500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Blazer / Chaqueta Fashion 1RA 20 Kg","price":93500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Abrigo 3/4 Mujer 1RA 20 Kg","price":102300,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Blazer / Chaqueta Fashion Verano 20 Kg","price":104500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Trench Coat Chaqueta Trench 1RA 20 Kg","price":132000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Chaquetas Cuero 25 Kg","price":132000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Abrigo Hombre 3/4 Y Largo 1ra+ 25 Kg","price":137500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Gamulan Piloto 20 Kg","price":137500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Abrigo 35 Kg","price":143000,"weight":"35kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Parka Chaqueta 1RA 40 Kg","price":159500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Gamulan 40KG","price":159500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Abrigo 3/4 Mujer + Blazer / Chaqueta Fashion 2x20 Kg","price":171600,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Chaqueta Lenadora 1ra+ 25 Kg","price":198000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Chaqueta Piloto Y Gamulan 1RA 20 Kg","price":242000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Chaqueta Bomber 1ra+ 25 Kg","price":286000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Chaqueta Marca Superdry 1ra+ 25 Kg","price":286000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Columbia MIX Oferta 20 Kg","price":342100,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"chaquetas","name":"Chaquetas Solo Marcas Deportivas Niño Juv 1RA 25 Kg","price":343200,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Chaqueta Lenadora 45 Kg","price":352000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Calvin Klein Chaquetas 1ra+ 25 Kg","price":363000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Parka/chaq Marca Oferta 25KG","price":363000,"weight":"25kg","tier":"oferta","new":True},
-    {"cat":"chaquetas","name":"Chaqueta Marca Zara Hym 1ra+ 25 Kg","price":399300,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Columbia MIX Oferta 25KG","price":399300,"weight":"25kg","tier":"oferta","new":True},
-    {"cat":"chaquetas","name":"Parka/chaq Polar Marca Columbia 1RA Directa 20 Kg","price":432300,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Outdoor / Trekking Columbia 1RA Seleccionado 10 Kg","price":433400,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Parka/chaq Marca Columbia Oferta 20 Kg","price":433400,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"chaquetas","name":"Northface MIX Polar Parka Chaq Oferta 20 Kg","price":433400,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"chaquetas","name":"Poleron Algodón Y Deportivo Columbia 10 Kg","price":445500,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Pantalones Outdoor Marca Columbia 10 Kg","price":445500,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Columbia MIX 1RA 20KG","price":542300,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Columbia Northface MIX 1RA Directo 25 Kg","price":570900,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Parka/chaq Marca Columbia/ Northface 1RA 20 Kg","price":633600,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Parka/chaq Marca Columbia 1RA 20 Kg","price":649000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Columbia MIX 1RA 25KG","price":656700,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Cortaviento Marca 25KG","price":662200,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Columbia/ Northface MIX Inv Oferta 40 Kg","price":685300,"weight":"40kg","tier":"oferta","new":True},
-    {"cat":"chaquetas","name":"Northface MIX Polar Parka Chaq 1RA 20 Kg","price":759000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Northface MIX Polar Parka Chaq 1RA 25 Kg","price":913000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Columbia/ Northface MIX Inv 1RA Can 45 Kg","price":1084600,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Pescador Jeans Juvenil Mujer 1RA 40 Kg","price":66000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jardineras De Jeans 40 Kg","price":132000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Mujer Plus Size 1RA 40 Kg","price":132000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Blusa Jeans 1RA 22 Kg","price":148500,"weight":"22kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Chaqueta Mezclilla 1RA 45 Kg","price":181500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Hombre Plus Size 1RA 45 Kg","price":203500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Blusa Jeans 1RA 45 Kg","price":242000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Mujer Marca PREM Retorno 24 U","price":257400,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"jeans","name":"Jeans Levis Mujer 25 Kg","price":264000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Hombre 1RA 25KG","price":268400,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Zara Mango Guess 24 U","price":411400,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Levis Hombre 1RA 30 Kg","price":451000,"weight":"30kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Levis Mujer 50 Kg","price":495000,"weight":"50kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Mujer Marca PREM Retorno 50 U","price":511500,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Poleras Y Blusas Marca Ardene Retorno 50 U","price":49500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Poleras Manga Larga Mujer 1RA 45 Kg","price":104500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Poleras Y Blusas Marca Ardene Retorno 150 U","price":110000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Blusa Mixta XL 45KG","price":110000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Blusa Franela 45 Kg 1RA","price":154000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Camisa Franela 45 Kg 1RA","price":154000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Manga Larga Hombre 1RA 40 Kg","price":159500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Camisa Guayabera 1RA 10 Kg","price":165000,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Tie Dye 1ra+ 22 Kg","price":198000,"weight":"22kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre M/la Oferta","price":203500,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre M/co Oferta 25KG","price":214500,"weight":"25kg","tier":"oferta","new":True},
-    {"cat":"poleras","name":"Polera Marca Deportiva Oferta 25KG","price":214500,"weight":"25kg","tier":"oferta","new":True},
-    {"cat":"poleras","name":"Polera Marca Deportiva Hombre 1RA 10 Kg","price":228800,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Hombre Dibujos Animados 1ra+/prem 20 Kg","price":231000,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Camisa Marca Hombre Oferta","price":242000,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"poleras","name":"Polera Hombre Dibujos Animados 1ra+/prem 25 Kg","price":275000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Polera Marca Niño 1ra+/prem 25 Kg","price":308000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre M/la 1ra+/prem 25KG","price":336600,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Camisa Guayabera 1RA 22 Kg","price":342100,"weight":"22kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre S/ma 1RA 25 Kg","price":352000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Hombre Cervezas 1ra+","price":377300,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Hombre Starwars / Marvel 1ra+ 20 Kg","price":377300,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"MIX Verano Marca (poleras Y Short) Oferta 50 Kg","price":399300,"weight":"50kg","tier":"oferta","new":True},
-    {"cat":"poleras","name":"Polera Marca Deportiva Hombre 1RA 25 Kg","price":468600,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Hombre Marca M/co Multi Marca 25 Kg","price":495000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre M/co C/cuello 1ra+/prem 25 Kg","price":495000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre M/co Adidas Nike 1ra+/prem 25 Kg","price":513700,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Camisa Guayabera 1RA 45 Kg","price":628100,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron C/ Gorro 2DA 40 Kg","price":66000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Sin Gorro 45KG","price":88000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Polar Oferta 45 Kg","price":93500,"weight":"45kg","tier":"oferta","new":True},
-    {"cat":"polerones","name":"Polar 45 Kg","price":99000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Pijama Polar 1RA 45 Kg","price":137500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Pantalón Polar 1RA 45 Kg","price":137500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Con Gorro Heavy 1RA 40 Kg","price":154000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Polar 1RA Canadá 45 Kg","price":159500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Polar Chaqueta 45KG Kg","price":159500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron C/ Gorro Talla Grande 1RA 45 Kg","price":176000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Sin Gorro Hombre 40 Kg","price":203500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Sin Gorro Marca Oferta 25 Kg","price":203500,"weight":"25kg","tier":"oferta","new":True},
-    {"cat":"polerones","name":"Poleron Polar Marca Columbia Oferta 12KG","price":211200,"weight":"12kg","tier":"oferta","new":True},
-    {"cat":"polerones","name":"Poleron Canguro Marca Oferta 25 Kg","price":214500,"weight":"25kg","tier":"oferta","new":True},
-    {"cat":"polerones","name":"Poleron Con Gorro 1RA Canadá 45 Kg","price":214500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Polerones Calvin Klein 20 U","price":220000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Polar Corderito 1RA 45 Kg","price":220000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Polar Marca Columbia 1RA 12KG","price":231000,"weight":"12kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Deportivo Premium 25KG","price":253000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"polerones","name":"Térmico Ski Columbia 1RA 10 Kg","price":257400,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Polar Marca 1RA 25 Kg","price":336600,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Deportivo Marca 23KG","price":365200,"weight":"23kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Polar Marcas PREM 1RA 25 Kg","price":388300,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"polerones","name":"Poleron Marca GAP Adulto 25 Kg","price":388300,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Con Gorro Solo Marca 1RA 25KG","price":388300,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Con Gorro Marca 1ra+ 25 Kg","price":411400,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Polar Marca Columbia 1RA 20KG","price":423500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Polar / Parka/ Chaq Marca Columbia 1RA 25 Kg","price":656700,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Sweter Oferta 20 Kg","price":44000,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"deportiva","name":"MIX Surtido Verano, Todo Producto 20 Kg Calidad Oferta","price":49500,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"deportiva","name":"MIX Mujer Verano EXTRA Linda 10 Kg","price":49500,"weight":"10kg","tier":"extra","new":True},
-    {"cat":"deportiva","name":"Hombre Y Mujer Verano 1RA Plus Size 20 Kg","price":88000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Ropa Mascota 10 Kg","price":88000,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"MIX Mujer Verano EXTRA Linda 20 Kg","price":88000,"weight":"20kg","tier":"extra","new":True},
-    {"cat":"deportiva","name":"Traje Bano Mujer Entero 1ra+ 20 Kg","price":93500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Traje Bano Mujer Entero Surtido 45 Kg","price":93500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Calza Y Pantalón Lycra 40 Kg","price":104500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Columbia/ Northface 3ra 10 Kg","price":104500,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Pantalón / Short 3/4 Outdoor 1RA 40 Kg","price":132000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Hospital 25 Kg","price":137500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Short Marca Vestir Y Outdoor 15 Kg","price":148500,"weight":"15kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"MIX Mujer Juv Verano 20 Kg","price":148500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"MIX Mujer Verano EXTRA Linda 40 Kg","price":154000,"weight":"40kg","tier":"extra","new":True},
-    {"cat":"deportiva","name":"Camisa Hombre 1RA 40 Kg","price":159500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Buzo Algodón 45KG","price":159500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Corset / Calzón Faja / Modeladores Otros 20KG","price":159500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Hombre Verano 1RA Plus Size 40 Kg","price":165000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Hombre Y Mujer Verano 1RA Plus Size 40 Kg","price":165000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"MIX Deportivo 1RA 20 Kg","price":165000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Buzos Plus Size 45 Kg","price":176000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Chaqueta Militar 20 Kg","price":181500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Abrigo 3/4 Mujer 1RA 2x20 Kg","price":182600,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marcas Premium Fila Champion Puma Reebok 1RA 10 Kg","price":188100,"weight":"10kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Premium Under Armour 10 Kg","price":188100,"weight":"10kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Ropa Moto 1ra+ 15-18 Kg","price":203500,"weight":"18kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Short Marca Surtido 25 Kg","price":203500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Buzo Algodón 40KG","price":203500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Deportivo Oferta 25 Kg","price":209000,"weight":"25kg","tier":"oferta","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Hombre Oferta","price":209000,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"deportiva","name":"Mujer EXTRA Linda Verano 45 Kg","price":209000,"weight":"45kg","tier":"extra","new":True},
-    {"cat":"deportiva","name":"Cortaviento Y Poleron Deportivo Mixto 45 Kg","price":209000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Short Running 1RA 20 Kg","price":220000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Hospital Marca 1RA 20 Kg","price":220000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Brillo / Lentejuela 1ra+/prem 20 Kg","price":220000,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"MIX Verano Pluz Size PREM 24 Kg","price":220000,"weight":"24kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Ciclismo 1ra/prem 20 Kg","price":220000,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Short Marca Columbia 10 Kg","price":228800,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Brillo / Lentejuela 1ra+/prem 25 Kg","price":253000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Ciclismo 1ra/prem 25 Kg","price":253000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Short Marca Vestir Y Outdoor 25KG","price":262900,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Deportivo Old Navy Nba, Nfl, Nhl, Russel,starter, Otras 1ra+ 25 Kg","price":275000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Short Surf / Playero Hombre 1RA 25 Kg","price":275000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Short Running 1RA 25 Kg","price":275000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Lino MIX 40 Kg","price":279400,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marcas Premium Deportivo Niños / Juvenil 25 Kg","price":286000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Deportivo Mujer Premium 25KG","price":297000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Ropa Caza Y Pesca 1RA 25 Kg","price":302500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Corset / Calzón Faja / Modeladores Otros 45KG","price":308000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"MIX Deportivo 1RA 40 Kg","price":308000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Pantalón Raquelado 1RA 45 Kg","price":308000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Deportivo Nike Adidas Surtido 20 Kg","price":313500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Ropa Caza Y Pesca 1RA PREM 25 Kg","price":324500,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Pink 1RA 25 Kg","price":324500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Poleron Con Gorro Solo Marca 1RA 20KG","price":342100,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marcas Premium Fila Champion Puma Reebok 1RA 20 Kg","price":342100,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Short Marcas Premium Unisex 1RA 25 Kg","price":352000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Calvin Klein MIX 22-23 Kg","price":365200,"weight":"23kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Deportivo Solo Marcas 1ra+/prem 20 Kg","price":374000,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Buzos Marca Algodón 1RA 23-25kg","price":377300,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Buzos Marca Deportivos 25 Kg","price":388300,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Deportivo Oferta 2x25kg (50 Kg Total)","price":396000,"weight":"25kg","tier":"oferta","new":True},
-    {"cat":"deportiva","name":"Buzos Marca 1RA 25 Kg","price":399300,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marcas Premium Fila Champion Puma Reebok 1RA 25 Kg","price":399300,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Mixto Marcas Premium Mujer Verano","price":423500,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Michael Kors 1RA 25KG","price":434500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Deportivo Solo Marcas 1ra+/prem 25 Kg","price":434500,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Premium Under Armour 25 Kg","price":451000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Under Armour Verano 25 Kg","price":451000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"MIX Marcas Premium 1ra-prem 20 Kg","price":451000,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Deportivo Verano Solo Marcas 1RA 25 Kg","price":456500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marcas Premium Nike Adidas Deportivo 1RA 25 Kg","price":468600,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Premium Nike Adidas Deportivo 20 Kg","price":468600,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Short Marcas Deportivas 1RA 25 Kg","price":495000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Pantalón Trekking / Senderismo Inv 1RA 40 Kg","price":513700,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"MIX Marcas Premium 1ra-prem 25 Kg","price":528000,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Columbia/ Northface MIX Inv 1RA Can 22 Kg","price":570900,"weight":"22kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Pantalón Trekking / Senderismo Verano 1RA 40 Kg","price":628100,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Pantalón Raquelado Marca 25KG","price":662200,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Deportivo Columbia The Northface 1ra+/prem 25 Kg","price":776600,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"sweaters","name":"Sweter Mujer Oferta 2x20 Kg","price":66000,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"sweaters","name":"Sweater Grueso 20 Kg","price":71500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Sweter Mujer Moderno 1RA 20 Kg","price":77000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Sweter Largo 20KG","price":77000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Sweter Mujer Moderno 1RA 45 Kg","price":137500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Cardigan Largo 1RA 20 Kg","price":148500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Cardigan 1RA 45 1RA Kg","price":159500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Ruana Poncho Fashion 1RA 45 Kg","price":187000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Poncho Fashion 1RA 45 Kg","price":203500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Sweater Shaggy 40 Kg","price":209000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Sweater Marca Hombre 1RA 25KG","price":308000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"sweaters","name":"Sweter Marca Mujer Premium 25KG","price":399300,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"vestidos","name":"Enteritos 1RA 20 Kg","price":93500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"vestidos","name":"Sweter Largo 45KG","price":137500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"vestidos","name":"Vestidos Verano Juv 1ra+ 20 Kg","price":143000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"vestidos","name":"Vestidos Y Faldas 1ra+ EXTRA Linda 20 Kg","price":148500,"weight":"20kg","tier":"extra","new":True},
-    {"cat":"vestidos","name":"Trench Coat Chaqueta Trench 1RA 25 Kg","price":170500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"vestidos","name":"Vestidos EXTRA Linda 1RA 45 Kg","price":176000,"weight":"45kg","tier":"extra","new":True},
-    {"cat":"vestidos","name":"Enteritos 1RA 40 Kg","price":176000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"vestidos","name":"MIX Brillo / Lentejuelas 25 Kg","price":247500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"vestidos","name":"Vestidos Y Faldas 1ra+ EXTRA Linda 40 Kg","price":253000,"weight":"40kg","tier":"extra","new":True},
-    {"cat":"vestidos","name":"Vestidos Fiesta PREM / Retorno 20 Kg","price":275000,"weight":"20kg","tier":"premium","new":True},
-    {"cat":"ski","name":"Parkas Sin Manga 1RA 25 Kg","price":143000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Pantalón Ski Y Térmicos Niños 1RA 40 Kg","price":159500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Térmico Ski Niños 1RA 40 Kg","price":159500,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Calzado Termico/nieve Adulto Mixto 20 Kg","price":160600,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Parkas Coreana 1RA 20 Kg","price":171600,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Parkas Plus Size 45KG","price":176000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Térmico Ski Adulto 1RA 45 Kg","price":209000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Pantalón Ski Y Térmicos Adulto Can 45 Kg","price":214500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Calzado Termico/nieve Adulto 1RA 20 Kg","price":216700,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Parkas Largas 1RA 40 Kg","price":216700,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Ski Alta Montana (parkas Chaq Y Termicos) 1ra+ 20 Kg","price":220000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Parka Alta Montana 20 Kg","price":242000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Parka Treking / Alta Montana 25 Kg","price":286000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"ski","name":"Parkas Coreana 1RA 40 Kg","price":331100,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"ninos","name":"MIX Niña Toda Estacion 1RA 10 Kg","price":49500,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"ninos","name":"Disfraces Y Accesorios 20 Kg","price":99000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"ninos","name":"Parka Y Chaq Niño 1RA 40KG","price":154000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"ninos","name":"Disfraces 45 Kg","price":165000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"ninos","name":"Chaquetas Solo Marcas Deportivas Niño Juv 1RA 20 Kg","price":280500,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"ninos","name":"Poleron Y Buzo Marca GAP Niño 25 Kg","price":302500,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Funda Cobertor 18 U Retorno","price":66000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"MIX Hogar 45 Kg","price":88000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"MIX Hogar 1RA 40 Kg Euro","price":110000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Cobertor 45 Kg","price":110000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Frazada 1RA 40kg.","price":114400,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Funda Cobertor 36 U Retorno","price":132000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Cobertor 1ra-prem 40KG","price":159500,"weight":"40kg","tier":"premium","new":True},
-    {"cat":"hogar","name":"MIX Hogar 2x45kg","price":165000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Bata Toalla 1RA 45KG","price":176000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Toalla 25 Kg","price":188100,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Sabanas Franela 1RA 45 Kg","price":192500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Cubrecolchon 1RA 45KG","price":203500,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Sabana Color 40 Kg","price":216700,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Sabana Blanca 40 Kg","price":216700,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"hogar","name":"Toalla 1RA 45 Kg","price":262900,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"calzado","name":"Calzado Mixto 18 Kg","price":55000,"weight":"18kg","tier":"primera","new":True},
-    {"cat":"calzado","name":"Calzado Marca Ugg Oferta 10KG","price":160600,"weight":"10kg","tier":"oferta","new":True},
-    {"cat":"calzado","name":"Calzado Marca Ugg 1RA 10 Kg","price":294800,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"calzado","name":"Calzado Marca Ugg 1RA 20 Kg","price":550000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Blazer / Chaqueta Fashion 20 Kg","price":97700,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Blazer / Chaqueta Fashion 1RA 20 Kg","price":97700,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Abrigo 3/4 Mujer 1RA 20 Kg","price":106900,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Blazer / Chaqueta Fashion Verano 20 Kg","price":109200,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Trench Coat Chaqueta Trench 1RA 20 Kg","price":138000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Chaquetas Cuero 25 Kg","price":138000,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Abrigo Hombre 3/4 Y Largo 1ra+ 25 Kg","price":718800,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
+    {"cat":"chaquetas","name":"Gamulan Piloto 20 Kg","price":143800,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Abrigo 35 Kg","price":149500,"weight":"35kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Parka Chaqueta 1RA 40 Kg","price":166800,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Gamulan 40KG","price":166800,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Abrigo 3/4 Mujer + Blazer / Chaqueta Fashion 2x20 Kg","price":179400,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Chaqueta Lenadora 1ra+ 25 Kg","price":207000,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Chaqueta Piloto Y Gamulan 1RA 20 Kg","price":253000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Chaqueta Bomber 1ra+ 25 Kg","price":299000,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Chaqueta Marca Superdry 1ra+ 25 Kg","price":718800,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
+    {"cat":"chaquetas","name":"Columbia MIX Oferta 20 Kg","price":357600,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"chaquetas","name":"Chaquetas Solo Marcas Deportivas Niño Juv 1RA 25 Kg","price":358800,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Chaqueta Lenadora 45 Kg","price":368000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Calvin Klein Chaquetas 1ra+ 25 Kg","price":379500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Parka/chaq Marca Oferta 25KG","price":379500,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
+    {"cat":"chaquetas","name":"Chaqueta Marca Zara Hym 1ra+ 25 Kg","price":417400,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Columbia MIX Oferta 25KG","price":557800,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
+    {"cat":"chaquetas","name":"Parka/chaq Polar Marca Columbia 1RA Directa 20 Kg","price":451900,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Outdoor / Trekking Columbia 1RA Seleccionado 10 Kg","price":453100,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Parka/chaq Marca Columbia Oferta 20 Kg","price":453100,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"chaquetas","name":"Northface MIX Polar Parka Chaq Oferta 20 Kg","price":453100,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"chaquetas","name":"Poleron Algodón Y Deportivo Columbia 10 Kg","price":465700,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Pantalones Outdoor Marca Columbia 10 Kg","price":465700,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Columbia MIX 1RA 20KG","price":567000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Columbia Northface MIX 1RA Directo 25 Kg","price":596800,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Parka/chaq Marca Columbia/ Northface 1RA 20 Kg","price":662400,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Parka/chaq Marca Columbia 1RA 20 Kg","price":678500,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Columbia MIX 1RA 25KG","price":686600,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Cortaviento Marca 25KG","price":692300,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Columbia/ Northface MIX Inv Oferta 40 Kg","price":716400,"weight":"40kg","tier":"oferta","new":True},
+    {"cat":"chaquetas","name":"Northface MIX Polar Parka Chaq 1RA 20 Kg","price":793500,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Northface MIX Polar Parka Chaq 1RA 25 Kg","price":954500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"chaquetas","name":"Columbia/ Northface MIX Inv 1RA Can 45 Kg","price":1133900,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Pescador Jeans Juvenil Mujer 1RA 40 Kg","price":69000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jardineras De Jeans 40 Kg","price":138000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Mujer Plus Size 1RA 40 Kg","price":138000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Blusa Jeans 1RA 22 Kg","price":155200,"weight":"22kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Chaqueta Mezclilla 1RA 45 Kg","price":189700,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Hombre Plus Size 1RA 45 Kg","price":442700,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Blusa Jeans 1RA 45 Kg","price":253000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Mujer Marca PREM Retorno 24 U","price":672800,"weight":"20kg","tier":"premium","new":True,"ganchos":1},
+    {"cat":"jeans","name":"Jeans Levis Mujer 25 Kg","price":276000,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Hombre 1RA 25KG","price":280600,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Zara Mango Guess 24 U","price":430100,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Levis Hombre 1RA 30 Kg","price":471500,"weight":"30kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Levis Mujer 50 Kg","price":517500,"weight":"50kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Mujer Marca PREM Retorno 50 U","price":534800,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Poleras Y Blusas Marca Ardene Retorno 50 U","price":51700,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Poleras Manga Larga Mujer 1RA 45 Kg","price":109200,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Poleras Y Blusas Marca Ardene Retorno 150 U","price":115000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Blusa Mixta XL 45KG","price":115000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Blusa Franela 45 Kg 1RA","price":161000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Camisa Franela 45 Kg 1RA","price":161000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Polera Manga Larga Hombre 1RA 40 Kg","price":166800,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Camisa Guayabera 1RA 10 Kg","price":172500,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Polera Tie Dye 1ra+ 22 Kg","price":207000,"weight":"22kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Polera Marca Hombre M/la Oferta","price":212700,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"poleras","name":"Polera Marca Hombre M/co Oferta 25KG","price":517500,"weight":"25kg","tier":"oferta","new":True},
+    {"cat":"poleras","name":"Polera Marca Deportiva Oferta 25KG","price":224200,"weight":"25kg","tier":"oferta","new":True},
+    {"cat":"poleras","name":"Polera Marca Deportiva Hombre 1RA 10 Kg","price":239200,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Polera Hombre Dibujos Animados 1ra+/prem 20 Kg","price":241500,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Camisa Marca Hombre Oferta","price":253000,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"poleras","name":"Polera Hombre Dibujos Animados 1ra+/prem 25 Kg","price":425500,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Polera Marca Niño 1ra+/prem 25 Kg","price":557800,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Polera Marca Hombre M/la 1ra+/prem 25KG","price":494500,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Camisa Guayabera 1RA 22 Kg","price":357600,"weight":"22kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Polera Marca Hombre S/ma 1RA 25 Kg","price":368000,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Polera Hombre Cervezas 1ra+","price":394400,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Polera Hombre Starwars / Marvel 1ra+ 20 Kg","price":394400,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"MIX Verano Marca (poleras Y Short) Oferta 50 Kg","price":417400,"weight":"50kg","tier":"oferta","new":True},
+    {"cat":"poleras","name":"Polera Marca Deportiva Hombre 1RA 25 Kg","price":626800,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
+    {"cat":"poleras","name":"Polera Hombre Marca M/co Multi Marca 25 Kg","price":517500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"poleras","name":"Polera Marca Hombre M/co C/cuello 1ra+/prem 25 Kg","price":517500,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Polera Marca Hombre M/co Adidas Nike 1ra+/prem 25 Kg","price":707200,"weight":"25kg","tier":"premium","new":True,"ganchos":1},
+    {"cat":"poleras","name":"Camisa Guayabera 1RA 45 Kg","price":656600,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron C/ Gorro 2DA 40 Kg","price":69000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Sin Gorro 45KG","price":264500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Polar Oferta 45 Kg","price":97700,"weight":"45kg","tier":"oferta","new":True},
+    {"cat":"polerones","name":"Polar 45 Kg","price":103500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Pijama Polar 1RA 45 Kg","price":143800,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Pantalón Polar 1RA 45 Kg","price":143800,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Con Gorro Heavy 1RA 40 Kg","price":161000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Polar 1RA Canadá 45 Kg","price":166800,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Polar Chaqueta 45KG Kg","price":166800,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron C/ Gorro Talla Grande 1RA 45 Kg","price":184000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Sin Gorro Hombre 40 Kg","price":212700,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Sin Gorro Marca Oferta 25 Kg","price":569200,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
+    {"cat":"polerones","name":"Poleron Polar Marca Columbia Oferta 12KG","price":220800,"weight":"12kg","tier":"oferta","new":True},
+    {"cat":"polerones","name":"Poleron Canguro Marca Oferta 25 Kg","price":224200,"weight":"25kg","tier":"oferta","new":True},
+    {"cat":"polerones","name":"Poleron Con Gorro 1RA Canadá 45 Kg","price":224200,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Polerones Calvin Klein 20 U","price":230000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Polar Corderito 1RA 45 Kg","price":230000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Polar Marca Columbia 1RA 12KG","price":241500,"weight":"12kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Deportivo Premium 25KG","price":431200,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"polerones","name":"Térmico Ski Columbia 1RA 10 Kg","price":269100,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Polar Marca 1RA 25 Kg","price":494500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Deportivo Marca 23KG","price":381800,"weight":"23kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Polar Marcas PREM 1RA 25 Kg","price":405900,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"polerones","name":"Poleron Marca GAP Adulto 25 Kg","price":405900,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Con Gorro Solo Marca 1RA 25KG","price":405900,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Con Gorro Marca 1ra+ 25 Kg","price":430100,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Polar Marca Columbia 1RA 20KG","price":442700,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Polar / Parka/ Chaq Marca Columbia 1RA 25 Kg","price":563500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Sweter Oferta 20 Kg","price":46000,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"deportiva","name":"MIX Surtido Verano, Todo Producto 20 Kg Calidad Oferta","price":51700,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"deportiva","name":"MIX Mujer Verano EXTRA Linda 10 Kg","price":51700,"weight":"10kg","tier":"extra","new":True},
+    {"cat":"deportiva","name":"Hombre Y Mujer Verano 1RA Plus Size 20 Kg","price":92000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Ropa Mascota 10 Kg","price":92000,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"MIX Mujer Verano EXTRA Linda 20 Kg","price":92000,"weight":"20kg","tier":"extra","new":True},
+    {"cat":"deportiva","name":"Traje Bano Mujer Entero 1ra+ 20 Kg","price":97700,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Traje Bano Mujer Entero Surtido 45 Kg","price":97700,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Calza Y Pantalón Lycra 40 Kg","price":109200,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Columbia/ Northface 3ra 10 Kg","price":109200,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Pantalón / Short 3/4 Outdoor 1RA 40 Kg","price":138000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Hospital 25 Kg","price":143800,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Short Marca Vestir Y Outdoor 15 Kg","price":155200,"weight":"15kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"MIX Mujer Juv Verano 20 Kg","price":155200,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"MIX Mujer Verano EXTRA Linda 40 Kg","price":161000,"weight":"40kg","tier":"extra","new":True},
+    {"cat":"deportiva","name":"Camisa Hombre 1RA 40 Kg","price":166800,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Buzo Algodón 45KG","price":166800,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Corset / Calzón Faja / Modeladores Otros 20KG","price":166800,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Hombre Verano 1RA Plus Size 40 Kg","price":172500,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Hombre Y Mujer Verano 1RA Plus Size 40 Kg","price":172500,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"MIX Deportivo 1RA 20 Kg","price":172500,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Buzos Plus Size 45 Kg","price":184000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Chaqueta Militar 20 Kg","price":189700,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Abrigo 3/4 Mujer 1RA 2x20 Kg","price":190900,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marcas Premium Fila Champion Puma Reebok 1RA 10 Kg","price":196600,"weight":"10kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Mixto Marca Premium Under Armour 10 Kg","price":196600,"weight":"10kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Ropa Moto 1ra+ 15-18 Kg","price":212700,"weight":"18kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Short Marca Surtido 25 Kg","price":212700,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Buzo Algodón 40KG","price":212700,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marca Deportivo Oferta 25 Kg","price":563500,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
+    {"cat":"deportiva","name":"Mixto Marca Hombre Oferta","price":218500,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"deportiva","name":"Mujer EXTRA Linda Verano 45 Kg","price":218500,"weight":"45kg","tier":"extra","new":True},
+    {"cat":"deportiva","name":"Cortaviento Y Poleron Deportivo Mixto 45 Kg","price":333500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Short Running 1RA 20 Kg","price":230000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Hospital Marca 1RA 20 Kg","price":230000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Brillo / Lentejuela 1ra+/prem 20 Kg","price":230000,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"MIX Verano Pluz Size PREM 24 Kg","price":230000,"weight":"24kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Ciclismo 1ra/prem 20 Kg","price":230000,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Short Marca Columbia 10 Kg","price":239200,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Brillo / Lentejuela 1ra+/prem 25 Kg","price":264500,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Ciclismo 1ra/prem 25 Kg","price":264500,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Short Marca Vestir Y Outdoor 25KG","price":274800,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marca Deportivo Old Navy Nba, Nfl, Nhl, Russel,starter, Otras 1ra+ 25 Kg","price":287500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Short Surf / Playero Hombre 1RA 25 Kg","price":287500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Short Running 1RA 25 Kg","price":287500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Lino MIX 40 Kg","price":292100,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marcas Premium Deportivo Niños / Juvenil 25 Kg","price":299000,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Deportivo Mujer Premium 25KG","price":310500,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Ropa Caza Y Pesca 1RA 25 Kg","price":316200,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Corset / Calzón Faja / Modeladores Otros 45KG","price":322000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"MIX Deportivo 1RA 40 Kg","price":322000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Pantalón Raquelado 1RA 45 Kg","price":322000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marca Deportivo Nike Adidas Surtido 20 Kg","price":327800,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Ropa Caza Y Pesca 1RA PREM 25 Kg","price":339200,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Pink 1RA 25 Kg","price":339200,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Poleron Con Gorro Solo Marca 1RA 20KG","price":357600,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marcas Premium Fila Champion Puma Reebok 1RA 20 Kg","price":357600,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Short Marcas Premium Unisex 1RA 25 Kg","price":368000,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Calvin Klein MIX 22-23 Kg","price":381800,"weight":"23kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Deportivo Solo Marcas 1ra+/prem 20 Kg","price":391000,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Buzos Marca Algodón 1RA 23-25kg","price":394400,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Buzos Marca Deportivos 25 Kg","price":405900,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marca Deportivo Oferta 2x25kg (50 Kg Total)","price":414000,"weight":"25kg","tier":"oferta","new":True},
+    {"cat":"deportiva","name":"Buzos Marca 1RA 25 Kg","price":417400,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marcas Premium Fila Champion Puma Reebok 1RA 25 Kg","price":557800,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Mixto Marcas Premium Mujer Verano","price":442700,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Michael Kors 1RA 25KG","price":454200,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Deportivo Solo Marcas 1ra+/prem 25 Kg","price":454200,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Mixto Marca Premium Under Armour 25 Kg","price":615200,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Mixto Marca Under Armour Verano 25 Kg","price":471500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"MIX Marcas Premium 1ra-prem 20 Kg","price":471500,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Deportivo Verano Solo Marcas 1RA 25 Kg","price":477200,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Mixto Marcas Premium Nike Adidas Deportivo 1RA 25 Kg","price":489900,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Premium Nike Adidas Deportivo 20 Kg","price":489900,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Short Marcas Deportivas 1RA 25 Kg","price":517500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Pantalón Trekking / Senderismo Inv 1RA 40 Kg","price":537000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"MIX Marcas Premium 1ra-prem 25 Kg","price":552000,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Columbia/ Northface MIX Inv 1RA Can 22 Kg","price":596800,"weight":"22kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Pantalón Trekking / Senderismo Verano 1RA 40 Kg","price":656600,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Pantalón Raquelado Marca 25KG","price":822200,"weight":"25kg","tier":"primera","new":True,"ganchos":2},
+    {"cat":"deportiva","name":"Mixto Marca Deportivo Columbia The Northface 1ra+/prem 25 Kg","price":811900,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"sweaters","name":"Sweter Mujer Oferta 2x20 Kg","price":69000,"weight":"20kg","tier":"oferta","new":True},
+    {"cat":"sweaters","name":"Sweater Grueso 20 Kg","price":74800,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Sweter Mujer Moderno 1RA 20 Kg","price":80500,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Sweter Largo 20KG","price":80500,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Sweter Mujer Moderno 1RA 45 Kg","price":143800,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Cardigan Largo 1RA 20 Kg","price":155200,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Cardigan 1RA 45 1RA Kg","price":166800,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Ruana Poncho Fashion 1RA 45 Kg","price":195500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Poncho Fashion 1RA 45 Kg","price":212700,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Sweater Shaggy 40 Kg","price":218500,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Sweater Marca Hombre 1RA 25KG","price":322000,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"sweaters","name":"Sweter Marca Mujer Premium 25KG","price":417400,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"vestidos","name":"Enteritos 1RA 20 Kg","price":97700,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"vestidos","name":"Sweter Largo 45KG","price":143800,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"vestidos","name":"Vestidos Verano Juv 1ra+ 20 Kg","price":149500,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"vestidos","name":"Vestidos Y Faldas 1ra+ EXTRA Linda 20 Kg","price":155200,"weight":"20kg","tier":"extra","new":True},
+    {"cat":"vestidos","name":"Trench Coat Chaqueta Trench 1RA 25 Kg","price":178200,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"vestidos","name":"Vestidos EXTRA Linda 1RA 45 Kg","price":184000,"weight":"45kg","tier":"extra","new":True},
+    {"cat":"vestidos","name":"Enteritos 1RA 40 Kg","price":184000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"vestidos","name":"MIX Brillo / Lentejuelas 25 Kg","price":258700,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"vestidos","name":"Vestidos Y Faldas 1ra+ EXTRA Linda 40 Kg","price":264500,"weight":"40kg","tier":"extra","new":True},
+    {"cat":"vestidos","name":"Vestidos Fiesta PREM / Retorno 20 Kg","price":287500,"weight":"20kg","tier":"premium","new":True},
+    {"cat":"ski","name":"Parkas Sin Manga 1RA 25 Kg","price":149500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Pantalón Ski Y Térmicos Niños 1RA 40 Kg","price":166800,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Térmico Ski Niños 1RA 40 Kg","price":166800,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Calzado Termico/nieve Adulto Mixto 20 Kg","price":167900,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Parkas Coreana 1RA 20 Kg","price":179400,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Parkas Plus Size 45KG","price":184000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Térmico Ski Adulto 1RA 45 Kg","price":218500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Pantalón Ski Y Térmicos Adulto Can 45 Kg","price":224200,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Calzado Termico/nieve Adulto 1RA 20 Kg","price":226500,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Parkas Largas 1RA 40 Kg","price":226500,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Ski Alta Montana (parkas Chaq Y Termicos) 1ra+ 20 Kg","price":230000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Parka Alta Montana 20 Kg","price":253000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Parka Treking / Alta Montana 25 Kg","price":299000,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"ski","name":"Parkas Coreana 1RA 40 Kg","price":346200,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"ninos","name":"MIX Niña Toda Estacion 1RA 10 Kg","price":51700,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"ninos","name":"Disfraces Y Accesorios 20 Kg","price":103500,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"ninos","name":"Parka Y Chaq Niño 1RA 40KG","price":161000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"ninos","name":"Disfraces 45 Kg","price":172500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"ninos","name":"Chaquetas Solo Marcas Deportivas Niño Juv 1RA 20 Kg","price":293200,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"ninos","name":"Poleron Y Buzo Marca GAP Niño 25 Kg","price":316200,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Funda Cobertor 18 U Retorno","price":69000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"MIX Hogar 45 Kg","price":92000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"MIX Hogar 1RA 40 Kg Euro","price":115000,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Cobertor 45 Kg","price":115000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Frazada 1RA 40kg.","price":119600,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Funda Cobertor 36 U Retorno","price":138000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Cobertor 1ra-prem 40KG","price":166800,"weight":"40kg","tier":"premium","new":True},
+    {"cat":"hogar","name":"MIX Hogar 2x45kg","price":172500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Bata Toalla 1RA 45KG","price":184000,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Toalla 25 Kg","price":196600,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Sabanas Franela 1RA 45 Kg","price":201200,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Cubrecolchon 1RA 45KG","price":212700,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Sabana Color 40 Kg","price":226500,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Sabana Blanca 40 Kg","price":226500,"weight":"40kg","tier":"primera","new":True},
+    {"cat":"hogar","name":"Toalla 1RA 45 Kg","price":274800,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"calzado","name":"Calzado Mixto 18 Kg","price":57500,"weight":"18kg","tier":"primera","new":True},
+    {"cat":"calzado","name":"Calzado Marca Ugg Oferta 10KG","price":167900,"weight":"10kg","tier":"oferta","new":True},
+    {"cat":"calzado","name":"Calzado Marca Ugg 1RA 10 Kg","price":308200,"weight":"10kg","tier":"primera","new":True},
+    {"cat":"calzado","name":"Calzado Marca Ugg 1RA 20 Kg","price":575000,"weight":"20kg","tier":"primera","new":True},
+    {"cat":"calzado","name":"Jordan Calzado 25 Kg","price":937200,"weight":"25kg","tier":"premium","new":True,"ganchos":2},
+    {"cat":"deportiva","name":"Realtree 1 25 Kg","price":483000,"weight":"25kg","tier":"premium","new":True,"ganchos":1},
+    {"cat":"deportiva","name":"Realtree 1 Premium 25 Kg","price":500200,"weight":"25kg","tier":"premium","new":True,"ganchos":1},
 ]
 def fmt_clp(n):
     s = f"{n:,.0f}".replace(",", ".")
@@ -774,6 +779,129 @@ class CatalogoPDF(FPDF):
         self.ln(row_h)
 
     # ══════════════════════════════════════════════
+    #  PÁGINA DEL CONCEPTO "GANCHO"
+    # ══════════════════════════════════════════════
+    def ganchos_page(self):
+        self.add_page()
+        # Page background cream
+        self.set_fill_color(*C_CREAM)
+        self.rect(0, 0, 210, 297, "F")
+        # Top bar gold
+        self.set_fill_color(*C_GOLD)
+        self.rect(0, 0, 210, 3, "F")
+        self.set_y(20)
+
+        # Section eyebrow
+        self.set_font("Body", "", 8)
+        self.set_text_color(*C_GOLD)
+        self.cell(0, 4, "MODALIDAD DE COMPRA", align="C")
+        self.ln(6)
+
+        # Title
+        self.set_font("Body", "B", 28)
+        self.set_text_color(*C_DARK)
+        self.cell(0, 12, "¿Qué es un \"Gancho\"?", align="C")
+        self.ln(14)
+
+        # Gold divider
+        self.set_fill_color(*C_GOLD)
+        self.rect(85, self.get_y(), 40, 0.8, "F")
+        self.ln(10)
+
+        # Definición
+        self.set_font("Body", "", 11)
+        self.set_text_color(*C_GRAY5)
+        self.set_x(20)
+        self.multi_cell(170, 6,
+            "Un GANCHO es un fardo de menor exclusividad que el cliente compra "
+            "junto a un fardo top muy demandado. Algunos productos exclusivos "
+            "de Maully se venden con la condición de sumar 1 o 2 ganchos en "
+            "la misma compra.",
+            align="C")
+        self.ln(8)
+
+        # Box "Por qué funciona así"
+        box_y = self.get_y()
+        self.set_fill_color(*C_GOLD_LT)
+        self.rect(20, box_y, 170, 56, "F")
+        self.set_fill_color(*C_GOLD)
+        self.rect(20, box_y, 4, 56, "F")
+        self.set_y(box_y + 6)
+        self.set_x(30)
+        self.set_font("Body", "B", 12)
+        self.set_text_color(*C_DARK)
+        self.cell(160, 6, "¿Por qué funciona así?")
+        self.ln(8)
+
+        bullets = [
+            ("Para Maully:", "rotamos bodega de variedad de stock y productos."),
+            ("Para ti:", "accedes a fardos exclusivos que no salen sueltos y diversificas tu mix."),
+            ("Beneficio mutuo:", "menor costo por kilo total combinando exclusivos + ganchos."),
+        ]
+        for label, txt in bullets:
+            self.set_x(30)
+            self.set_font("Body", "B", 10)
+            self.set_text_color(*C_DARK)
+            self.cell(40, 5, "• " + label)
+            self.set_font("Body", "", 10)
+            self.set_text_color(*C_GRAY5)
+            self.multi_cell(120, 5, txt)
+            self.ln(1)
+
+        self.set_y(box_y + 64)
+
+        # Qué fardos sirven como gancho
+        self.set_x(20)
+        self.set_font("Body", "B", 12)
+        self.set_text_color(*C_DARK)
+        self.cell(170, 6, "¿Qué fardos sirven como gancho?", align="C")
+        self.ln(8)
+
+        self.set_x(20)
+        self.set_font("Body", "", 10.5)
+        self.set_text_color(*C_GRAY5)
+        self.multi_cell(170, 5.5,
+            "Cualquier fardo etiquetado PREMIUM, MARCA, SEGUNDA o MARCA SEGUNDA. "
+            "Son productos de excelente calidad — no son saldos. En el catálogo, "
+            "los fardos top que requieren ganchos vienen marcados con \"+1 gancho\" "
+            "o \"+2 ganchos\" junto a su precio.",
+            align="C")
+        self.ln(10)
+
+        # Ejemplos box
+        ex_y = self.get_y()
+        self.set_fill_color(245, 235, 220)
+        self.rect(30, ex_y, 150, 38, "F")
+        self.set_y(ex_y + 5)
+        self.set_x(30)
+        self.set_font("Body", "B", 10)
+        self.set_text_color(*C_DARK)
+        self.cell(150, 5, "Ejemplos del catálogo:", align="C")
+        self.ln(7)
+        examples = [
+            "JORDAN 25 kg  →  + 2 ganchos",
+            "Pantalón Raquelado Marca 25 kg  →  + 2 ganchos",
+            "REMERA HOMBRE MULTIMARCA 1RA  →  + 1 gancho",
+            "OUTDOR MARCA 25 kg  →  + 1 gancho",
+        ]
+        self.set_font("Body", "", 9.5)
+        self.set_text_color(*C_GRAY5)
+        for ex in examples:
+            self.set_x(30)
+            self.cell(150, 5, ex, align="C")
+            self.ln(5)
+
+        # CTA
+        self.ln(10)
+        self.set_x(20)
+        self.set_font("Body", "I", 10)
+        self.set_text_color(*C_GOLD)
+        self.multi_cell(170, 5,
+            "Bea te ayuda a armar el combo perfecto según tu presupuesto. "
+            "WhatsApp: " + WA_NUM,
+            align="C")
+
+    # ══════════════════════════════════════════════
     #  LEGEND + CTA
     # ══════════════════════════════════════════════
     def legend_and_cta(self):
@@ -873,9 +1001,10 @@ def main():
 
     pdf.cover_page()
     pdf.about_page()
+    pdf.ganchos_page()
 
     cat_order = ['chaquetas', 'jeans', 'poleras', 'polerones', 'deportiva',
-                 'sweaters', 'vestidos', 'calzado', 'hogar', 'plussize']
+                 'sweaters', 'vestidos', 'ski', 'ninos', 'calzado', 'hogar', 'plussize']
 
     for cat_id in cat_order:
         cat_products = [p for p in products if p["cat"] == cat_id]
