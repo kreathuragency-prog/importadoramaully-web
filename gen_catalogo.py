@@ -297,7 +297,6 @@ products = [
     {"cat":"calzado","name":"Calzado Marca Ugg 1RA 10 Kg","price":294800,"weight":"10kg","tier":"primera","new":True},
     {"cat":"calzado","name":"Calzado Marca Ugg 1RA 20 Kg","price":550000,"weight":"20kg","tier":"primera","new":True},
 ]
-
 def fmt_clp(n):
     s = f"{n:,.0f}".replace(",", ".")
     return f"${s}"
@@ -892,9 +891,13 @@ def main():
 
     pdf.legend_and_cta()
 
-    out = os.path.join(os.path.dirname(__file__), "catalogo-maully.pdf")
-    pdf.output(out)
-    print(f"PDF generado: {out}")
+    out_dir = os.path.dirname(__file__)
+    out_main = os.path.join(out_dir, "catalogo-maully-mayo-2026.pdf")
+    pdf.output(out_main)
+    # mantener alias estable para compatibilidad con links existentes
+    import shutil
+    shutil.copy(out_main, os.path.join(out_dir, "catalogo-maully.pdf"))
+    print(f"PDF generado: {out_main} (+ alias catalogo-maully.pdf)")
     print(f"Total productos: {len(products)}")
     print(f"Paginas: {pdf.page_no()}")
 

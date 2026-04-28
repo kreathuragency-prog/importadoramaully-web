@@ -9,6 +9,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 1
   },
   {
@@ -21,6 +22,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 2
   },
   {
@@ -33,6 +35,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 3
   },
   {
@@ -45,6 +48,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 4
   },
   {
@@ -57,6 +61,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 5
   },
   {
@@ -69,6 +74,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 6
   },
   {
@@ -81,6 +87,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 7
   },
   {
@@ -93,6 +100,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 8
   },
   {
@@ -105,6 +113,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 9
   },
   {
@@ -117,6 +126,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 10
   },
   {
@@ -129,6 +139,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 11
   },
   {
@@ -141,6 +152,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 12
   },
   {
@@ -153,6 +165,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 13
   },
   {
@@ -165,6 +178,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 14
   },
   {
@@ -177,6 +191,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 15
   },
   {
@@ -189,6 +204,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 16
   },
   {
@@ -201,6 +217,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 17
   },
   {
@@ -213,6 +230,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 18
   },
   {
@@ -225,6 +243,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 19
   },
   {
@@ -237,6 +256,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 20
   },
   {
@@ -249,6 +269,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 21
   },
   {
@@ -261,6 +282,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 22
   },
   {
@@ -273,6 +295,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 23
   },
   {
@@ -285,6 +308,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 24
   },
   {
@@ -297,6 +321,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 25
   },
   {
@@ -309,6 +334,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 26
   },
   {
@@ -321,6 +347,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 27
   },
   {
@@ -333,6 +360,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 28
   },
   {
@@ -345,6 +373,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 29
   },
   {
@@ -357,6 +386,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 30
   },
   {
@@ -369,6 +399,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 31
   },
   {
@@ -381,6 +412,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 32
   },
   {
@@ -393,6 +425,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 33
   },
   {
@@ -405,6 +438,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 34
   },
   {
@@ -417,6 +451,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 35
   },
   {
@@ -429,6 +464,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 36
   },
   {
@@ -441,6 +477,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 37
   },
   {
@@ -453,6 +490,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 38
   },
   {
@@ -465,6 +503,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 39
   },
   {
@@ -477,6 +516,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 40
   },
   {
@@ -489,6 +529,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 41
   },
   {
@@ -501,6 +542,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 42
   },
   {
@@ -513,6 +555,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 43
   },
   {
@@ -525,6 +568,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 44
   },
   {
@@ -537,6 +581,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 45
   },
   {
@@ -549,6 +594,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 46
   },
   {
@@ -561,6 +607,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 47
   },
   {
@@ -573,6 +620,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 48
   },
   {
@@ -585,6 +633,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 49
   },
   {
@@ -597,6 +646,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 50
   },
   {
@@ -609,6 +659,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 51
   },
   {
@@ -621,6 +672,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 52
   },
   {
@@ -633,6 +685,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 53
   },
   {
@@ -645,6 +698,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 54
   },
   {
@@ -657,6 +711,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 55
   },
   {
@@ -669,6 +724,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 56
   },
   {
@@ -681,6 +737,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 57
   },
   {
@@ -693,6 +750,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 58
   },
   {
@@ -705,6 +763,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 59
   },
   {
@@ -717,6 +776,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 60
   },
   {
@@ -729,6 +789,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 61
   },
   {
@@ -741,6 +802,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 62
   },
   {
@@ -753,6 +815,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 63
   },
   {
@@ -765,6 +828,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 64
   },
   {
@@ -777,6 +841,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 65
   },
   {
@@ -789,6 +854,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 66
   },
   {
@@ -801,6 +867,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 67
   },
   {
@@ -813,6 +880,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 68
   },
   {
@@ -825,6 +893,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 69
   },
   {
@@ -837,6 +906,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 70
   },
   {
@@ -849,6 +919,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 71
   },
   {
@@ -861,6 +932,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 72
   },
   {
@@ -873,6 +945,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 73
   },
   {
@@ -885,6 +958,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 74
   },
   {
@@ -897,6 +971,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 75
   },
   {
@@ -909,6 +984,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 76
   },
   {
@@ -921,6 +997,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 77
   },
   {
@@ -933,6 +1010,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 78
   },
   {
@@ -945,6 +1023,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 79
   },
   {
@@ -957,6 +1036,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 80
   },
   {
@@ -969,6 +1049,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 81
   },
   {
@@ -981,6 +1062,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": false,
     "id": 82
   },
   {
@@ -993,6 +1075,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 83
   },
   {
@@ -1005,6 +1088,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 84
   },
   {
@@ -1017,6 +1101,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 85
   },
   {
@@ -1029,6 +1114,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 86
   },
   {
@@ -1041,6 +1127,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 87
   },
   {
@@ -1053,6 +1140,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 88
   },
   {
@@ -1065,6 +1153,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 89
   },
   {
@@ -1077,6 +1166,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 90
   },
   {
@@ -1089,6 +1179,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 91
   },
   {
@@ -1101,6 +1192,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 92
   },
   {
@@ -1113,6 +1205,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 93
   },
   {
@@ -1125,6 +1218,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 94
   },
   {
@@ -1137,6 +1231,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 95
   },
   {
@@ -1149,6 +1244,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 96
   },
   {
@@ -1161,6 +1257,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 97
   },
   {
@@ -1173,6 +1270,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 98
   },
   {
@@ -1185,6 +1283,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 99
   },
   {
@@ -1197,6 +1296,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 100
   },
   {
@@ -1209,6 +1309,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 101
   },
   {
@@ -1221,6 +1322,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 102
   },
   {
@@ -1233,6 +1335,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 103
   },
   {
@@ -1245,6 +1348,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 104
   },
   {
@@ -1257,6 +1361,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 105
   },
   {
@@ -1269,6 +1374,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 106
   },
   {
@@ -1281,6 +1387,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 107
   },
   {
@@ -1293,6 +1400,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 108
   },
   {
@@ -1305,6 +1413,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 109
   },
   {
@@ -1317,6 +1426,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 110
   },
   {
@@ -1329,6 +1439,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 111
   },
   {
@@ -1341,6 +1452,7 @@
     "tier": "extra",
     "badge": "extra",
     "isNew": true,
+    "premium": true,
     "id": 112
   },
   {
@@ -1353,6 +1465,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 113
   },
   {
@@ -1365,6 +1478,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 114
   },
   {
@@ -1377,6 +1491,7 @@
     "tier": "extra",
     "badge": "extra",
     "isNew": true,
+    "premium": true,
     "id": 115
   },
   {
@@ -1389,6 +1504,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 116
   },
   {
@@ -1401,6 +1517,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 117
   },
   {
@@ -1413,6 +1530,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 118
   },
   {
@@ -1425,6 +1543,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 119
   },
   {
@@ -1437,6 +1556,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 120
   },
   {
@@ -1449,6 +1569,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 121
   },
   {
@@ -1461,6 +1582,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 122
   },
   {
@@ -1473,6 +1595,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 123
   },
   {
@@ -1485,6 +1608,7 @@
     "tier": "extra",
     "badge": "extra",
     "isNew": true,
+    "premium": true,
     "id": 124
   },
   {
@@ -1497,6 +1621,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 125
   },
   {
@@ -1509,6 +1634,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 126
   },
   {
@@ -1521,6 +1647,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 127
   },
   {
@@ -1533,6 +1660,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 128
   },
   {
@@ -1545,6 +1673,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 129
   },
   {
@@ -1557,6 +1686,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 130
   },
   {
@@ -1569,6 +1699,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 131
   },
   {
@@ -1581,6 +1712,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 132
   },
   {
@@ -1593,6 +1725,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 133
   },
   {
@@ -1605,6 +1738,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 134
   },
   {
@@ -1617,6 +1751,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 135
   },
   {
@@ -1629,6 +1764,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 136
   },
   {
@@ -1641,6 +1777,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 137
   },
   {
@@ -1653,6 +1790,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 138
   },
   {
@@ -1665,6 +1803,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 139
   },
   {
@@ -1677,6 +1816,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 140
   },
   {
@@ -1689,6 +1829,7 @@
     "tier": "extra",
     "badge": "extra",
     "isNew": true,
+    "premium": true,
     "id": 141
   },
   {
@@ -1701,6 +1842,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 142
   },
   {
@@ -1713,6 +1855,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 143
   },
   {
@@ -1725,6 +1868,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 144
   },
   {
@@ -1737,6 +1881,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 145
   },
   {
@@ -1749,6 +1894,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 146
   },
   {
@@ -1761,6 +1907,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 147
   },
   {
@@ -1773,6 +1920,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 148
   },
   {
@@ -1785,6 +1933,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 149
   },
   {
@@ -1797,6 +1946,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 150
   },
   {
@@ -1809,6 +1959,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 151
   },
   {
@@ -1821,6 +1972,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 152
   },
   {
@@ -1833,6 +1985,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 153
   },
   {
@@ -1845,6 +1998,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 154
   },
   {
@@ -1857,6 +2011,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 155
   },
   {
@@ -1869,6 +2024,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 156
   },
   {
@@ -1881,6 +2037,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 157
   },
   {
@@ -1893,6 +2050,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 158
   },
   {
@@ -1905,6 +2063,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 159
   },
   {
@@ -1917,6 +2076,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 160
   },
   {
@@ -1929,6 +2089,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 161
   },
   {
@@ -1941,6 +2102,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 162
   },
   {
@@ -1953,6 +2115,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 163
   },
   {
@@ -1965,6 +2128,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 164
   },
   {
@@ -1977,6 +2141,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 165
   },
   {
@@ -1989,6 +2154,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 166
   },
   {
@@ -2001,6 +2167,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 167
   },
   {
@@ -2013,6 +2180,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 168
   },
   {
@@ -2025,6 +2193,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 169
   },
   {
@@ -2037,6 +2206,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 170
   },
   {
@@ -2049,6 +2219,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 171
   },
   {
@@ -2061,6 +2232,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 172
   },
   {
@@ -2073,6 +2245,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 173
   },
   {
@@ -2085,6 +2258,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 174
   },
   {
@@ -2097,6 +2271,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 175
   },
   {
@@ -2109,6 +2284,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 176
   },
   {
@@ -2121,6 +2297,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 177
   },
   {
@@ -2133,6 +2310,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 178
   },
   {
@@ -2145,6 +2323,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 179
   },
   {
@@ -2157,6 +2336,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 180
   },
   {
@@ -2169,6 +2349,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 181
   },
   {
@@ -2181,6 +2362,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 182
   },
   {
@@ -2193,6 +2375,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 183
   },
   {
@@ -2205,6 +2388,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 184
   },
   {
@@ -2217,6 +2401,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 185
   },
   {
@@ -2229,6 +2414,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 186
   },
   {
@@ -2241,6 +2427,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 187
   },
   {
@@ -2253,6 +2440,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 188
   },
   {
@@ -2265,6 +2453,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 189
   },
   {
@@ -2277,6 +2466,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 190
   },
   {
@@ -2289,6 +2479,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 191
   },
   {
@@ -2301,6 +2492,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 192
   },
   {
@@ -2313,6 +2505,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 193
   },
   {
@@ -2325,6 +2518,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 194
   },
   {
@@ -2337,6 +2531,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 195
   },
   {
@@ -2349,6 +2544,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 196
   },
   {
@@ -2361,6 +2557,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 197
   },
   {
@@ -2373,6 +2570,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 198
   },
   {
@@ -2385,6 +2583,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 199
   },
   {
@@ -2397,6 +2596,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 200
   },
   {
@@ -2409,6 +2609,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 201
   },
   {
@@ -2421,6 +2622,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 202
   },
   {
@@ -2433,6 +2635,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 203
   },
   {
@@ -2445,6 +2648,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 204
   },
   {
@@ -2457,6 +2661,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 205
   },
   {
@@ -2469,6 +2674,7 @@
     "tier": "extra",
     "badge": "extra",
     "isNew": true,
+    "premium": true,
     "id": 206
   },
   {
@@ -2481,6 +2687,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 207
   },
   {
@@ -2493,6 +2700,7 @@
     "tier": "extra",
     "badge": "extra",
     "isNew": true,
+    "premium": true,
     "id": 208
   },
   {
@@ -2505,6 +2713,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 209
   },
   {
@@ -2517,6 +2726,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 210
   },
   {
@@ -2529,6 +2739,7 @@
     "tier": "extra",
     "badge": "extra",
     "isNew": true,
+    "premium": true,
     "id": 211
   },
   {
@@ -2541,6 +2752,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 212
   },
   {
@@ -2553,6 +2765,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 213
   },
   {
@@ -2565,6 +2778,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 214
   },
   {
@@ -2577,6 +2791,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 215
   },
   {
@@ -2589,6 +2804,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 216
   },
   {
@@ -2601,6 +2817,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 217
   },
   {
@@ -2613,6 +2830,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 218
   },
   {
@@ -2625,6 +2843,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 219
   },
   {
@@ -2637,6 +2856,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 220
   },
   {
@@ -2649,6 +2869,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 221
   },
   {
@@ -2661,6 +2882,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 222
   },
   {
@@ -2673,6 +2895,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 223
   },
   {
@@ -2685,6 +2908,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 224
   },
   {
@@ -2697,6 +2921,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 225
   },
   {
@@ -2709,6 +2934,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 226
   },
   {
@@ -2721,6 +2947,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 227
   },
   {
@@ -2733,6 +2960,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 228
   },
   {
@@ -2745,6 +2973,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 229
   },
   {
@@ -2757,6 +2986,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 230
   },
   {
@@ -2769,6 +2999,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 231
   },
   {
@@ -2781,6 +3012,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 232
   },
   {
@@ -2793,6 +3025,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 233
   },
   {
@@ -2805,6 +3038,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": false,
     "id": 234
   },
   {
@@ -2817,6 +3051,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 235
   },
   {
@@ -2829,6 +3064,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 236
   },
   {
@@ -2841,6 +3077,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 237
   },
   {
@@ -2853,6 +3090,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 238
   },
   {
@@ -2865,6 +3103,7 @@
     "tier": "premium",
     "badge": "premium",
     "isNew": true,
+    "premium": true,
     "id": 239
   },
   {
@@ -2877,6 +3116,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 240
   },
   {
@@ -2889,6 +3129,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 241
   },
   {
@@ -2901,6 +3142,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 242
   },
   {
@@ -2913,6 +3155,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 243
   },
   {
@@ -2925,6 +3168,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 244
   },
   {
@@ -2937,6 +3181,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 245
   },
   {
@@ -2949,6 +3194,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 246
   },
   {
@@ -2961,6 +3207,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 247
   },
   {
@@ -2973,6 +3220,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 248
   },
   {
@@ -2985,6 +3233,7 @@
     "tier": "oferta",
     "badge": "oferta",
     "isNew": true,
+    "premium": true,
     "id": 249
   },
   {
@@ -2997,6 +3246,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 250
   },
   {
@@ -3009,6 +3259,7 @@
     "tier": "primera",
     "badge": "primera",
     "isNew": true,
+    "premium": true,
     "id": 251
   }
 ]

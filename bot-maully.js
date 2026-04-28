@@ -21,9 +21,9 @@
   var KB = [
     {
       id: 'envio',
-      kw: ['envio', 'envío', 'envian', 'despacho', 'mandan', 'llegar', 'demora', 'courier', 'starken', 'region', 'flete'],
+      kw: ['envio', 'envío', 'envian', 'despacho', 'mandan', 'llegar', 'demora', 'courier', 'starken', 'region', 'flete', 'logistica', 'logística'],
       title: '¿Cómo funcionan los envíos?',
-      answer: 'Despachamos a <b>todo Chile vía courier</b> (Starken / Chilexpress / Bluexpress según destino). El plazo es de <b>5 a 15 días hábiles</b> dependiendo de tu ciudad.<br><br>El costo del envío se cotiza según <b>peso y destino</b> y se informa al momento de cerrar el pedido. También puedes <b>retirar en bodega</b> en Santiago coordinando con Bea.<br><br>📦 También enviamos a <b>Argentina</b>.'
+      answer: 'Despachamos a <b>todo Chile con Starken</b>. El plazo es de <b>5 a 15 días hábiles</b> según ciudad.<br><br>📦 <b>Modalidad:</b> Tú pagas el flete a Starken al retirar; nosotros <b>coordinamos y despachamos desde Chile</b> sin costo adicional.<br><br>💡 También puedes <b>retirar en bodega</b> en Santiago coordinando con Bea.<br><br>🌎 Enviamos también a <b>Argentina</b> — pregúntame por las modalidades.'
     },
     {
       id: 'minimo',
@@ -47,7 +47,7 @@
       id: 'pago',
       kw: ['pago', 'pagar', 'tarjeta', 'mercadopago', 'transferencia', 'debito', 'credito', 'cuotas', 'webpay', 'medios'],
       title: '¿Qué medios de pago aceptan?',
-      answer: 'Aceptamos:<br>• <b>Transferencia bancaria</b> (te pasamos los datos al confirmar el pedido)<br>• <b>MercadoPago</b> directo en el sitio (Webpay, Visa, Mastercard, hasta 12 cuotas)<br>• <b>Efectivo</b> si retiras en bodega<br><br>Todos los precios <b>incluyen IVA</b> y se emite boleta o factura electrónica.'
+      answer: 'Aceptamos:<br>• <b>Transferencia bancaria</b> (te pasamos los datos al confirmar el pedido)<br>• <b>MercadoPago</b> directo en el sitio (Webpay, Visa, Mastercard, hasta 12 cuotas)<br>• <b>Efectivo</b> si retiras en bodega<br>• <b>Desde Argentina</b>: <b>Global66</b> y <b>USD</b> 🇦🇷<br><br>Todos los precios <b>incluyen IVA</b> y se emite boleta o factura electrónica.'
     },
     {
       id: 'devolucion',
@@ -105,9 +105,15 @@
     },
     {
       id: 'argentina',
-      kw: ['argentina', 'mendoza', 'buenos aires', 'cordoba', 'argentino', 'cruzar frontera'],
-      title: '¿Envían a Argentina?',
-      answer: 'Sí, enviamos a <b>Argentina</b>. Trabajamos con clientes en Mendoza, Córdoba, Buenos Aires y otras provincias hace años.<br><br>El proceso requiere coordinar courier internacional y documentación. Bea te explica el flujo completo (costos, tiempos, papeles) por WhatsApp.'
+      kw: ['argentina', 'mendoza', 'buenos aires', 'cordoba', 'argentino', 'cruzar frontera', 'global66', 'global 66', 'usd', 'dolares', 'dólares'],
+      title: '¿Envían a Argentina? ¿Cuánto cuesta?',
+      answer: 'Sí, enviamos a <b>Argentina</b> hace años — Mendoza, Córdoba, Buenos Aires y más.<br><br>📦 <b>Dos modalidades</b>:<br>• <b>Cajas Starken hasta 10 kg</b>: la opción más ágil para pedidos chicos<br>• <b>Fardos de 23 kg</b>: la opción mayorista<br><br>💰 <b>Precios fardos 23 kg a Argentina</b>:<br>• 1 fardo: <b>$150.000 CLP</b><br>• 10+ fardos: <b>$100.000 CLP c/u</b> 🔥<br><br>💳 <b>Pagos desde Argentina</b>: aceptamos <b>Global66</b> y <b>USD</b>.<br><br>La logística la paga el cliente; nosotros coordinamos y despachamos desde Chile a Starken.'
+    },
+    {
+      id: 'pago_arg',
+      kw: ['global66', 'global 66', 'pago argentina', 'usd', 'dolar', 'dólar', 'dolares', 'dólares'],
+      title: '¿Cómo pago desde Argentina?',
+      answer: 'Desde Argentina aceptamos:<br>• <b>Global66</b> (transferencia internacional rápida)<br>• <b>USD</b> en efectivo o transferencia<br><br>Bea te coordina los datos y el tipo de cambio del día por WhatsApp 💛'
     },
     {
       id: 'contacto',

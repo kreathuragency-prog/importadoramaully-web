@@ -174,6 +174,20 @@ for p in products_raw:
     if not desc:
         desc = f"Fardo de {weight} - Selección {tier}"
 
+    # Flag PREMIUM: productos con keywords premium/crema/primera/marca/marcas
+    # o calzado (todos), o tier premium/extra/primera, o "1ra" en nombre/desc
+    full_text = (name_clean + " " + (desc or "")).lower()
+    premium_kw = any(k in full_text for k in ["premium", "crema", "primera", "marca", "marcas",
+                                               "columbia", "northface", "north face", "nike", "adidas",
+                                               "calvin klein", "ck ", "tommy", "levis", "ugg", "patagonia",
+                                               "1ra", "1ra+", "extra"])
+    # Excluir explícitamente productos de OFERTA pura
+    is_only_oferta = "oferta" in full_text and not premium_kw
+    is_premium = (
+        (premium_kw or cat == "calzado" or tier in ("premium", "extra", "primera"))
+        and not is_only_oferta
+    )
+
     processed.append({
         "cat": cat,
         "name": name_clean,
@@ -184,6 +198,7 @@ for p in products_raw:
         "tier": tier,
         "badge": badge,
         "isNew": bool(p.get("on_sale")),
+        "premium": is_premium,
     })
 
 # Ordenar: primero por categoría (orden Maully), luego por precio
@@ -226,7 +241,8 @@ for p in processed:
         f"desc:'{js_escape(p['desc'])}',"
         f"price:{p['price']},origPrice:{p['origPrice']},"
         f"weight:'{p['weight']}',tier:'{p['tier']}',badge:'{p['badge']}',"
-        f"isNew:{'true' if p['isNew'] else 'false'},img:MAULLY_IMG}},"
+        f"isNew:{'true' if p['isNew'] else 'false'},"
+        f"premium:{'true' if p['premium'] else 'false'},img:MAULLY_IMG}},"
     )
 js_lines.append("];")
 (ROOT / "_products_js_block.js").write_text("\n".join(js_lines), encoding="utf-8")
