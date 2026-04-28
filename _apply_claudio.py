@@ -131,10 +131,11 @@ for p in maully:
     new_flag = ',"new":True' if p.get("isNew") else ""
     g = p.get("requires_ganchos", 0)
     g_flag = f',"ganchos":{g}' if g > 0 else ""
+    es_gancho_flag = ',"es_gancho":True' if p.get("gancho_eligible") else ""
     name_safe = p["name"].replace('"', '\\"')
     py_lines.append(
         f'    {{"cat":"{p["cat"]}","name":"{name_safe}","price":{p["price"]},'
-        f'"weight":"{p["weight"]}","tier":"{p["tier"]}"{new_flag}{g_flag}}},'
+        f'"weight":"{p["weight"]}","tier":"{p["tier"]}"{new_flag}{g_flag}{es_gancho_flag}}},'
     )
 py_lines.append("]")
 (ROOT / "_products_py_block.py").write_text("\n".join(py_lines), encoding="utf-8")
