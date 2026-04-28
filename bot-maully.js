@@ -51,9 +51,9 @@
     },
     {
       id: 'devolucion',
-      kw: ['devolucion', 'devolución', 'devolver', 'cambio', 'garantia', 'garantía', 'reclamo', 'no me sirve'],
+      kw: ['devolucion', 'devolución', 'devolver', 'cambio', 'garantia', 'garantía', 'reclamo', 'no me sirve', 'retracto', 'arrepentido', 'arrepiento'],
       title: '¿Aceptan devoluciones o cambios?',
-      answer: 'Por ser venta <b>mayorista por peso</b>, no aplica el derecho de retracto (Ley 19.496 art. 3 bis b).<br><br>Sí aceptamos cambio o nota de crédito si:<br>• La <b>merma supera el 20%</b> del lote, o<br>• El fardo no corresponde al nivel/categoría descrito<br><br>El reclamo debe hacerse <b>dentro de 48 hrs</b> de recibida la mercadería, enviando fotos por WhatsApp.'
+      answer: '<b>Estudiamos cada caso para entregar la mejor solución posible.</b><br><br>⚖️ Por ley, la ropa importada por peso (fardos, packs, calugas) <b>no tiene derecho a cambio ni devolución</b> — <a href="https://www.bcn.cl/leychile/Navegar?idNorma=61438" target="_blank" rel="noopener">Ley 19.496 art. 3 bis letra b</a>: "bienes que por su naturaleza no pueden ser devueltos o son de uso personal".<br><br>Toda devolución queda <b>sujeta a evaluación y decisión final de Importadora Maully</b>. En la práctica evaluamos cuando:<br>• El nivel/categoría no corresponde a lo descrito<br>• La merma supera el 20% del lote<br>• Reclamas dentro de <b>48 hrs</b> con fotos por WhatsApp<br><br>📲 Para evaluar tu caso, escríbele a Bea con fotos al +56 9 7515 5745.'
     },
     {
       id: 'gancho',

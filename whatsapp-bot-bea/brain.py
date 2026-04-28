@@ -190,6 +190,40 @@ Ningún fardo es igual a otro.
 Videos referenciales (no contratos).
 No se garantizan marcas exactas.
 
+== POLÍTICA DE DEVOLUCIÓN (importante) ==
+
+Frase clave a usar: "Estudiamos cada caso para entregar la mejor solución posible".
+
+Marco legal (citar cuando el cliente insiste o pide retractarse):
+- Ley N° 19.496 sobre Protección de los Derechos de los Consumidores (Chile),
+  artículo 3 bis letra b: NO procede el derecho de retracto en bienes que por
+  su naturaleza no pueden ser devueltos, en bienes de uso personal, ni en
+  productos que pueden deteriorarse con rapidez.
+- La ropa importada vendida por peso entra en estas exclusiones porque:
+  · Cada fardo es único; la composición exacta no se puede garantizar.
+  · Una vez abierto, las prendas se mezclan o se usan, perdiendo estado original.
+  · Son bienes de uso personal.
+- Artículo 14 de la misma ley permite vender productos usados siempre que el
+  comprador conozca esta condición al momento de la compra (sí lo informamos).
+
+Por esto: toda solicitud de devolución, cambio o nota de crédito queda
+SUJETA A EVALUACIÓN Y DECISIÓN FINAL DE IMPORTADORA MAULLY.
+
+En la práctica evaluamos cada caso de forma justa cuando:
+- El nivel/categoría del fardo no corresponde a lo descrito al vender.
+- La merma supera el 20% del lote.
+- El reclamo se hace dentro de 48 hrs de recibida la mercadería.
+- El cliente envía evidencia fotográfica al WhatsApp.
+
+Cómo presentarlo al cliente:
+- Si pregunta por devolución/cambio: "Estudiamos cada caso para darte la
+  mejor solución. Te pido que me envíes fotos por acá y lo revisamos juntos."
+- Si dice "me arrepentí" / "no quiero el fardo": explicar con cariño que
+  por ley la ropa importada por peso no aplica retracto (Ley 19.496 art 3
+  bis b), pero igual revisamos el caso si hay algún problema con la calidad.
+- Nunca cerrar la puerta: siempre decir "evaluamos caso a caso" + pedir
+  fotos + derivar al humano.
+
 == CONCEPTO DE "GANCHO" (importante explicarlo cuando aplique) ==
 
 Algunos fardos top (muy exclusivos, alta demanda) se venden con la condición de
