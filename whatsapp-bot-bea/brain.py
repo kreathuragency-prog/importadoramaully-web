@@ -279,13 +279,15 @@ CHILE:
 - Modalidad: el cliente paga el flete a Starken al retirar; nosotros coordinamos y despachamos desde Chile sin costo extra.
 - También: retiro gratis en bodega (Santiago Av. La Florida 9421).
 
-ARGENTINA: dos modalidades, ambas con tarifas FIJAS (puedes mencionarlas):
-1) Cajas Starken hasta 10 kg c/u (opción ágil para pedidos chicos).
-2) Fardos de 23 kg (opción mayorista). Precios CLP:
-   - 1 fardo de 23 kg = $150.000
-   - Desde 10 fardos = $100.000 c/u (descuento por volumen)
-- La logística la paga el cliente, nosotros coordinamos y despachamos desde Chile a Starken.
-- Pagos desde Argentina: GLOBAL66 o USD.
+ARGENTINA: dos modalidades según el PESO del envío:
+1) HASTA 10 KG → con Starken. Tarifa según el courier (Starken la cobra al
+   retirar; no es una tarifa fija de Maully). Solo coordinación de despacho.
+2) SOBRE 10 KG (fardos completos) → con TRANSPORTISTAS PRIVADOS. Cobran POR
+   FARDO según volumen, destino y temporada. NO hay tarifa fija publicable.
+   Para precios de fardos mayoristas y cotizaciones, el cliente debe pedir
+   cotización por WhatsApp y se la armamos a la medida.
+- Pago desde Argentina: 100% ADELANTADO siempre. GLOBAL66 o USD.
+- La logística la paga el cliente, nosotros coordinamos desde Chile.
 
 Para precios de envío Chile no comprometerte; solo decir "se cotiza con Starken según ciudad y peso, lo coordinamos al cerrar el pedido".
 

@@ -943,8 +943,8 @@ class CatalogoPDF(FPDF):
         self.set_x(20)
         self.multi_cell(170, 6,
             "Estos precios incluyen el costo del producto puesto en Argentina. "
-            "Coordinamos el despacho desde Chile a Starken (cajas hasta 10 kg) o "
-            "como fardos de 23 kg para volúmenes mayores.",
+            "El envío va aparte: hasta 10 kg con Starken, sobre 10 kg con "
+            "transportistas privados que cobran por fardo. Pago 100% adelantado.",
             align="C")
         self.ln(6)
 
@@ -963,8 +963,9 @@ class CatalogoPDF(FPDF):
 
         bullets_arg = [
             ("Pago:", "100% por adelantado siempre. Aceptamos Global66 y USD."),
-            ("Modalidades:", "cajas Starken hasta 10 kg c/u o fardos de 23 kg (mayorista)."),
-            ("Despacho:", "el cliente paga el flete a Starken; nosotros coordinamos desde Chile."),
+            ("Hasta 10 kg:", "envío con Starken, tarifa del courier (cobrada al retirar)."),
+            ("Sobre 10 kg:", "transportistas privados — cobran por fardo, cotizar por WhatsApp."),
+            ("Despacho:", "el flete lo paga el cliente; nosotros coordinamos desde Chile."),
             ("Visítanos:", "Av. La Florida 9421 (Santiago) o Berna 767 (Pichilemu)."),
         ]
         for label, txt in bullets_arg:

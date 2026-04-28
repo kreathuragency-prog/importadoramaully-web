@@ -113,7 +113,7 @@
       id: 'argentina',
       kw: ['argentina', 'mendoza', 'buenos aires', 'cordoba', 'argentino', 'cruzar frontera', 'global66', 'global 66', 'usd', 'dolares', 'dólares'],
       title: '¿Envían a Argentina? ¿Cuánto cuesta?',
-      answer: 'Sí, enviamos a <b>Argentina</b> hace años — Mendoza, Córdoba, Buenos Aires y más.<br><br>📦 <b>Dos modalidades</b>:<br>• <b>Cajas Starken hasta 10 kg</b>: la opción más ágil para pedidos chicos<br>• <b>Fardos de 23 kg</b>: la opción mayorista<br><br>💰 <b>Precios fardos 23 kg a Argentina</b>:<br>• 1 fardo: <b>$150.000 CLP</b><br>• 10+ fardos: <b>$100.000 CLP c/u</b> 🔥<br><br>💳 <b>Pagos desde Argentina</b>: aceptamos <b>Global66</b> y <b>USD</b>.<br><br>La logística la paga el cliente; nosotros coordinamos y despachamos desde Chile a Starken.'
+      answer: 'Sí, enviamos a <b>Argentina</b> hace años — Mendoza, Córdoba, Buenos Aires y más.<br><br>📦 <b>Dos modalidades según peso</b>:<br>• <b>Hasta 10 kg</b>: con <b>Starken</b>, según las tarifas del courier (las cobra Starken al retirar).<br>• <b>Sobre 10 kg</b> (fardos completos): con <b>transportistas privados</b> que <b>cobran por fardo</b> según volumen y destino.<br><br>💰 Para precios de fardos mayoristas y cotizaciones específicas, <b>hablanos por WhatsApp</b> y armamos el costo exacto.<br><br>💳 <b>Pago desde Argentina</b>: <b>100% adelantado</b> vía <b>Global66</b> o <b>USD</b>.<br><br>La logística la paga el cliente; nosotros coordinamos y despachamos desde Chile.'
     },
     {
       id: 'pago_arg',
