@@ -65,11 +65,20 @@ def strip_html(s: str) -> str:
 
 
 def clean_name(name: str) -> str:
-    """Title-case respetando palabras técnicas."""
+    """Title-case respetando palabras técnicas + tildes/ñ correctos."""
     name = strip_html(name).strip()
     # Tokens que quedan en mayúscula
     keep_upper = {"1RA", "2DA", "PREM", "EXTRA", "MIX", "CK", "NF", "GAP",
                   "USA", "UK", "EU", "XL", "XXL", "USD", "CLP", "DEP"}
+    # Restauración tildes/ñ (palabras frecuentes en nombres)
+    spanish_fixes = {
+        "Nino": "Niño", "Ninos": "Niños", "Nina": "Niña", "Ninas": "Niñas",
+        "Canada": "Canadá", "Sudamerica": "Sudamérica",
+        "Polizon": "Polizón", "Algodon": "Algodón", "Termico": "Térmico",
+        "Termicos": "Térmicos", "Pantalon": "Pantalón", "Chaqueton": "Chaquetón",
+        "Cinturon": "Cinturón", "Calzon": "Calzón", "Polizon": "Polizón",
+        "Anos": "Años",
+    }
     out = []
     for w in name.split():
         if w.upper() in keep_upper:
@@ -79,7 +88,8 @@ def clean_name(name: str) -> str:
         elif w.upper() == "KG":
             out.append("Kg")
         else:
-            out.append(w.capitalize())
+            cap = w.capitalize()
+            out.append(spanish_fixes.get(cap, cap))
     return " ".join(out)
 
 
@@ -252,10 +262,9 @@ py_lines = ["products = ["]
 for p in processed:
     new_flag = ',"new":True' if p["isNew"] else ""
     name_safe = p["name"].replace('"', '\\"')
-    # gen_catalogo.py parece usar nombres ASCII (sin tildes) -- normalizar
-    name_ascii = unicodedata.normalize("NFKD", name_safe).encode("ascii", "ignore").decode("ascii")
+    # Conservar tildes/ñ - el PDF ahora usa fuente Unicode (DejaVuSans)
     py_lines.append(
-        f'    {{"cat":"{p["cat"]}","name":"{name_ascii}","price":{p["price"]},'
+        f'    {{"cat":"{p["cat"]}","name":"{name_safe}","price":{p["price"]},'
         f'"weight":"{p["weight"]}","tier":"{p["tier"]}"{new_flag}}},'
     )
 py_lines.append("]")
