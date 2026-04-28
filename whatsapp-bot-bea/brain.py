@@ -355,12 +355,30 @@ CHILE:
 ARGENTINA: dos modalidades según el PESO del envío:
 1) HASTA 10 KG → con Starken. Tarifa según el courier (Starken la cobra al
    retirar; no es una tarifa fija de Maully). Solo coordinación de despacho.
-2) SOBRE 10 KG (fardos completos) → con TRANSPORTISTAS PRIVADOS. Cobran POR
-   FARDO según volumen, destino y temporada. NO hay tarifa fija publicable.
-   Para precios de fardos mayoristas y cotizaciones, el cliente debe pedir
-   cotización por WhatsApp y se la armamos a la medida.
+2) SOBRE 10 KG (fardos completos) → con TRANSPORTISTAS PRIVADOS. Tarifa POR
+   FARDO con descuento por volumen:
+   · $100.000 CLP por fardo si el pedido es de 10 fardos o más.
+   · $150.000 CLP por fardo si el pedido es menor a 10 fardos.
+
+PRODUCTOS CON GANCHO PUESTOS EN ARGENTINA (importante explicar):
+- El precio publicado para fardos con "+1 gancho" o "+2 ganchos" SOLO incluye
+  el fardo top. NO incluye los ganchos.
+- Para calcular el TOTAL puesto en Argentina:
+    Total = precio fardo top + precio fardo gancho (CLP, Chile) + envío de
+    AMBOS fardos (al precio por fardo según volumen del pedido).
+- Ejemplo: JORDAN 25kg + 2 ganchos en pedido de 10+ fardos:
+    $937.200 (top) + 2 ganchos elegidos (CLP Chile) + ($100.000 × 3 fardos) = total.
+
 - Pago desde Argentina: 100% ADELANTADO siempre. GLOBAL66 o USD.
 - La logística la paga el cliente, nosotros coordinamos desde Chile.
+
+CATÁLOGOS PDF PARA ARGENTINA (compartir según contexto):
+- Marcas exclusivas (24 productos premium):
+  https://importadoramaully.cl/catalogo-maully-marcas-exclusivas-argentina.pdf
+- Catálogo completo Argentina (34 productos):
+  https://importadoramaully.cl/catalogo-maully-argentina-mayo-2026.pdf
+- Catálogo completo Maully:
+  https://importadoramaully.cl/catalogo-maully-mayo-2026.pdf
 
 Para precios de envío Chile no comprometerte; solo decir "se cotiza con Starken según ciudad y peso, lo coordinamos al cerrar el pedido".
 
