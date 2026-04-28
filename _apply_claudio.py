@@ -64,10 +64,9 @@ def determine_cat(name):
 maully = json.loads((ROOT / "products_eurotextile.json").read_text(encoding="utf-8"))
 claudio = json.loads((ROOT / "_claudio_prices.json").read_text(encoding="utf-8"))["productos"]
 
-# ── Set defecto: gancho_eligible = true para premium/marca/primera/calzado ──
+# ── Set defecto: requires_ganchos = 0 (NO tocar gancho_eligible, viene del build) ──
 for p in maully:
-    p["gancho_eligible"] = bool(p.get("premium"))  # ya lo calculamos antes
-    p["requires_ganchos"] = 0
+    p.setdefault("requires_ganchos", 0)
 
 # ── Aplica SOLO metadata de ganchos (precios Chile = Eurotextile + 15%, no se tocan) ──
 print("=== Aplicando metadata de ganchos por matching de títulos (precios NO se tocan) ===")
@@ -79,7 +78,7 @@ for c in claudio:
     match, score, idx = find_match(maully, c["name_claudio"], c["weight"])
     if match and score >= 2:
         match["requires_ganchos"] = c.get("ganchos", 0)
-        match["gancho_eligible"] = match.get("gancho_eligible", False) or c.get("exclusivo", False)
+        # NO modificar gancho_eligible — viene del build estricto (segunda/sin marca-premium)
         matcheados += 1
         gflag = c.get("ganchos", 0)
         if gflag > 0:

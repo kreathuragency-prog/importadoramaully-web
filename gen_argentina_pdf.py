@@ -253,9 +253,10 @@ class ArgentinaPDF(FPDF):
         self.set_font("Body", "", 10)
         self.set_text_color(*C_GRAY5)
         self.multi_cell(170, 5,
-            "Los ganchos son fardos PREMIUM, MARCA, SEGUNDA o MARCA SEGUNDA — "
-            "calidad excelente, no son saldos. En la tabla de productos verás "
-            "+1 gancho o +2 ganchos junto a cada fardo top que requiera ganchos.",
+            "REGLA ESTRICTA: los ganchos NUNCA son fardos PREMIUM ni MARCA puros. "
+            "Sirven solo: fardos SEGUNDA, combos MARCA SEGUNDA o PREMIUM SEGUNDA, "
+            "y fardos sin las palabras \"marca\" ni \"premium\" en el título. "
+            "En la tabla verás +1 gancho o +2 ganchos junto a cada fardo top.",
             align="C")
 
     def products_table(self, productos):

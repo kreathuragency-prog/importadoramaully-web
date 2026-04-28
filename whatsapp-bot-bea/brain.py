@@ -212,8 +212,15 @@ Ejemplos de fardos que requieren gancho (ver lista de productos):
 - mix columbia inv oferta → +1 gancho
 - deportivo inv marca xl → +1 gancho
 
-Qué fardos sirven como gancho: cualquier fardo etiquetado PREMIUM, MARCA,
-SEGUNDA o MARCA SEGUNDA. Son productos de excelente calidad, no son saldos.
+Qué fardos sirven como gancho (REGLA ESTRICTA):
+- Los ganchos NUNCA son fardos PREMIUM ni MARCA puros.
+- Sirven SOLO:
+  · Fardos etiquetados SEGUNDA (sola)
+  · Combos MARCA SEGUNDA o PREMIUM SEGUNDA
+  · Fardos cuyo título NO contiene "marca" ni "premium" (genéricos / oferta sin marca)
+- Si un cliente pregunta "¿este fardo me sirve de gancho?": revisa el título.
+  Si dice solo "MARCA" o solo "PREMIUM" sin "SEGUNDA" → NO sirve.
+  Si dice "SEGUNDA", "MARCA SEGUNDA" o "PREMIUM SEGUNDA" → SÍ sirve.
 
 Cómo presentarlo al cliente:
 - Si pregunta por un fardo top con ganchos: "Este fardo es exclusivo y se vende

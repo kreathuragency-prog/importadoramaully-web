@@ -184,19 +184,35 @@ for p in products_raw:
     if not desc:
         desc = f"Fardo de {weight} - Selección {tier}"
 
-    # Flag PREMIUM: productos con keywords premium/crema/primera/marca/marcas
-    # o calzado (todos), o tier premium/extra/primera, o "1ra" en nombre/desc
+    # Flag PREMIUM (filtro web "Premium"): productos con keywords premium/marca/primera
+    # o calzado, o tier premium/extra/primera, o "1ra" en nombre/desc
     full_text = (name_clean + " " + (desc or "")).lower()
     premium_kw = any(k in full_text for k in ["premium", "crema", "primera", "marca", "marcas",
                                                "columbia", "northface", "north face", "nike", "adidas",
                                                "calvin klein", "ck ", "tommy", "levis", "ugg", "patagonia",
                                                "1ra", "1ra+", "extra"])
-    # Excluir explícitamente productos de OFERTA pura
     is_only_oferta = "oferta" in full_text and not premium_kw
     is_premium = (
         (premium_kw or cat == "calzado" or tier in ("premium", "extra", "primera"))
         and not is_only_oferta
     )
+
+    # Flag GANCHO_ELIGIBLE (regla estricta de Maully):
+    # Los ganchos NUNCA son fardos premium puros. Sirven como gancho:
+    #   - SEGUNDA / 2DA (sola)
+    #   - PREMIUM SEGUNDA / MARCA SEGUNDA (combo)
+    #   - Título SIN marca y SIN premium (genéricos / oferta sin marca)
+    has_segunda = bool(re.search(r"\bsegunda\b|\b2da\b", full_text))
+    has_marca = bool(re.search(r"\bmarca\b|\bmarcas\b", full_text))
+    has_premium_word = bool(re.search(r"\bpremium\b|\bprem\b", full_text))
+    has_1ra = bool(re.search(r"\b1ra\b|\bprimera\b|\b1ra\+", full_text))
+    has_extra_linda = "extra" in full_text and "linda" in full_text
+    if has_segunda:
+        is_gancho_eligible = True
+    elif not has_marca and not has_premium_word and not has_1ra and not has_extra_linda:
+        is_gancho_eligible = True
+    else:
+        is_gancho_eligible = False
 
     processed.append({
         "cat": cat,
@@ -209,6 +225,7 @@ for p in products_raw:
         "badge": badge,
         "isNew": bool(p.get("on_sale")),
         "premium": is_premium,
+        "gancho_eligible": is_gancho_eligible,
     })
 
 # Ordenar: primero por categoría (orden Maully), luego por precio
@@ -252,7 +269,9 @@ for p in processed:
         f"price:{p['price']},origPrice:{p['origPrice']},"
         f"weight:'{p['weight']}',tier:'{p['tier']}',badge:'{p['badge']}',"
         f"isNew:{'true' if p['isNew'] else 'false'},"
-        f"premium:{'true' if p['premium'] else 'false'},img:MAULLY_IMG}},"
+        f"premium:{'true' if p['premium'] else 'false'},"
+        f"esGancho:{'true' if p.get('gancho_eligible') else 'false'},"
+        f"img:MAULLY_IMG}},"
     )
 js_lines.append("];")
 (ROOT / "_products_js_block.js").write_text("\n".join(js_lines), encoding="utf-8")
@@ -261,11 +280,12 @@ js_lines.append("];")
 py_lines = ["products = ["]
 for p in processed:
     new_flag = ',"new":True' if p["isNew"] else ""
+    gancho_flag = ',"es_gancho":True' if p.get("gancho_eligible") else ""
     name_safe = p["name"].replace('"', '\\"')
     # Conservar tildes/ñ - el PDF ahora usa fuente Unicode (DejaVuSans)
     py_lines.append(
         f'    {{"cat":"{p["cat"]}","name":"{name_safe}","price":{p["price"]},'
-        f'"weight":"{p["weight"]}","tier":"{p["tier"]}"{new_flag}}},'
+        f'"weight":"{p["weight"]}","tier":"{p["tier"]}"{new_flag}{gancho_flag}}},'
     )
 py_lines.append("]")
 (ROOT / "_products_py_block.py").write_text("\n".join(py_lines), encoding="utf-8")

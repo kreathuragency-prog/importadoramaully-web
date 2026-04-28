@@ -10,8 +10,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 1,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -25,8 +25,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 2,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -40,8 +40,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 3,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -55,8 +55,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 4,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -70,8 +70,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 5,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -85,8 +85,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 6,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -100,8 +100,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 7,
-    "gancho_eligible": true,
     "requires_ganchos": 1
   },
   {
@@ -115,8 +115,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 8,
     "gancho_eligible": true,
+    "id": 8,
     "requires_ganchos": 0
   },
   {
@@ -130,8 +130,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 9,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -145,8 +145,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 10,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -160,8 +160,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 11,
     "gancho_eligible": true,
+    "id": 11,
     "requires_ganchos": 0
   },
   {
@@ -175,8 +175,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 12,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -190,8 +190,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 13,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -205,8 +205,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 14,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -220,8 +220,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 15,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -235,8 +235,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 16,
-    "gancho_eligible": true,
     "requires_ganchos": 1
   },
   {
@@ -250,8 +250,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 17,
     "gancho_eligible": true,
+    "id": 17,
     "requires_ganchos": 0
   },
   {
@@ -265,8 +265,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 18,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -280,8 +280,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 19,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -295,8 +295,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 20,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -310,8 +310,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 21,
     "gancho_eligible": true,
+    "id": 21,
     "requires_ganchos": 1
   },
   {
@@ -325,8 +325,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 22,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -340,8 +340,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 23,
     "gancho_eligible": true,
+    "id": 23,
     "requires_ganchos": 1
   },
   {
@@ -355,8 +355,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 24,
     "gancho_eligible": true,
+    "id": 24,
     "requires_ganchos": 0
   },
   {
@@ -370,8 +370,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 25,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -385,8 +385,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 26,
     "gancho_eligible": true,
+    "id": 26,
     "requires_ganchos": 0
   },
   {
@@ -400,8 +400,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 27,
     "gancho_eligible": true,
+    "id": 27,
     "requires_ganchos": 0
   },
   {
@@ -415,8 +415,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 28,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -430,8 +430,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 29,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -445,8 +445,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 30,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -460,8 +460,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 31,
     "gancho_eligible": true,
+    "id": 31,
     "requires_ganchos": 0
   },
   {
@@ -475,8 +475,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 32,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -490,8 +490,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 33,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -505,8 +505,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 34,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -520,8 +520,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 35,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -535,8 +535,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 36,
     "gancho_eligible": true,
+    "id": 36,
     "requires_ganchos": 0
   },
   {
@@ -550,8 +550,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 37,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -565,8 +565,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 38,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -580,8 +580,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 39,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -595,8 +595,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 40,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -610,8 +610,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 41,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -625,8 +625,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 42,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -640,8 +640,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 43,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -655,8 +655,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 44,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -670,8 +670,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 45,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -685,8 +685,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 46,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -700,8 +700,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 47,
-    "gancho_eligible": true,
     "requires_ganchos": 1
   },
   {
@@ -715,8 +715,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 48,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -730,8 +730,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 49,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -745,8 +745,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 50,
     "gancho_eligible": true,
+    "id": 50,
     "requires_ganchos": 0
   },
   {
@@ -760,8 +760,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 51,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -775,8 +775,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 52,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -790,8 +790,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 53,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -805,8 +805,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 54,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -820,8 +820,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 55,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -835,8 +835,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 56,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -850,8 +850,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 57,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -865,8 +865,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 58,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -880,8 +880,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 59,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -895,8 +895,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 60,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -910,8 +910,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 61,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -925,8 +925,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 62,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -940,8 +940,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 63,
     "gancho_eligible": true,
+    "id": 63,
     "requires_ganchos": 0
   },
   {
@@ -955,8 +955,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 64,
     "gancho_eligible": true,
+    "id": 64,
     "requires_ganchos": 0
   },
   {
@@ -970,8 +970,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 65,
     "gancho_eligible": true,
+    "id": 65,
     "requires_ganchos": 0
   },
   {
@@ -985,8 +985,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 66,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1000,8 +1000,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 67,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1015,8 +1015,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 68,
     "gancho_eligible": true,
+    "id": 68,
     "requires_ganchos": 0
   },
   {
@@ -1030,8 +1030,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 69,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1045,8 +1045,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 70,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1060,8 +1060,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 71,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1075,8 +1075,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 72,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1090,8 +1090,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 73,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1105,8 +1105,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 74,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1120,8 +1120,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 75,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1135,8 +1135,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 76,
     "gancho_eligible": true,
+    "id": 76,
     "requires_ganchos": 0
   },
   {
@@ -1150,8 +1150,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 77,
-    "gancho_eligible": true,
     "requires_ganchos": 1
   },
   {
@@ -1165,8 +1165,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 78,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1180,8 +1180,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 79,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1195,8 +1195,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 80,
-    "gancho_eligible": true,
     "requires_ganchos": 1
   },
   {
@@ -1210,8 +1210,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 81,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1225,8 +1225,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": false,
+    "gancho_eligible": true,
     "id": 82,
-    "gancho_eligible": false,
     "requires_ganchos": 0
   },
   {
@@ -1240,8 +1240,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 83,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1255,8 +1255,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 84,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1270,8 +1270,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 85,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1285,8 +1285,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 86,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1300,8 +1300,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 87,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1315,8 +1315,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 88,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1330,8 +1330,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 89,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1345,8 +1345,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 90,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1360,8 +1360,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 91,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1375,8 +1375,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 92,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1390,8 +1390,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 93,
     "gancho_eligible": true,
+    "id": 93,
     "requires_ganchos": 1
   },
   {
@@ -1405,8 +1405,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 94,
     "gancho_eligible": true,
+    "id": 94,
     "requires_ganchos": 0
   },
   {
@@ -1420,8 +1420,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 95,
     "gancho_eligible": true,
+    "id": 95,
     "requires_ganchos": 0
   },
   {
@@ -1435,8 +1435,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 96,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1450,8 +1450,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 97,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1465,8 +1465,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 98,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1480,8 +1480,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 99,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1495,8 +1495,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 100,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1510,8 +1510,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 101,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1525,8 +1525,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 102,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1540,8 +1540,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 103,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1555,8 +1555,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 104,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1570,8 +1570,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 105,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1585,8 +1585,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 106,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1600,8 +1600,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 107,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1615,8 +1615,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 108,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1630,8 +1630,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 109,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1645,8 +1645,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 110,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1660,8 +1660,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 111,
     "gancho_eligible": true,
+    "id": 111,
     "requires_ganchos": 0
   },
   {
@@ -1675,8 +1675,8 @@
     "badge": "extra",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 112,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1690,8 +1690,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 113,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1705,8 +1705,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 114,
     "gancho_eligible": true,
+    "id": 114,
     "requires_ganchos": 0
   },
   {
@@ -1720,8 +1720,8 @@
     "badge": "extra",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 115,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1735,8 +1735,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 116,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1750,8 +1750,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 117,
     "gancho_eligible": true,
+    "id": 117,
     "requires_ganchos": 0
   },
   {
@@ -1765,8 +1765,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 118,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1780,8 +1780,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 119,
     "gancho_eligible": true,
+    "id": 119,
     "requires_ganchos": 0
   },
   {
@@ -1795,8 +1795,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 120,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1810,8 +1810,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 121,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1825,8 +1825,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 122,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1840,8 +1840,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 123,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1855,8 +1855,8 @@
     "badge": "extra",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 124,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1870,8 +1870,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 125,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1885,8 +1885,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 126,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1900,8 +1900,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 127,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1915,8 +1915,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 128,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1930,8 +1930,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 129,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1945,8 +1945,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 130,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1960,8 +1960,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 131,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1975,8 +1975,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 132,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -1990,8 +1990,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 133,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2005,8 +2005,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 134,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2020,8 +2020,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 135,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2035,8 +2035,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 136,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2050,8 +2050,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 137,
     "gancho_eligible": true,
+    "id": 137,
     "requires_ganchos": 0
   },
   {
@@ -2065,8 +2065,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 138,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2080,8 +2080,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 139,
     "gancho_eligible": true,
+    "id": 139,
     "requires_ganchos": 1
   },
   {
@@ -2095,8 +2095,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 140,
     "gancho_eligible": true,
+    "id": 140,
     "requires_ganchos": 0
   },
   {
@@ -2110,8 +2110,8 @@
     "badge": "extra",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 141,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2125,8 +2125,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 142,
     "gancho_eligible": true,
+    "id": 142,
     "requires_ganchos": 0
   },
   {
@@ -2140,8 +2140,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 143,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2155,8 +2155,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 144,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2170,8 +2170,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 145,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2185,8 +2185,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 146,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2200,8 +2200,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 147,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2215,8 +2215,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 148,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2230,8 +2230,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 149,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2245,8 +2245,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 150,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2260,8 +2260,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 151,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2275,8 +2275,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 152,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2290,8 +2290,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 153,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2305,8 +2305,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 154,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2320,8 +2320,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 155,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2335,8 +2335,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 156,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2350,8 +2350,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 157,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2365,8 +2365,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 158,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2380,8 +2380,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 159,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2395,8 +2395,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 160,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2410,8 +2410,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 161,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2425,8 +2425,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 162,
     "gancho_eligible": true,
+    "id": 162,
     "requires_ganchos": 0
   },
   {
@@ -2440,8 +2440,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 163,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2455,8 +2455,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 164,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2470,8 +2470,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 165,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2485,8 +2485,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 166,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2500,8 +2500,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 167,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2515,8 +2515,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 168,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2530,8 +2530,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 169,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2545,8 +2545,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 170,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2560,8 +2560,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 171,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2575,8 +2575,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 172,
     "gancho_eligible": true,
+    "id": 172,
     "requires_ganchos": 0
   },
   {
@@ -2590,8 +2590,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 173,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2605,8 +2605,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 174,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2620,8 +2620,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 175,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2635,8 +2635,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 176,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2650,8 +2650,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 177,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2665,8 +2665,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 178,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2680,8 +2680,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 179,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2695,8 +2695,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 180,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2710,8 +2710,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 181,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2725,8 +2725,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 182,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2740,8 +2740,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 183,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2755,8 +2755,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 184,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2770,8 +2770,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 185,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2785,8 +2785,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 186,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2800,8 +2800,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 187,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2815,8 +2815,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 188,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2830,8 +2830,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 189,
-    "gancho_eligible": true,
     "requires_ganchos": 2
   },
   {
@@ -2845,8 +2845,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 190,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2860,8 +2860,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 191,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2875,8 +2875,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 192,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2890,8 +2890,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 193,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2905,8 +2905,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 194,
     "gancho_eligible": true,
+    "id": 194,
     "requires_ganchos": 0
   },
   {
@@ -2920,8 +2920,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 195,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2935,8 +2935,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 196,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2950,8 +2950,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 197,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2965,8 +2965,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 198,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2980,8 +2980,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 199,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -2995,8 +2995,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 200,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3010,8 +3010,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 201,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3025,8 +3025,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 202,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3040,8 +3040,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 203,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3055,8 +3055,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 204,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3070,8 +3070,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 205,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3085,8 +3085,8 @@
     "badge": "extra",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 206,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3100,8 +3100,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 207,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3115,8 +3115,8 @@
     "badge": "extra",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 208,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3130,8 +3130,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 209,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3145,8 +3145,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 210,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3160,8 +3160,8 @@
     "badge": "extra",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 211,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3175,8 +3175,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 212,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3190,8 +3190,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 213,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3205,8 +3205,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 214,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3220,8 +3220,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 215,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3235,8 +3235,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 216,
     "gancho_eligible": true,
+    "id": 216,
     "requires_ganchos": 0
   },
   {
@@ -3250,8 +3250,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 217,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3265,8 +3265,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 218,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3280,8 +3280,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 219,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3295,8 +3295,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 220,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3310,8 +3310,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 221,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3325,8 +3325,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 222,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3340,8 +3340,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 223,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3355,8 +3355,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 224,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3370,8 +3370,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 225,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3385,8 +3385,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 226,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3400,8 +3400,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 227,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3415,8 +3415,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 228,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3430,8 +3430,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 229,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3445,8 +3445,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 230,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3460,8 +3460,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 231,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3475,8 +3475,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 232,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3490,8 +3490,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 233,
     "gancho_eligible": true,
+    "id": 233,
     "requires_ganchos": 0
   },
   {
@@ -3505,8 +3505,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": false,
+    "gancho_eligible": true,
     "id": 234,
-    "gancho_eligible": false,
     "requires_ganchos": 0
   },
   {
@@ -3520,8 +3520,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 235,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3535,8 +3535,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 236,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3550,8 +3550,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 237,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3565,8 +3565,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 238,
     "gancho_eligible": true,
+    "id": 238,
     "requires_ganchos": 0
   },
   {
@@ -3580,8 +3580,8 @@
     "badge": "premium",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 239,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3595,8 +3595,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 240,
     "gancho_eligible": true,
+    "id": 240,
     "requires_ganchos": 0
   },
   {
@@ -3610,8 +3610,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 241,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3625,8 +3625,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 242,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3640,8 +3640,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 243,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3655,8 +3655,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 244,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3670,8 +3670,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 245,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3685,8 +3685,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 246,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3700,8 +3700,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 247,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3715,8 +3715,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
-    "id": 248,
     "gancho_eligible": true,
+    "id": 248,
     "requires_ganchos": 0
   },
   {
@@ -3730,8 +3730,8 @@
     "badge": "oferta",
     "isNew": true,
     "premium": true,
-    "id": 249,
     "gancho_eligible": true,
+    "id": 249,
     "requires_ganchos": 0
   },
   {
@@ -3745,8 +3745,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 250,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   },
   {
@@ -3760,8 +3760,8 @@
     "badge": "primera",
     "isNew": true,
     "premium": true,
+    "gancho_eligible": false,
     "id": 251,
-    "gancho_eligible": true,
     "requires_ganchos": 0
   }
 ]

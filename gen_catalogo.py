@@ -43,6 +43,7 @@ CAT_INFO = {
     'plussize':   ('PLUS SIZE',           (120, 25, 65)),
     'ski':        ('ROPA SKI Y NIEVE',    (13, 71, 161)),
     'ninos':      ('ROPA NIÑOS Y NIÑAS',  (0, 150, 136)),
+    'ganchos':    ('GANCHOS',             (234, 88, 12)),  # virtual category
 }
 
 # ── All products ──
@@ -865,10 +866,11 @@ class CatalogoPDF(FPDF):
         self.set_font("Body", "", 10.5)
         self.set_text_color(*C_GRAY5)
         self.multi_cell(170, 5.5,
-            "Cualquier fardo etiquetado PREMIUM, MARCA, SEGUNDA o MARCA SEGUNDA. "
-            "Son productos de excelente calidad — no son saldos. En el catálogo, "
-            "los fardos top que requieren ganchos vienen marcados con \"+1 gancho\" "
-            "o \"+2 ganchos\" junto a su precio.",
+            "REGLA ESTRICTA: los ganchos NUNCA son fardos PREMIUM ni MARCA puros. "
+            "Sirven solo: fardos etiquetados SEGUNDA, combos MARCA SEGUNDA o "
+            "PREMIUM SEGUNDA, y fardos cuyo título no contiene las palabras "
+            "\"marca\" ni \"premium\". En el catálogo verás la sección \"Ganchos\" "
+            "con todos los fardos disponibles para acompañar productos top.",
             align="C")
         self.ln(10)
 
@@ -1194,6 +1196,25 @@ def main():
         for i, p in enumerate(cat_products):
             pdf.product_row(p, i)
 
+        pdf.ln(8)
+
+    # Sección GANCHOS (virtual: agrupa todos los gancho-elegibles)
+    gancho_products = [p for p in products if p.get("es_gancho")]
+    if gancho_products:
+        pdf.add_page()
+        pdf.category_header("GANCHOS — Para acompañar fardos top",
+                            len(gancho_products), CAT_INFO["ganchos"][1])
+        # Subtítulo aclaratorio
+        pdf.set_font("Body", "I", 9)
+        pdf.set_text_color(*C_GRAY5)
+        pdf.set_x(14)
+        pdf.cell(pdf.content_w, 5,
+                 "Fardos sin marca/premium puros — sirven como gancho de productos top exclusivos.",
+                 align="L")
+        pdf.ln(8)
+        pdf.table_header()
+        for i, p in enumerate(gancho_products):
+            pdf.product_row(p, i)
         pdf.ln(8)
 
     # ── Sección Argentina ──
