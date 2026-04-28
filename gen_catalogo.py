@@ -5,7 +5,7 @@ from fpdf import FPDF
 import os
 
 # ── Config ──
-USD_RATE = 950
+USD_RATE = 894  # Actualizado dinámicamente vía mindicador.cl al regenerar el PDF
 BASE_URL = "https://www.importadoramaully.cl"
 WA_LINK = "https://wa.me/56975155745"
 WA_NUM = "+56 9 7515 5745"
@@ -1025,35 +1025,37 @@ class CatalogoPDF(FPDF):
 
         # Box condiciones
         box_y = self.get_y()
+        box_h = 70
         self.set_fill_color(*C_GOLD_LT)
-        self.rect(20, box_y, 170, 50, "F")
+        self.rect(20, box_y, 170, box_h, "F")
         self.set_fill_color(117, 170, 219)
-        self.rect(20, box_y, 4, 50, "F")
+        self.rect(20, box_y, 4, box_h, "F")
         self.set_y(box_y + 6)
         self.set_x(30)
         self.set_font("Body", "B", 12)
         self.set_text_color(*C_DARK)
-        self.cell(160, 6, "Condiciones para Argentina")
+        self.cell(160, 6, f"Condiciones para Argentina  ·  Hoy 1 USD = ${USD_RATE} CLP")
         self.ln(8)
 
         bullets_arg = [
-            ("Pago:", "100% por adelantado siempre. Aceptamos Global66 y USD."),
+            ("Pago:", "100% por adelantado. Aceptamos Global66 y USD."),
             ("Hasta 10 kg:", "envío con Starken, tarifa del courier (cobrada al retirar)."),
-            ("Sobre 10 kg:", "transportistas privados — cobran por fardo, cotizar por WhatsApp."),
+            ("Sobre 10 kg:", "transportistas privados — $100.000 CLP/fardo si pides 10+ fardos · $150.000 CLP/fardo en pedidos menores."),
+            ("Ganchos:", "ver lista de fardos elegibles en la sección GANCHOS de este catálogo. A cada gancho que elijas se le suma su valor (CLP Chile) + $100.000 CLP de envío."),
             ("Despacho:", "el flete lo paga el cliente; nosotros coordinamos desde Chile."),
             ("Visítanos:", "Av. La Florida 9421 (Santiago) o Berna 767 (Pichilemu)."),
         ]
         for label, txt in bullets_arg:
             self.set_x(30)
-            self.set_font("Body", "B", 10)
+            self.set_font("Body", "B", 9.5)
             self.set_text_color(*C_DARK)
-            self.cell(28, 5, "• " + label)
-            self.set_font("Body", "", 10)
+            self.cell(28, 4.5, "• " + label)
+            self.set_font("Body", "", 9.5)
             self.set_text_color(*C_GRAY5)
-            self.multi_cell(132, 5, txt)
-            self.ln(0.5)
+            self.multi_cell(132, 4.5, txt)
+            self.ln(0.3)
 
-        self.set_y(box_y + 56)
+        self.set_y(box_y + box_h + 6)
 
         # Tabla de productos Argentina
         self.set_x(20)
@@ -1063,30 +1065,24 @@ class CatalogoPDF(FPDF):
         self.ln(10)
 
         # Tabla header
-        self.set_fill_color(*C_DARK)
-        self.set_text_color(*C_WHITE)
-        self.set_font("Body", "B", 7)
-        self.set_x(14)
-        self.cell(98, 6.5, "  PRODUCTO", fill=True)
-        self.cell(18, 6.5, "PESO", align="C", fill=True)
-        self.cell(36, 6.5, "PRECIO ARG", align="R", fill=True)
-        self.cell(30, 6.5, "GANCHOS  ", align="R", fill=True)
-        self.ln(8)
+        def _ar_header():
+            self.set_fill_color(*C_DARK)
+            self.set_text_color(*C_WHITE)
+            self.set_font("Body", "B", 7)
+            self.set_x(14)
+            self.cell(82, 6.5, "  PRODUCTO", fill=True)
+            self.cell(16, 6.5, "PESO", align="C", fill=True)
+            self.cell(34, 6.5, "PRECIO CLP", align="R", fill=True)
+            self.cell(28, 6.5, "USD", align="R", fill=True)
+            self.cell(22, 6.5, "GANCHOS  ", align="R", fill=True)
+            self.ln(8)
+        _ar_header()
 
         # Filas
         for i, p in enumerate(productos_arg):
             if self.get_y() > 268:
                 self.add_page()
-                # repetir header
-                self.set_fill_color(*C_DARK)
-                self.set_text_color(*C_WHITE)
-                self.set_font("Body", "B", 7)
-                self.set_x(14)
-                self.cell(98, 6.5, "  PRODUCTO", fill=True)
-                self.cell(18, 6.5, "PESO", align="C", fill=True)
-                self.cell(36, 6.5, "PRECIO ARG", align="R", fill=True)
-                self.cell(30, 6.5, "GANCHOS  ", align="R", fill=True)
-                self.ln(8)
+                _ar_header()
 
             y = self.get_y()
             row_h = 6.5
@@ -1100,22 +1096,27 @@ class CatalogoPDF(FPDF):
 
             # Name
             name = p["name"]
-            if len(name) > 56:
-                name = name[:54] + ".."
+            if len(name) > 48:
+                name = name[:46] + ".."
             self.set_x(14)
             self.set_font("Body", "", 7.5)
             self.set_text_color(*C_DARK)
-            self.cell(98, row_h, "  " + name)
+            self.cell(82, row_h, "  " + name)
 
             # Weight
             self.set_font("Body", "", 7)
             self.set_text_color(*C_GRAY3)
-            self.cell(18, row_h, p["weight"], align="C")
+            self.cell(16, row_h, p["weight"], align="C")
 
-            # Price ARG
+            # Price CLP
             self.set_font("Body", "B", 8)
             self.set_text_color(*C_DARK)
-            self.cell(36, row_h, fmt_clp(p["price"]), align="R")
+            self.cell(34, row_h, fmt_clp(p["price"]), align="R")
+
+            # Price USD
+            self.set_font("Body", "", 7.5)
+            self.set_text_color(*C_GRAY5)
+            self.cell(28, row_h, fmt_usd(p["price"]), align="R")
 
             # Ganchos
             ganchos = p.get("ganchos", 0)
@@ -1127,18 +1128,20 @@ class CatalogoPDF(FPDF):
                 self.set_font("Body", "", 7)
                 self.set_text_color(*C_GRAY3)
                 txt_g = "—"
-            self.cell(30, row_h, txt_g + "  ", align="R")
+            self.cell(22, row_h, txt_g + "  ", align="R")
             self.ln(row_h)
 
         # Footer note
         self.ln(6)
         self.set_x(20)
-        self.set_font("Body", "I", 9)
+        self.set_font("Body", "I", 8.5)
         self.set_text_color(*C_GRAY5)
-        self.multi_cell(170, 5,
-            "Precios en CLP. Conversión USD informativa al cierre de pedido. "
-            "Pago 100% adelantado vía Global66 o USD para activar el despacho. "
-            "Ganchos: producto adicional (premium / marca / segunda) que acompaña al fardo top.",
+        self.multi_cell(170, 4.5,
+            f"Precios en CLP convertidos a USD a tasa referencial de hoy 1 USD = ${USD_RATE} CLP "
+            f"(fuente: Banco Central de Chile). El tipo de cambio definitivo se confirma al cierre del pedido. "
+            f"Pago 100% adelantado vía Global66 o USD. "
+            f"Productos con +1 / +2 ganchos: ver lista de fardos elegibles en sección GANCHOS de este catálogo. "
+            f"A cada gancho elegido se le suma su valor (CLP Chile) + $100.000 CLP de envío.",
             align="C")
         # CTA visit
         self.ln(4)
