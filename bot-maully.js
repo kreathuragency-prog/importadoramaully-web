@@ -111,9 +111,9 @@
     },
     {
       id: 'argentina',
-      kw: ['argentina', 'mendoza', 'buenos aires', 'cordoba', 'argentino', 'cruzar frontera', 'global66', 'global 66', 'usd', 'dolares', 'dólares'],
+      kw: ['argentina', 'mendoza', 'buenos aires', 'cordoba', 'argentino', 'argentina', 'rosario', 'tucuman', 'tucumán', 'salta', 'cruzar frontera', 'global66', 'global 66', 'precio argentina', 'envio argentina', 'envío argentina', 'puesto en argentina', 'puestos en argentina', 'al exterior', 'exportar', 'usd', 'dolares', 'dólares', 'dolar', 'dólar'],
       title: '¿Envían a Argentina? ¿Cuánto cuesta?',
-      answer: 'Sí, enviamos a <b>Argentina</b> hace años — Mendoza, Córdoba, Buenos Aires y más.<br><br>📦 <b>Dos modalidades según peso</b>:<br>• <b>Hasta 10 kg</b>: con <b>Starken</b>, según las tarifas del courier (las cobra Starken al retirar).<br>• <b>Sobre 10 kg</b> (fardos completos): con <b>transportistas privados</b> que <b>cobran por fardo</b> según volumen y destino.<br><br>💰 Para precios de fardos mayoristas y cotizaciones específicas, <b>hablanos por WhatsApp</b> y armamos el costo exacto.<br><br>💳 <b>Pago desde Argentina</b>: <b>100% adelantado</b> vía <b>Global66</b> o <b>USD</b>.<br><br>La logística la paga el cliente; nosotros coordinamos y despachamos desde Chile.'
+      answer: '🇦🇷 Sí, enviamos a <b>Argentina</b> hace años — Mendoza, Córdoba, Buenos Aires y más.<br><br>📕 <b>Aquí tienes los 2 catálogos PDF</b>:<br>• <a href="https://importadoramaully.cl/catalogo-maully-argentina-mayo-2026.pdf" target="_blank" rel="noopener"><b>Catálogo EXCLUSIVO Argentina</b></a> — solo precios puestos en Argentina<br>• <a href="https://importadoramaully.cl/catalogo-maully-mayo-2026.pdf" target="_blank" rel="noopener"><b>Catálogo completo</b></a> — todos los productos + sección Argentina<br><br>📦 <b>Dos modalidades de envío</b>:<br>• <b>Hasta 10 kg</b>: con <b>Starken</b>, tarifa del courier (cobra Starken al retirar).<br>• <b>Sobre 10 kg</b> (fardos): con <b>transportistas privados</b> que <b>cobran por fardo</b> según volumen y destino.<br><br>💳 <b>Pago</b>: <b>100% adelantado</b> vía <b>Global66</b> o <b>USD</b>.<br><br>Para cotizaciones específicas, <b>hablanos por WhatsApp</b> 💛'
     },
     {
       id: 'pago_arg',
