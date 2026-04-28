@@ -143,8 +143,8 @@ class MarcasExclusivasPDF(FPDF):
 
         items = [
             ("PAGO 100% ADELANTADO", "Aceptamos Global66 (transferencia internacional) o USD (efectivo o transferencia)."),
-            ("ENVÍOS HASTA 10 KG", "Con Starken según tarifas del courier. Cobra Starken al retirar."),
-            ("ENVÍOS SOBRE 10 KG (FARDOS)", "Transportistas privados que cobran por fardo: $100.000 CLP/fardo en pedidos de 10+ fardos · $150.000 CLP/fardo en pedidos menores a 10 fardos."),
+            ("ENVÍO A ARGENTINA", "Solo con empresas privadas desde Chile. $100.000 CLP/fardo si pides 10 fardos o más · $150.000 CLP/fardo si pides hasta 9 fardos."),
+            ("STARKEN NO APLICA", "Starken solo se usa para envíos dentro de Chile. Para Argentina siempre transporte privado."),
             ("VISÍTANOS EN CHILE", "Av. La Florida 9421, Santiago · Berna 767, Pichilemu. Lun-Vie 11:00-19:00."),
         ]
         for title, body in items:

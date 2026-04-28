@@ -352,13 +352,14 @@ CHILE:
 - Modalidad: el cliente paga el flete a Starken al retirar; nosotros coordinamos y despachamos desde Chile sin costo extra.
 - También: retiro gratis en bodega (Santiago Av. La Florida 9421).
 
-ARGENTINA: dos modalidades según el PESO del envío:
-1) HASTA 10 KG → con Starken. Tarifa según el courier (Starken la cobra al
-   retirar; no es una tarifa fija de Maully). Solo coordinación de despacho.
-2) SOBRE 10 KG (fardos completos) → con TRANSPORTISTAS PRIVADOS. Tarifa POR
-   FARDO con descuento por volumen:
-   · $100.000 CLP por fardo si el pedido es de 10 fardos o más.
-   · $150.000 CLP por fardo si el pedido es menor a 10 fardos.
+ARGENTINA: SOLO con empresas privadas de transporte desde Chile (Starken NO
+aplica para Argentina). Tarifa POR FARDO con descuento por volumen:
+- $100.000 CLP por fardo si el pedido es de 10 fardos o más.
+- $150.000 CLP por fardo si el pedido es de hasta 9 fardos.
+
+(Starken solo se usa para envíos DENTRO DE CHILE. Si el cliente argentino
+pregunta por Starken: aclarar que para Argentina solo trabajamos con
+empresas privadas y dar las tarifas anteriores.)
 
 PRODUCTOS CON GANCHO PUESTOS EN ARGENTINA (importante explicar):
 - El precio publicado para fardos con "+1 gancho" o "+2 ganchos" SOLO incluye

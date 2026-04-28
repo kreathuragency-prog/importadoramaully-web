@@ -156,8 +156,8 @@ class ArgentinaPDF(FPDF):
         # 4 boxes
         items = [
             ("PAGO", "100% por adelantado siempre. Aceptamos Global66 (transferencia internacional) o USD (efectivo o transferencia)."),
-            ("ENVÍOS HASTA 10 KG", "Con Starken según las tarifas del courier. Starken cobra el flete al retirar el cliente en Argentina."),
-            ("ENVÍOS SOBRE 10 KG", "Con transportistas privados que cobran por fardo según volumen y destino. Cotizamos por WhatsApp a la medida."),
+            ("ENVÍO A ARGENTINA", "Solo con empresas privadas desde Chile. Tarifa por fardo: $100.000 CLP si pides 10 fardos o más · $150.000 CLP si pides hasta 9 fardos."),
+            ("STARKEN NO APLICA", "Starken solo se usa para envíos dentro de Chile, no para Argentina. Para Argentina se usa siempre transporte privado."),
             ("VISÍTANOS EN CHILE", "Av. La Florida 9421, Santiago · Berna 767, Pichilemu. Atendemos lun-vie 11:00-19:00."),
         ]
         for title, body in items:

@@ -1039,8 +1039,8 @@ class CatalogoPDF(FPDF):
 
         bullets_arg = [
             ("Pago:", "100% por adelantado. Aceptamos Global66 y USD."),
-            ("Hasta 10 kg:", "envío con Starken, tarifa del courier (cobrada al retirar)."),
-            ("Sobre 10 kg:", "transportistas privados — $100.000 CLP/fardo si pides 10+ fardos · $150.000 CLP/fardo en pedidos menores."),
+            ("Envío a Argentina:", "solo con empresas privadas desde Chile — $100.000 CLP/fardo si pides 10 fardos o más · $150.000 CLP/fardo si pides hasta 9 fardos."),
+            ("(Starken no aplica)", "Starken solo se usa para envíos dentro de Chile, no para Argentina."),
             ("Ganchos:", "ver lista de fardos elegibles en la sección GANCHOS de este catálogo. A cada gancho que elijas se le suma su valor (CLP Chile) + $100.000 CLP de envío."),
             ("Despacho:", "el flete lo paga el cliente; nosotros coordinamos desde Chile."),
             ("Visítanos:", "Av. La Florida 9421 (Santiago) o Berna 767 (Pichilemu)."),
