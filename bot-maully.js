@@ -23,7 +23,13 @@
       id: 'envio',
       kw: ['envio', 'envío', 'envian', 'despacho', 'mandan', 'llegar', 'demora', 'courier', 'starken', 'region', 'flete', 'logistica', 'logística'],
       title: '¿Cómo funcionan los envíos?',
-      answer: '🇨🇱 <b>Dentro de Chile</b>: con <b>Starken</b> a todo el país. Plazo 5-15 días hábiles según ciudad. Tú pagas el flete a Starken al retirar; nosotros coordinamos y despachamos desde Chile sin costo extra.<br><br>💡 También retiro gratis en bodega Santiago / Pichilemu.<br><br>🇦🇷 <b>A Argentina</b>: solo con empresas privadas (Starken no aplica). Tarifa fija por fardo: <b>$100.000 CLP</b> si pides 10+ fardos · <b>$150.000 CLP</b> si pides hasta 9 fardos.'
+      answer: '🇨🇱 <b>Dentro de Chile · Starken por pagar</b><br>• Despachamos a todo Chile vía Starken. Tú pagas el flete <b>al retirar en Starken</b>.<br>• <b>Tú eliges si quieres seguro</b> o no (lo decides al cotizar con Bea).<br>• Te enviamos <b>foto del fardo puesto en Starken</b> + número de pedido y seguimiento.<br>• Hacemos el seguimiento juntos — te acompañamos en la espera.<br>• ⚠️ Starken es empresa externa: no nos hacemos cargo de problemas en el camino después del despacho. Por eso ofrecemos el seguro Starken si lo quieres.<br><br>💡 También retiro gratis en bodega Santiago / Pichilemu.<br><br>🇦🇷 <b>A Argentina</b>: solo con empresas privadas (Starken no aplica). <b>$100.000 CLP/fardo</b> si pides 10+ fardos · <b>$150.000 CLP/fardo</b> si pides hasta 9 fardos.'
+    },
+    {
+      id: 'lote10',
+      kw: ['lote', 'lotes', '10 kilos', '10 kg', 'mitad fardo', 'medio fardo', 'mas barato', 'más barato', 'menos cantidad', 'pequeño', 'caluga'],
+      title: '¿Tienen lotes más pequeños?',
+      answer: '✅ Sí, según disponibilidad ofrecemos <b>lotes de 10 kg</b> de productos que normalmente vienen en fardo de 25 kg.<br><br>💰 <b>El precio del lote 10 kg = la mitad del precio del fardo 25 kg.</b><br><br>⚠️ <b>Importante</b>: son 10 kg reales, no son la mitad del fardo de 25 kg (no son 12,5 kg). Es una opción más accesible para empezar a probar un producto.<br><br>📦 <b>Disponibilidad</b>: depende del producto y la rotación de stock. No todos los fardos tienen lote 10 kg disponible.<br><br>Pregúntale a Bea por WhatsApp por el producto que te interesa para saber si hay lote 10 kg disponible y al toque te confirma precio y disponibilidad.'
     },
     {
       id: 'minimo',
@@ -53,7 +59,7 @@
       id: 'devolucion',
       kw: ['devolucion', 'devolución', 'devolver', 'cambio', 'garantia', 'garantía', 'reclamo', 'no me sirve', 'retracto', 'arrepentido', 'arrepiento'],
       title: '¿Aceptan devoluciones o cambios?',
-      answer: '<b>Estudiamos cada caso para entregar la mejor solución posible.</b><br><br>⚖️ Por ley, la ropa importada por peso (fardos, packs, calugas) <b>no tiene derecho a cambio ni devolución</b> — <a href="https://www.bcn.cl/leychile/Navegar?idNorma=61438" target="_blank" rel="noopener">Ley 19.496 art. 3 bis letra b</a>: "bienes que por su naturaleza no pueden ser devueltos o son de uso personal".<br><br>Toda devolución queda <b>sujeta a evaluación y decisión final de Importadora Maully</b>. En la práctica evaluamos cuando:<br>• El nivel/categoría no corresponde a lo descrito<br>• La merma supera el 20% del lote<br>• Reclamas dentro de <b>48 hrs</b> con fotos por WhatsApp<br><br>📲 Para evaluar tu caso, escríbele a Bea con fotos al +56 9 7515 5745.'
+      answer: 'Antes de comprar es importante que entiendas la modalidad — así filtras si es el negocio correcto para ti.<br><br>⚖️ Por <a href="https://www.bcn.cl/leychile/Navegar?idNorma=61438" target="_blank" rel="noopener">Ley 19.496 art. 3 bis letra b</a>, la ropa importada por peso <b>no tiene derecho a cambio ni devolución</b> ("bienes que por su naturaleza no pueden ser devueltos o son de uso personal"). Cada fardo es único y al abrirlo las prendas se mezclan.<br><br>👉 <b>Estudiamos cada caso para dar la mejor solución posible</b>, pero toda devolución queda <b>sujeta a evaluación y decisión final de Importadora Maully</b>. Evaluamos cuando:<br>• El nivel/categoría no corresponde a lo descrito<br>• La merma supera el 20% del lote<br>• Reclamas dentro de <b>48 hrs</b> con fotos por WhatsApp<br><br>📲 Si necesitas evaluar un caso, escríbele a Bea con fotos al +56 9 7515 5745.'
     },
     {
       id: 'gancho',
@@ -129,7 +135,7 @@
     }
   ];
 
-  var QUICK = ['envio', 'gancho', 'calidad', 'pago', 'cupon', 'argentina'];
+  var QUICK = ['envio', 'gancho', 'lote10', 'calidad', 'argentina', 'devolucion'];
 
   // ====== Intent matching ======
   function normalize(s) {

@@ -190,6 +190,48 @@ Ningún fardo es igual a otro.
 Videos referenciales (no contratos).
 No se garantizan marcas exactas.
 
+== LOTES DE 10 KG (alternativa más accesible) ==
+
+Para algunos productos del catálogo que vienen en fardo de 25 kg, ofrecemos
+también LOTES DE 10 KG según disponibilidad.
+
+Reglas claras:
+- Precio del lote 10 kg = LA MITAD EXACTA del precio del fardo 25 kg.
+- Son 10 kg reales (no es la mitad del fardo de 25 kg, que serían 12,5 kg).
+- Disponibilidad varía: no todos los fardos tienen versión 10 kg en stock.
+
+Cuándo ofrecerlo:
+- Cliente que recién está empezando y no quiere arriesgar mucha plata.
+- Cliente que quiere PROBAR un producto antes de pedir un fardo grande.
+- Cliente con presupuesto limitado.
+
+Cómo presentarlo:
+"Te puedo ver si hay lote de 10 kg disponible de ese producto. Sale a la
+mitad del precio del fardo de 25 kg. Eso sí, son 10 kg reales, no la mitad
+del fardo. Es ideal para probar el producto antes de pedir un fardo grande.
+¿Te interesa que revise stock?"
+
+== POLÍTICA DE FILTRO PREVIO (sutil pero clara) ==
+
+Antes de cerrar la venta, recordá DE FORMA SUTIL al cliente las condiciones
+clave para filtrar compradores reales y evitar reclamos posteriores:
+
+- Que cada fardo es ÚNICO, abierto NO se puede devolver (Ley 19.496 art 3 bis b).
+- Que la merma natural es 25-30% — está incluida en el precio.
+- Que estudiamos cada caso, pero la devolución queda sujeta a evaluación
+  y decisión final de Maully.
+- Que con Starken Chile, los problemas en el camino son responsabilidad de
+  Starken (por eso ofrecemos seguro).
+
+Cómo recordarlo SIN espantar al cliente:
+- Cuando muestra interés fuerte: "Antes de cerrar, te recuerdo que es venta
+  por peso, cada fardo es único y no aplica retracto. Si todo bien, te lo
+  reservo 🙌"
+- Cuando pide envío Chile: "Para el envío Starken: tú pagas al retirar.
+  ¿Quieres seguro Starken? Es opcional pero te recomiendo agregarlo".
+- Cuando duda: "Si quieres probar primero, podemos ver lote de 10 kg que
+  sale a la mitad. Es ideal para validar el producto."
+
 == POLÍTICA DE DEVOLUCIÓN (importante) ==
 
 Frase clave a usar: "Estudiamos cada caso para entregar la mejor solución posible".
@@ -346,11 +388,19 @@ Tel fijo: 22 8332 667 (lun-vie 11:00-19:00)
 WhatsApp: +56 9 7515 5745
 
 == ENVÍOS ==
-CHILE:
-- Despachamos a TODO CHILE con STARKEN.
+CHILE — Starken por pagar:
+- Despachamos a TODO CHILE con Starken.
+- El cliente PAGA el flete a Starken al retirar (no es prepagado).
+- El cliente ELIGE si quiere seguro Starken o no (lo decide al cotizar).
 - Plazo: 5-15 días hábiles según ciudad.
-- Modalidad: el cliente paga el flete a Starken al retirar; nosotros coordinamos y despachamos desde Chile sin costo extra.
-- También: retiro gratis en bodega (Santiago Av. La Florida 9421).
+- Le enviamos al cliente: foto del fardo puesto en Starken + número de
+  pedido y seguimiento. Hacemos el seguimiento juntos y lo acompañamos
+  durante la espera por si tiene dudas.
+- IMPORTANTE: Starken es una empresa externa. NO nos hacemos cargo de
+  problemas o asuntos que se presenten en el camino LUEGO de despachado el
+  producto. Por eso ofrecemos el seguro Starken si el cliente lo solicita.
+- También: retiro gratis en bodega (Santiago Av. La Florida 9421 o
+  Pichilemu Berna 767).
 
 ARGENTINA: SOLO con empresas privadas de transporte desde Chile (Starken NO
 aplica para Argentina). Tarifa POR FARDO con descuento por volumen:
