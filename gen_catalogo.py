@@ -908,6 +908,107 @@ class CatalogoPDF(FPDF):
             align="C")
 
     # ══════════════════════════════════════════════
+    #  PÁGINA: LOTES 10 KG + PROCESO STARKEN CHILE
+    # ══════════════════════════════════════════════
+    def lotes_y_envios_page(self):
+        self.add_page()
+        self.set_fill_color(*C_CREAM)
+        self.rect(0, 0, 210, 297, "F")
+        self.set_fill_color(*C_GOLD)
+        self.rect(0, 0, 210, 3, "F")
+        self.set_y(20)
+
+        self.set_font("Body", "", 8)
+        self.set_text_color(*C_GOLD)
+        self.cell(0, 4, "MODALIDADES DE COMPRA Y DESPACHO", align="C")
+        self.ln(6)
+        self.set_font("Body", "B", 24)
+        self.set_text_color(*C_DARK)
+        self.cell(0, 12, "Lotes 10 kg + Envíos Chile", align="C")
+        self.ln(14)
+        self.set_fill_color(*C_GOLD)
+        self.rect(85, self.get_y(), 40, 0.8, "F")
+        self.ln(10)
+
+        # Sección Lotes 10 kg
+        self.set_x(20); self.set_font("Body", "B", 14); self.set_text_color(*C_DARK)
+        self.cell(170, 7, "Lotes de 10 kg — alternativa más accesible"); self.ln(9)
+        self.set_x(20); self.set_font("Body", "", 10); self.set_text_color(*C_GRAY5)
+        self.multi_cell(170, 5.5,
+            "Para algunos productos del catálogo que vienen en fardo de 25 kg "
+            "ofrecemos también lotes de 10 kg según disponibilidad de stock.")
+        self.ln(2)
+        # Box regla
+        box_y = self.get_y()
+        self.set_fill_color(*C_GOLD_LT)
+        self.rect(20, box_y, 170, 36, "F")
+        self.set_fill_color(*C_GOLD)
+        self.rect(20, box_y, 4, 36, "F")
+        self.set_y(box_y + 5); self.set_x(30)
+        self.set_font("Body", "B", 11); self.set_text_color(*C_DARK)
+        self.cell(160, 5, "Regla del precio")
+        self.ln(7)
+        for label, txt in [
+            ("Precio:", "lote 10 kg = mitad exacta del precio del fardo de 25 kg del mismo producto."),
+            ("Aclaración:", "son 10 kg reales — NO es la mitad del fardo de 25 kg (no son 12,5 kg)."),
+            ("Stock:", "disponibilidad varía según rotación. Pregúntale a Bea por el producto que te interesa."),
+        ]:
+            self.set_x(30); self.set_font("Body", "B", 9.5); self.set_text_color(*C_DARK)
+            self.cell(28, 5, "• " + label)
+            self.set_font("Body", "", 9.5); self.set_text_color(*C_GRAY5)
+            self.multi_cell(132, 5, txt)
+        self.set_y(box_y + 42)
+
+        # Sección Envíos Chile
+        self.set_x(20); self.set_font("Body", "B", 14); self.set_text_color(*C_DARK)
+        self.cell(170, 7, "Envíos a todo Chile con Starken — por pagar"); self.ln(9)
+        self.set_x(20); self.set_font("Body", "", 10); self.set_text_color(*C_GRAY5)
+        self.multi_cell(170, 5.5,
+            "Despachamos a todo Chile vía Starken. El cliente paga el flete a "
+            "Starken al retirar y elige si quiere seguro o no. Te acompañamos "
+            "en cada paso del proceso.")
+        self.ln(2)
+
+        # Box pasos
+        box_y = self.get_y()
+        self.set_fill_color(*C_GOLD_LT)
+        self.rect(20, box_y, 170, 56, "F")
+        self.set_fill_color(*C_GOLD)
+        self.rect(20, box_y, 4, 56, "F")
+        self.set_y(box_y + 5); self.set_x(30)
+        self.set_font("Body", "B", 11); self.set_text_color(*C_DARK)
+        self.cell(160, 5, "Proceso de envío Chile (paso a paso)")
+        self.ln(7)
+        steps = [
+            ("1.", "Confirmas tu pedido y pago con Bea por WhatsApp."),
+            ("2.", "Eliges si quieres seguro Starken (opcional, recomendado)."),
+            ("3.", "Despachamos y te enviamos foto del fardo puesto en Starken."),
+            ("4.", "Recibes número de pedido + link de seguimiento."),
+            ("5.", "Hacemos el seguimiento juntos hasta la entrega."),
+            ("6.", "Pagas el flete directo a Starken al retirar."),
+        ]
+        for n, txt in steps:
+            self.set_x(30); self.set_font("Body", "B", 9.5); self.set_text_color(*C_GOLD)
+            self.cell(8, 4.5, n)
+            self.set_font("Body", "", 9.5); self.set_text_color(*C_GRAY5)
+            self.multi_cell(152, 4.5, txt)
+        self.set_y(box_y + 62)
+
+        # Disclaimer
+        self.set_x(20); self.set_font("Body", "I", 9.5); self.set_text_color(190, 50, 50)
+        self.multi_cell(170, 5,
+            "Importante: Starken es una empresa externa. NO nos hacemos cargo de "
+            "problemas que se presenten en el camino luego del despacho. Por eso "
+            "te recomendamos contratar el seguro Starken al cotizar el envío.",
+            align="C")
+        self.ln(4)
+
+        # CTA
+        self.set_x(20); self.set_font("Body", "B", 10); self.set_text_color(*C_GOLD)
+        self.cell(170, 5, f"Cotiza con Bea por WhatsApp: {WA_NUM}",
+                  align="C", link=WA_LINK)
+
+    # ══════════════════════════════════════════════
     #  PÁGINA: EL NEGOCIO DE LOS FARDOS
     # ══════════════════════════════════════════════
     def negocio_page(self):
@@ -1251,6 +1352,7 @@ def main():
 
     pdf.cover_page()
     pdf.about_page()
+    pdf.lotes_y_envios_page()
     pdf.ganchos_page()
     pdf.negocio_page()
 
