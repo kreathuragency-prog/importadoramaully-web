@@ -1069,16 +1069,20 @@
 </div>
 
 <!-- WHATSAPP FLOTANTE -->
-<a href="https://wa.me/56975155745?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20fardos%20de%20ropa" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">
+<div class="wa-float-tooltip">¡Hola! Soy <b>Bea</b> 👋 Te asesoro por WhatsApp con los mejores fardos.</div>
+<a href="https://wa.me/56975155745?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20fardos%20de%20ropa" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp Bea">
 <i class="fab fa-whatsapp"></i>
-<span class="wa-float-label">Chatea con Bea</span>
+<span class="wa-float-label">WhatsApp Bea</span>
 </a>
 <style>
-.wa-float{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:14px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .3s}
+.wa-float{position:fixed;bottom:24px;left:24px;z-index:9998;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:14px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .3s}
 .wa-float:hover{transform:scale(1.05);box-shadow:0 6px 28px rgba(37,211,102,.5)}
 .wa-float i{font-size:1.5rem}
 .wa-float-label{white-space:nowrap}
-@media(max-width:480px){.wa-float{padding:12px 18px;font-size:.9rem;bottom:16px;right:16px}.wa-float i{font-size:1.3rem}}
+.wa-float-tooltip{position:fixed;bottom:88px;left:24px;z-index:9997;background:#fff;color:#0f0f23;padding:10px 16px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.15);font-size:13px;font-weight:500;max-width:240px;animation:waTipIn .5s ease 1.2s both;pointer-events:none}
+.wa-float-tooltip::after{content:"";position:absolute;bottom:-6px;left:30px;width:12px;height:12px;background:#fff;transform:rotate(45deg)}
+@keyframes waTipIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:480px){.wa-float{padding:12px 18px;font-size:.9rem;bottom:16px;left:16px}.wa-float i{font-size:1.3rem}.wa-float-label{display:none}.wa-float-tooltip{display:none}}
 </style>
 
 <!-- BACK TO TOP -->
@@ -1218,6 +1222,6 @@
 </style>
 
 <script src="script.js?v=ganchos2"></script>
-<script src="bot-maully.js?v=ganchos3" defer></script>
+<script src="bot-maully.js?v=split2" defer></script>
 </body>
 </html>

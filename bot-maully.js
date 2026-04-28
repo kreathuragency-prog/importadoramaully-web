@@ -159,7 +159,13 @@
 
   // ====== Estilos (paleta Maully: navy + rojo + dorado) ======
   var css =
-  '.mly-bot-fab{position:fixed;bottom:20px;right:20px;z-index:9998;background:linear-gradient(135deg,#0f0f23,#1a1a3e 60%,#e94560);color:#fff;width:64px;height:64px;border-radius:50%;border:none;box-shadow:0 8px 28px rgba(15,15,35,.45);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease;font-family:"Manrope",system-ui,-apple-system,sans-serif}'+
+  '.mly-bot-fab{position:fixed;bottom:20px;right:20px;z-index:9999;background:linear-gradient(135deg,#0f0f23,#1a1a3e 60%,#e94560);color:#fff;width:64px;height:64px;border-radius:50%;border:none;box-shadow:0 8px 28px rgba(15,15,35,.45);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease;font-family:"Manrope",system-ui,-apple-system,sans-serif}'+
+  '.mly-bot-tooltip{position:fixed;bottom:92px;right:24px;z-index:9998;background:#fff;color:#0f0f23;padding:10px 16px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.15);font-size:13px;font-weight:500;max-width:230px;animation:mlyTipIn .5s ease 2s both;pointer-events:none}'+
+  '.mly-bot-tooltip::after{content:"";position:absolute;bottom:-6px;right:30px;width:12px;height:12px;background:#fff;transform:rotate(45deg)}'+
+  '.mly-bot-tooltip b{color:#e94560}'+
+  '@keyframes mlyTipIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}'+
+  '.mly-bot-fab.mly-bot-active~.mly-bot-tooltip{display:none}'+
+  '@media(max-width:480px){.mly-bot-tooltip{display:none}}'+
   '.mly-bot-fab:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 12px 34px rgba(233,69,96,.45)}'+
   '.mly-bot-fab svg{width:30px;height:30px}'+
   '.mly-bot-fab .mly-bot-ping{position:absolute;top:4px;right:6px;width:12px;height:12px;border-radius:50%;background:#d4a853;border:2px solid #fff;animation:mly-ping 1.8s infinite}'+
@@ -208,15 +214,18 @@
   style.textContent = css;
   document.head.appendChild(style);
 
-  // Ocultar la wa-float original para no duplicar
-  var waFloat = document.querySelector('.wa-float');
-  if (waFloat) waFloat.style.display = 'none';
+  // El wa-float queda visible a la izquierda; el bot chat va a la derecha (no duplicamos).
 
   var fab = document.createElement('button');
   fab.className = 'mly-bot-fab';
   fab.setAttribute('aria-label', 'Hablar con Bea, asistente de Importadora Maully');
   fab.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.52 1.18 4.8 3.08 6.43L4 22l4.73-1.28c1 .27 2.07.42 3.27.42 5.52 0 10-4.04 10-9S17.52 2 12 2zM8 12.5c-.83 0-1.5-.67-1.5-1.5S7.17 9.5 8 9.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg><span class="mly-bot-ping"></span>';
   document.body.appendChild(fab);
+
+  var tooltip = document.createElement('div');
+  tooltip.className = 'mly-bot-tooltip';
+  tooltip.innerHTML = '🤖 ¿Dudas? Soy <b>Bea</b>, tu asistente. Hazme una pregunta o haz click.';
+  document.body.appendChild(tooltip);
 
   var panel = document.createElement('div');
   panel.className = 'mly-bot-panel';
@@ -342,11 +351,15 @@
   fab.addEventListener('click', function () {
     var open = panel.classList.toggle('mly-bot-open');
     if (open) {
+      tooltip.style.display = 'none';
+      fab.classList.add('mly-bot-active');
       if (!msgs.childElementCount) {
         addBot('¡Hola! 👋 Soy <b>Bea</b>, asistente de <b>Importadora Maully</b>. Te ayudo con fardos, packs, calugas, envíos y precios. ¿Qué necesitas?');
-        addQuickChips(QUICK, 'Preguntas frecuentes:');
+        addQuickChips(QUICK, 'Preguntas frecuentes — haz click o escribe tu consulta:');
       }
       setTimeout(function () { input.focus(); }, 300);
+    } else {
+      fab.classList.remove('mly-bot-active');
     }
   });
 
