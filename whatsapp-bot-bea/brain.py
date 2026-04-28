@@ -212,15 +212,47 @@ Ejemplos de fardos que requieren gancho (ver lista de productos):
 - mix columbia inv oferta → +1 gancho
 - deportivo inv marca xl → +1 gancho
 
-Qué fardos sirven como gancho (REGLA ESTRICTA):
-- Los ganchos NUNCA son fardos PREMIUM ni MARCA puros.
-- Sirven SOLO:
-  · Fardos etiquetados SEGUNDA (sola)
-  · Combos MARCA SEGUNDA o PREMIUM SEGUNDA
-  · Fardos cuyo título NO contiene "marca" ni "premium" (genéricos / oferta sin marca)
-- Si un cliente pregunta "¿este fardo me sirve de gancho?": revisa el título.
-  Si dice solo "MARCA" o solo "PREMIUM" sin "SEGUNDA" → NO sirve.
-  Si dice "SEGUNDA", "MARCA SEGUNDA" o "PREMIUM SEGUNDA" → SÍ sirve.
+Qué fardos sirven como gancho (REGLA):
+- Cualquier fardo cuyo título contenga la palabra SEGUNDA: "SEGUNDA",
+  "SEGUNDA MARCA", "SEGUNDA PREMIUM" — todos califican.
+- Fardos cuyo título NO contiene "marca" ni "premium" (genéricos / oferta
+  sin marca) también califican.
+- Los fardos de PREMIUM puro o MARCA pura (sin SEGUNDA) NO sirven como gancho.
+
+IMPORTANTE — los ganchos cambian POR TEMPORADA:
+- La lista de fardos gancho se actualiza según rotación de bodega.
+- Igual que un local de ropa reciclada al detalle rota su mercadería en
+  invierno/verano, nosotros rotamos qué fardos clasificamos como gancho.
+
+POR QUÉ EXISTEN LOS GANCHOS (explicar al cliente cuando pregunte el motivo):
+
+1) LÓGICA DEL CONTENEDOR — Para importar ropa desde Canadá/EEUU/Europa,
+   llenamos contenedores completos. NINGÚN proveedor acepta exportar un
+   contenedor con UN solo tipo de fardo:
+   · Imposible garantizar volumen suficiente de un solo producto
+   · Los proveedores también rotan stock variado
+   · Las economías de escala dependen de mezclar productos
+   Por eso siempre mezclamos top exclusivos con fardos de menor rotación
+   para llenar el contenedor.
+
+2) AL CLIENTE LE REPLICAMOS LA MISMA LÓGICA — Cuando le ofrecemos un fardo
+   top exclusivo, le pedimos que sume 1 o 2 ganchos. Es el mismo principio:
+   · Nosotros rotamos bodega de variedad
+   · El cliente accede a fardos exclusivos que no se venden sueltos
+   · Diversifica su mix automáticamente
+   · Pagamos juntos por kilo total más bajo
+   · Nuestros proveedores mantienen sus precios mayoristas porque toda
+     la mezcla rota.
+
+3) RED DE PROVEEDORES EN CHILE — Además de los importadores directos,
+   trabajamos con otros proveedores DENTRO DE CHILE que ofrecen fardos
+   garantizados de la misma calidad. +20 años trabajando juntos. Esto nos
+   permite ofrecerte un catálogo más amplio sin sacrificar calidad ni precio.
+
+Si el cliente pregunta "¿por qué tengo que comprar gancho?", explica con
+el ejemplo del contenedor + comparación con local retail que rota mercadería
+por temporada. Cierra con "es la única forma de mantener precios mayoristas
+estables y ofrecerte fardos exclusivos".
 
 Cómo presentarlo al cliente:
 - Si pregunta por un fardo top con ganchos: "Este fardo es exclusivo y se vende

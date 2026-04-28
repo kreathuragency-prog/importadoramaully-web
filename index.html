@@ -794,8 +794,13 @@
 <div class="animate-on-scroll" style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 8px 20px rgba(234,88,12,.12);border-top:4px solid #ea580c">
 <div style="font-size:2.2rem;margin-bottom:12px">🪝</div>
 <h3 style="color:#7c2d12;margin:0 0 10px;font-size:1.15rem">¿Cuáles sirven?</h3>
-<p style="color:#9a3412;font-size:.92rem;line-height:1.5;margin:0">Los ganchos <b>NUNCA</b> son fardos premium ni marca puros.<br><br>Solo califican: <b>SEGUNDA</b>, <b>MARCA SEGUNDA</b>, <b>PREMIUM SEGUNDA</b> o títulos sin las palabras "marca" ni "premium".</p>
+<p style="color:#9a3412;font-size:.92rem;line-height:1.5;margin:0">Cualquier fardo con la palabra <b>SEGUNDA</b> sirve: <b>SEGUNDA</b>, <b>SEGUNDA MARCA</b>, <b>SEGUNDA PREMIUM</b>. También fardos sin "marca" ni "premium" en el título.<br><br>⚠️ Los ganchos <b>cambian por temporada</b> — la lista se actualiza según rotación.</p>
 </div>
+</div>
+<div class="animate-on-scroll" style="margin-top:24px;text-align:center">
+<button onclick="document.getElementById('ganchoBusinessModal').classList.add('open')" style="background:linear-gradient(135deg,#ea580c,#f59e0b);color:#fff;border:none;padding:14px 32px;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(234,88,12,.35);transition:all .2s;display:inline-flex;align-items:center;gap:10px" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(234,88,12,.5)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 18px rgba(234,88,12,.35)'">
+<i class="fas fa-circle-info"></i> ¿Por qué los ganchos? Entender el negocio
+</button>
 </div>
 <div class="animate-on-scroll" style="margin-top:32px;background:#fff;border-radius:18px;padding:28px;box-shadow:0 10px 26px rgba(234,88,12,.15)">
 <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:20px">
@@ -1128,6 +1133,74 @@
 <p style="margin-top:20px"><em>Última actualización: Marzo 2026 | Santiago, Chile</em></p>
 </div>
 </div>
+
+<!-- MODAL: ¿POR QUÉ LOS GANCHOS? -->
+<div id="ganchoBusinessModal" class="gbm-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+<div class="gbm-content">
+<button class="gbm-close" onclick="document.getElementById('ganchoBusinessModal').classList.remove('open')" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+<div class="gbm-header">
+<div style="display:flex;align-items:center;gap:14px">
+<div style="font-size:2.4rem">🪝</div>
+<div>
+<h2 style="margin:0;color:#fff;font-size:1.5rem;line-height:1.2">El Negocio de los Fardos</h2>
+<p style="margin:4px 0 0;color:#fed7aa;font-size:.92rem">Por qué existen los ganchos y cómo funciona la importación mayorista</p>
+</div>
+</div>
+</div>
+<div class="gbm-body">
+<div class="gbm-section">
+<h3><i class="fas fa-calendar-alt" style="color:#ea580c"></i> Rotación por temporada</h3>
+<p>Así como un local de ropa reciclada al detalle <b>rota su mercadería según temporada</b> (en invierno saca poleras y pone parkas), nosotros también rotamos <b>qué fardos clasificamos como ganchos según la temporada</b>. La lista de ganchos cambia continuamente — depende de qué hay en bodega, qué llegó en el último contenedor y qué necesitamos rotar.</p>
+</div>
+<div class="gbm-section">
+<h3><i class="fas fa-ship" style="color:#1a4d80"></i> La lógica del contenedor</h3>
+<p>Para importar ropa desde <b>Canadá, EEUU o Europa</b>, llenamos contenedores completos. <b>Ningún proveedor acepta exportar un contenedor con un solo tipo de fardo</b>, porque:</p>
+<ul>
+<li>Es imposible garantizar volumen suficiente de un solo producto</li>
+<li>Los proveedores también rotan stock variado</li>
+<li>Las economías de escala dependen de mezclar productos</li>
+</ul>
+<p>Por eso <b>siempre llenamos el contenedor mezclando fardos top exclusivos</b> (los que más rotan acá) con fardos de menor rotación. Cuando llegan a Chile, vendemos los top junto con sus respectivos <b>"ganchos"</b> — replicando a menor escala la misma lógica del contenedor.</p>
+</div>
+<div class="gbm-section gbm-highlight">
+<h3><i class="fas fa-handshake" style="color:#d4a853"></i> Beneficio para todos</h3>
+<ul>
+<li><b>Para nuestros proveedores:</b> mantienen sus precios mayoristas porque toda la mezcla se mueve.</li>
+<li><b>Para Maully:</b> rotamos bodega de variedad y mantenemos precios competitivos.</li>
+<li><b>Para ti, cliente:</b> accedes a fardos top que jamás se venderían sueltos, y <b>diversificas tu mix automáticamente</b>.</li>
+</ul>
+</div>
+<div class="gbm-section">
+<h3><i class="fas fa-people-group" style="color:#0f0f23"></i> Red de proveedores en Chile</h3>
+<p>Además de los importadores directos, trabajamos con <b>otros proveedores dentro de Chile</b> que ofrecen fardos garantizados de la misma calidad. Llevamos <b>+20 años trabajando juntos</b>, lo que nos permite ofrecerte un catálogo amplio sin sacrificar calidad ni precio mayorista.</p>
+</div>
+<div class="gbm-cta">
+<a href="https://wa.me/56975155745?text=Hola%20Bea!%20Quiero%20entender%20mejor%20el%20sistema%20de%20ganchos" target="_blank" rel="noopener" class="btn btn-wa" style="background:#25d366;color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:10px">
+<i class="fab fa-whatsapp"></i> Cualquier duda, escríbele a Bea
+</a>
+</div>
+</div>
+</div>
+</div>
+<style>
+.gbm-overlay{display:none;position:fixed;inset:0;background:rgba(15,15,35,.85);backdrop-filter:blur(6px);z-index:99999;align-items:center;justify-content:center;padding:20px}
+.gbm-overlay.open{display:flex;animation:gbmFade .25s ease}
+@keyframes gbmFade{from{opacity:0}to{opacity:1}}
+.gbm-content{background:#fff;border-radius:18px;max-width:720px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.4);position:relative;animation:gbmSlide .3s ease}
+@keyframes gbmSlide{from{transform:translateY(20px);opacity:.5}to{transform:translateY(0);opacity:1}}
+.gbm-header{background:linear-gradient(135deg,#7c2d12,#ea580c);color:#fff;padding:24px 28px;border-radius:18px 18px 0 0}
+.gbm-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.18);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background .2s}
+.gbm-close:hover{background:rgba(255,255,255,.32)}
+.gbm-body{padding:24px 28px}
+.gbm-section{margin-bottom:22px}
+.gbm-section h3{margin:0 0 10px;font-size:1.1rem;color:#0f0f23;display:flex;align-items:center;gap:10px}
+.gbm-section p{margin:0 0 10px;color:#374151;line-height:1.65;font-size:.95rem}
+.gbm-section ul{margin:8px 0 10px 4px;padding-left:20px;color:#374151;line-height:1.65;font-size:.93rem}
+.gbm-section ul li{margin-bottom:6px}
+.gbm-highlight{background:linear-gradient(135deg,#fff7ed,#ffedd5);padding:18px 22px;border-radius:12px;border-left:4px solid #ea580c}
+.gbm-cta{text-align:center;padding-top:10px;border-top:1px solid #e5e7eb;margin-top:6px}
+@media(max-width:600px){.gbm-content{max-height:95vh}.gbm-header{padding:18px}.gbm-body{padding:18px}}
+</style>
 
 <script src="script.js?v=ganchos2"></script>
 <script src="bot-maully.js?v=ganchos2" defer></script>

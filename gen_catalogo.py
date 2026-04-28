@@ -908,6 +908,79 @@ class CatalogoPDF(FPDF):
             align="C")
 
     # ══════════════════════════════════════════════
+    #  PÁGINA: EL NEGOCIO DE LOS FARDOS
+    # ══════════════════════════════════════════════
+    def negocio_page(self):
+        self.add_page()
+        self.set_fill_color(*C_CREAM)
+        self.rect(0, 0, 210, 297, "F")
+        self.set_fill_color(234, 88, 12)
+        self.rect(0, 0, 210, 3, "F")
+        self.set_y(20)
+        self.set_font("Body", "", 8)
+        self.set_text_color(234, 88, 12)
+        self.cell(0, 4, "POR QUÉ LOS GANCHOS", align="C")
+        self.ln(6)
+        self.set_font("Body", "B", 26)
+        self.set_text_color(*C_DARK)
+        self.cell(0, 12, "El negocio de los fardos", align="C")
+        self.ln(14)
+        self.set_fill_color(234, 88, 12)
+        self.rect(85, self.get_y(), 40, 0.8, "F")
+        self.ln(10)
+        # Sección 1
+        self.set_x(20); self.set_font("Body", "B", 12); self.set_text_color(*C_DARK)
+        self.cell(170, 6, "Rotación por temporada"); self.ln(7)
+        self.set_x(20); self.set_font("Body", "", 10); self.set_text_color(*C_GRAY5)
+        self.multi_cell(170, 5.5,
+            "Así como un local de ropa reciclada al detalle rota su mercadería según "
+            "temporada, nosotros también rotamos qué fardos clasificamos como ganchos. "
+            "La lista cambia según qué hay en bodega y qué llegó en el último contenedor.")
+        self.ln(6)
+        # Sección 2
+        self.set_x(20); self.set_font("Body", "B", 12); self.set_text_color(*C_DARK)
+        self.cell(170, 6, "La lógica del contenedor"); self.ln(7)
+        self.set_x(20); self.set_font("Body", "", 10); self.set_text_color(*C_GRAY5)
+        self.multi_cell(170, 5.5,
+            "Para importar ropa desde Canadá, EEUU o Europa llenamos contenedores "
+            "completos. Ningún proveedor acepta exportar un contenedor con un solo "
+            "tipo de fardo: imposible garantizar volumen, los proveedores rotan stock "
+            "variado y las economías de escala dependen de mezclar. Por eso siempre "
+            "llenamos el contenedor mezclando fardos top exclusivos con fardos de menor "
+            "rotación. Al venderte, replicamos esa misma lógica a menor escala.")
+        self.ln(6)
+        # Box beneficio
+        box_y = self.get_y()
+        self.set_fill_color(*C_GOLD_LT); self.rect(20, box_y, 170, 42, "F")
+        self.set_fill_color(234, 88, 12); self.rect(20, box_y, 4, 42, "F")
+        self.set_y(box_y + 5); self.set_x(30)
+        self.set_font("Body", "B", 11); self.set_text_color(*C_DARK)
+        self.cell(160, 5, "Beneficio para todos"); self.ln(7)
+        for label, txt in [
+            ("Proveedores:", "mantienen precios mayoristas porque toda la mezcla se mueve."),
+            ("Maully:", "rota bodega de variedad y mantiene precios competitivos."),
+            ("Cliente:", "accede a fardos top que jamás se venderían sueltos y diversifica su mix."),
+        ]:
+            self.set_x(30); self.set_font("Body", "B", 9.5); self.set_text_color(*C_DARK)
+            self.cell(28, 5, "• " + label)
+            self.set_font("Body", "", 9.5); self.set_text_color(*C_GRAY5)
+            self.multi_cell(132, 5, txt)
+        self.set_y(box_y + 48)
+        # Sección 4
+        self.set_x(20); self.set_font("Body", "B", 12); self.set_text_color(*C_DARK)
+        self.cell(170, 6, "Red de proveedores en Chile"); self.ln(7)
+        self.set_x(20); self.set_font("Body", "", 10); self.set_text_color(*C_GRAY5)
+        self.multi_cell(170, 5.5,
+            "Además de los importadores directos, trabajamos con otros proveedores "
+            "dentro de Chile que ofrecen fardos garantizados de la misma calidad. "
+            "+20 años trabajando juntos. Esto nos permite ofrecerte un catálogo amplio "
+            "sin sacrificar calidad ni precio mayorista.")
+        self.ln(8)
+        self.set_x(20); self.set_font("Body", "B", 11); self.set_text_color(*C_GOLD)
+        self.cell(170, 6, "Cualquier duda sobre el sistema de ganchos, escríbele a Bea por WhatsApp",
+                  align="C", link=WA_LINK)
+
+    # ══════════════════════════════════════════════
     #  SECCIÓN ARGENTINA — productos puestos en Argentina
     # ══════════════════════════════════════════════
     def argentina_section(self, productos_arg):
@@ -1176,6 +1249,7 @@ def main():
     pdf.cover_page()
     pdf.about_page()
     pdf.ganchos_page()
+    pdf.negocio_page()
 
     cat_order = ['chaquetas', 'jeans', 'poleras', 'polerones', 'deportiva',
                  'sweaters', 'vestidos', 'ski', 'ninos', 'calzado', 'hogar', 'plussize']
