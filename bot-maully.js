@@ -75,9 +75,9 @@
     },
     {
       id: 'catalogo',
-      kw: ['catalogo', 'catálogo', 'lista', 'precios', 'pdf', 'productos', 'ver todo'],
+      kw: ['catalogo', 'catálogo', 'lista', 'precios', 'pdf', 'productos', 'ver todo', 'descargar'],
       title: '¿Tienen catálogo o lista de precios?',
-      answer: 'Sí. Tenemos:<br>• <b>Catálogo PDF</b> descargable (link en el menú superior y banner)<br>• <b>Tienda online</b> con todos los fardos, packs y calugas en stock<br>• <b>Calculadora de retorno</b> en el sitio para estimar tu ganancia<br><br>Si buscas algo específico (categoría, peso, presupuesto), Bea te arma una <b>cotización personalizada</b> por WhatsApp.'
+      answer: 'Sí, descárgalo aquí 👇<br><br>📕 <a href="https://importadoramaully.cl/catalogo-maully-mayo-2026.pdf" target="_blank" rel="noopener"><b>Catálogo Maully Mayo 2026 (PDF)</b></a><br>14 páginas — 251 productos + sección Argentina.<br><br>También tenemos:<br>• <b>Tienda online</b> con stock real<br>• <b>Calculadora de retorno</b> para estimar tu ganancia<br><br>Si buscas algo específico (categoría, peso, presupuesto), Bea te arma una <b>cotización personalizada</b> por WhatsApp.'
     },
     {
       id: 'tienda',

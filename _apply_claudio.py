@@ -69,62 +69,27 @@ for p in maully:
     p["gancho_eligible"] = bool(p.get("premium"))  # ya lo calculamos antes
     p["requires_ganchos"] = 0
 
-# ── Aplica precios y ganchos de Claudio ──
-print("=== Aplicando lista Claudio ===")
-nuevos = []
-actualizados = 0
+# ── Aplica SOLO metadata de ganchos (precios Chile = Eurotextile + 15%, no se tocan) ──
+print("=== Aplicando metadata de ganchos por matching de títulos (precios NO se tocan) ===")
+matcheados = 0
+no_match = []
 for c in claudio:
     if c.get("es_nuevo"):
-        nuevos.append(c)
-        continue
+        continue  # los nuevos solo van al PDF Argentina, no al catálogo Chile
     match, score, idx = find_match(maully, c["name_claudio"], c["weight"])
     if match and score >= 2:
-        nuevo_precio = round_100(c["price_costo"] * MARGIN)
-        nuevo_orig = round_100(c["price_costo"] * MARGIN * 1.18)  # 18% extra para mostrar dcto
-        viejo = match["price"]
-        match["price"] = nuevo_precio
-        match["origPrice"] = nuevo_orig
         match["requires_ganchos"] = c.get("ganchos", 0)
         match["gancho_eligible"] = match.get("gancho_eligible", False) or c.get("exclusivo", False)
-        actualizados += 1
-        delta = nuevo_precio - viejo
-        sign = "+" if delta >= 0 else "−"
-        print(f"  ✓ {c['name_claudio'][:40]:<40} ${viejo:>8,} → ${nuevo_precio:>8,} {sign}${abs(delta):>8,} | g={c.get('ganchos',0)}")
+        matcheados += 1
+        gflag = c.get("ganchos", 0)
+        if gflag > 0:
+            print(f"  ✓ {c['name_claudio'][:40]:<40} → match: {match['name'][:42]:<42} | +{gflag}g")
     else:
-        print(f"  ✗ NO MATCH: {c['name_claudio']}")
+        no_match.append(c["name_claudio"])
 
-print(f"\nActualizados: {actualizados}/{len(claudio) - len(nuevos)}")
-
-# ── Agrega productos nuevos ──
-print(f"\n=== Productos NUEVOS ({len(nuevos)}) ===")
-next_id = max(p["id"] for p in maully) + 1
-for c in nuevos:
-    name = c["name_claudio"].title()
-    if "jordan" in name.lower():
-        name = "Jordan Calzado 25 Kg"
-    elif "realtree 1 prem" in name.lower():
-        name = "Realtree 1 Premium 25 Kg"
-    elif "realtree 1" in name.lower():
-        name = "Realtree 1 25 Kg"
-    cat = determine_cat(name)
-    nuevo = {
-        "id": next_id,
-        "cat": cat,
-        "name": name,
-        "desc": "Producto premium nuevo en catálogo. Selección directa con stock.",
-        "price": round_100(c["price_costo"] * MARGIN),
-        "origPrice": round_100(c["price_costo"] * MARGIN * 1.18),
-        "weight": c["weight"],
-        "tier": "premium",
-        "badge": "premium",
-        "isNew": True,
-        "premium": True,
-        "gancho_eligible": True,
-        "requires_ganchos": c.get("ganchos", 0),
-    }
-    maully.append(nuevo)
-    print(f"  + {name:<40} ${nuevo['price']:>8,} | g={nuevo['requires_ganchos']}")
-    next_id += 1
+print(f"\nMatcheados: {matcheados}/{len([c for c in claudio if not c.get('es_nuevo')])}")
+if no_match:
+    print(f"Sin match: {no_match}")
 
 # ── Stats finales ──
 total = len(maully)

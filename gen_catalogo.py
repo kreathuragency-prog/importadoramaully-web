@@ -53,7 +53,7 @@ products = [
     {"cat":"chaquetas","name":"Blazer / Chaqueta Fashion Verano 20 Kg","price":109200,"weight":"20kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Trench Coat Chaqueta Trench 1RA 20 Kg","price":138000,"weight":"20kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Chaquetas Cuero 25 Kg","price":138000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Abrigo Hombre 3/4 Y Largo 1ra+ 25 Kg","price":718800,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
+    {"cat":"chaquetas","name":"Abrigo Hombre 3/4 Y Largo 1ra+ 25 Kg","price":143800,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
     {"cat":"chaquetas","name":"Gamulan Piloto 20 Kg","price":143800,"weight":"20kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Abrigo 35 Kg","price":149500,"weight":"35kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Parka Chaqueta 1RA 40 Kg","price":166800,"weight":"40kg","tier":"primera","new":True},
@@ -62,14 +62,14 @@ products = [
     {"cat":"chaquetas","name":"Chaqueta Lenadora 1ra+ 25 Kg","price":207000,"weight":"25kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Chaqueta Piloto Y Gamulan 1RA 20 Kg","price":253000,"weight":"20kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Chaqueta Bomber 1ra+ 25 Kg","price":299000,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Chaqueta Marca Superdry 1ra+ 25 Kg","price":718800,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
+    {"cat":"chaquetas","name":"Chaqueta Marca Superdry 1ra+ 25 Kg","price":299000,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
     {"cat":"chaquetas","name":"Columbia MIX Oferta 20 Kg","price":357600,"weight":"20kg","tier":"oferta","new":True},
     {"cat":"chaquetas","name":"Chaquetas Solo Marcas Deportivas Niño Juv 1RA 25 Kg","price":358800,"weight":"25kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Chaqueta Lenadora 45 Kg","price":368000,"weight":"45kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Calvin Klein Chaquetas 1ra+ 25 Kg","price":379500,"weight":"25kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Parka/chaq Marca Oferta 25KG","price":379500,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
     {"cat":"chaquetas","name":"Chaqueta Marca Zara Hym 1ra+ 25 Kg","price":417400,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"chaquetas","name":"Columbia MIX Oferta 25KG","price":557800,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
+    {"cat":"chaquetas","name":"Columbia MIX Oferta 25KG","price":417400,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
     {"cat":"chaquetas","name":"Parka/chaq Polar Marca Columbia 1RA Directa 20 Kg","price":451900,"weight":"20kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Outdoor / Trekking Columbia 1RA Seleccionado 10 Kg","price":453100,"weight":"10kg","tier":"primera","new":True},
     {"cat":"chaquetas","name":"Parka/chaq Marca Columbia Oferta 20 Kg","price":453100,"weight":"20kg","tier":"oferta","new":True},
@@ -91,9 +91,9 @@ products = [
     {"cat":"jeans","name":"Jeans Mujer Plus Size 1RA 40 Kg","price":138000,"weight":"40kg","tier":"primera","new":True},
     {"cat":"jeans","name":"Blusa Jeans 1RA 22 Kg","price":155200,"weight":"22kg","tier":"primera","new":True},
     {"cat":"jeans","name":"Chaqueta Mezclilla 1RA 45 Kg","price":189700,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Hombre Plus Size 1RA 45 Kg","price":442700,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"jeans","name":"Jeans Hombre Plus Size 1RA 45 Kg","price":212700,"weight":"45kg","tier":"primera","new":True},
     {"cat":"jeans","name":"Blusa Jeans 1RA 45 Kg","price":253000,"weight":"45kg","tier":"primera","new":True},
-    {"cat":"jeans","name":"Jeans Mujer Marca PREM Retorno 24 U","price":672800,"weight":"20kg","tier":"premium","new":True,"ganchos":1},
+    {"cat":"jeans","name":"Jeans Mujer Marca PREM Retorno 24 U","price":269100,"weight":"20kg","tier":"premium","new":True,"ganchos":1},
     {"cat":"jeans","name":"Jeans Levis Mujer 25 Kg","price":276000,"weight":"25kg","tier":"primera","new":True},
     {"cat":"jeans","name":"Jeans Hombre 1RA 25KG","price":280600,"weight":"25kg","tier":"primera","new":True},
     {"cat":"jeans","name":"Jeans Zara Mango Guess 24 U","price":430100,"weight":"20kg","tier":"primera","new":True},
@@ -110,26 +110,26 @@ products = [
     {"cat":"poleras","name":"Camisa Guayabera 1RA 10 Kg","price":172500,"weight":"10kg","tier":"primera","new":True},
     {"cat":"poleras","name":"Polera Tie Dye 1ra+ 22 Kg","price":207000,"weight":"22kg","tier":"primera","new":True},
     {"cat":"poleras","name":"Polera Marca Hombre M/la Oferta","price":212700,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre M/co Oferta 25KG","price":517500,"weight":"25kg","tier":"oferta","new":True},
+    {"cat":"poleras","name":"Polera Marca Hombre M/co Oferta 25KG","price":224200,"weight":"25kg","tier":"oferta","new":True},
     {"cat":"poleras","name":"Polera Marca Deportiva Oferta 25KG","price":224200,"weight":"25kg","tier":"oferta","new":True},
     {"cat":"poleras","name":"Polera Marca Deportiva Hombre 1RA 10 Kg","price":239200,"weight":"10kg","tier":"primera","new":True},
     {"cat":"poleras","name":"Polera Hombre Dibujos Animados 1ra+/prem 20 Kg","price":241500,"weight":"20kg","tier":"premium","new":True},
     {"cat":"poleras","name":"Camisa Marca Hombre Oferta","price":253000,"weight":"20kg","tier":"oferta","new":True},
-    {"cat":"poleras","name":"Polera Hombre Dibujos Animados 1ra+/prem 25 Kg","price":425500,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Polera Marca Niño 1ra+/prem 25 Kg","price":557800,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre M/la 1ra+/prem 25KG","price":494500,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Polera Hombre Dibujos Animados 1ra+/prem 25 Kg","price":287500,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Polera Marca Niño 1ra+/prem 25 Kg","price":322000,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"poleras","name":"Polera Marca Hombre M/la 1ra+/prem 25KG","price":351900,"weight":"25kg","tier":"premium","new":True},
     {"cat":"poleras","name":"Camisa Guayabera 1RA 22 Kg","price":357600,"weight":"22kg","tier":"primera","new":True},
     {"cat":"poleras","name":"Polera Marca Hombre S/ma 1RA 25 Kg","price":368000,"weight":"25kg","tier":"primera","new":True},
     {"cat":"poleras","name":"Polera Hombre Cervezas 1ra+","price":394400,"weight":"20kg","tier":"primera","new":True},
     {"cat":"poleras","name":"Polera Hombre Starwars / Marvel 1ra+ 20 Kg","price":394400,"weight":"20kg","tier":"primera","new":True},
     {"cat":"poleras","name":"MIX Verano Marca (poleras Y Short) Oferta 50 Kg","price":417400,"weight":"50kg","tier":"oferta","new":True},
-    {"cat":"poleras","name":"Polera Marca Deportiva Hombre 1RA 25 Kg","price":626800,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
+    {"cat":"poleras","name":"Polera Marca Deportiva Hombre 1RA 25 Kg","price":489900,"weight":"25kg","tier":"primera","new":True,"ganchos":1},
     {"cat":"poleras","name":"Polera Hombre Marca M/co Multi Marca 25 Kg","price":517500,"weight":"25kg","tier":"primera","new":True},
     {"cat":"poleras","name":"Polera Marca Hombre M/co C/cuello 1ra+/prem 25 Kg","price":517500,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"poleras","name":"Polera Marca Hombre M/co Adidas Nike 1ra+/prem 25 Kg","price":707200,"weight":"25kg","tier":"premium","new":True,"ganchos":1},
+    {"cat":"poleras","name":"Polera Marca Hombre M/co Adidas Nike 1ra+/prem 25 Kg","price":537000,"weight":"25kg","tier":"premium","new":True,"ganchos":1},
     {"cat":"poleras","name":"Camisa Guayabera 1RA 45 Kg","price":656600,"weight":"45kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Poleron C/ Gorro 2DA 40 Kg","price":69000,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Sin Gorro 45KG","price":264500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Sin Gorro 45KG","price":92000,"weight":"45kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Polar Oferta 45 Kg","price":97700,"weight":"45kg","tier":"oferta","new":True},
     {"cat":"polerones","name":"Polar 45 Kg","price":103500,"weight":"45kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Pijama Polar 1RA 45 Kg","price":143800,"weight":"45kg","tier":"primera","new":True},
@@ -139,23 +139,23 @@ products = [
     {"cat":"polerones","name":"Polar Chaqueta 45KG Kg","price":166800,"weight":"45kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Poleron C/ Gorro Talla Grande 1RA 45 Kg","price":184000,"weight":"45kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Poleron Sin Gorro Hombre 40 Kg","price":212700,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Sin Gorro Marca Oferta 25 Kg","price":569200,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
+    {"cat":"polerones","name":"Poleron Sin Gorro Marca Oferta 25 Kg","price":212700,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
     {"cat":"polerones","name":"Poleron Polar Marca Columbia Oferta 12KG","price":220800,"weight":"12kg","tier":"oferta","new":True},
     {"cat":"polerones","name":"Poleron Canguro Marca Oferta 25 Kg","price":224200,"weight":"25kg","tier":"oferta","new":True},
     {"cat":"polerones","name":"Poleron Con Gorro 1RA Canadá 45 Kg","price":224200,"weight":"45kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Polerones Calvin Klein 20 U","price":230000,"weight":"20kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Polar Corderito 1RA 45 Kg","price":230000,"weight":"45kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Poleron Polar Marca Columbia 1RA 12KG","price":241500,"weight":"12kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Deportivo Premium 25KG","price":431200,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"polerones","name":"Poleron Deportivo Premium 25KG","price":264500,"weight":"25kg","tier":"premium","new":True},
     {"cat":"polerones","name":"Térmico Ski Columbia 1RA 10 Kg","price":269100,"weight":"10kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Polar Marca 1RA 25 Kg","price":494500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Polar Marca 1RA 25 Kg","price":351900,"weight":"25kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Poleron Deportivo Marca 23KG","price":381800,"weight":"23kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Polar Marcas PREM 1RA 25 Kg","price":405900,"weight":"25kg","tier":"premium","new":True},
     {"cat":"polerones","name":"Poleron Marca GAP Adulto 25 Kg","price":405900,"weight":"25kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Poleron Con Gorro Solo Marca 1RA 25KG","price":405900,"weight":"25kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Poleron Con Gorro Marca 1ra+ 25 Kg","price":430100,"weight":"25kg","tier":"primera","new":True},
     {"cat":"polerones","name":"Poleron Polar Marca Columbia 1RA 20KG","price":442700,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"polerones","name":"Poleron Polar / Parka/ Chaq Marca Columbia 1RA 25 Kg","price":563500,"weight":"25kg","tier":"primera","new":True},
+    {"cat":"polerones","name":"Poleron Polar / Parka/ Chaq Marca Columbia 1RA 25 Kg","price":686600,"weight":"25kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Sweter Oferta 20 Kg","price":46000,"weight":"20kg","tier":"oferta","new":True},
     {"cat":"deportiva","name":"MIX Surtido Verano, Todo Producto 20 Kg Calidad Oferta","price":51700,"weight":"20kg","tier":"oferta","new":True},
     {"cat":"deportiva","name":"MIX Mujer Verano EXTRA Linda 10 Kg","price":51700,"weight":"10kg","tier":"extra","new":True},
@@ -185,10 +185,10 @@ products = [
     {"cat":"deportiva","name":"Ropa Moto 1ra+ 15-18 Kg","price":212700,"weight":"18kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Short Marca Surtido 25 Kg","price":212700,"weight":"25kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Buzo Algodón 40KG","price":212700,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Deportivo Oferta 25 Kg","price":563500,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
+    {"cat":"deportiva","name":"Mixto Marca Deportivo Oferta 25 Kg","price":218500,"weight":"25kg","tier":"oferta","new":True,"ganchos":1},
     {"cat":"deportiva","name":"Mixto Marca Hombre Oferta","price":218500,"weight":"20kg","tier":"oferta","new":True},
     {"cat":"deportiva","name":"Mujer EXTRA Linda Verano 45 Kg","price":218500,"weight":"45kg","tier":"extra","new":True},
-    {"cat":"deportiva","name":"Cortaviento Y Poleron Deportivo Mixto 45 Kg","price":333500,"weight":"45kg","tier":"primera","new":True},
+    {"cat":"deportiva","name":"Cortaviento Y Poleron Deportivo Mixto 45 Kg","price":218500,"weight":"45kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Short Running 1RA 20 Kg","price":230000,"weight":"20kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Hospital Marca 1RA 20 Kg","price":230000,"weight":"20kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Brillo / Lentejuela 1ra+/prem 20 Kg","price":230000,"weight":"20kg","tier":"premium","new":True},
@@ -220,11 +220,11 @@ products = [
     {"cat":"deportiva","name":"Buzos Marca Deportivos 25 Kg","price":405900,"weight":"25kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Mixto Marca Deportivo Oferta 2x25kg (50 Kg Total)","price":414000,"weight":"25kg","tier":"oferta","new":True},
     {"cat":"deportiva","name":"Buzos Marca 1RA 25 Kg","price":417400,"weight":"25kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Mixto Marcas Premium Fila Champion Puma Reebok 1RA 25 Kg","price":557800,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Mixto Marcas Premium Fila Champion Puma Reebok 1RA 25 Kg","price":417400,"weight":"25kg","tier":"premium","new":True},
     {"cat":"deportiva","name":"Mixto Marcas Premium Mujer Verano","price":442700,"weight":"20kg","tier":"premium","new":True},
     {"cat":"deportiva","name":"Michael Kors 1RA 25KG","price":454200,"weight":"25kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Deportivo Solo Marcas 1ra+/prem 25 Kg","price":454200,"weight":"25kg","tier":"premium","new":True},
-    {"cat":"deportiva","name":"Mixto Marca Premium Under Armour 25 Kg","price":615200,"weight":"25kg","tier":"premium","new":True},
+    {"cat":"deportiva","name":"Mixto Marca Premium Under Armour 25 Kg","price":471500,"weight":"25kg","tier":"premium","new":True},
     {"cat":"deportiva","name":"Mixto Marca Under Armour Verano 25 Kg","price":471500,"weight":"25kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"MIX Marcas Premium 1ra-prem 20 Kg","price":471500,"weight":"20kg","tier":"premium","new":True},
     {"cat":"deportiva","name":"Deportivo Verano Solo Marcas 1RA 25 Kg","price":477200,"weight":"25kg","tier":"primera","new":True},
@@ -235,7 +235,7 @@ products = [
     {"cat":"deportiva","name":"MIX Marcas Premium 1ra-prem 25 Kg","price":552000,"weight":"25kg","tier":"premium","new":True},
     {"cat":"deportiva","name":"Columbia/ Northface MIX Inv 1RA Can 22 Kg","price":596800,"weight":"22kg","tier":"primera","new":True},
     {"cat":"deportiva","name":"Pantalón Trekking / Senderismo Verano 1RA 40 Kg","price":656600,"weight":"40kg","tier":"primera","new":True},
-    {"cat":"deportiva","name":"Pantalón Raquelado Marca 25KG","price":822200,"weight":"25kg","tier":"primera","new":True,"ganchos":2},
+    {"cat":"deportiva","name":"Pantalón Raquelado Marca 25KG","price":692300,"weight":"25kg","tier":"primera","new":True,"ganchos":2},
     {"cat":"deportiva","name":"Mixto Marca Deportivo Columbia The Northface 1ra+/prem 25 Kg","price":811900,"weight":"25kg","tier":"premium","new":True},
     {"cat":"sweaters","name":"Sweter Mujer Oferta 2x20 Kg","price":69000,"weight":"20kg","tier":"oferta","new":True},
     {"cat":"sweaters","name":"Sweater Grueso 20 Kg","price":74800,"weight":"20kg","tier":"primera","new":True},
@@ -298,9 +298,6 @@ products = [
     {"cat":"calzado","name":"Calzado Marca Ugg Oferta 10KG","price":167900,"weight":"10kg","tier":"oferta","new":True},
     {"cat":"calzado","name":"Calzado Marca Ugg 1RA 10 Kg","price":308200,"weight":"10kg","tier":"primera","new":True},
     {"cat":"calzado","name":"Calzado Marca Ugg 1RA 20 Kg","price":575000,"weight":"20kg","tier":"primera","new":True},
-    {"cat":"calzado","name":"Jordan Calzado 25 Kg","price":937200,"weight":"25kg","tier":"premium","new":True,"ganchos":2},
-    {"cat":"deportiva","name":"Realtree 1 25 Kg","price":483000,"weight":"25kg","tier":"premium","new":True,"ganchos":1},
-    {"cat":"deportiva","name":"Realtree 1 Premium 25 Kg","price":500200,"weight":"25kg","tier":"premium","new":True,"ganchos":1},
 ]
 def fmt_clp(n):
     s = f"{n:,.0f}".replace(",", ".")
@@ -723,8 +720,12 @@ class CatalogoPDF(FPDF):
 
         # Product name (clickable)
         name = p["name"]
-        if len(name) > 44:
-            name = name[:42] + ".."
+        ganchos = p.get("ganchos", 0)
+        # Tag de gancho compacto al lado del nombre
+        gancho_suffix = f"  +{ganchos}g" if ganchos > 0 else ""
+        max_name = 42 - len(gancho_suffix)
+        if len(name) > max_name:
+            name = name[:max_name - 2] + ".."
         is_new = p.get("new", False)
 
         pid = p.get("id", 0)
@@ -738,11 +739,14 @@ class CatalogoPDF(FPDF):
             self.set_x(14)
             self.set_font("Body", "", 7.5)
             self.set_text_color(*C_DARK)
-            self.cell(78, row_h, f"     {name}", link=link_url)
+            self.cell(78, row_h, f"     {name}{gancho_suffix}", link=link_url)
         else:
             self.set_font("Body", "", 7.5)
             self.set_text_color(*C_GRAY5)
-            self.cell(78, row_h, f"  {name}", link=link_url)
+            self.cell(78, row_h, f"  {name}{gancho_suffix}", link=link_url)
+        # Indicador de gancho en color
+        if ganchos > 0:
+            self.set_text_color(234, 88, 12)  # naranja
 
         # Weight
         self.set_font("Body", "", 7)
@@ -902,6 +906,173 @@ class CatalogoPDF(FPDF):
             align="C")
 
     # ══════════════════════════════════════════════
+    #  SECCIÓN ARGENTINA — productos puestos en Argentina
+    # ══════════════════════════════════════════════
+    def argentina_section(self, productos_arg):
+        """productos_arg: lista de dicts {name, weight, price, ganchos}"""
+        self.add_page()
+        # Background sky-blue accent (Argentina colors hint)
+        self.set_fill_color(*C_CREAM)
+        self.rect(0, 0, 210, 297, "F")
+        # Top stripe sky blue (Argentina flag)
+        self.set_fill_color(117, 170, 219)  # celeste
+        self.rect(0, 0, 210, 8, "F")
+        self.set_fill_color(*C_GOLD)
+        self.rect(0, 8, 210, 1, "F")
+        self.set_y(20)
+
+        # Eyebrow
+        self.set_font("Body", "", 8)
+        self.set_text_color(117, 170, 219)
+        self.cell(0, 4, "EXPORTACIÓN A ARGENTINA", align="C")
+        self.ln(6)
+
+        # Title
+        self.set_font("Body", "B", 28)
+        self.set_text_color(*C_DARK)
+        self.cell(0, 12, "Productos puestos en Argentina", align="C")
+        self.ln(14)
+
+        self.set_fill_color(117, 170, 219)
+        self.rect(85, self.get_y(), 40, 0.8, "F")
+        self.ln(10)
+
+        # Intro
+        self.set_font("Body", "", 11)
+        self.set_text_color(*C_GRAY5)
+        self.set_x(20)
+        self.multi_cell(170, 6,
+            "Estos precios incluyen el costo del producto puesto en Argentina. "
+            "Coordinamos el despacho desde Chile a Starken (cajas hasta 10 kg) o "
+            "como fardos de 23 kg para volúmenes mayores.",
+            align="C")
+        self.ln(6)
+
+        # Box condiciones
+        box_y = self.get_y()
+        self.set_fill_color(*C_GOLD_LT)
+        self.rect(20, box_y, 170, 50, "F")
+        self.set_fill_color(117, 170, 219)
+        self.rect(20, box_y, 4, 50, "F")
+        self.set_y(box_y + 6)
+        self.set_x(30)
+        self.set_font("Body", "B", 12)
+        self.set_text_color(*C_DARK)
+        self.cell(160, 6, "Condiciones para Argentina")
+        self.ln(8)
+
+        bullets_arg = [
+            ("Pago:", "100% por adelantado siempre. Aceptamos Global66 y USD."),
+            ("Modalidades:", "cajas Starken hasta 10 kg c/u o fardos de 23 kg (mayorista)."),
+            ("Despacho:", "el cliente paga el flete a Starken; nosotros coordinamos desde Chile."),
+            ("Visítanos:", "Av. La Florida 9421 (Santiago) o Berna 767 (Pichilemu)."),
+        ]
+        for label, txt in bullets_arg:
+            self.set_x(30)
+            self.set_font("Body", "B", 10)
+            self.set_text_color(*C_DARK)
+            self.cell(28, 5, "• " + label)
+            self.set_font("Body", "", 10)
+            self.set_text_color(*C_GRAY5)
+            self.multi_cell(132, 5, txt)
+            self.ln(0.5)
+
+        self.set_y(box_y + 56)
+
+        # Tabla de productos Argentina
+        self.set_x(20)
+        self.set_font("Body", "B", 13)
+        self.set_text_color(*C_DARK)
+        self.cell(170, 7, "Lista de precios — puestos en Argentina", align="C")
+        self.ln(10)
+
+        # Tabla header
+        self.set_fill_color(*C_DARK)
+        self.set_text_color(*C_WHITE)
+        self.set_font("Body", "B", 7)
+        self.set_x(14)
+        self.cell(98, 6.5, "  PRODUCTO", fill=True)
+        self.cell(18, 6.5, "PESO", align="C", fill=True)
+        self.cell(36, 6.5, "PRECIO ARG", align="R", fill=True)
+        self.cell(30, 6.5, "GANCHOS  ", align="R", fill=True)
+        self.ln(8)
+
+        # Filas
+        for i, p in enumerate(productos_arg):
+            if self.get_y() > 268:
+                self.add_page()
+                # repetir header
+                self.set_fill_color(*C_DARK)
+                self.set_text_color(*C_WHITE)
+                self.set_font("Body", "B", 7)
+                self.set_x(14)
+                self.cell(98, 6.5, "  PRODUCTO", fill=True)
+                self.cell(18, 6.5, "PESO", align="C", fill=True)
+                self.cell(36, 6.5, "PRECIO ARG", align="R", fill=True)
+                self.cell(30, 6.5, "GANCHOS  ", align="R", fill=True)
+                self.ln(8)
+
+            y = self.get_y()
+            row_h = 6.5
+            if i % 2 == 0:
+                self.set_fill_color(252, 250, 246)
+                self.rect(14, y, self.content_w, row_h, "F")
+
+            self.set_draw_color(*C_GRAY2)
+            self.set_line_width(0.1)
+            self.line(14, y + row_h, 14 + self.content_w, y + row_h)
+
+            # Name
+            name = p["name"]
+            if len(name) > 56:
+                name = name[:54] + ".."
+            self.set_x(14)
+            self.set_font("Body", "", 7.5)
+            self.set_text_color(*C_DARK)
+            self.cell(98, row_h, "  " + name)
+
+            # Weight
+            self.set_font("Body", "", 7)
+            self.set_text_color(*C_GRAY3)
+            self.cell(18, row_h, p["weight"], align="C")
+
+            # Price ARG
+            self.set_font("Body", "B", 8)
+            self.set_text_color(*C_DARK)
+            self.cell(36, row_h, fmt_clp(p["price"]), align="R")
+
+            # Ganchos
+            ganchos = p.get("ganchos", 0)
+            if ganchos > 0:
+                self.set_font("Body", "B", 7.5)
+                self.set_text_color(234, 88, 12)
+                txt_g = f"+{ganchos} gancho{'s' if ganchos > 1 else ''}"
+            else:
+                self.set_font("Body", "", 7)
+                self.set_text_color(*C_GRAY3)
+                txt_g = "—"
+            self.cell(30, row_h, txt_g + "  ", align="R")
+            self.ln(row_h)
+
+        # Footer note
+        self.ln(6)
+        self.set_x(20)
+        self.set_font("Body", "I", 9)
+        self.set_text_color(*C_GRAY5)
+        self.multi_cell(170, 5,
+            "Precios en CLP. Conversión USD informativa al cierre de pedido. "
+            "Pago 100% adelantado vía Global66 o USD para activar el despacho. "
+            "Ganchos: producto adicional (premium / marca / segunda) que acompaña al fardo top.",
+            align="C")
+        # CTA visit
+        self.ln(4)
+        self.set_x(20)
+        self.set_font("Body", "B", 10)
+        self.set_text_color(*C_GOLD)
+        self.cell(170, 5, "Te invitamos a conocernos en Av. La Florida 9421 (Santiago) o Berna 767 (Pichilemu)",
+                  align="C", link=MAPS_STGO)
+
+    # ══════════════════════════════════════════════
     #  LEGEND + CTA
     # ══════════════════════════════════════════════
     def legend_and_cta(self):
@@ -1023,6 +1194,26 @@ def main():
             pdf.product_row(p, i)
 
         pdf.ln(8)
+
+    # ── Sección Argentina ──
+    try:
+        import json as _json
+        claudio = _json.load(open(os.path.join(os.path.dirname(__file__), "_claudio_prices.json"),
+                                  encoding="utf-8"))
+        margin_arg = claudio["_meta"].get("margen_aplicado", 1.15)
+        productos_arg = []
+        for c in claudio["productos"]:
+            productos_arg.append({
+                "name": c["name_claudio"],
+                "weight": c["weight"].upper(),
+                "price": int(round(c["price_costo"] * margin_arg / 100)) * 100,
+                "ganchos": c.get("ganchos", 0),
+            })
+        # Ordenar: top exclusivos primero, luego alfabético
+        productos_arg.sort(key=lambda p: (-p["ganchos"], p["name"].lower()))
+        pdf.argentina_section(productos_arg)
+    except Exception as e:
+        print(f"AVISO: sección Argentina no agregada — {e}")
 
     pdf.legend_and_cta()
 

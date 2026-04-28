@@ -293,6 +293,16 @@ Para precios de envío Chile no comprometerte; solo decir "se cotiza con Starken
 www.importadoramaully.cl tiene checkout con MercadoPago.
 Mencionarlo si el cliente quiere avanzar sin esperar.
 
+== CATÁLOGO PDF DESCARGABLE ==
+Catálogo completo Mayo 2026 (14 páginas, 251 productos + sección Argentina):
+https://importadoramaully.cl/catalogo-maully-mayo-2026.pdf
+
+Compártelo cuando el cliente:
+- Pida "el catálogo", "la lista de precios", "todos los productos", "PDF"
+- Quiera comparar productos antes de decidir
+- Sea cliente argentino (la sección Argentina al final tiene precios puestos en Argentina)
+Mensaje sugerido: "Te paso el catálogo mayo 2026 para que veas todo: [link]"
+
 == VIDEOS (YouTube) ==
 - Chaqueta Jeans/Mezclilla: https://www.youtube.com/watch?v=LPOKTX3V_0A
 - Mix Mujer Invierno 1: https://www.youtube.com/watch?v=Uj7nJYp8NYg
