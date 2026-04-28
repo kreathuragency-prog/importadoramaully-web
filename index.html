@@ -222,10 +222,19 @@
 <div class="filter-group" id="filterGroup">
 <button class="filter-btn active" data-filter="all">Todos</button>
 </div>
-<div class="search-box">
-<i class="fas fa-search"></i>
-<input type="text" id="searchInput" placeholder="Buscar productos...">
+<div class="search-box" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+<div style="flex:1;min-width:220px;position:relative">
+<i class="fas fa-search" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--gray-500);pointer-events:none"></i>
+<input type="text" id="searchInput" placeholder="Buscar productos..." style="width:100%;padding-left:40px">
 </div>
+<a href="catalogo-maully-mayo-2026.pdf" download class="btn btn-pdf" style="background:linear-gradient(135deg,var(--accent),var(--gold));color:#fff;padding:12px 22px;border-radius:50px;font-weight:700;font-size:.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 14px rgba(233,69,96,.3);white-space:nowrap;flex-shrink:0;transition:all .2s">
+<i class="fas fa-file-pdf"></i> Descargar Lista PDF Mayo 2026
+</a>
+</div>
+<style>
+.btn-pdf:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(233,69,96,.45)}
+@media(max-width:600px){.btn-pdf{width:100%;justify-content:center}}
+</style>
 <div class="price-filter">
 <label class="price-filter-label"><i class="fas fa-tag"></i> Precio: <span id="priceRangeLabel">$0 - $1.000.000+</span></label>
 <div class="price-slider-wrap">
@@ -310,6 +319,11 @@
 <!-- ABOUT -->
 <section class="section" id="nosotros">
 <div class="container">
+<div class="section-header animate-on-scroll" style="margin-bottom:32px">
+<div class="label"><i class="fas fa-users"></i> Quiénes Somos</div>
+<h2>Quiénes Somos</h2>
+<p>+40 años importando ropa premium desde Canadá, EEUU y Europa</p>
+</div>
 <div class="about-grid">
 <div class="about-img animate-on-scroll">
 <div class="about-video">
@@ -317,7 +331,7 @@
 </div>
 </div>
 <div class="about-content animate-on-scroll">
-<div class="label"><i class="fas fa-building"></i> Sobre Nosotros</div>
+<div class="label"><i class="fas fa-building"></i> Tu Socio Mayorista</div>
 <h2>Importadora Maully - Tu Socio Mayorista de Confianza</h2>
 <p>Somos una empresa chilena con <strong>más de 40 años de experiencia en el rubro textil</strong> y más de 20 años importando ropa directamente desde <strong>Canadá, Estados Unidos y Europa</strong>. Nos hemos consolidado como referentes en el mercado de prendas importadas de calidad en Chile y Sudamérica.</p>
 <p>Trabajamos directamente con proveedores internacionales en Norteamérica y Europa para ofrecerte la mejor selección exclusiva de prendas importadas, con calidad garantizada y precios competitivos para hacer crecer tu negocio.</p>
@@ -329,6 +343,18 @@
 <div class="about-feature"><i class="fas fa-check-circle"></i><span>Precios mayoristas</span></div>
 <div class="about-feature"><i class="fas fa-check-circle"></i><span>Selección premium</span></div>
 </div>
+<div class="social-links" style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+<a href="https://www.instagram.com/fardos_importadoramaully/" target="_blank" rel="noopener" class="social-btn" style="display:inline-flex;align-items:center;gap:10px;padding:11px 22px;background:linear-gradient(135deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);color:#fff;border-radius:50px;text-decoration:none;font-weight:600;font-size:.92rem;box-shadow:0 4px 14px rgba(220,39,67,.35);transition:all .2s">
+<i class="fab fa-instagram" style="font-size:1.2rem"></i> @fardos_importadoramaully
+</a>
+<a href="https://www.facebook.com/importadoramaully" target="_blank" rel="noopener" class="social-btn" style="display:inline-flex;align-items:center;gap:10px;padding:11px 22px;background:#1877f2;color:#fff;border-radius:50px;text-decoration:none;font-weight:600;font-size:.92rem;box-shadow:0 4px 14px rgba(24,119,242,.35);transition:all .2s">
+<i class="fab fa-facebook" style="font-size:1.2rem"></i> Importadora Maully
+</a>
+<a href="https://wa.me/56975155745?text=Hola!%20Quiero%20info%20sobre%20fardos" target="_blank" rel="noopener" class="social-btn" style="display:inline-flex;align-items:center;gap:10px;padding:11px 22px;background:#25d366;color:#fff;border-radius:50px;text-decoration:none;font-weight:600;font-size:.92rem;box-shadow:0 4px 14px rgba(37,211,102,.35);transition:all .2s">
+<i class="fab fa-whatsapp" style="font-size:1.2rem"></i> WhatsApp Bea
+</a>
+</div>
+<style>.social-btn:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 8px 20px rgba(0,0,0,.2)!important}</style>
 </div>
 </div>
 </div>
@@ -982,7 +1008,7 @@
 </div>
 </div>
 
-<script src="script.js?v=251p"></script>
-<script src="bot-maully.js?v=2" defer></script>
+<script src="script.js?v=ganchos2"></script>
+<script src="bot-maully.js?v=ganchos2" defer></script>
 </body>
 </html>
