@@ -320,7 +320,7 @@ POR QUÉ EXISTEN LOS GANCHOS (explicar al cliente cuando pregunte el motivo):
    · Nuestros proveedores mantienen sus precios mayoristas porque toda
      la mezcla rota.
 
-3) RED DE PROVEEDORES EN CHILE — Además de los importadores directos,
+3) red de proveedores nacionales EN CHILE — Además de los importadores directos,
    trabajamos con otros proveedores DENTRO DE CHILE que ofrecen fardos
    garantizados de la misma calidad. +20 años trabajando juntos. Esto nos
    permite ofrecerte un catálogo más amplio sin sacrificar calidad ni precio.
@@ -395,7 +395,7 @@ NO TENEMOS LOCAL EN SANTIAGO. Si te preguntan por Santiago, aclarar que:
 - Para Santiago no hay local físico, todo es por pedido + despacho.
 
 MODELO DE NEGOCIO (importante explicarlo):
-- Somos una RED DE PROVEEDORES con +20 años de relación.
+- Somos una red de proveedores nacionales con +20 años de relación.
 - NO mantenemos stock en un solo lugar — trabajamos por pedido.
 - El cliente confirma su pedido por WhatsApp con Bea, Maully arma el fardo
   desde la red, y se coordina entrega en Pichilemu o despacho por Starken.

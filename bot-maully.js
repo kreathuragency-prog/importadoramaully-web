@@ -89,7 +89,7 @@
       id: 'tienda',
       kw: ['tienda', 'bodega', 'direccion', 'dirección', 'ubicacion', 'ubicación', 'donde estan', 'dónde están', 'donde estan ubicados', 'visitar', 'ver fardos', 'local', 'showroom', 'pichilemu', 'pichilemu wear', 'lilafken'],
       title: '¿Dónde están ubicados? ¿Puedo visitarlos?',
-      answer: 'Nuestra <b>única oficina de entrega</b> es <b>Berna 767, Pichilemu</b>.<br><br>📦 <b>Importante:</b> somos una <b>red de proveedores</b> y <b>no mantenemos stock en un solo lugar</b>. Trabajamos por pedido — coordinas con Bea, armamos tu fardo desde la red y lo despachamos.<br><br>🏖️ <b>Si nos visitas en Pichilemu</b> vas a ver:<br>• La tienda <b>Pichilemu Wear</b> (showroom del tipo de prendas que vienen en los fardos)<br>• La recepción de <b>Lilafken Apart</b><br>• Es la cara visible y oficina de entrega de Importadora Maully<br><br>📲 Coordina visita con cita previa por WhatsApp para tenerte el pedido preparado.'
+      answer: 'Nuestra <b>única oficina de entrega</b> es <b>Berna 767, Pichilemu</b>.<br><br>📦 <b>Importante:</b> somos una <b>red de proveedores nacionales</b> y <b>no mantenemos stock en un solo lugar</b>. Trabajamos por pedido — coordinas con Bea, armamos tu fardo desde la red y lo despachamos.<br><br>🏖️ <b>Si nos visitas en Pichilemu</b> vas a ver:<br>• La tienda <b>Pichilemu Wear</b> (showroom del tipo de prendas que vienen en los fardos)<br>• La recepción de <b>Lilafken Apart</b><br>• Es la cara visible y oficina de entrega de Importadora Maully<br><br>📲 Coordina visita con cita previa por WhatsApp para tenerte el pedido preparado.'
     },
     {
       id: 'horario',

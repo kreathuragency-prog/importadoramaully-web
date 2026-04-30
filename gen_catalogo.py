@@ -632,7 +632,7 @@ class CatalogoPDF(FPDF):
 
         self.set_font("Body", "I", 8)
         self.set_xy(card_x + 4, y + 28)
-        self.cell(card_w - 8, 4, "Red de proveedores · trabajamos por pedido (cita previa)", align="C")
+        self.cell(card_w - 8, 4, "red de proveedores nacionales · trabajamos por pedido (cita previa)", align="C")
 
         self.set_font("Body", "B", 8)
         self.set_text_color(*C_BLUE)
@@ -1055,7 +1055,7 @@ class CatalogoPDF(FPDF):
         self.set_y(box_y + 48)
         # Sección 4
         self.set_x(20); self.set_font("Body", "B", 12); self.set_text_color(*C_DARK)
-        self.cell(170, 6, "Red de proveedores en Chile"); self.ln(7)
+        self.cell(170, 6, "red de proveedores nacionales en Chile"); self.ln(7)
         self.set_x(20); self.set_font("Body", "", 10); self.set_text_color(*C_GRAY5)
         self.multi_cell(170, 5.5,
             "Además de los importadores directos, trabajamos con otros proveedores "
