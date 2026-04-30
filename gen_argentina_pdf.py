@@ -128,7 +128,7 @@ class ArgentinaPDF(FPDF):
         self.ln(8)
         self.set_font("Body", "", 8)
         self.set_text_color(*C_CELESTE)
-        self.cell(170, 4, "Av. La Florida 9421, Santiago · Berna 767, Pichilemu", align="C")
+        self.cell(170, 4, "Berna 767, Pichilemu — única oficina de entrega", align="C")
 
     def conditions_page(self):
         self.add_page()
@@ -158,7 +158,7 @@ class ArgentinaPDF(FPDF):
             ("PAGO", "100% por adelantado siempre. Aceptamos Global66 (transferencia internacional) o USD (efectivo o transferencia)."),
             ("ENVÍO A ARGENTINA", "Solo con empresas privadas desde Chile. Tarifa por fardo: $100.000 CLP si pides 10 fardos o más · $150.000 CLP si pides hasta 9 fardos."),
             ("STARKEN NO APLICA", "Starken solo se usa para envíos dentro de Chile, no para Argentina. Para Argentina se usa siempre transporte privado."),
-            ("VISÍTANOS EN CHILE", "Av. La Florida 9421, Santiago · Berna 767, Pichilemu. Atendemos lun-vie 11:00-19:00."),
+            ("VISÍTANOS EN CHILE", "Berna 767, Pichilemu — única oficina de entrega. Cita previa por WhatsApp."),
         ]
         for title, body in items:
             box_y = self.get_y()
@@ -351,7 +351,7 @@ class ArgentinaPDF(FPDF):
         self.set_x(20)
         self.set_font("Body", "B", 10)
         self.set_text_color(*C_GOLD)
-        self.cell(170, 5, "Te invitamos a conocernos en Av. La Florida 9421 (Santiago) o Berna 767 (Pichilemu)",
+        self.cell(170, 5, "Te invitamos a visitarnos en Berna 767, Pichilemu — Pichilemu Wear (showroom) y Lilafken Apart (recepción)",
                   align="C")
 
 

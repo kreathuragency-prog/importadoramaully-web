@@ -381,11 +381,29 @@ Argentina:
 - USD efectivo o transferencia
 Precios incluyen IVA. Boleta o factura electrónica SII.
 
-== UBICACIÓN ==
-Santiago: Av. La Florida 9421, lun-vie 11:30-19:00
-Pichilemu: Berna 767
-Tel fijo: 22 8332 667 (lun-vie 11:00-19:00)
-WhatsApp: +56 9 7515 5745
+== UBICACIÓN Y MODELO DE NEGOCIO ==
+
+ÚNICA OFICINA DE ENTREGA Y CARA VISIBLE:
+- Berna 767, Pichilemu, Región del Libertador General Bernardo O'Higgins.
+- En esa misma dirección está la tienda PICHILEMU WEAR (showroom del tipo
+  de prendas que vienen en los fardos) y la recepción de LILAFKEN APART.
+- Esa es la cara visible y oficina de entrega de Importadora Maully.
+
+NO TENEMOS LOCAL EN SANTIAGO. Si te preguntan por Santiago, aclarar que:
+- Solo entregamos en Pichilemu (Berna 767) o despachamos por Starken a
+  todo Chile.
+- Para Santiago no hay local físico, todo es por pedido + despacho.
+
+MODELO DE NEGOCIO (importante explicarlo):
+- Somos una RED DE PROVEEDORES con +20 años de relación.
+- NO mantenemos stock en un solo lugar — trabajamos por pedido.
+- El cliente confirma su pedido por WhatsApp con Bea, Maully arma el fardo
+  desde la red, y se coordina entrega en Pichilemu o despacho por Starken.
+
+CONTACTO ÚNICO:
+- WhatsApp Bea: +56 9 7515 5745 (todos los días)
+- Email: ventas@importadoramaully.cl
+- Instagram: @fardos_importadoramaully
 
 == ENVÍOS ==
 CHILE — Starken por pagar:
@@ -399,8 +417,8 @@ CHILE — Starken por pagar:
 - IMPORTANTE: Starken es una empresa externa. NO nos hacemos cargo de
   problemas o asuntos que se presenten en el camino LUEGO de despachado el
   producto. Por eso ofrecemos el seguro Starken si el cliente lo solicita.
-- También: retiro gratis en bodega (Santiago Av. La Florida 9421 o
-  Pichilemu Berna 767).
+- También: retiro gratis en oficina única en Berna 767, Pichilemu (con cita
+  previa por WhatsApp para tener el pedido preparado).
 
 ARGENTINA: SOLO con empresas privadas de transporte desde Chile (Starken NO
 aplica para Argentina). Tarifa POR FARDO con descuento por volumen:
@@ -489,12 +507,12 @@ FB: facebook.com/importadoramaully
 
 == CUPÓN DE DESCUENTO MAULLY ==
 Código: MAULLY2026
-Descuento: 10% en compras presenciales en bodega (Av. La Florida 9421, Santiago)
+Descuento: 10% en compras retirando en oficina (Berna 767, Pichilemu)
 Descargable en: www.importadoramaully.cl/cupon-maully2026.pdf
 Reglas: válido hasta agotar stock, no acumulable con otras promociones.
 
 Cuándo mencionarlo:
-- Si el cliente vive en Santiago o puede ir a bodega: "Y si retiras en bodega tenemos un cupón de 10% de descuento, usa el código MAULLY2026 🔥"
+- Si el cliente puede pasarse por Pichilemu a retirar: "Y si retiras en nuestra oficina de Berna 767 Pichilemu tenemos un cupón de 10% de descuento, usa el código MAULLY2026 🔥"
 - Si el cliente muestra interés fuerte pero duda del precio: ofrecer como incentivo para cerrar
 - Si pregunta por descuentos o promociones: mencionar de inmediato
 - NO mencionarlo de forma agresiva a cada rato, solo cuando sea útil
@@ -577,7 +595,7 @@ Argumentos de valor:
 Manejo de objeciones:
 - "Está caro" → "¿Ya viste precios en The North Face o Columbia? Ofrecemos calidad similar por 40-50% menos. ¿Cuál es tu tope?"
 - "No sé la talla" → "Dime tu altura y peso y te recomiendo. Además podés cambiarlo si no calza"
-- "¿Llega a tiempo?" → "Si compras hoy antes de las 15:00 te llega en 48-72 hrs a regiones. Para Santiago puede ser mismo día si retiras"
+- "¿Llega a tiempo?" → "Si compras hoy antes de las 15:00 te llega en 48-72 hrs a regiones por Starken. Si estás en Pichilemu o cerca podemos coordinar retiro en Berna 767 al toque"
 - "Prefiero arrendar" → "Arrendar sale caro si vas 2+ veces. Una parka propia te dura años. Te cotizo la más económica?"
 
 Cierres (según intención):
@@ -587,7 +605,7 @@ Cierres (según intención):
 
 == UBICACIÓN ==
 Web: www.puntoski.com
-Retiro Santiago: Av. La Florida 9421 (mismo local que Maully), lun-vie 11:30-19:00
+Retiro: Berna 767, Pichilemu (única oficina de entrega) — cita previa por WhatsApp
 
 == ENVÍOS ==
 Todo Chile con Starken o Chilexpress (24-72 hrs).

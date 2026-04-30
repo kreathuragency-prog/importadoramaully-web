@@ -9,8 +9,8 @@ USD_RATE = 894  # Actualizado dinámicamente vía mindicador.cl al regenerar el 
 BASE_URL = "https://www.importadoramaully.cl"
 WA_LINK = "https://wa.me/56975155745"
 WA_NUM = "+56 9 7515 5745"
-MAPS_STGO = "https://www.google.com/maps/search/Av+La+Florida+9421+Santiago+Chile"
-MAPS_PICH = "https://www.google.com/maps/search/Av+Millaco+1172+Pichilemu+Chile"
+MAPS_PICH = "https://www.google.com/maps/search/Berna+767+Pichilemu+Chile"
+MAPS_STGO = MAPS_PICH  # alias para compat (ya no hay Santiago, todo es Pichilemu)
 
 # ── Color palette ──
 C_DARK    = (18, 18, 28)
@@ -607,53 +607,39 @@ class CatalogoPDF(FPDF):
         self.ln(14)
 
         y = self.get_y()
-        card_w = 86
-
-        # Santiago card
+        # Card única Pichilemu (centrada, ancho amplio)
+        card_x = 32
+        card_w = 146
+        card_h = 44
         self.set_fill_color(255, 255, 255)
-        self.rect(14, y, card_w, 32, "F")
+        self.rect(card_x, y, card_w, card_h, "F")
         self.set_fill_color(*C_DARK)
-        self.rect(14, y, card_w, 8, "F")
+        self.rect(card_x, y, card_w, 9, "F")
         self.set_font("Body", "B", 8)
         self.set_text_color(*C_GOLD)
-        self.set_xy(18, y + 1.5)
-        self.cell(78, 5, "SANTIAGO")
-        self.set_font("Body", "B", 9)
-        self.set_text_color(*C_DARK)
-        self.set_xy(18, y + 12)
-        self.cell(78, 4, "Av. La Florida 9421")
-        self.set_font("Body", "", 7.5)
-        self.set_text_color(*C_GRAY4)
-        self.set_xy(18, y + 18)
-        self.cell(78, 4, "Santiago de Chile")
-        self.set_font("Body", "B", 7)
-        self.set_text_color(*C_BLUE)
-        self.set_xy(18, y + 24)
-        self.cell(78, 4, "Abrir en Google Maps  >", link=MAPS_STGO)
+        self.set_xy(card_x + 4, y + 2)
+        self.cell(card_w - 8, 5, "ÚNICA OFICINA DE ENTREGA · PICHILEMU")
 
-        # Pichilemu card
-        self.set_fill_color(255, 255, 255)
-        self.rect(110, y, card_w, 32, "F")
-        self.set_fill_color(*C_DARK)
-        self.rect(110, y, card_w, 8, "F")
+        self.set_font("Body", "B", 11)
+        self.set_text_color(*C_DARK)
+        self.set_xy(card_x + 4, y + 13)
+        self.cell(card_w - 8, 5, "Berna 767, Pichilemu", align="C")
+
+        self.set_font("Body", "", 9)
+        self.set_text_color(*C_GRAY4)
+        self.set_xy(card_x + 4, y + 21)
+        self.cell(card_w - 8, 4, "Pichilemu Wear (showroom) + Lilafken Apart (recepción)", align="C")
+
+        self.set_font("Body", "I", 8)
+        self.set_xy(card_x + 4, y + 28)
+        self.cell(card_w - 8, 4, "Red de proveedores · trabajamos por pedido (cita previa)", align="C")
+
         self.set_font("Body", "B", 8)
-        self.set_text_color(*C_GREEN)
-        self.set_xy(114, y + 1.5)
-        self.cell(78, 5, "PICHILEMU")
-        self.set_font("Body", "B", 9)
-        self.set_text_color(*C_DARK)
-        self.set_xy(114, y + 12)
-        self.cell(78, 4, "Av. Millaco 1172")
-        self.set_font("Body", "", 7.5)
-        self.set_text_color(*C_GRAY4)
-        self.set_xy(114, y + 18)
-        self.cell(78, 4, "Pichilemu, Chile")
-        self.set_font("Body", "B", 7)
         self.set_text_color(*C_BLUE)
-        self.set_xy(114, y + 24)
-        self.cell(78, 4, "Abrir en Google Maps  >", link=MAPS_PICH)
+        self.set_xy(card_x + 4, y + 35)
+        self.cell(card_w - 8, 4, "Abrir en Google Maps  >", align="C", link=MAPS_PICH)
 
-        self.set_y(y + 36)
+        self.set_y(y + card_h + 4)
 
     # ══════════════════════════════════════════════
     #  CATEGORY HEADER
@@ -1144,7 +1130,7 @@ class CatalogoPDF(FPDF):
             ("(Starken no aplica)", "Starken solo se usa para envíos dentro de Chile, no para Argentina."),
             ("Ganchos:", "ver lista de fardos elegibles en la sección GANCHOS de este catálogo. A cada gancho que elijas se le suma su valor (CLP Chile) + $100.000 CLP de envío."),
             ("Despacho:", "el flete lo paga el cliente; nosotros coordinamos desde Chile."),
-            ("Visítanos:", "Av. La Florida 9421 (Santiago) o Berna 767 (Pichilemu)."),
+            ("Visítanos:", "Berna 767, Pichilemu — Pichilemu Wear (showroom) + Lilafken Apart (recepción)."),
         ]
         for label, txt in bullets_arg:
             self.set_x(30)
@@ -1249,7 +1235,7 @@ class CatalogoPDF(FPDF):
         self.set_x(20)
         self.set_font("Body", "B", 10)
         self.set_text_color(*C_GOLD)
-        self.cell(170, 5, "Te invitamos a conocernos en Av. La Florida 9421 (Santiago) o Berna 767 (Pichilemu)",
+        self.cell(170, 5, "Te invitamos a visitarnos en Berna 767, Pichilemu — Pichilemu Wear (showroom) y Lilafken Apart (recepción)",
                   align="C", link=MAPS_STGO)
 
     # ══════════════════════════════════════════════

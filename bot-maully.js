@@ -12,7 +12,7 @@
   var WA_NUMBER = '56975155745';
   var WA_BASE = 'https://wa.me/' + WA_NUMBER + '?text=';
   var PHONE_TIENDA = '+56228332667';
-  var ADDRESS = 'Santiago, Chile';
+  var ADDRESS = 'Berna 767, Pichilemu';
   var IG = 'https://www.instagram.com/fardos_importadoramaully';
   var EMAIL = 'ventas@importadoramaully.cl';
   var CUPON = 'MAULLY2026';
@@ -23,7 +23,7 @@
       id: 'envio',
       kw: ['envio', 'envío', 'envian', 'despacho', 'mandan', 'llegar', 'demora', 'courier', 'starken', 'region', 'flete', 'logistica', 'logística'],
       title: '¿Cómo funcionan los envíos?',
-      answer: '🇨🇱 <b>Dentro de Chile · Starken por pagar</b><br>• Despachamos a todo Chile vía Starken. Tú pagas el flete <b>al retirar en Starken</b>.<br>• <b>Tú eliges si quieres seguro</b> o no (lo decides al cotizar con Bea).<br>• Te enviamos <b>foto del fardo puesto en Starken</b> + número de pedido y seguimiento.<br>• Hacemos el seguimiento juntos — te acompañamos en la espera.<br>• ⚠️ Starken es empresa externa: no nos hacemos cargo de problemas en el camino después del despacho. Por eso ofrecemos el seguro Starken si lo quieres.<br><br>💡 También retiro gratis en bodega Santiago / Pichilemu.<br><br>🇦🇷 <b>A Argentina</b>: solo con empresas privadas (Starken no aplica). <b>$100.000 CLP/fardo</b> si pides 10+ fardos · <b>$150.000 CLP/fardo</b> si pides hasta 9 fardos.'
+      answer: '🇨🇱 <b>Dentro de Chile · Starken por pagar</b><br>• Despachamos a todo Chile vía Starken. Tú pagas el flete <b>al retirar en Starken</b>.<br>• <b>Tú eliges si quieres seguro</b> o no (lo decides al cotizar con Bea).<br>• Te enviamos <b>foto del fardo puesto en Starken</b> + número de pedido y seguimiento.<br>• Hacemos el seguimiento juntos — te acompañamos en la espera.<br>• ⚠️ Starken es empresa externa: no nos hacemos cargo de problemas en el camino después del despacho. Por eso ofrecemos el seguro Starken si lo quieres.<br><br>💡 También retiro gratis en oficina Pichilemu (Berna 767) con cita previa.<br><br>🇦🇷 <b>A Argentina</b>: solo con empresas privadas (Starken no aplica). <b>$100.000 CLP/fardo</b> si pides 10+ fardos · <b>$150.000 CLP/fardo</b> si pides hasta 9 fardos.'
     },
     {
       id: 'lote10',
@@ -87,9 +87,9 @@
     },
     {
       id: 'tienda',
-      kw: ['tienda', 'bodega', 'direccion', 'dirección', 'ubicacion', 'ubicación', 'donde estan', 'dónde están', 'visitar', 'ver fardos', 'local', 'showroom'],
-      title: '¿Puedo ir a ver los fardos a la bodega?',
-      answer: 'Sí, atendemos en bodega en <b>' + ADDRESS + '</b> con <b>cita previa</b> (para tenerte los fardos preparados).<br><br>Coordina día y hora con Bea por WhatsApp y te recibimos. Puedes <b>revisar prendas, abrir packs</b> y aprovechar el cupón de retiro.'
+      kw: ['tienda', 'bodega', 'direccion', 'dirección', 'ubicacion', 'ubicación', 'donde estan', 'dónde están', 'donde estan ubicados', 'visitar', 'ver fardos', 'local', 'showroom', 'pichilemu', 'pichilemu wear', 'lilafken'],
+      title: '¿Dónde están ubicados? ¿Puedo visitarlos?',
+      answer: 'Nuestra <b>única oficina de entrega</b> es <b>Berna 767, Pichilemu</b>.<br><br>📦 <b>Importante:</b> somos una <b>red de proveedores</b> y <b>no mantenemos stock en un solo lugar</b>. Trabajamos por pedido — coordinas con Bea, armamos tu fardo desde la red y lo despachamos.<br><br>🏖️ <b>Si nos visitas en Pichilemu</b> vas a ver:<br>• La tienda <b>Pichilemu Wear</b> (showroom del tipo de prendas que vienen en los fardos)<br>• La recepción de <b>Lilafken Apart</b><br>• Es la cara visible y oficina de entrega de Importadora Maully<br><br>📲 Coordina visita con cita previa por WhatsApp para tenerte el pedido preparado.'
     },
     {
       id: 'horario',
@@ -131,7 +131,7 @@
       id: 'contacto',
       kw: ['contacto', 'whatsapp', 'telefono', 'teléfono', 'llamar', 'email', 'mail', 'correo', 'instagram'],
       title: '¿Cómo los contacto?',
-      answer: '<b>WhatsApp Bea:</b> <a href="' + WA_BASE + encodeURIComponent('Hola Bea! Tengo una consulta') + '" target="_blank" rel="noopener">+56 9 7515 5745</a> (todos los días)<br><b>Teléfono fijo:</b> <a href="tel:' + PHONE_TIENDA + '">22 8332 667</a> (Lun-Vie 11-19h)<br><b>Email:</b> <a href="mailto:' + EMAIL + '">' + EMAIL + '</a><br><b>Instagram:</b> <a href="' + IG + '" target="_blank" rel="noopener">@fardos_importadoramaully</a>'
+      answer: '<b>WhatsApp Bea:</b> <a href="' + WA_BASE + encodeURIComponent('Hola Bea! Tengo una consulta') + '" target="_blank" rel="noopener">+56 9 7515 5745</a> (todos los días)<br><b>Email:</b> <a href="mailto:' + EMAIL + '">' + EMAIL + '</a><br><b>Instagram:</b> <a href="' + IG + '" target="_blank" rel="noopener">@fardos_importadoramaully</a><br><b>Oficina de entrega:</b> Berna 767, Pichilemu (con cita previa)'
     }
   ];
 
