@@ -9,6 +9,43 @@
   if (window.__maullyBotLoaded) return;
   window.__maullyBotLoaded = true;
 
+  // ── CRM tracking (envía cada interacción al inbox del CRM) ──
+  var CRM_WEBHOOK = 'https://crm.kreathur.agency/api/webhooks/web-chat';
+  var SESSION_KEY = 'mly_chat_session';
+  var sessionId = (function () {
+    try {
+      var s = localStorage.getItem(SESSION_KEY);
+      if (!s) {
+        s = 'web-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+        localStorage.setItem(SESSION_KEY, s);
+      }
+      return s;
+    } catch (_) { return 'anon-' + Date.now(); }
+  })();
+  function trackToCRM(userMsg, botReply) {
+    try {
+      var payload = {
+        sessionId: sessionId,
+        url: location.pathname + location.search,
+        userMessage: userMsg || undefined,
+        botReply: botReply || undefined,
+        businessSlug: 'maully',
+        userAgent: navigator.userAgent.slice(0, 200),
+      };
+      if (navigator.sendBeacon) {
+        var blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+        navigator.sendBeacon(CRM_WEBHOOK, blob);
+      } else {
+        fetch(CRM_WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true,
+        }).catch(function () {});
+      }
+    } catch (_) { /* fail silently */ }
+  }
+
   var WA_NUMBER = '56975155745';
   var WA_BASE = 'https://wa.me/' + WA_NUMBER + '?text=';
   var PHONE_TIENDA = '+56228332667';
@@ -349,8 +386,15 @@
     if (!text) return;
     addUser(text);
     var kb = findIntent(text);
-    if (kb) respondIntent(kb);
-    else respondNoMatch(text);
+    if (kb) {
+      // Strip HTML for CRM (texto plano)
+      var plain = (kb.title + ' — ' + kb.answer.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+      trackToCRM(text, plain.slice(0, 500));
+      respondIntent(kb);
+    } else {
+      trackToCRM(text, '[Sin match — derivado a Bea WhatsApp]');
+      respondNoMatch(text);
+    }
   }
 
   // Event listeners

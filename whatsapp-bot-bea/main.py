@@ -307,6 +307,53 @@ async def _responder(telefono: str, texto_para_ia: str, texto_para_db: str):
 # PANEL CRM (conversaciones de WhatsApp)
 # ══════════════════════════════════════════════════════════════
 
+# ══════════════════════════════════════════════════════════════
+# API EXTERNA — para integración con CRM Kreathur (envío manual)
+# ══════════════════════════════════════════════════════════════
+
+EXTERNAL_API_KEY = os.getenv("EXTERNAL_API_KEY", "kreathur-bridge-2026")
+
+
+@app.post("/api/external/send")
+async def api_external_send(request: Request):
+    """Envía un mensaje WhatsApp manualmente (desde el CRM Kreathur).
+
+    Auth: header X-API-Key debe coincidir con EXTERNAL_API_KEY.
+    Body: {"phone": "+5697...", "text": "Hola..."}
+    """
+    api_key = request.headers.get("X-API-Key", "")
+    if api_key != EXTERNAL_API_KEY:
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
+    try:
+        data = await request.json()
+        phone = (data.get("phone") or "").strip()
+        text = (data.get("text") or "").strip()
+        if not phone or not text:
+            raise HTTPException(status_code=400, detail="phone and text required")
+
+        # Normaliza el teléfono (quita +, espacios, paréntesis)
+        phone_clean = "".join(c for c in phone if c.isdigit())
+
+        # Persiste el mensaje en bot.db como outbound manual
+        contact = await get_or_create_contact(phone_clean)
+        conv = await get_or_create_conversation(contact.id)
+        await save_message(conv.id, "outbound", text)
+
+        # Envía via Meta Cloud API
+        ok = await enviar_mensaje(phone_clean, text)
+        if not ok:
+            raise HTTPException(status_code=500, detail="Meta API error")
+
+        logger.info(f"[CRM-BRIDGE] [{mask_phone(phone_clean)}] <- {mask_text(text)}")
+        return {"ok": True, "conversation_id": conv.id, "phone": phone_clean}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error /api/external/send: {type(e).__name__}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.get("/crm", response_class=HTMLResponse)
 async def crm_dashboard(request: Request):
     stats = await get_dashboard_stats()

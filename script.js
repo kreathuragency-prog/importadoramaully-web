@@ -1453,6 +1453,28 @@ function showWheelResult(idx){
   document.getElementById('wheelCoupon').textContent=code;
   sessionStorage.setItem('wheelSpun','1');
   sessionStorage.setItem('wheelCoupon',code);
+  // Capturar el email al CRM Kreathur (lead capture)
+  try {
+    const email = (document.getElementById('wheelEmail')||{}).value || '';
+    if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      const payload = {
+        source: 'ruleta-maully',
+        email: email,
+        coupon: code,
+        prize: '10% OFF',
+        url: location.pathname + location.search,
+        businessSlug: 'maully',
+        userAgent: navigator.userAgent.slice(0, 200),
+      };
+      const url = 'https://crm.kreathur.com/api/webhooks/lead-capture';
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(url, new Blob([JSON.stringify(payload)], {type:'application/json'}));
+      } else {
+        fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload), keepalive:true}).catch(()=>{});
+      }
+      try { localStorage.setItem('mly_lead_email', email); } catch(_){}
+    }
+  } catch(_){}
   // Schedule event popup after wheel is done
   scheduleEventPopup();
 }
