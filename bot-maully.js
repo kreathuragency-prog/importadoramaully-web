@@ -9,8 +9,11 @@
   if (window.__maullyBotLoaded) return;
   window.__maullyBotLoaded = true;
 
-  // ── CRM tracking (envía cada interacción al inbox del CRM) ──
-  var CRM_WEBHOOK = 'https://crm.kreathur.agency/api/webhooks/web-chat';
+  // ── Endpoints ──
+  // Tracking va al bot del VPS (que ya está vivo) y persiste en su bot.db.
+  // Los mensajes se ven en https://importadoramaully.cl/crm/conversations
+  var CRM_WEBHOOK = 'https://importadoramaully.cl/api/bot/api/track-web';
+  var BUSINESS_SLUG = 'maully';
   var SESSION_KEY = 'mly_chat_session';
   var sessionId = (function () {
     try {

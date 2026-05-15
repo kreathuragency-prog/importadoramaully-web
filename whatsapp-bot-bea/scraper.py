@@ -91,11 +91,66 @@ async def scrape_maully() -> str:
 async def scrape_puntoski() -> str:
     """
     Scrape puntoski.com y devuelve texto con productos/precios.
-    Intenta varios métodos:
-    1. /products.json (Shopify API pública)
-    2. Parseo de HTML genérico buscando product cards
+    Intenta en orden:
+    1. /products-schema.json (JSON-LD nativo de PuntoSki — fuente oficial)
+    2. /products.json (formato Shopify — por si migra)
+    3. Parseo de HTML genérico buscando product cards (fallback)
     """
-    # Método 1: API de Shopify (si aplica)
+    # Método 1: products-schema.json (formato nativo PuntoSki — JSON-LD Schema.org)
+    try:
+        async with httpx.AsyncClient(timeout=20, follow_redirects=True) as client:
+            resp = await client.get(f"{URL_PUNTOSKI}/products-schema.json",
+                                     headers={"Accept": "application/json",
+                                              "User-Agent": "BeaBot/1.0 (+https://puntoski.com)"})
+            if resp.status_code == 200:
+                data = resp.json()
+                # JSON-LD viene como array de productos Schema.org
+                productos = data if isinstance(data, list) else data.get("products", [])
+                if productos:
+                    lines = [f"Catálogo Punto Ski con {len(productos)} productos disponibles:\n"]
+                    sin_stock = 0
+                    for p in productos:
+                        name = p.get("name", "") or p.get("title", "")
+                        sku  = p.get("sku", "")
+                        brand = ""
+                        b = p.get("brand")
+                        if isinstance(b, dict):
+                            brand = b.get("name", "")
+                        elif isinstance(b, str):
+                            brand = b
+                        category = p.get("category", "") or ""
+                        offers = p.get("offers", {}) or {}
+                        if isinstance(offers, list):
+                            offers = offers[0] if offers else {}
+                        precio = offers.get("price") or offers.get("lowPrice") or ""
+                        availability = (offers.get("availability") or "").lower()
+                        disponible = "instock" in availability or "in_stock" in availability or availability == ""
+                        if not disponible:
+                            sin_stock += 1
+                        precio_str = ""
+                        if precio:
+                            try:
+                                pf = int(float(precio))
+                                precio_str = f"${pf:,}".replace(",", ".") + " CLP"
+                            except (TypeError, ValueError):
+                                precio_str = f"${precio} CLP"
+                        stock_str = "" if disponible else " (SIN STOCK)"
+                        brand_str = f" [{brand}]" if brand else ""
+                        sku_str = f" SKU:{sku}" if sku else ""
+                        cat_str = f" · {category}" if category else ""
+                        url = p.get("url", "") or (offers.get("url", "") if isinstance(offers, dict) else "")
+                        url_str = f" → {url}" if url else ""
+                        # Línea compacta para que el modelo no se sature
+                        lines.append(f"- {name}{brand_str}{cat_str} | {precio_str}{stock_str}{sku_str}{url_str}")
+                    if sin_stock:
+                        lines.append(f"\n(Total sin stock: {sin_stock}/{len(productos)})")
+                    result = "\n".join(lines)
+                    logger.info(f"Scraper Punto Ski (products-schema.json): {len(productos)} productos")
+                    return result
+    except Exception as e:
+        logger.info(f"Scraper Punto Ski: products-schema.json falló ({e}), probando Shopify API")
+
+    # Método 2: API de Shopify (legacy, por si migra)
     try:
         async with httpx.AsyncClient(timeout=15, follow_redirects=True) as client:
             resp = await client.get(f"{URL_PUNTOSKI}/products.json?limit=250")
